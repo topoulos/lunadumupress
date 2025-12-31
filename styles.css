@@ -1,0 +1,83 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  background: #0b0b0b;
+  color: #eee;
+  line-height: 1.6;
+}
+
+.hero {
+  min-height: 100vh;
+  background: url("images/hero.jpg") center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero-content h1 {
+  letter-spacing: 0.2em;
+}
+
+.hero-content span {
+  color: #e6b14a;
+}
+
+.cta {
+  display: inline-block;
+  margin-top: 1.5rem;
+  padding: 0.75rem 1.5rem;
+  background: #fff;
+  color: #000;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+section {
+  padding: 5rem 2rem;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.about {
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+}
+
+.about img {
+  width: 200px;
+}
+
+.book-grid {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.book-grid img {
+  width: 220px;
+}
+
+footer {
+  text-align: center;
+  padding: 2rem;
+  opacity: 0.6;
+}
+
+/* Fade-in */
+.fade {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.8s ease-out;
+}
+
+.fade.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
