@@ -32,6 +32,13 @@ body {
   color: #e6b14a;
 }
 
+.hero-content {
+  background: transparent;
+  max-width: 700px;
+  padding: 2rem;
+  text-align: center;
+}
+
 .cta {
   display: inline-block;
   margin-top: 1.5rem;
