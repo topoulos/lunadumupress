@@ -13,11 +13,15 @@ body {
 
 .hero {
   min-height: 100vh;
-  background: url("images/hero.png") center/cover no-repeat;
+  width: 100%;
+  background-image: url("images/hero.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
   display: flex;
   align-items: center;
   justify-content: center;
-  text-align: center;
 }
 
 .hero-content h1 {
