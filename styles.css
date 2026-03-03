@@ -1,32 +1,113 @@
-/* HERO polish: readability + button feel */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  background: #0b0b0b;
+  color: #eee;
+  line-height: 1.6;
+}
+
+/* =========================
+   HERO
+========================= */
+
 .hero {
   position: relative;
+  min-height: 100vh;
+  width: 100%;
+  background-image: url("images/hero.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .hero::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0,0,0,0.45);
+  background: rgba(0, 0, 0, 0.45);
 }
 
 .hero-content {
-  position: relative; /* keeps it above the overlay */
+  position: relative;
+  max-width: 700px;
+  padding: 2rem;
+  text-align: center;
 }
 
+.hero-content h1 {
+  letter-spacing: 0.2em;
+}
+
+.hero-content span {
+  color: #e6b14a;
+}
+
+.series-credit {
+  opacity: 0.75;
+  margin-top: 0.5rem;
+}
+
+.hero-tagline {
+  max-width: 750px;
+  margin: 1.75rem auto;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  font-weight: 500;
+}
+
+/* CTA Button */
 .cta {
+  display: inline-block;
+  margin-top: 1.5rem;
+  padding: 0.85rem 1.75rem;
+  background: #fff;
+  color: #000;
+  text-decoration: none;
+  font-weight: bold;
   border-radius: 10px;
   transition: transform 0.15s ease, opacity 0.15s ease;
 }
 
 .cta:hover {
-  transform: translateY(-1px);
+  transform: translateY(-2px);
   opacity: 0.92;
 }
 
-/* Mission spacing (small, but makes it feel expensive) */
-.about h3 {
-  margin-bottom: 0.5rem;
+/* =========================
+   SECTIONS
+========================= */
+
+section {
+  padding: 5rem 2rem;
+  max-width: 1100px;
+  margin: auto;
+}
+
+h3 {
+  margin-bottom: 1rem;
+}
+
+/* =========================
+   ABOUT
+========================= */
+
+.about {
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+}
+
+.about img {
+  width: 200px;
 }
 
 .about p {
@@ -34,7 +115,10 @@
   opacity: 0.92;
 }
 
-/* Books section: “coming soon” typography */
+/* =========================
+   BOOKS
+========================= */
+
 .books h3 {
   text-align: center;
   margin-bottom: 0.75rem;
@@ -53,19 +137,28 @@
   opacity: 0.75;
 }
 
-/* Make covers feel clickable even if they aren’t */
+.book-grid {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+}
+
 .book-grid img {
+  width: 220px;
   border-radius: 12px;
-  box-shadow: 0 10px 35px rgba(0,0,0,0.55);
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.55);
   transition: transform 0.18s ease, opacity 0.18s ease;
 }
 
 .book-grid img:hover {
-  transform: translateY(-3px);
+  transform: translateY(-4px);
   opacity: 0.96;
 }
 
-/* Mailing list section: center the embed + add breathing room */
+/* =========================
+   MAILING LIST
+========================= */
+
 .mailing-list {
   display: flex;
   flex-direction: column;
@@ -80,7 +173,51 @@
   max-width: 40rem;
 }
 
-/* Responsive */
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+  text-align: center;
+  padding: 2rem;
+  opacity: 0.6;
+}
+
+/* =========================
+   FADE IN
+========================= */
+
+.fade {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.8s ease-out;
+}
+
+.fade.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* =========================
+   ACCESSIBILITY
+========================= */
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
 @media (max-width: 800px) {
   .about {
     flex-direction: column;
