@@ -38,7 +38,13 @@ body {
   padding: 2rem;
   text-align: center;
 }
-
+.hero-tagline {
+  max-width: 750px;
+  margin: 1.75rem auto;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  font-weight: 500;
+}
 .cta {
   display: inline-block;
   margin-top: 1.5rem;
