@@ -9,9 +9,9 @@
 <body>
 
  <!-- HERO -->
-<section class="hero fade visible">
+<section class="hero fade visible" aria-labelledby="site-title">
   <div class="hero-content">
-    <h1>LUNA DUMU PRESS</h1>
+    <h1 id="site-title">LUNA DUMU PRESS</h1>
     <h2>Home of <span>Moon Gun Sam</span></h2>
     <p class="series-credit">A Book Series by Anthony Angel</p>
 
@@ -19,34 +19,39 @@
       A brutal sci-fi saga about a family built on love—and a universe determined to tear it apart.
     </p>
 
-    <a class="cta" href="#books">Begin with The Dolphin</a>
+    <a class="cta" href="#join">Get Launch Alerts</a>
   </div>
 </section>
 
   <!-- ABOUT -->
-  <section class="about fade">
-    <img src="images/logo.png" alt="Luna Dumu Press Logo" />
+  <section class="about fade" aria-labelledby="mission-title">
+    <img src="images/logo.png" alt="Luna Dumu Press logo" />
     <div>
-      <h3>Our Mission</h3>
-      <p>
-        Luna Dumu Press publishes speculative fiction about love under pressure, power systems, and the cost of staying human.
-      </p>
+      <h3 id="mission-title">Our Mission</h3>
+      <p>Mythic sci-fi about love, power, and survival.</p>
     </div>
   </section>
 
   <!-- BOOKS -->
-  <section id="books" class="books fade">
-    <h3>Begin the Story</h3>
-    <div class="book-grid">
-      <img src="images/dolphin1.jpg" alt="The Dolphin Volume I" />
-      <img src="images/dolphin2.jpg" alt="The Dolphin Volume II" />
+  <section id="books" class="books fade" aria-labelledby="books-title">
+    <h3 id="books-title">The Series</h3>
+    <p class="books-subtitle">Book One: <strong>The Dolphin</strong> (Volumes I &amp; II) — launching soon.</p>
+
+    <div class="book-grid" aria-label="The Dolphin book covers">
+      <img src="images/dolphin1.jpg" alt="Moon Gun Sam: The Dolphin, Volume I cover" />
+      <img src="images/dolphin2.jpg" alt="Moon Gun Sam: The Dolphin, Volume II cover" />
     </div>
+
+    <p class="books-note">Want the release date? Join the Pod below.</p>
   </section>
 
   <!-- JOIN -->
-  <section class="mailing-list fade">
-       <div class="ml-embedded" data-form="9NV2sK"></div>
+  <section id="join" class="mailing-list fade" aria-labelledby="join-title">
+    <h3 id="join-title" class="sr-only">Join the Pod</h3>
+    <div class="ml-embedded" data-form="9NV2sK"></div>
+    <p class="privacy-note">No spam. Unsubscribe anytime.</p>
   </section>
+
   <footer>
     © 2025 Luna Dumu Press
   </footer>

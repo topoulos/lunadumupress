@@ -1,100 +1,110 @@
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-  background: #0b0b0b;
-  color: #eee;
-  line-height: 1.6;
-}
-
+/* HERO polish: readability + button feel */
 .hero {
-  min-height: 100vh;
-  width: 100%;
-  background-image: url("images/hero.png");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  position: relative;
 }
 
-.hero-content h1 {
-  letter-spacing: 0.2em;
-}
-
-.hero-content span {
-  color: #e6b14a;
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
 }
 
 .hero-content {
-  background: transparent;
-  max-width: 700px;
-  padding: 2rem;
-  text-align: center;
+  position: relative; /* keeps it above the overlay */
 }
-.hero-tagline {
-  max-width: 750px;
-  margin: 1.75rem auto;
-  font-size: 1.2rem;
-  line-height: 1.6;
-  font-weight: 500;
-}
+
 .cta {
-  display: inline-block;
+  border-radius: 10px;
+  transition: transform 0.15s ease, opacity 0.15s ease;
+}
+
+.cta:hover {
+  transform: translateY(-1px);
+  opacity: 0.92;
+}
+
+/* Mission spacing (small, but makes it feel expensive) */
+.about h3 {
+  margin-bottom: 0.5rem;
+}
+
+.about p {
+  max-width: 42rem;
+  opacity: 0.92;
+}
+
+/* Books section: “coming soon” typography */
+.books h3 {
+  text-align: center;
+  margin-bottom: 0.75rem;
+}
+
+.books-subtitle {
+  text-align: center;
+  opacity: 0.85;
+  margin-bottom: 2rem;
+  font-size: 1.05rem;
+}
+
+.books-note {
+  text-align: center;
   margin-top: 1.5rem;
-  padding: 0.75rem 1.5rem;
-  background: #fff;
-  color: #000;
-  text-decoration: none;
-  font-weight: bold;
+  opacity: 0.75;
 }
 
-section {
-  padding: 5rem 2rem;
-  max-width: 1100px;
-  margin: auto;
+/* Make covers feel clickable even if they aren’t */
+.book-grid img {
+  border-radius: 12px;
+  box-shadow: 0 10px 35px rgba(0,0,0,0.55);
+  transition: transform 0.18s ease, opacity 0.18s ease;
 }
 
-.about {
+.book-grid img:hover {
+  transform: translateY(-3px);
+  opacity: 0.96;
+}
+
+/* Mailing list section: center the embed + add breathing room */
+.mailing-list {
   display: flex;
-  gap: 3rem;
+  flex-direction: column;
   align-items: center;
 }
 
-.about img {
-  width: 200px;
-}
-
-.book-grid {
-  display: flex;
-  gap: 2rem;
-  justify-content: center;
-}
-
-.book-grid img {
-  width: 220px;
-}
-
-footer {
+.privacy-note {
+  margin-top: 1rem;
+  font-size: 0.95rem;
+  opacity: 0.65;
   text-align: center;
-  padding: 2rem;
-  opacity: 0.6;
+  max-width: 40rem;
 }
 
-/* Fade-in */
-.fade {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: all 0.8s ease-out;
-}
+/* Responsive */
+@media (max-width: 800px) {
+  .about {
+    flex-direction: column;
+    text-align: center;
+  }
 
-.fade.visible {
-  opacity: 1;
-  transform: translateY(0);
+  .about img {
+    width: 170px;
+  }
+
+  .book-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .book-grid img {
+    width: min(260px, 70vw);
+  }
+
+  section {
+    padding: 4rem 1.5rem;
+  }
+
+  .hero-tagline {
+    font-size: 1.05rem;
+  }
 }
