@@ -349,3 +349,28 @@ footer .copyright {
     display: block;
   }
 }
+
+.hero {
+  width: 100vw;
+  min-height: 100svh; /* better on mobile browsers */
+}
+
+.hero::after,
+.hero::before,
+.hero-grain {
+  width: 100%;
+  height: 100%;
+}
+
+.hero::after {
+  inset: 0 !important;
+  aspect-ratio: auto !important;
+}
+
+/* HERO should be full-bleed, not constrained by the generic section rule */
+.hero {
+  max-width: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
