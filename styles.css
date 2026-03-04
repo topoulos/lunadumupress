@@ -31,29 +31,32 @@ body {
   justify-content: center;
 }
 
-/* background image */
+/* LAYER A (current image) */
 .hero::after {
   content: "";
   position: absolute;
   inset: 0;
-  background-image: var(--hero-img);
+  background-image: var(--hero-img-a);
   background-size: cover;
-  background-position: center;
+  background-position: center 20%;
   background-repeat: no-repeat;
-  opacity: var(--hero-opacity, 1);
+  opacity: var(--hero-a-opacity, 1);
   transition: opacity 1.2s ease;
   z-index: 0;
-
-  animation: heroDrift 12s ease-in-out infinite;
 }
 
-/* dark overlay */
+/* LAYER B (next image) */
 .hero::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0,0,0,0.55);
-  z-index: 1;
+  background-image: var(--hero-img-b);
+  background-size: cover;
+  background-position: center 20%;
+  background-repeat: no-repeat;
+  opacity: var(--hero-b-opacity, 0);
+  transition: opacity 1.2s ease;
+  z-index: 0;
 }
 
 /* film grain + vignette */
@@ -70,6 +73,14 @@ body {
   background-size: cover, 200px 200px;
 
   animation: grainMove 8s steps(10) infinite;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.55);
+  z-index: 1;
+  pointer-events: none;
 }
 
 @keyframes heroDrift {
