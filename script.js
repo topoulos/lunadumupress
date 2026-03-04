@@ -82,16 +82,20 @@ document.querySelectorAll(".fade").forEach(el => observer.observe(el));
     ];
 
     const book1Images = [
-      "images/book1/01_alex_kelli_sam_rover.jpg"
+      "images/book1/01_alex_kelli_sam_rover.jpg",
+      "images/book1/02_alex_kelli_sam_preg_porch.jpg",
     ];
 
     const book2Images = [
       "images/book2/01_sam_alex_kill.jpg",
       "images/book2/02_harmonic_cortex.jpg",
       "images/book2/03_fork_array_destruction.jpg",
-      "images/book2/04_sam_alex_war.jpg",
       "images/book2/05_alex_sam_keira.jpg",
-      "images/book2/06_lila_tim_carnival.jpg"
+      "images/book2/06_lila_tim_carnival.jpg",
+      "images/book2/08_kellis_message.jpg",
+      "images/book2/09_killing_olosk.jpg",
+      "images/book2/10_missing_boy.jpg",
+
     ];
 
     let images = [...publicImages];
