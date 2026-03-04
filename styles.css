@@ -292,6 +292,39 @@ footer .copyright {
   }
 }
 
+@media (max-width: 900px) {
+  .hero-content {
+    padding: 2.5rem 1.25rem 2rem;
+  }
+
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .hero-content h2 {
+    font-size: 1.25rem;
+  }
+
+  .hero-tagline {
+    font-size: 1.05rem;
+    margin: 1.25rem auto;
+  }
+
+  .cta {
+    padding: 0.85rem 1.6rem;
+  }
+}
+
+@media (max-height: 720px) {
+  .hero {
+    padding: 5rem 0;
+  }
+
+  .hero-tagline {
+    margin: 1rem auto;
+  }
+}
+
 .spoiler-settings {
   max-width: 900px;
   margin: 0 auto 1.5rem;
@@ -378,4 +411,32 @@ footer .copyright {
 /* Control how the hero background is cropped */
 .hero::after {
   background-position: center top; /* show the top of the image */
+}
+
+/* Let hero grow if content is taller than the viewport */
+.hero {
+  min-height: 100vh;
+  height: auto;
+  padding: 4rem 0;
+}
+
+@media (max-width: 900px) {
+  .hero-content {
+    padding: 2.5rem 1.25rem 2rem;
+  }
+
+  .hero-content h1 { font-size: 2rem; }
+  .hero-content h2 { font-size: 1.25rem; }
+
+  .hero-tagline {
+    font-size: 1.05rem;
+    margin: 1.25rem auto;
+  }
+
+  .cta { padding: 0.85rem 1.6rem; }
+}
+
+@media (max-height: 720px) {
+  .hero { padding: 5rem 0; }
+  .hero-tagline { margin: 1rem auto; }
 }
