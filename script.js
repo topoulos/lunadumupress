@@ -75,7 +75,7 @@ document.querySelectorAll(".fade").forEach(el => observer.observe(el));
   "images/public/03_pod_pizza_party.jpg",
   "images/public/04_church_cornfield_earth.jpg",
   "images/public/05_sam_alex_kelli_lila_family_night.jpg",
-  "images/public/06_sam_alex_running_recruites.jpg",
+  "images/public/06_sam_alex_running_recruits.jpg",
 ];
 
   const FADE_MS = 1200;   // match CSS transition
