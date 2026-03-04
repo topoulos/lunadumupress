@@ -21,6 +21,11 @@
 
     <a class="cta" href="#join">Get Launch Alerts</a>
   </div>
+
+  <div data-spoiler="book2">
+    <h3>Artifact Cortex Reveal</h3>
+    <p>Hidden content that only appears if reader selected Book 2.</p>
+  </div>
 </section>
 
   <!-- ABOUT -->
@@ -53,6 +58,15 @@
   </section>
 
   <footer>
+    <section class="spoiler-settings">
+      <h3>Spoiler Settings</h3>
+      <p>Choose how far you've read in the series:</p>
+
+      <button onclick="setSpoiler('none')">No Spoilers</button>
+      <button onclick="setSpoiler('book1')">I've read Book 1</button>
+      <button onclick="setSpoiler('book2')">I've read Book 2</button>
+      <button onclick="setSpoiler('book3')">I've read Book 3</button>
+    </section>
     © 2025 Luna Dumu Press
   </footer>
 
