@@ -374,3 +374,8 @@ footer .copyright {
   padding: 0;
   width: 100%;
 }
+
+/* Control how the hero background is cropped */
+.hero::after {
+  background-position: center top; /* show the top of the image */
+}
