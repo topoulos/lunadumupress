@@ -31,6 +31,17 @@ body {
   justify-content: center;
 }
 
+.hero-title {
+  position: absolute;
+  top: 7vh;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(820px, 86vw);
+  opacity: 0.9;
+  z-index: 4;
+  pointer-events: none;
+}
+
 /* LAYER A (current image) */
 .hero::after {
   content: "";
@@ -83,9 +94,21 @@ body {
   pointer-events: none;
 }
 
+/* subtle Ken Burns drift on hero images */
+.hero::before,
+.hero::after {
+  will-change: transform;
+  animation: heroDrift 14s ease-in-out infinite;
+}
+
+/* a tiny offset so the two layers don't drift perfectly in sync */
+.hero::before {
+  animation-delay: -7s;
+}
+
 @keyframes heroDrift {
   0%   { transform: scale(1) translateY(0); }
-  50%  { transform: scale(1.01) translateY(-0.5%); }
+  50%  { transform: scale(1.02) translateY(-0.6%); }
   100% { transform: scale(1) translateY(0); }
 }
 

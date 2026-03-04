@@ -111,7 +111,7 @@ document.querySelectorAll(".fade").forEach(el => observer.observe(el));
   images.forEach(src => { const img = new Image(); img.src = src; });
 
   const FADE_MS = 1200;
-  const HOLD_MS = 2500;
+  const HOLD_MS = 12000;
 
   let idx = 0;
   let showingA = true;
