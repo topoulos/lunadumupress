@@ -54,13 +54,18 @@ document.addEventListener("DOMContentLoaded", () => {
 const observer = new IntersectionObserver(
   entries => {
     entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("visible");
-      }
+    if (entry.isIntersecting) {
+      entry.target.classList.add("visible");
+      entry.target.classList.add("decoded");
+    }
     });
   },
   { threshold: 0.15 }
 );
+
+document.querySelectorAll(".decode").forEach((el) => {
+  observer.observe(el);
+});
 
 document.querySelectorAll(".fade").forEach(el => observer.observe(el));
 
