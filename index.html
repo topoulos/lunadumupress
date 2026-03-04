@@ -9,7 +9,8 @@
 <body>
 
  <!-- HERO -->
-<section class="hero fade visible" aria-labelledby="site-title">
+<section class="hero fade visible" aria-labelledby="site-title" id="hero">
+  <div class="hero-grain"></div>
   <div class="hero-content">
     <h1 id="site-title">LUNA DUMU PRESS</h1>
     <h2>Home of <span>Moon Gun Sam</span></h2>
@@ -21,9 +22,15 @@
 
     <a class="cta" href="#join">Get Launch Alerts</a>
   </div>
+ 
+</section>
+
+<!-- EXTRAS (optional / spoiler gated) -->
+<section class="extras fade" aria-labelledby="extras-title">
+  <h3 id="extras-title">Extras</h3>
 
   <div data-spoiler="book2">
-    <h3>Artifact Cortex Reveal</h3>
+    <h4>Artifact Cortex Reveal</h4>
     <p>Hidden content that only appears if reader selected Book 2.</p>
   </div>
 </section>
@@ -59,15 +66,29 @@
 
   <footer>
     <section class="spoiler-settings">
-      <h3>Spoiler Settings</h3>
-      <p>Choose how far you've read in the series:</p>
+      <h3>Spoiler Filter</h3>
+      <p>Show extras based on how far you've read:</p>
 
-      <button onclick="setSpoiler('none')">No Spoilers</button>
-      <button onclick="setSpoiler('book1')">I've read Book 1</button>
-      <button onclick="setSpoiler('book2')">I've read Book 2</button>
-      <button onclick="setSpoiler('book3')">I've read Book 3</button>
+      <!-- Desktop buttons -->
+      <div class="spoiler-buttons">
+        <button type="button" onclick="setSpoiler('none')">No Spoilers</button>
+        <button type="button" onclick="setSpoiler('book1')">I've read Book 1</button>
+        <button type="button" onclick="setSpoiler('book2')">I've read Book 2</button>
+        <button type="button" onclick="setSpoiler('book3')">I've read Book 3</button>
+      </div>
+
+      <!-- Mobile dropdown -->
+      <div class="spoiler-select">
+        <label class="sr-only" for="spoilerLevel">Spoiler level</label>
+        <select id="spoilerLevel">
+          <option value="none">No Spoilers</option>
+          <option value="book1">I've read Book 1</option>
+          <option value="book2">I've read Book 2</option>
+          <option value="book3">I've read Book 3</option>
+        </select>
+      </div>
     </section>
-    © 2025 Luna Dumu Press
+    <div class="copyright">© 2025 Luna Dumu Press</div>
   </footer>
 
   <script src="script.js"></script>

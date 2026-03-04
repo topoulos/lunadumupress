@@ -17,9 +17,9 @@ body {
 
 .hero {
   position: relative;
+  overflow: hidden;
   min-height: 100vh;
   width: 100%;
-  background-image: url("images/hero.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -29,11 +29,51 @@ body {
   justify-content: center;
 }
 
+/* base image layer */
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: var(--hero-img);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: var(--hero-opacity, 1);
+  transition: opacity 1.2s ease;
+  z-index: 0;
+}
+
+/* dark overlay for readability */
 .hero::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.45);
+  background: rgba(0,0,0,0.55);
+  z-index: 1;
+}
+
+/* film grain + vignette overlay (extra layer) */
+.hero-grain {
+  position: absolute;
+  inset: 0;
+  z-index: 2;           /* same layer as dark overlay */
+  pointer-events: none;
+  opacity: 0.35;        /* overall strength of grain layer */
+
+  background:
+    radial-gradient(circle at center, rgba(0,0,0,0.10) 0%, rgba(0,0,0,0.35) 100%),
+    url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)' opacity='0.05'/%3E%3C/svg%3E");
+  background-size: cover, 200px 200px;
+}
+
+/* optional: subtle drift so it feels like film */
+@keyframes grainMove {
+  0%   { background-position: center, 0 0; }
+  100% { background-position: center, 200px 200px; }
+}
+
+.hero-grain {
+  animation: grainMove 8s steps(10) infinite;
 }
 
 .hero-content {
@@ -41,6 +81,7 @@ body {
   max-width: 700px;
   padding: 2rem;
   text-align: center;
+  z-index: 3;
 }
 
 .hero-content h1 {
@@ -180,7 +221,12 @@ h3 {
 footer {
   text-align: center;
   padding: 2rem;
-  opacity: 0.6;
+  opacity: 1;
+}
+
+footer .copyright { 
+  opacity: 0.6; 
+  margin-top: 1rem;
 }
 
 /* =========================
@@ -243,5 +289,63 @@ footer {
 
   .hero-tagline {
     font-size: 1.05rem;
+  }
+}
+
+.spoiler-settings {
+  max-width: 900px;
+  margin: 0 auto 1.5rem;
+  padding: 1.5rem;
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 12px;
+}
+
+.spoiler-settings p {
+  opacity: 0.75;
+  margin-bottom: 0.75rem;
+}
+
+.spoiler-settings button {
+  margin: 0.25rem 0.35rem 0.25rem 0;
+  padding: 0.6rem 0.9rem;
+  background: rgba(255,255,255,0.08);
+  color: #eee;
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.spoiler-settings button:hover {
+  background: rgba(255,255,255,0.12);
+}
+
+.spoiler-settings button.active {
+  background: #e6b14a;
+  color: #000;
+  border-color: #e6b14a;
+}
+
+/* Desktop vs Mobile spoiler controls */
+.spoiler-select {
+  display: none;
+  margin-top: 0.75rem;
+}
+
+.spoiler-select select {
+  width: min(420px, 90vw);
+  padding: 0.75rem 0.9rem;
+  border-radius: 10px;
+  background: rgba(255,255,255,0.08);
+  color: #eee;
+  border: 1px solid rgba(255,255,255,0.12);
+}
+
+/* Make dropdown usable on mobile */
+@media (max-width: 600px) {
+  .spoiler-buttons {
+    display: none;
+  }
+  .spoiler-select {
+    display: block;
   }
 }
