@@ -93,12 +93,14 @@ document.querySelectorAll(".fade").forEach(el => observer.observe(el));
   hero.style.setProperty("--hero-img", `url("${images[idx]}")`);
 
   function next() {
+  hero.classList.add("is-fading");
   hero.style.setProperty("--hero-opacity", "0");
 
   setTimeout(() => {
     idx = (idx + 1) % images.length;
     hero.style.setProperty("--hero-img", `url("${images[idx]}")`);
     hero.style.setProperty("--hero-opacity", "1");
+    hero.classList.remove("is-fading");
   }, FADE_MS);
 }
 
