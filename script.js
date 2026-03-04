@@ -98,7 +98,6 @@ document.querySelectorAll(".fade").forEach(el => observer.observe(el));
     ];
 
     let images = [...publicImages];
-
     if (level === "book1" || level === "book2" || level === "book3") images.push(...book1Images);
     if (level === "book2" || level === "book3") images.push(...book2Images);
 
@@ -106,56 +105,44 @@ document.querySelectorAll(".fade").forEach(el => observer.observe(el));
   }
 
   let images = getHeroImages();
+  if (images.length === 0) return;
 
-  // Preload
+  // Preload (prevents flash)
   images.forEach(src => { const img = new Image(); img.src = src; });
 
   const FADE_MS = 1200;
-  const HOLD_MS = 12000;
+  const HOLD_MS = 2500;
 
   let idx = 0;
-  let aIsActive = true;
+  let showingA = true;
 
-  // Init: A visible, B hidden
+  // Initialize: A visible, B hidden
   hero.style.setProperty("--hero-img-a", `url("${images[idx]}")`);
-  hero.style.setProperty("--hero-img-b", `url("${images[(idx + 1) % images.length]}")`);
   hero.style.setProperty("--hero-a-opacity", "1");
+
+  hero.style.setProperty("--hero-img-b", `url("${images[(idx + 1) % images.length]}")`);
   hero.style.setProperty("--hero-b-opacity", "0");
 
-  function next() {
+  function tick() {
     const nextIdx = (idx + 1) % images.length;
-    const afterNextIdx = (idx + 2) % images.length;
 
-    if (aIsActive) {
-      // load next into B, crossfade A->B
+    if (showingA) {
+      // Put next image into B and crossfade A -> B
       hero.style.setProperty("--hero-img-b", `url("${images[nextIdx]}")`);
-      hero.style.setProperty("--hero-a-opacity", "0");
       hero.style.setProperty("--hero-b-opacity", "1");
-
-      // after fade, prep A with the image after next
-      setTimeout(() => {
-        hero.style.setProperty("--hero-img-a", `url("${images[afterNextIdx]}")`);
-        hero.style.setProperty("--hero-a-opacity", "1");
-        hero.style.setProperty("--hero-b-opacity", "0");
-        aIsActive = false;
-        idx = nextIdx;
-      }, FADE_MS);
+      hero.style.setProperty("--hero-a-opacity", "0");
+      showingA = false;
     } else {
-      // load next into A, crossfade B->A
+      // Put next image into A and crossfade B -> A
       hero.style.setProperty("--hero-img-a", `url("${images[nextIdx]}")`);
       hero.style.setProperty("--hero-a-opacity", "1");
       hero.style.setProperty("--hero-b-opacity", "0");
-
-      // after fade, prep B with the image after next
-      setTimeout(() => {
-        hero.style.setProperty("--hero-img-b", `url("${images[afterNextIdx]}")`);
-        hero.style.setProperty("--hero-a-opacity", "0");
-        hero.style.setProperty("--hero-b-opacity", "1");
-        aIsActive = true;
-        idx = nextIdx;
-      }, FADE_MS);
+      showingA = true;
     }
+
+    idx = nextIdx;
   }
 
-  setInterval(next, HOLD_MS);
+  // Start rotation
+  setInterval(tick, HOLD_MS);
 })();
