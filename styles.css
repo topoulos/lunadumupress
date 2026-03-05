@@ -148,7 +148,7 @@ body {
 /* CTA Button */
 .cta {
   display: inline-block;
-  margin-top: 1.25rem;
+  margin-top: 0;
   padding: 0.95rem 2rem;
   background: #fff;
   color: #000;
@@ -162,6 +162,26 @@ body {
   transform: translateY(-2px);
   opacity: 0.95;
   box-shadow: 0 6px 20px rgba(255,255,255,0.15);
+}
+
+.hero-ctas{
+  display:flex;
+  gap: 0.9rem;
+  justify-content:center;
+  align-items:center;
+  flex-wrap:wrap;
+  margin-top: 1.25rem;
+}
+
+.cta.secondary{
+  background: transparent;
+  color:#fff;
+  border: 1px solid rgba(255,255,255,0.65);
+}
+
+.cta.secondary:hover{
+  border-color:#fff;
+  box-shadow: 0 6px 20px rgba(255,255,255,0.12);
 }
 
 /* hero responsive */
