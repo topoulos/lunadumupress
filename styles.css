@@ -546,6 +546,12 @@ footer .copyright {
   }
 }
 
+footer {
+  border-top: 1px solid rgba(255,255,255,0.08);
+  margin-top: 3rem;
+  padding-top: 2rem;
+}
+
 footer a {
   color: #eee;
   opacity: 0.75;
