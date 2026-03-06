@@ -201,6 +201,33 @@ body {
 }
 
 /* =========================
+   SITE LINKS
+========================= */
+
+a {
+  color: #e6b14a;
+  text-decoration: none;
+  transition: color 0.15s ease, opacity 0.15s ease;
+}
+
+a:hover {
+  color: #ffd87a;
+  text-decoration: underline;
+}
+
+.inline-link {
+  color: #e6b14a;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-size: 0.95rem;
+}
+
+.inline-link:hover {
+  color: #ffd87a;
+  border-bottom-color: #ffd87a;
+}
+
+/* =========================
    SECTIONS
 ========================= */
 
@@ -268,6 +295,11 @@ h3 {
   transform: translateY(0);
   filter: blur(0);
 }
+
+.signal-log a::before {
+  content: "→ ";
+}
+
 /* =========================
    ABOUT
 ========================= */
