@@ -126,7 +126,7 @@ document.addEventListener("DOMContentLoaded", () => {
       exitFocusMode();
     });
 
-    ["mousemove", "touchstart", "click", "keydown"].forEach((evt) => {
+    ["touchstart", "keydown"].forEach((evt) => {
       window.addEventListener(evt, wakeHeroTemporarily, { passive: true });
     });
 
