@@ -46,10 +46,7 @@ function highlightSpoiler(level) {
   if (activeBtn) activeBtn.classList.add("active");
 }
 
-  ["mousemove", "touchstart", "click", "keydown"].forEach(evt => {
-    window.addEventListener(evt, wakeHeroTemporarily, { passive: true });
-  });
-
+  
   window.addEventListener("scroll", () => {
     if (!heroAudio.paused) {
       hero.classList.remove("is-focused");
@@ -163,6 +160,10 @@ document.querySelectorAll(".decode").forEach((el) => {
 });
 
 document.querySelectorAll(".fade").forEach(el => observer.observe(el));
+
+["mousemove", "touchstart", "click", "keydown"].forEach(evt => {
+    window.addEventListener(evt, wakeHeroTemporarily, { passive: true });
+  });
 
 (() => {
   const hero = document.getElementById("hero");
