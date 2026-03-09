@@ -159,7 +159,16 @@ document.querySelectorAll(".fade").forEach(el => observer.observe(el));
     list.push(`images/public/140_sam_alex_kelli_after_graduation.jpg?v=${VERSION}`); // family night
     list.push(`images/public/150_wedding_photo_sam_alex_kelli.jpg?v=${VERSION}`); // family night
     list.push(`images/public/160_sam_kelli_hopper.jpg?v=${VERSION}`); // family night
+    list.push(`images/book1/025_marriedlife.jpg?v=${VERSION}`); // toggle on/off
+    list.push(`images/book1/020_alex_kelli_sam_preg_porch.jpg?v=${VERSION}`); // toggle on/off
+    list.push(`images/book1/035_sam_alex_brink_kelli_pregnant_to_hospital.jpg?v=${VERSION}`); // toggle on/off
+    list.push(`images/book1/038_sam_alex_kelli_lila_born.jpg?v=${VERSION}`); // toggle on/off
     list.push(`images/public/170_sam_alex_kelli_lila_family_night.jpg?v=${VERSION}`); // family night
+    list.push(`images/book1/060_Kelli_Lila_west_comm.jpg?v=${VERSION}`); // toggle on/off
+    list.push(`images/book1/050_kelli_alex_gethsemane.jpg?v=${VERSION}`); // toggle on/off
+    list.push(`images/book2/01_sam_alex_kill.jpg?v=${VERSION}`);
+    list.push(`images/book2/02_harmonic_cortex.jpg?v=${VERSION}`);
+    list.push(`images/book2/03_fork_array_destruction.jpg?v=${VERSION}`);
 
 
        // ===== BOOK 1 =====
@@ -167,13 +176,7 @@ document.querySelectorAll(".fade").forEach(el => observer.observe(el));
       list.push(`images/book1/010_cadet_funeral.jpg?v=${VERSION}`);
       list.push(`images/book1/012_shoemaker_families.jpg?v=${VERSION}`);
       list.push(`images/book1/015_shoemaker_disaster.jpg?v=${VERSION}`); // toggle on/off
-      list.push(`images/book1/020_alex_kelli_sam_preg_porch.jpg?v=${VERSION}`); // toggle on/off
-      list.push(`images/book1/025_marriedlife.jpg?v=${VERSION}`); // toggle on/off
-      list.push(`images/book1/035_sam_alex_brink_kelli_pregnant_to_hospital.jpg?v=${VERSION}`); // toggle on/off
-      list.push(`images/book1/038_sam_alex_kelli_lila_born.jpg?v=${VERSION}`); // toggle on/off
       list.push(`images/book1/040_spaghetti_night.jpg?v=${VERSION}`); // toggle on/off
-      list.push(`images/book1/050_kelli_alex_gethsemane.jpg?v=${VERSION}`); // toggle on/off
-      list.push(`images/book1/060_Kelli_Lila_west_comm.jpg?v=${VERSION}`); // toggle on/off
       list.push(`images/book1/070_lila_doesnt_want_to_say_goodbye.jpg?v=${VERSION}`); // toggle on/off
       list.push(`images/book1/080_kelli_waves_goodbye.jpg?v=${VERSION}`); // toggle on/off
       list.push(`images/book1/085_arbitor.jpg?v=${VERSION}`); // toggle on/off
@@ -181,9 +184,6 @@ document.querySelectorAll(".fade").forEach(el => observer.observe(el));
 
     // ===== BOOK 2 =====
     if (levelAtLeast(level, "book2")) {
-      list.push(`images/book2/01_sam_alex_kill.jpg?v=${VERSION}`);
-      list.push(`images/book2/02_harmonic_cortex.jpg?v=${VERSION}`);
-      list.push(`images/book2/03_fork_array_destruction.jpg?v=${VERSION}`);
       list.push(`images/book2/03_pod_pizza_party.jpg?v=${VERSION}`);
       list.push(`images/book2/04_sam_alex_war.jpg?v=${VERSION}`);
       list.push(`images/book2/05_alex_sam_keira.jpg?v=${VERSION}`); // spoiler heavy? toggle
