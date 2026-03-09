@@ -12,6 +12,24 @@ body {
 }
 
 /* =========================
+   PAGE CINEMATIC FADE-IN
+========================= */
+
+#pageFade {
+  position: fixed;
+  inset: 0;
+  background: #000;
+  z-index: 9999;
+  pointer-events: none;
+  opacity: 1;
+  transition: opacity 1.2s ease;
+}
+
+body.loaded #pageFade {
+  opacity: 0;
+}
+
+/* =========================
    HERO
 ========================= */
 
@@ -46,7 +64,29 @@ body {
   opacity: 0.9;
   z-index: 4;
   pointer-events: none;
+
   filter: drop-shadow(0 6px 18px rgba(0,0,0,0.6));
+  overflow: hidden;
+}
+
+.hero-title::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(
+    120deg,
+    transparent 0%,
+    rgba(255,255,255,0.15) 45%,
+    rgba(255,255,255,0.35) 50%,
+    rgba(255,255,255,0.15) 55%,
+    transparent 100%
+  );
+
+  transform: translateX(-120%);
+  mix-blend-mode: screen;
+
+  animation: logoSweep 14s ease-in-out infinite;
 }
 
 /* LAYER A (current image) */
@@ -223,6 +263,33 @@ body {
     text-shadow:
       0 0 2px rgba(255,255,255,0.12),
       0 0 14px rgba(255,255,255,0.08);
+  }
+
+}
+
+@keyframes logoSweep {
+
+  0% {
+    transform: translateX(-120%);
+    opacity: 0;
+  }
+
+  20% {
+    opacity: 0.35;
+  }
+
+  50% {
+    transform: translateX(120%);
+    opacity: 0.6;
+  }
+
+  70% {
+    opacity: 0.35;
+  }
+
+  100% {
+    transform: translateX(120%);
+    opacity: 0;
   }
 
 }

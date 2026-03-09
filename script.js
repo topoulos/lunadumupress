@@ -47,6 +47,7 @@ function highlightSpoiler(level) {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
+  document.body.classList.add("loaded");
   const stored = localStorage.getItem("spoilerLevel") || "none";
   if (!localStorage.getItem("spoilerLevel")) localStorage.setItem("spoilerLevel", "none");
 
