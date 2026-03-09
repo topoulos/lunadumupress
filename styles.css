@@ -46,6 +46,7 @@ body {
   opacity: 0.9;
   z-index: 4;
   pointer-events: none;
+  filter: drop-shadow(0 6px 18px rgba(0,0,0,0.6));
 }
 
 /* LAYER A (current image) */
