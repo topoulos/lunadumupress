@@ -107,7 +107,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
     musicToggle.addEventListener("click", async () => {
       try {
-        if (heroAudio.paused) {
+       if (heroAudio.paused) {
+          heroAudio.currentTime = 0;
+
+          if (typeof window.restartHeroSequence === "function") {
+            window.restartHeroSequence();
+          }
+
           await heroAudio.play();
         } else {
           heroAudio.pause();
@@ -123,6 +129,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
       ignoreWakeUntil = Date.now() + 2200;
 
+      if (hero) {
+        hero.classList.remove("music-started");
+        void hero.offsetWidth;
+        hero.classList.add("music-started");
+      }
+
       setTimeout(() => {
         enterFocusMode();
       }, 800);
@@ -132,6 +144,20 @@ document.addEventListener("DOMContentLoaded", () => {
       clearTimeout(focusTimer);
       updateMusicUI();
       exitFocusMode();
+    });
+
+    heroAudio.addEventListener("ended", async () => {
+      if (typeof window.restartHeroSequence === "function") {
+        window.restartHeroSequence();
+      }
+
+      heroAudio.currentTime = 0;
+
+      try {
+        await heroAudio.play();
+      } catch (err) {
+        console.error("Audio replay failed:", err);
+      }
     });
 
     ["touchstart", "keydown"].forEach((evt) => {
@@ -299,6 +325,10 @@ document.querySelectorAll(".fade").forEach(el => observer.observe(el));
 
   // Build on load
   rebuildFromSpoilerLevel();
+
+  window.restartHeroSequence = function() {
+    rebuildFromSpoilerLevel();
+  };
 
   // Rebuild when the user changes spoiler level (in this tab)
   const originalSetSpoiler = window.setSpoiler;
