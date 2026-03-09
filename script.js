@@ -105,23 +105,34 @@ document.addEventListener("DOMContentLoaded", () => {
       );
     };
 
-    musicToggle.addEventListener("click", async () => {
+  musicToggle.addEventListener("click", async () => {
       try {
-       if (heroAudio.paused) {
+        if (heroAudio.paused) {
           heroAudio.currentTime = 0;
 
           if (typeof window.restartHeroSequence === "function") {
             window.restartHeroSequence();
           }
 
+          hero.classList.remove("music-started");
+          void hero.offsetWidth;
+          hero.classList.add("music-started");
+
+          hero.classList.remove("cinematic-start");
+          void hero.offsetWidth;
+          hero.classList.add("cinematic-start");
+
           await heroAudio.play();
         } else {
           heroAudio.pause();
         }
+
+        updateMusicUI();
       } catch (err) {
         console.error("Audio playback failed:", err);
       }
     });
+  }
 
     heroAudio.addEventListener("play", () => {
       clearTimeout(focusTimer);
@@ -198,6 +209,8 @@ document.querySelectorAll(".fade").forEach(el => observer.observe(el));
   let idx = 0;
   let showingA = true;
   let images = [];
+  let touchStartX = 0;
+  let touchEndX = 0;
 
   function levelAtLeast(level, required) {
     const order = ["none", "book1", "book2", "book3"];
@@ -286,29 +299,34 @@ document.querySelectorAll(".fade").forEach(el => observer.observe(el));
     hero.style.setProperty("--hero-b-opacity", "0");
   }
 
-  function startRotation() {
-    const HOLD_MS = 6000;
+  function showSlide(newIdx) {
+    if (!images.length) return;
 
+    const normalizedIdx = (newIdx + images.length) % images.length;
+
+    if (showingA) {
+      hero.style.setProperty("--hero-img-b", `url("${images[normalizedIdx]}")`);
+      hero.style.setProperty("--hero-b-opacity", "1");
+      hero.style.setProperty("--hero-a-opacity", "0");
+      showingA = false;
+    } else {
+      hero.style.setProperty("--hero-img-a", `url("${images[normalizedIdx]}")`);
+      hero.style.setProperty("--hero-a-opacity", "1");
+      hero.style.setProperty("--hero-b-opacity", "0");
+      showingA = true;
+    }
+
+    idx = normalizedIdx;
+  }
+
+  function startRotation() {
+    const HOLD_MS = window.innerWidth < 700 ? 12000 : 6000;
+  
     if (intervalId) clearInterval(intervalId);
 
     intervalId = setInterval(() => {
       if (!images.length) return;
-
-      const nextIdx = (idx + 1) % images.length;
-
-      if (showingA) {
-        hero.style.setProperty("--hero-img-b", `url("${images[nextIdx]}")`);
-        hero.style.setProperty("--hero-b-opacity", "1");
-        hero.style.setProperty("--hero-a-opacity", "0");
-        showingA = false;
-      } else {
-        hero.style.setProperty("--hero-img-a", `url("${images[nextIdx]}")`);
-        hero.style.setProperty("--hero-a-opacity", "1");
-        hero.style.setProperty("--hero-b-opacity", "0");
-        showingA = true;
-      }
-
-      idx = nextIdx;
+      showSlide(idx + 1);
     }, HOLD_MS);
   }
 
@@ -325,6 +343,30 @@ document.querySelectorAll(".fade").forEach(el => observer.observe(el));
 
   // Build on load
   rebuildFromSpoilerLevel();
+
+  hero.addEventListener("touchstart", (e) => {
+    if (window.innerWidth >= 700) return;
+    touchStartX = e.changedTouches[0].clientX;
+  }, { passive: true });
+
+  hero.addEventListener("touchend", (e) => {
+    if (window.innerWidth >= 700) return;
+
+    touchEndX = e.changedTouches[0].clientX;
+    const deltaX = touchEndX - touchStartX;
+    const swipeThreshold = 40;
+
+    if (Math.abs(deltaX) < swipeThreshold) return;
+
+    if (deltaX < 0) {
+      showSlide(idx + 1); // swipe left = next
+    } else {
+      showSlide(idx - 1); // swipe right = previous
+    }
+
+    startRotation(); // restart timer so it doesn't jump immediately
+  }, { passive: true });
+
 
   window.restartHeroSequence = function() {
     rebuildFromSpoilerLevel();

@@ -74,25 +74,6 @@ body.loaded #pageFade {
   height: auto;
 }
 
-.hero-title-wrap {
-  position: absolute;
-  top: 7vh;
-  left: 50%;
-  transform: translateX(-50%);
-  width: min(820px, 86vw);
-  opacity: 0.9;
-  z-index: 4;
-  pointer-events: none;
-
-  filter: drop-shadow(0 6px 18px rgba(0,0,0,0.6));
-  overflow: hidden;
-}
-
-.hero-title {
-  width: 100%;
-  display: block;
-}
-
 /* subtle glint layer */
 .hero-title-wrap::after {
   content: "";
@@ -247,6 +228,31 @@ body.loaded #pageFade {
   opacity: 1;
 }
 
+.hero.cinematic-start::before,
+.hero.cinematic-start::after {
+  animation: heroIntroPush 10s ease forwards;
+}
+
+@keyframes heroIntroPush {
+
+  0% {
+    transform: scale(1.00) translate3d(0,0,0);
+    filter: brightness(0.9);
+    opacity: 0;
+  }
+
+  20% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(1.06) translate3d(0.5%, -0.3%, 0);
+    filter: brightness(1.02);
+    opacity: 1;
+  }
+
+}
+
 @keyframes heroDrift {
 
   0% {
@@ -285,25 +291,23 @@ body.loaded #pageFade {
 }
 
 @keyframes logoGlint {
-
   0% {
     transform: translateX(-140%);
     opacity: 0;
   }
 
   20% {
-    opacity: 0.25;
+    opacity: 0.12;
   }
 
   45% {
-    opacity: 0.5;
+    opacity: 0.22;
   }
 
   100% {
     transform: translateX(140%);
     opacity: 0;
   }
-
 }
 
 /* CTA Button */
@@ -668,6 +672,12 @@ footer .copyright {
    RESPONSIVE
 ========================= */
 
+@media (max-width: 700px) {
+  .hero {
+    touch-action: pan-y;
+  }
+}
+
 @media (max-width: 800px) {
   .about {
     flex-direction: column;
@@ -855,4 +865,62 @@ footer a:hover {
 
 .music-credit a:hover {
   color: #fff;
+}
+
+/* =========================
+   MOBILE HERO LAYOUT
+========================= */
+
+@media (max-width: 700px) {
+
+  .hero {
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 2rem 1rem 3rem;
+    min-height: auto;
+    padding-top: max(2rem, env(safe-area-inset-top));
+  }
+
+  /* create framed slideshow window */
+  .hero::before,
+  .hero::after {
+    inset: 0;
+    background-position: center;
+    animation-duration: 40s;
+  }
+
+  /* crop the hero visually */
+  .hero {
+    height: 58vw;
+    max-height: 380px;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 1rem;
+  }
+
+  /* title moves above slideshow */
+  .hero-title-wrap {
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: none;
+    width: 82vw;
+    margin-bottom: 1rem;
+  }
+
+  /* text stack below */
+  .hero-content {
+    padding: 1rem;
+    text-align: center;
+    transform: none !important;
+    opacity: 1 !important;
+    filter: none !important;
+  }
+
+  .hero-overlay,
+  .hero-grain,
+  .hero-stars {
+    display: none;
+  }
+
 }
