@@ -141,6 +141,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
     updateMusicUI();
   }
+
+  ["mousemove", "touchstart", "click", "keydown"].forEach(evt => {
+    window.addEventListener(evt, wakeHeroTemporarily, { passive: true });
+  });
+  
 });
 
 const observer = new IntersectionObserver(
@@ -160,10 +165,6 @@ document.querySelectorAll(".decode").forEach((el) => {
 });
 
 document.querySelectorAll(".fade").forEach(el => observer.observe(el));
-
-["mousemove", "touchstart", "click", "keydown"].forEach(evt => {
-    window.addEventListener(evt, wakeHeroTemporarily, { passive: true });
-  });
 
 (() => {
   const hero = document.getElementById("hero");
