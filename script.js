@@ -33,35 +33,15 @@ function highlightSpoiler(level) {
 
   if (activeBtn) activeBtn.classList.add("active");
 }
-
-function highlightSpoiler(level) {
-  document.querySelectorAll(".spoiler-settings button").forEach(btn => {
-    btn.classList.remove("active");
-  });
-
-  const activeBtn = document.querySelector(
-    `.spoiler-settings button[onclick="setSpoiler('${level}')"]`
-  );
-
-  if (activeBtn) activeBtn.classList.add("active");
-}
-
   
-  window.addEventListener("scroll", () => {
-    if (!heroAudio.paused) {
-      hero.classList.remove("is-focused");
-      hero.classList.add("is-awake");
-    }
-  }, { passive: true });
-
-  heroAudio.addEventListener("pause", () => {
-    hero.classList.remove("is-focused", "is-awake");
-  });
-
+ 
 document.addEventListener("DOMContentLoaded", () => {
   document.body.classList.add("loaded");
+
   const stored = localStorage.getItem("spoilerLevel") || "none";
-  if (!localStorage.getItem("spoilerLevel")) localStorage.setItem("spoilerLevel", "none");
+  if (!localStorage.getItem("spoilerLevel")) {
+    localStorage.setItem("spoilerLevel", "none");
+  }
 
   applySpoilers();
   highlightSpoiler(stored);
@@ -75,16 +55,24 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   const hero = document.getElementById("hero");
+  const musicToggle = document.getElementById("musicToggle");
+  const heroAudio = document.getElementById("heroAudio");
+
   let focusTimer = null;
 
   function enterFocusMode() {
-    if (!hero || heroAudio.paused) return;
+    if (!hero || !heroAudio || heroAudio.paused) return;
     hero.classList.remove("is-awake");
     hero.classList.add("is-focused");
   }
 
+  function exitFocusMode() {
+    if (!hero) return;
+    hero.classList.remove("is-focused", "is-awake");
+  }
+
   function wakeHeroTemporarily() {
-    if (!hero || heroAudio.paused) return;
+    if (!hero || !heroAudio || heroAudio.paused) return;
 
     hero.classList.remove("is-focused");
     hero.classList.add("is-awake");
@@ -95,9 +83,6 @@ document.addEventListener("DOMContentLoaded", () => {
       hero.classList.add("is-focused");
     }, 3500);
   }
-
-  const musicToggle = document.getElementById("musicToggle");
-  const heroAudio = document.getElementById("heroAudio");
 
   if (musicToggle && heroAudio) {
     const label = musicToggle.querySelector(".music-label");
@@ -116,36 +101,39 @@ document.addEventListener("DOMContentLoaded", () => {
 
     musicToggle.addEventListener("click", async () => {
       try {
-
-        if (!heroAudio.paused) {
-          setTimeout(() => {
-            enterFocusMode();
-          }, 1800);
-        } else {
-          hero.classList.remove("is-focused", "is-awake");
-        }
-
         if (heroAudio.paused) {
           await heroAudio.play();
         } else {
           heroAudio.pause();
         }
-        updateMusicUI();
       } catch (err) {
         console.error("Audio playback failed:", err);
       }
     });
 
-    heroAudio.addEventListener("play", updateMusicUI);
-    heroAudio.addEventListener("pause", updateMusicUI);
+    heroAudio.addEventListener("play", () => {
+      clearTimeout(focusTimer);
+      updateMusicUI();
+
+      setTimeout(() => {
+        enterFocusMode();
+      }, 800);
+    });
+
+    heroAudio.addEventListener("pause", () => {
+      clearTimeout(focusTimer);
+      updateMusicUI();
+      exitFocusMode();
+    });
+
+    ["mousemove", "touchstart", "click", "keydown"].forEach((evt) => {
+      window.addEventListener(evt, wakeHeroTemporarily, { passive: true });
+    });
+
+    window.addEventListener("scroll", wakeHeroTemporarily, { passive: true });
 
     updateMusicUI();
   }
-
-  ["mousemove", "touchstart", "click", "keydown"].forEach(evt => {
-    window.addEventListener(evt, wakeHeroTemporarily, { passive: true });
-  });
-  
 });
 
 const observer = new IntersectionObserver(
