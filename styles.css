@@ -177,6 +177,42 @@ body.loaded #pageFade {
   animation: starDrift 120s linear infinite;
 }
 
+/* cinematic focus mode after music starts */
+.hero-content {
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s ease,
+    filter 0.8s ease;
+}
+
+.hero.is-focused .hero-content {
+  opacity: 0.32;
+  transform: translateY(2.2rem) scale(0.94);
+  filter: blur(0.5px);
+}
+
+.hero.is-focused .hero-ctas,
+.hero.is-focused .hero-music {
+  opacity: 0.55;
+}
+
+.hero-ctas,
+.hero-music {
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+/* wake back up when user interacts */
+.hero.is-awake .hero-content {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  filter: blur(0);
+}
+
+.hero.is-awake .hero-ctas,
+.hero.is-awake .hero-music {
+  opacity: 1;
+}
+
 @keyframes heroDrift {
 
   0% {

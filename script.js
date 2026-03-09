@@ -46,6 +46,21 @@ function highlightSpoiler(level) {
   if (activeBtn) activeBtn.classList.add("active");
 }
 
+  ["mousemove", "touchstart", "click", "keydown"].forEach(evt => {
+    window.addEventListener(evt, wakeHeroTemporarily, { passive: true });
+  });
+
+  window.addEventListener("scroll", () => {
+    if (!heroAudio.paused) {
+      hero.classList.remove("is-focused");
+      hero.classList.add("is-awake");
+    }
+  }, { passive: true });
+
+  heroAudio.addEventListener("pause", () => {
+    hero.classList.remove("is-focused", "is-awake");
+  });
+
 document.addEventListener("DOMContentLoaded", () => {
   document.body.classList.add("loaded");
   const stored = localStorage.getItem("spoilerLevel") || "none";
@@ -60,6 +75,28 @@ document.addEventListener("DOMContentLoaded", () => {
     select.addEventListener("change", (e) => {
       setSpoiler(e.target.value);
     });
+  }
+
+  const hero = document.getElementById("hero");
+  let focusTimer = null;
+
+  function enterFocusMode() {
+    if (!hero || heroAudio.paused) return;
+    hero.classList.remove("is-awake");
+    hero.classList.add("is-focused");
+  }
+
+  function wakeHeroTemporarily() {
+    if (!hero || heroAudio.paused) return;
+
+    hero.classList.remove("is-focused");
+    hero.classList.add("is-awake");
+
+    clearTimeout(focusTimer);
+    focusTimer = setTimeout(() => {
+      hero.classList.remove("is-awake");
+      hero.classList.add("is-focused");
+    }, 3500);
   }
 
   const musicToggle = document.getElementById("musicToggle");
@@ -82,6 +119,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
     musicToggle.addEventListener("click", async () => {
       try {
+
+        if (!heroAudio.paused) {
+          setTimeout(() => {
+            enterFocusMode();
+          }, 1800);
+        } else {
+          hero.classList.remove("is-focused", "is-awake");
+        }
+
         if (heroAudio.paused) {
           await heroAudio.play();
         } else {
