@@ -102,27 +102,32 @@ body {
 /* cinematic Ken Burns drift + pan */
 .hero::before,
 .hero::after {
-  will-change: transform;
-  animation: heroDrift 18s ease-in-out infinite alternate;
+  will-change: transform, filter;
+  animation: heroDrift 26s ease-in-out infinite alternate;
 }
 
-/* offset so the layers move differently during crossfades */
+/* offset the two layers so the motion doesn't match perfectly */
 .hero::before {
-  animation-delay: -9s;
+  animation-delay: -13s;
 }
 
 @keyframes heroDrift {
+
   0% {
-    transform: scale(1.03) translate3d(0%, 0%, 0);
+    transform: scale(1.02) translate3d(0%, 0%, 0);
+    filter: brightness(0.98);
   }
 
   50% {
-    transform: scale(1.06) translate3d(-2%, -1%, 0);
+    transform: scale(1.05) translate3d(-1.5%, -0.8%, 0);
+    filter: brightness(1.02);
   }
 
   100% {
-    transform: scale(1.08) translate3d(2%, 1%, 0);
+    transform: scale(1.08) translate3d(1.5%, 0.8%, 0);
+    filter: brightness(1.04);
   }
+
 }
 
 @keyframes grainMove {
