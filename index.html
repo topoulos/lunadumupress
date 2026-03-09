@@ -30,10 +30,29 @@
 
     <div class="hero-ctas">
       <a class="cta" href="#join">Get Launch Alerts</a>
-      <a class="cta secondary" href="https://shop.lunadumupress.com">Enter the Store</a>
+      <a class="cta secondary" href="https://shop.lunadumupress.com" target="_blank" rel="noopener noreferrer">Enter the Store</a>
+    </div>
+
+    <div class="hero-music">
+      <button id="musicToggle" class="music-btn" aria-label="Play background music">
+        <span class="music-icon">♪</span>
+        <span class="music-label">Play Theme</span>
+      </button>
+
+      <div class="music-credit">
+        “Frankincense and Myrrh” by
+        <a href="https://www.scottbuckley.com.au/" target="_blank" rel="noopener noreferrer">
+          Scott Buckley
+        </a>
+        — CC BY 4.0
+      </div>
+
+      <audio id="heroAudio" loop preload="none">
+        <source src="audio/sb_frankincenseandmyrrh.mp3" type="audio/mpeg" />
+        Your browser does not support the audio element.
+      </audio>
     </div>
   </div>
- 
 </section>
 
 <!-- EXTRAS (optional / spoiler gated) 

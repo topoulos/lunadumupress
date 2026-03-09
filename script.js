@@ -1,16 +1,15 @@
-function setSpoiler(level) {
+window.setSpoiler = function(level) {
   localStorage.setItem("spoilerLevel", level);
   applySpoilers();
   highlightSpoiler(level);
 
   const select = document.getElementById("spoilerLevel");
   if (select) select.value = level;
-}
+};
 
 function applySpoilers() {
   const level = localStorage.getItem("spoilerLevel") || "none";
-
-  const order = ["none","book1","book2","book3"];
+  const order = ["none", "book1", "book2", "book3"];
 
   document.querySelectorAll("[data-spoiler]").forEach(el => {
     const required = el.dataset.spoiler;
@@ -21,6 +20,18 @@ function applySpoilers() {
       el.style.display = "none";
     }
   });
+}
+
+function highlightSpoiler(level) {
+  document.querySelectorAll(".spoiler-settings button").forEach(btn => {
+    btn.classList.remove("active");
+  });
+
+  const activeBtn = document.querySelector(
+    `.spoiler-settings button[onclick="setSpoiler('${level}')"]`
+  );
+
+  if (activeBtn) activeBtn.classList.add("active");
 }
 
 function highlightSpoiler(level) {
@@ -48,6 +59,43 @@ document.addEventListener("DOMContentLoaded", () => {
     select.addEventListener("change", (e) => {
       setSpoiler(e.target.value);
     });
+  }
+
+  const musicToggle = document.getElementById("musicToggle");
+  const heroAudio = document.getElementById("heroAudio");
+
+  if (musicToggle && heroAudio) {
+    const label = musicToggle.querySelector(".music-label");
+    const icon = musicToggle.querySelector(".music-icon");
+
+    const updateMusicUI = () => {
+      const isPlaying = !heroAudio.paused;
+      musicToggle.classList.toggle("playing", isPlaying);
+      if (label) label.textContent = isPlaying ? "Pause Theme" : "Play Theme";
+      if (icon) icon.textContent = "♪";
+      musicToggle.setAttribute(
+        "aria-label",
+        isPlaying ? "Pause background music" : "Play background music"
+      );
+    };
+
+    musicToggle.addEventListener("click", async () => {
+      try {
+        if (heroAudio.paused) {
+          await heroAudio.play();
+        } else {
+          heroAudio.pause();
+        }
+        updateMusicUI();
+      } catch (err) {
+        console.error("Audio playback failed:", err);
+      }
+    });
+
+    heroAudio.addEventListener("play", updateMusicUI);
+    heroAudio.addEventListener("pause", updateMusicUI);
+
+    updateMusicUI();
   }
 });
 
@@ -89,6 +137,7 @@ document.querySelectorAll(".fade").forEach(el => observer.observe(el));
     const list = [];
 
     // ===== PUBLIC (no spoilers) =====
+    list.push(`images/public/005_sam_kelli_cornfield_church.jpg?v=${VERSION}`);          // porch swing
     list.push(`images/public/010_alex_kelli_porch.jpg?v=${VERSION}`);          // porch swing
     list.push(`images/public/020_alex_kelli_hair.jpg?v=${VERSION}`);           // hair dye
     list.push(`images/public/025_sam_arienne.jpg?v=${VERSION}`);           // pizza pod
@@ -113,11 +162,7 @@ document.querySelectorAll(".fade").forEach(el => observer.observe(el));
     list.push(`images/public/170_sam_alex_kelli_lila_family_night.jpg?v=${VERSION}`); // family night
 
 
-    // IMPORTANT: match your actual filename EXACTLY.
-    // If your file is still "recruites" (with an e), use that spelling:
-    list.push(`images/public/06_sam_alex_running_recruits.jpg?v=${VERSION}`); // recruits run (CHECK NAME)
-
-    // ===== BOOK 1 =====
+       // ===== BOOK 1 =====
     if (levelAtLeast(level, "book1")) {
       list.push(`images/book1/010_cadet_funeral.jpg?v=${VERSION}`);
       list.push(`images/book1/012_shoemaker_families.jpg?v=${VERSION}`);
