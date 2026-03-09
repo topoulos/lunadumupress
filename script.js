@@ -59,6 +59,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const heroAudio = document.getElementById("heroAudio");
 
   let focusTimer = null;
+  let ignoreWakeUntil = 0;
 
   function enterFocusMode() {
     if (!hero || !heroAudio || heroAudio.paused) return;
@@ -73,14 +74,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function wakeHeroTemporarily() {
     if (!hero || !heroAudio || heroAudio.paused) return;
+    if (Date.now() < ignoreWakeUntil) return;
 
     hero.classList.remove("is-focused");
     hero.classList.add("is-awake");
 
     clearTimeout(focusTimer);
     focusTimer = setTimeout(() => {
-      hero.classList.remove("is-awake");
-      hero.classList.add("is-focused");
+      if (!heroAudio.paused) {
+        hero.classList.remove("is-awake");
+        hero.classList.add("is-focused");
+      }
     }, 3500);
   }
 
@@ -91,8 +95,10 @@ document.addEventListener("DOMContentLoaded", () => {
     const updateMusicUI = () => {
       const isPlaying = !heroAudio.paused;
       musicToggle.classList.toggle("playing", isPlaying);
+
       if (label) label.textContent = isPlaying ? "Pause Theme" : "Play Theme";
       if (icon) icon.textContent = "♪";
+
       musicToggle.setAttribute(
         "aria-label",
         isPlaying ? "Pause background music" : "Play background music"
@@ -114,6 +120,8 @@ document.addEventListener("DOMContentLoaded", () => {
     heroAudio.addEventListener("play", () => {
       clearTimeout(focusTimer);
       updateMusicUI();
+
+      ignoreWakeUntil = Date.now() + 2200;
 
       setTimeout(() => {
         enterFocusMode();
@@ -253,7 +261,6 @@ document.querySelectorAll(".fade").forEach(el => observer.observe(el));
   }
 
   function startRotation() {
-    const FADE_MS = 1200;
     const HOLD_MS = 6000;
 
     if (intervalId) clearInterval(intervalId);

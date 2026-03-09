@@ -69,7 +69,7 @@ body.loaded #pageFade {
   overflow: hidden;
 }
 
-.hero-title::after {
+.hero-title-wrap::after {
   content: "";
   position: absolute;
   inset: 0;
@@ -179,21 +179,15 @@ body.loaded #pageFade {
 
 /* cinematic focus mode after music starts */
 .hero-content {
+  position: relative;
+  z-index: 3;
+  max-width: 760px;
+  padding: 2rem;
+  text-align: center;
   transition:
     opacity 0.8s ease,
     transform 0.8s ease,
     filter 0.8s ease;
-}
-
-.hero.is-focused .hero-content {
-  opacity: 0.32;
-  transform: translateY(2.2rem) scale(0.94);
-  filter: blur(0.5px);
-}
-
-.hero.is-focused .hero-ctas,
-.hero.is-focused .hero-music {
-  opacity: 0.55;
 }
 
 .hero-ctas,
@@ -201,7 +195,17 @@ body.loaded #pageFade {
   transition: opacity 0.8s ease, transform 0.8s ease;
 }
 
-/* wake back up when user interacts */
+.hero.is-focused .hero-content {
+  opacity: 0.42;
+  transform: translateY(2rem) scale(0.96);
+  filter: blur(0.3px);
+}
+
+.hero.is-focused .hero-ctas,
+.hero.is-focused .hero-music {
+  opacity: 0.68;
+}
+
 .hero.is-awake .hero-content {
   opacity: 1;
   transform: translateY(0) scale(1);
@@ -235,16 +239,6 @@ body.loaded #pageFade {
 @keyframes grainMove {
   0%   { background-position: center, 0 0; }
   100% { background-position: center, 200px 200px; }
-}
-
-.hero-content {
-  transition: opacity 0.8s ease, transform 0.8s ease;
-  position: relative;
-  z-index: 3;
-
-  max-width: 760px;
-  padding: 2rem;
-  text-align: center;
 }
 
 .hero.is-fading .hero-content {
@@ -380,6 +374,19 @@ body.loaded #pageFade {
 @media (max-height: 820px) {
   .hero { padding: 5rem 0; }
   .hero-tagline { margin: 1rem auto; }
+}
+
+@media (max-width: 700px) {
+  .hero.is-focused .hero-content {
+    opacity: 0.62;
+    transform: translateY(1rem) scale(0.98);
+    filter: blur(0);
+  }
+
+  .hero.is-focused .hero-ctas,
+  .hero.is-focused .hero-music {
+    opacity: 0.82;
+  }
 }
 
 /* =========================
