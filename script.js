@@ -89,11 +89,29 @@ document.querySelectorAll(".fade").forEach(el => observer.observe(el));
     const list = [];
 
     // ===== PUBLIC (no spoilers) =====
-    list.push(`images/public/01_alex_kelli_porch.jpg?v=${VERSION}`);          // porch swing
-    list.push(`images/public/02_alex_kelli_hair.jpg?v=${VERSION}`);           // hair dye
-    list.push(`images/public/03_pod_pizza_party.jpg?v=${VERSION}`);           // pizza pod
-    list.push(`images/public/04_church_cornfield_earth.jpg?v=${VERSION}`);    // cornfield church
-    list.push(`images/public/05_sam_alex_kelli_lila_family_night.jpg?v=${VERSION}`); // family night
+    list.push(`images/public/010_alex_kelli_porch.jpg?v=${VERSION}`);          // porch swing
+    list.push(`images/public/020_alex_kelli_hair.jpg?v=${VERSION}`);           // hair dye
+    list.push(`images/public/025_sam_arienne.jpg?v=${VERSION}`);           // pizza pod
+    list.push(`images/public/030_sam_alex_scale_wall.jpg?v=${VERSION}`);    // sam and alex scale wall
+    list.push(`images/public/035_sam_alex_west_comm.jpg?v=${VERSION}`); // sam and alex sneak into west comm
+    list.push(`images/public/040_sam_alex_running_recruits.jpg?v=${VERSION}`); // sam and alex running
+    list.push(`images/public/045_sam_alex_bunks.jpg?v=${VERSION}`); // sam and alex bunks night
+    list.push(`images/public/050_sam_alex_jamestown_mess_hall.jpg?v=${VERSION}`); // friends in mess hall
+    list.push(`images/public/060_sam_alex_comfort.jpg?v=${VERSION}`); // sam holding alex in barracks
+    list.push(`images/public/070_sam_alex_trainging_photo.jpg?v=${VERSION}`); // sam and alex pose in training gear
+    list.push(`images/public/075_west_comm_tower_wide_shot.jpg?v=${VERSION}`); // west comm tower wide shot
+    list.push(`images/public/080_sam_alex_west_comm_sneak.jpg?v=${VERSION}`); // family night
+    list.push(`images/public/090_sam_alex_kelli_west_comm.jpg?v=${VERSION}`); // family night
+    list.push(`images/public/100_alex_kelli_sam_rover.jpg?v=${VERSION}`); // family night
+    list.push(`images/public/105_sam_kelli_karaoke_bar2.jpg?v=${VERSION}`); // family night
+    list.push(`images/public/110_sam_alex_charge_tower_fenyang.jpg?v=${VERSION}`); // family night
+    list.push(`images/public/120_water_tower_battle.jpg?v=${VERSION}`); // family night
+    list.push(`images/public/130_sam_alex_graduation.jpg?v=${VERSION}`); // family night
+    list.push(`images/public/140_sam_alex_kelli_after_graduation.jpg?v=${VERSION}`); // family night
+    list.push(`images/public/150_wedding_photo_sam_alex_kelli.jpg?v=${VERSION}`); // family night
+    list.push(`images/public/160_sam_kelli_hopper.jpg?v=${VERSION}`); // family night
+    list.push(`images/public/170_sam_alex_kelli_lila_family_night.jpg?v=${VERSION}`); // family night
+
 
     // IMPORTANT: match your actual filename EXACTLY.
     // If your file is still "recruites" (with an e), use that spelling:
@@ -101,9 +119,19 @@ document.querySelectorAll(".fade").forEach(el => observer.observe(el));
 
     // ===== BOOK 1 =====
     if (levelAtLeast(level, "book1")) {
-      list.push(`images/book1/01_alex_kelli_sam_rover.jpg?v=${VERSION}`);
-      list.push(`images/book1/02_alex_kelli_sam_preg_porch.jpg?v=${VERSION}`);
-      // list.push(`images/book1/03_whatever.jpg?v=${VERSION}`); // toggle on/off
+      list.push(`images/book1/010_cadet_funeral.jpg?v=${VERSION}`);
+      list.push(`images/book1/012_shoemaker_families.jpg?v=${VERSION}`);
+      list.push(`images/book1/015_shoemaker_disaster.jpg?v=${VERSION}`); // toggle on/off
+      list.push(`images/book1/020_alex_kelli_sam_preg_porch.jpg?v=${VERSION}`); // toggle on/off
+      list.push(`images/book1/025_marriedlife.jpg?v=${VERSION}`); // toggle on/off
+      list.push(`images/book1/035_sam_alex_brink_kelli_pregnant_to_hospital.jpg?v=${VERSION}`); // toggle on/off
+      list.push(`images/book1/038_sam_alex_kelli_lila_born.jpg?v=${VERSION}`); // toggle on/off
+      list.push(`images/book1/040_spaghetti_night.jpg?v=${VERSION}`); // toggle on/off
+      list.push(`images/book1/050_kelli_alex_gethsemane.jpg?v=${VERSION}`); // toggle on/off
+      list.push(`images/book1/060_Kelli_Lila_west_comm.jpg?v=${VERSION}`); // toggle on/off
+      list.push(`images/book1/070_lila_doesnt_want_to_say_goodbye.jpg?v=${VERSION}`); // toggle on/off
+      list.push(`images/book1/080_kelli_waves_goodbye.jpg?v=${VERSION}`); // toggle on/off
+      list.push(`images/book1/085_arbitor.jpg?v=${VERSION}`); // toggle on/off
     }
 
     // ===== BOOK 2 =====
@@ -111,9 +139,11 @@ document.querySelectorAll(".fade").forEach(el => observer.observe(el));
       list.push(`images/book2/01_sam_alex_kill.jpg?v=${VERSION}`);
       list.push(`images/book2/02_harmonic_cortex.jpg?v=${VERSION}`);
       list.push(`images/book2/03_fork_array_destruction.jpg?v=${VERSION}`);
-
-      // list.push(`images/book2/05_alex_sam_keira.jpg?v=${VERSION}`); // spoiler heavy? toggle
+      list.push(`images/book2/03_pod_pizza_party.jpg?v=${VERSION}`);
+      list.push(`images/book2/04_sam_alex_war.jpg?v=${VERSION}`);
+      list.push(`images/book2/05_alex_sam_keira.jpg?v=${VERSION}`); // spoiler heavy? toggle
       list.push(`images/book2/06_lila_tim_carnival.jpg?v=${VERSION}`);
+      list.push(`images/book2/07_alex_sam_remember.jpg?v=${VERSION}`);
       list.push(`images/book2/08_kellis_message.jpg?v=${VERSION}`);
       list.push(`images/book2/09_killing_olosk.jpg?v=${VERSION}`);
       list.push(`images/book2/10_missing_boy.jpg?v=${VERSION}`);
