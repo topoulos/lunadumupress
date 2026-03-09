@@ -34,6 +34,7 @@ body {
 .hero-content h1 {
   letter-spacing: 0.22em;
   font-weight: 600;
+  animation: titleGlow 18s ease-in-out infinite alternate;
 }
 
 .hero-title {
@@ -201,6 +202,28 @@ body {
 @keyframes grainFloat {
   0%   { transform: translate3d(0,0,0); }
   100% { transform: translate3d(1.5%, -1%, 0); }
+}
+
+@keyframes titleGlow {
+
+  0% {
+    text-shadow:
+      0 0 0px rgba(255,255,255,0.0),
+      0 0 8px rgba(255,255,255,0.05);
+  }
+
+  50% {
+    text-shadow:
+      0 0 6px rgba(255,255,255,0.25),
+      0 0 22px rgba(255,255,255,0.15);
+  }
+
+  100% {
+    text-shadow:
+      0 0 2px rgba(255,255,255,0.12),
+      0 0 14px rgba(255,255,255,0.08);
+  }
+
 }
 
 /* hero responsive */
