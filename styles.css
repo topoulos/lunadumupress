@@ -74,25 +74,49 @@ body.loaded #pageFade {
   height: auto;
 }
 
+.hero-title-wrap {
+  position: absolute;
+  top: 7vh;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(820px, 86vw);
+  opacity: 0.9;
+  z-index: 4;
+  pointer-events: none;
+
+  filter: drop-shadow(0 6px 18px rgba(0,0,0,0.6));
+  overflow: hidden;
+}
+
+.hero-title {
+  width: 100%;
+  display: block;
+}
+
+/* subtle glint layer */
 .hero-title-wrap::after {
   content: "";
   position: absolute;
   inset: 0;
+
   background: linear-gradient(
     120deg,
     transparent 0%,
-    rgba(255,255,255,0.03) 45%,
-    rgba(255,255,255,0.10) 50%,
-    rgba(255,255,255,0.03) 55%,
+    rgba(255,255,255,0.04) 45%,
+    rgba(255,255,255,0.14) 50%,
+    rgba(255,255,255,0.04) 55%,
     transparent 100%
   );
-  transform: translateX(-120%);
+
+  transform: translateX(-140%);
   opacity: 0;
+
   mix-blend-mode: screen;
 }
 
+/* glint triggered when music starts */
 .hero.music-started .hero-title-wrap::after {
-  animation: logoSweep 8s ease-out 1;
+  animation: logoGlint 3.2s ease-out 1;
 }
 
 /* LAYER A (current image) */
@@ -258,6 +282,28 @@ body.loaded #pageFade {
   font-size: 1.2rem;
   line-height: 1.6;
   font-weight: 500;
+}
+
+@keyframes logoGlint {
+
+  0% {
+    transform: translateX(-140%);
+    opacity: 0;
+  }
+
+  20% {
+    opacity: 0.25;
+  }
+
+  45% {
+    opacity: 0.5;
+  }
+
+  100% {
+    transform: translateX(140%);
+    opacity: 0;
+  }
+
 }
 
 /* CTA Button */
