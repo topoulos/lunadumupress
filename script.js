@@ -217,7 +217,7 @@ document.querySelectorAll(".fade").forEach(el => observer.observe(el));
 
   function startRotation() {
     const FADE_MS = 1200;
-    const HOLD_MS = 4000;
+    const HOLD_MS = 6000;
 
     if (intervalId) clearInterval(intervalId);
 
