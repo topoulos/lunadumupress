@@ -97,7 +97,7 @@ body.loaded #pageFade {
 
 /* glint triggered when music starts */
 .hero.music-started .hero-title-wrap::after {
-  animation: logoGlint 3.2s ease-out 1;
+  animation: logoGlint 13.2s ease-out 1;
 }
 
 /* LAYER A (current image) */
@@ -304,11 +304,11 @@ body.loaded #pageFade {
   }
 
   20% {
-    opacity: 0.12;
+    opacity: 0.32;
   }
 
   45% {
-    opacity: 0.22;
+    opacity: 0.52;
   }
 
   100% {
