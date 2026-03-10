@@ -105,7 +105,7 @@ document.addEventListener("DOMContentLoaded", () => {
       );
     };
 
-  musicToggle.addEventListener("click", async () => {
+    musicToggle.addEventListener("click", async () => {
       try {
         if (heroAudio.paused) {
           heroAudio.currentTime = 0;
@@ -132,8 +132,8 @@ document.addEventListener("DOMContentLoaded", () => {
         console.error("Audio playback failed:", err);
       }
     });
-  }
 
+    heroAudio.addEventListener("play", () => {
     heroAudio.addEventListener("play", () => {
       clearTimeout(focusTimer);
       updateMusicUI();
