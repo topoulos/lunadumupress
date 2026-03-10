@@ -146,12 +146,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
       cinematicTimer = setTimeout(() => {
         hero.classList.remove("cinematic-start");
-      }, window.innerWidth < 700 ? 9000 : 4000);
+      }, window.innerWidth < 700 ? 9000 : 6000);
     }
 
     setTimeout(() => {
       enterFocusMode();
-    }, 800);
+    }, 800); f
 
     shouldRunIntro = false;
   });
@@ -340,7 +340,7 @@ document.querySelectorAll(".fade").forEach(el => observer.observe(el));
   }
 
   function startRotation() {
-    const HOLD_MS = window.innerWidth < 700 ? 12000 : 7000;
+    const HOLD_MS = window.innerWidth < 700 ? 12000 : 6000;
   
     if (intervalId) clearInterval(intervalId);
 
