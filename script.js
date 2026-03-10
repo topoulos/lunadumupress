@@ -5,6 +5,11 @@ window.setSpoiler = function(level) {
 
   const select = document.getElementById("spoilerLevel");
   if (select) select.value = level;
+
+  // Rebuild hero if available
+  if (typeof window.rebuildHeroFromSpoilerLevel === "function") {
+    window.rebuildHeroFromSpoilerLevel();
+  }
 };
 
 function applySpoilers() {
@@ -36,7 +41,14 @@ function highlightSpoiler(level) {
   
  
 document.addEventListener("DOMContentLoaded", () => {
-  document.body.classList.add("loaded");
+  // Double rAF ensures at least one paint frame before the transition fires.
+  // Without this, mobile browsers can skip the #pageFade opacity transition
+  // entirely and leave a black screen.
+  requestAnimationFrame(() => {
+    requestAnimationFrame(() => {
+      document.body.classList.add("loaded");
+    });
+  });
 
   const stored = localStorage.getItem("spoilerLevel") || "none";
   if (!localStorage.getItem("spoilerLevel")) {
@@ -130,61 +142,68 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
 
- heroAudio.addEventListener("play", () => {
-    clearTimeout(focusTimer);
-    clearTimeout(cinematicTimer);
-    updateMusicUI();
+    heroAudio.addEventListener("play", () => {
+      clearTimeout(focusTimer);
+      clearTimeout(cinematicTimer);
+      updateMusicUI();
 
-    ignoreWakeUntil = Date.now() + 2200;
+      ignoreWakeUntil = Date.now() + 2200;
 
-    if (hero && shouldRunIntro) {
-      console.log("triggering intro/glint", hero.className);
-      hero.classList.remove("music-started", "cinematic-start");
-      void hero.offsetWidth;
-      hero.classList.add("music-started");
-      hero.classList.add("cinematic-start");
+      if (hero && shouldRunIntro) {
+        console.log("triggering intro/glint", hero.className);
+        hero.classList.remove("music-started", "cinematic-start");
+        void hero.offsetWidth;
+        hero.classList.add("music-started");
+        hero.classList.add("cinematic-start");
 
-      cinematicTimer = setTimeout(() => {
-        hero.classList.remove("cinematic-start");
-      }, window.innerWidth < 700 ? 9000 : 12000);
-    }
+        cinematicTimer = setTimeout(() => {
+          hero.classList.remove("cinematic-start");
+        }, window.innerWidth < 700 ? 9000 : 12000);
+      }
 
-    setTimeout(() => {
-      enterFocusMode();
-    }, 800); 
+      setTimeout(() => {
+        enterFocusMode();
+      }, 800); 
 
-    shouldRunIntro = false;
-  });
+      shouldRunIntro = false;
+    });
 
-  heroAudio.addEventListener("pause", () => {
-    clearTimeout(focusTimer);
-    clearTimeout(cinematicTimer);
-    updateMusicUI();
+    heroAudio.addEventListener("pause", () => {
+      clearTimeout(focusTimer);
+      clearTimeout(cinematicTimer);
+      updateMusicUI();
 
-    if (hero) {
-      hero.classList.remove("cinematic-start", "music-started");
-    }
+      if (hero) {
+        hero.classList.remove("cinematic-start", "music-started");
+      }
 
-    exitFocusMode();
-  });
+      exitFocusMode();
+    });
+
+  } // ← closes if (musicToggle && heroAudio)
+
+}); // ← closes DOMContentLoaded
 
 const observer = new IntersectionObserver(
   entries => {
     entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add("visible");
-      entry.target.classList.add("decoded");
-    }
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+        entry.target.classList.add("decoded");
+      }
     });
   },
-  { threshold: 0.15 }
+  { threshold: 0, rootMargin: "0px 0px -10px 0px" }
 );
 
-document.querySelectorAll(".decode").forEach((el) => {
+document.querySelectorAll(".fade, .decode").forEach(el => {
   observer.observe(el);
+  // Fallback: immediately reveal anything already in the viewport on load
+  const rect = el.getBoundingClientRect();
+  if (rect.top < window.innerHeight && rect.bottom > 0) {
+    el.classList.add("visible", "decoded");
+  }
 });
-
-document.querySelectorAll(".fade").forEach(el => observer.observe(el));
 
 (() => {
   const hero = document.getElementById("hero");
@@ -336,6 +355,9 @@ document.querySelectorAll(".fade").forEach(el => observer.observe(el));
 
   // Build on load
   rebuildFromSpoilerLevel();
+
+  // Expose so setSpoiler (top-level) can call it
+  window.rebuildHeroFromSpoilerLevel = rebuildFromSpoilerLevel;
 
   hero.addEventListener("touchstart", (e) => {
     if (window.innerWidth >= 700) return;
