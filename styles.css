@@ -873,12 +873,14 @@ footer a:hover {
 
 @media (max-width: 700px) {
 
-  .hero {
+ .hero {
     flex-direction: column;
-    justify-content: flex-start;
     padding: 2rem 1rem 3rem;
     min-height: auto;
     padding-top: max(2rem, env(safe-area-inset-top));
+    border-radius: 12px;
+    margin-bottom: 1rem;
+    overflow: visible;
   }
 
   /* create framed slideshow window */
@@ -889,6 +891,15 @@ footer a:hover {
     animation-duration: 40s;
   }
 
+  .music-credit {
+    max-width: 90vw;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 0.62rem;
+    line-height: 1.35;
+    word-wrap: break-word;
+  }
+  
   /* crop the hero visually */
   .hero {
     height: 58vw;
