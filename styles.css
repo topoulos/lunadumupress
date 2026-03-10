@@ -214,8 +214,8 @@ body.loaded #pageFade {
 }
 
 .hero.is-focused .hero-content {
-  opacity: 0.42;
-  transform: translateY(2rem) scale(0.96);
+  opacity: 0.35;
+  transform: translateY(12rem) scale(0.6);
   filter: blur(0.3px);
 }
 

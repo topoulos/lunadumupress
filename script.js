@@ -168,39 +168,6 @@ document.addEventListener("DOMContentLoaded", () => {
     exitFocusMode();
   });
 
-  heroAudio.addEventListener("ended", async () => {
-    clearTimeout(focusTimer);
-    clearTimeout(cinematicTimer);
-    shouldRunIntro = false;
-
-    if (hero) {
-      hero.classList.remove("is-awake", "is-focused", "cinematic-start", "music-started");
-      void hero.offsetWidth;
-    }
-
-    if (typeof window.restartHeroSequence === "function") {
-      window.restartHeroSequence();
-    }
-
-    heroAudio.currentTime = 0;
-
-    try {
-      await heroAudio.play();
-    } catch (err) {
-      console.error("Audio replay failed:", err);
-    }
-  });
-
-  ["touchstart", "keydown"].forEach((evt) => {
-      window.addEventListener(evt, wakeHeroTemporarily, { passive: true });
-    });
-
-    window.addEventListener("scroll", wakeHeroTemporarily, { passive: true });
-
-    updateMusicUI();
-  }
-});
-
 const observer = new IntersectionObserver(
   entries => {
     entries.forEach(entry => {
