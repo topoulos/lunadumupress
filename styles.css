@@ -101,7 +101,7 @@ body.loaded #pageFade {
 }
 
 /* LAYER A (current image) */
-.hero::after {
+.hero-stage::after {
   content: "";
   position: absolute;
   inset: 0;
@@ -115,7 +115,7 @@ body.loaded #pageFade {
 }
 
 /* LAYER B (next image) */
-.hero::before {
+.hero-stage::before {
   content: "";
   position: absolute;
   inset: 0;
@@ -153,14 +153,14 @@ body.loaded #pageFade {
 }
 
 /* cinematic Ken Burns drift + pan */
-.hero::before,
-.hero::after {
+.hero-stage::before,
+.hero-stage::after {
   will-change: transform, filter;
   animation: heroDrift 26s ease-in-out infinite alternate;
 }
 
 /* offset the two layers so the motion doesn't match perfectly */
-.hero::before {
+.hero-stage::before {
   animation-delay: -13s;
 }
 
@@ -168,6 +168,7 @@ body.loaded #pageFade {
   position: absolute;
   inset: 0;
   z-index: 0;
+  overflow: hidden;
 }
 
 /* =========================
@@ -234,8 +235,8 @@ body.loaded #pageFade {
   opacity: 1;
 }
 
-.hero.cinematic-start::before,
-.hero.cinematic-start::after {
+.hero.cinematic-start .hero-stage::before,
+.hero.cinematic-start .hero-stage::after {
   animation: heroIntroPush 10s ease forwards;
 }
 
@@ -878,13 +879,14 @@ footer a:hover {
 ========================= */
 
 @media (max-width: 700px) {
-.hero {
+  .hero {
     position: relative;
     display: block;
     min-height: auto;
+    padding: 0 0 2rem;
+    overflow: visible;
   }
 
-  /* framed slideshow area */
   .hero-stage {
     position: relative;
     width: 100%;
@@ -894,18 +896,6 @@ footer a:hover {
     overflow: hidden;
     border-radius: 0 0 18px 18px;
     margin-bottom: 1rem;
-  }
-
-  /* keep slideshow layers working, but visually crop them to the stage */
-  .hero::before,
-  .hero::after {
-    inset: 0 auto auto 0;
-    width: 100%;
-    height: 56vw;
-    min-height: 260px;
-    max-height: 420px;
-    background-position: center center;
-    clip-path: inset(0 round 0 0 18px 18px);
   }
 
   .hero-stars,
@@ -935,7 +925,6 @@ footer a:hover {
     transform: none !important;
     opacity: 1 !important;
     filter: none !important;
-    margin-top: clamp(260px, 56vw, 420px);
   }
 
   .hero-content h1 {
