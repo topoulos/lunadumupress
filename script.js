@@ -134,7 +134,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     heroAudio.addEventListener("play", () => {
-    heroAudio.addEventListener("play", () => {
       clearTimeout(focusTimer);
       updateMusicUI();
 
