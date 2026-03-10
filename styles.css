@@ -153,8 +153,8 @@ body.loaded #pageFade {
 }
 
 /* cinematic Ken Burns drift + pan */
-.hero-stage::before,
-.hero-stage::after {
+.hero:not(.cinematic-start) .hero-stage::before,
+.hero:not(.cinematic-start) .hero-stage::after {
   will-change: transform, filter;
   animation: heroDrift 26s ease-in-out infinite alternate;
 }

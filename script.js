@@ -60,7 +60,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
   let focusTimer = null;
   let ignoreWakeUntil = 0;
-
+  let cinematicTimer = null;
+  
   function enterFocusMode() {
     if (!hero || !heroAudio || heroAudio.paused) return;
     hero.classList.remove("is-awake");
@@ -114,14 +115,6 @@ document.addEventListener("DOMContentLoaded", () => {
             window.restartHeroSequence();
           }
 
-          hero.classList.remove("music-started");
-          void hero.offsetWidth;
-          hero.classList.add("music-started");
-
-          hero.classList.remove("cinematic-start");
-          void hero.offsetWidth;
-          hero.classList.add("cinematic-start");
-
           await heroAudio.play();
         } else {
           heroAudio.pause();
@@ -135,14 +128,21 @@ document.addEventListener("DOMContentLoaded", () => {
 
     heroAudio.addEventListener("play", () => {
       clearTimeout(focusTimer);
+      clearTimeout(cinematicTimer);
       updateMusicUI();
 
       ignoreWakeUntil = Date.now() + 2200;
 
       if (hero) {
         hero.classList.remove("music-started");
+        hero.classList.remove("cinematic-start");
         void hero.offsetWidth;
         hero.classList.add("music-started");
+        hero.classList.add("cinematic-start");
+
+        cinematicTimer = setTimeout(() => {
+          hero.classList.remove("cinematic-start");
+        }, 10000);
       }
 
       setTimeout(() => {
@@ -150,11 +150,17 @@ document.addEventListener("DOMContentLoaded", () => {
       }, 800);
     });
 
-    heroAudio.addEventListener("pause", () => {
-      clearTimeout(focusTimer);
-      updateMusicUI();
-      exitFocusMode();
-    });
+   heroAudio.addEventListener("pause", () => {
+    clearTimeout(focusTimer);
+    clearTimeout(cinematicTimer);
+    updateMusicUI();
+
+    if (hero) {
+      hero.classList.remove("cinematic-start");
+    }
+
+    exitFocusMode();
+  });
 
     heroAudio.addEventListener("ended", async () => {
       if (typeof window.restartHeroSequence === "function") {
