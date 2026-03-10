@@ -142,7 +142,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         cinematicTimer = setTimeout(() => {
           hero.classList.remove("cinematic-start");
-        }, 10000);
+        }, window.innerWidth < 700 ? 9000 : 6000);
       }
 
       setTimeout(() => {

@@ -237,7 +237,7 @@ body.loaded #pageFade {
 
 .hero.cinematic-start .hero-stage::before,
 .hero.cinematic-start .hero-stage::after {
-  animation: heroIntroPush 10s ease forwards;
+  animation: heroIntroPush 6s ease forwards;
 }
 
 @keyframes heroIntroPush {
@@ -879,6 +879,9 @@ footer a:hover {
 ========================= */
 
 @media (max-width: 700px) {
+
+
+  
   .hero {
     position: relative;
     display: block;
@@ -985,5 +988,10 @@ footer a:hover {
   .hero.is-focused .hero-ctas,
   .hero.is-focused .hero-music {
     opacity: 0.9;
+  }
+
+  .hero.cinematic-start .hero-stage::before,
+  .hero.cinematic-start .hero-stage::after {
+    animation: heroIntroPush 9s ease forwards;
   }
 }
