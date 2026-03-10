@@ -61,7 +61,8 @@ document.addEventListener("DOMContentLoaded", () => {
   let focusTimer = null;
   let ignoreWakeUntil = 0;
   let cinematicTimer = null;
-  
+  let shouldRunIntro = false;
+
   function enterFocusMode() {
     if (!hero || !heroAudio || heroAudio.paused) return;
     hero.classList.remove("is-awake");
@@ -109,6 +110,9 @@ document.addEventListener("DOMContentLoaded", () => {
     musicToggle.addEventListener("click", async () => {
       try {
         if (heroAudio.paused) {
+
+          shouldRunIntro = true;   // ← ADD THIS LINE
+
           heroAudio.currentTime = 0;
 
           if (typeof window.restartHeroSequence === "function") {
@@ -126,29 +130,35 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
 
-    heroAudio.addEventListener("play", () => {
-      clearTimeout(focusTimer);
-      clearTimeout(cinematicTimer);
-      updateMusicUI();
+   heroAudio.addEventListener("play", () => {
+    clearTimeout(focusTimer);
+    clearTimeout(cinematicTimer);
+    updateMusicUI();
 
-      ignoreWakeUntil = Date.now() + 2200;
+    ignoreWakeUntil = Date.now() + 2200;
 
-      if (hero) {
-        hero.classList.remove("music-started");
+    if (hero) {
+      hero.classList.remove("music-started");
+      void hero.offsetWidth;
+      hero.classList.add("music-started");
+
+      if (shouldRunIntro) {
         hero.classList.remove("cinematic-start");
         void hero.offsetWidth;
-        hero.classList.add("music-started");
         hero.classList.add("cinematic-start");
 
         cinematicTimer = setTimeout(() => {
           hero.classList.remove("cinematic-start");
         }, window.innerWidth < 700 ? 9000 : 6000);
       }
+    }
 
-      setTimeout(() => {
-        enterFocusMode();
-      }, 800);
-    });
+    setTimeout(() => {
+      enterFocusMode();
+    }, 800);
+
+    shouldRunIntro = false;
+  });
 
    heroAudio.addEventListener("pause", () => {
     clearTimeout(focusTimer);
@@ -162,19 +172,28 @@ document.addEventListener("DOMContentLoaded", () => {
     exitFocusMode();
   });
 
-    heroAudio.addEventListener("ended", async () => {
-      if (typeof window.restartHeroSequence === "function") {
-        window.restartHeroSequence();
-      }
+   heroAudio.addEventListener("ended", async () => {
+    clearTimeout(focusTimer);
+    clearTimeout(cinematicTimer);
+    shouldRunIntro = false;
 
-      heroAudio.currentTime = 0;
+    if (hero) {
+      hero.classList.remove("is-awake", "is-focused", "cinematic-start", "music-started");
+      void hero.offsetWidth;
+    }
 
-      try {
-        await heroAudio.play();
-      } catch (err) {
-        console.error("Audio replay failed:", err);
-      }
-    });
+    if (typeof window.restartHeroSequence === "function") {
+      window.restartHeroSequence();
+    }
+
+    heroAudio.currentTime = 0;
+
+    try {
+      await heroAudio.play();
+    } catch (err) {
+      console.error("Audio replay failed:", err);
+    }
+  });
 
     ["touchstart", "keydown"].forEach((evt) => {
       window.addEventListener(evt, wakeHeroTemporarily, { passive: true });
