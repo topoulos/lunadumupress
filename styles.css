@@ -164,6 +164,12 @@ body.loaded #pageFade {
   animation-delay: -13s;
 }
 
+.hero-stage {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
 /* =========================
    HERO STARFIELD
 ========================= */
@@ -872,66 +878,122 @@ footer a:hover {
 ========================= */
 
 @media (max-width: 700px) {
-
- .hero {
-    flex-direction: column;
-    padding: 2rem 1rem 3rem;
+  .hero {
+    display: block;
     min-height: auto;
-    padding-top: max(2rem, env(safe-area-inset-top));
-    border-radius: 12px;
-    margin-bottom: 1rem;
+    padding: 1rem 0 2.5rem;
     overflow: visible;
+    border-radius: 0;
+    margin-bottom: 0;
+    background: none;
   }
 
-  /* create framed slideshow window */
+  /* framed slideshow area */
+  .hero-stage {
+    position: relative;
+    width: 100%;
+    height: 56vw;
+    min-height: 260px;
+    max-height: 420px;
+    overflow: hidden;
+    border-radius: 0 0 18px 18px;
+    margin-bottom: 1rem;
+  }
+
+  /* keep slideshow layers working, but visually crop them to the stage */
   .hero::before,
   .hero::after {
     inset: 0;
-    background-position: center;
-    animation-duration: 40s;
+    background-position: center center;
+    clip-path: inset(0 round 0 0 18px 18px);
   }
 
-  .music-credit {
-    max-width: 90vw;
-    margin-left: auto;
-    margin-right: auto;
-    font-size: 0.62rem;
-    line-height: 1.35;
-    word-wrap: break-word;
-  }
-  
-  /* crop the hero visually */
-  .hero {
-    height: 58vw;
-    max-height: 380px;
-    border-radius: 12px;
-    overflow: hidden;
-    margin-bottom: 1rem;
+  .hero-stars,
+  .hero-overlay,
+  .hero-grain {
+    position: absolute;
+    inset: 0;
+    display: block;
   }
 
-  /* title moves above slideshow */
   .hero-title-wrap {
-    position: relative;
-    top: auto;
-    left: auto;
-    transform: none;
-    width: 82vw;
-    margin-bottom: 1rem;
+    position: absolute;
+    top: 5.5vw;
+    left: 50%;
+    transform: translateX(-50%);
+    width: min(88vw, 620px);
+    z-index: 4;
   }
 
-  /* text stack below */
   .hero-content {
-    padding: 1rem;
+    position: relative;
+    z-index: 5;
+    max-width: 92vw;
+    margin: 0 auto;
+    padding: 0.5rem 1rem 0;
     text-align: center;
     transform: none !important;
     opacity: 1 !important;
     filter: none !important;
   }
 
-  .hero-overlay,
-  .hero-grain,
-  .hero-stars {
-    display: none;
+  .hero-content h1 {
+    font-size: 1.9rem;
+    letter-spacing: 0.12em;
   }
 
+  .hero-content h2 {
+    font-size: 1.2rem;
+    line-height: 1.2;
+  }
+
+  .series-credit {
+    font-size: 0.95rem;
+  }
+
+  .hero-tagline {
+    font-size: 1rem;
+    line-height: 1.45;
+    max-width: 22rem;
+    margin: 1rem auto 0.9rem;
+  }
+
+  .hero-ctas {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    align-items: center;
+    margin-top: 1rem;
+  }
+
+  .cta,
+  .cta.secondary,
+  .music-btn {
+    width: min(88vw, 320px);
+    text-align: center;
+    justify-content: center;
+  }
+
+  .hero-music {
+    margin-top: 0.9rem;
+  }
+
+  .music-credit {
+    max-width: min(88vw, 340px);
+    margin: 0.5rem auto 0;
+    font-size: 0.66rem;
+    line-height: 1.35;
+    word-break: break-word;
+  }
+
+  .hero.is-focused .hero-content {
+    opacity: 0.72;
+    transform: translateY(0.6rem) scale(0.99) !important;
+    filter: none !important;
+  }
+
+  .hero.is-focused .hero-ctas,
+  .hero.is-focused .hero-music {
+    opacity: 0.9;
+  }
 }
