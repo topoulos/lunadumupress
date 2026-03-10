@@ -146,7 +146,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       cinematicTimer = setTimeout(() => {
         hero.classList.remove("cinematic-start");
-      }, window.innerWidth < 700 ? 9000 : 6000);
+      }, window.innerWidth < 700 ? 9000 : 12000);
     }
 
     setTimeout(() => {
@@ -340,7 +340,7 @@ document.querySelectorAll(".fade").forEach(el => observer.observe(el));
   }
 
   function startRotation() {
-    const HOLD_MS = window.innerWidth < 700 ? 12000 : 6000;
+    const HOLD_MS = window.innerWidth < 700 ? 12000 : 12000;
   
     if (intervalId) clearInterval(intervalId);
 
