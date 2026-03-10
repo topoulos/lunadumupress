@@ -130,27 +130,23 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
 
-   heroAudio.addEventListener("play", () => {
+ heroAudio.addEventListener("play", () => {
     clearTimeout(focusTimer);
     clearTimeout(cinematicTimer);
     updateMusicUI();
 
     ignoreWakeUntil = Date.now() + 2200;
 
-    if (hero) {
-      hero.classList.remove("music-started");
+    if (hero && shouldRunIntro) {
+      console.log("triggering intro/glint", hero.className);
+      hero.classList.remove("music-started", "cinematic-start");
       void hero.offsetWidth;
       hero.classList.add("music-started");
+      hero.classList.add("cinematic-start");
 
-      if (shouldRunIntro) {
+      cinematicTimer = setTimeout(() => {
         hero.classList.remove("cinematic-start");
-        void hero.offsetWidth;
-        hero.classList.add("cinematic-start");
-
-        cinematicTimer = setTimeout(() => {
-          hero.classList.remove("cinematic-start");
-        }, window.innerWidth < 700 ? 9000 : 6000);
-      }
+      }, window.innerWidth < 700 ? 9000 : 6000);
     }
 
     setTimeout(() => {
@@ -160,19 +156,19 @@ document.addEventListener("DOMContentLoaded", () => {
     shouldRunIntro = false;
   });
 
-   heroAudio.addEventListener("pause", () => {
+  heroAudio.addEventListener("pause", () => {
     clearTimeout(focusTimer);
     clearTimeout(cinematicTimer);
     updateMusicUI();
 
     if (hero) {
-      hero.classList.remove("cinematic-start");
+      hero.classList.remove("cinematic-start", "music-started");
     }
 
     exitFocusMode();
   });
 
-   heroAudio.addEventListener("ended", async () => {
+  heroAudio.addEventListener("ended", async () => {
     clearTimeout(focusTimer);
     clearTimeout(cinematicTimer);
     shouldRunIntro = false;
@@ -195,7 +191,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-    ["touchstart", "keydown"].forEach((evt) => {
+  ["touchstart", "keydown"].forEach((evt) => {
       window.addEventListener(evt, wakeHeroTemporarily, { passive: true });
     });
 
