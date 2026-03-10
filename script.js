@@ -151,7 +151,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     setTimeout(() => {
       enterFocusMode();
-    }, 800); f
+    }, 800); 
 
     shouldRunIntro = false;
   });
