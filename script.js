@@ -238,7 +238,7 @@ document.querySelectorAll(".fade, .decode").forEach(el => {
     list.push(`images/public/018_alex_underwood_cocoa.jpg?v=${VERSION}`);          // porch swing
     list.push(`images/public/010_alex_kelli_porch.jpg?v=${VERSION}`);          // porch swing
     list.push(`images/public/020_alex_kelli_hair.jpg?v=${VERSION}`);           // hair dye
-    list.push(`images/public/021_alex_kelli_promise_hands.jpg?v=${VERSION}`);           // pizza pod
+    list.push(`images/public/021_kelli_alex_promise_hands.jpg?v=${VERSION}`);           // pizza pod
     list.push(`images/public/022_kelli_alex_promise.jpg?v=${VERSION}`);           // pizza pod
     list.push(`images/public/023_kelli_alex_slate_goodbye.jpg?v=${VERSION}`);           // pizza pod
     list.push(`images/public/024_sam_arienne_pendant.jpg?v=${VERSION}`);           // pizza pod
@@ -255,7 +255,7 @@ document.querySelectorAll(".fade, .decode").forEach(el => {
     list.push(`images/public/050_sam_alex_jamestown_mess_hall.jpg?v=${VERSION}`); // friends in mess hall
     list.push(`images/public/060_sam_alex_comfort.jpg?v=${VERSION}`); // sam holding alex in barracks
     list.push(`images/public/070_sam_alex_training_photo.jpg?v=${VERSION}`); // sam and alex pose in training gear
-    list.push(`images/public/west_comm_corrected.jpg?v=${VERSION}`); // west comm tower wide shot
+    list.push(`images/public/west_comm_tower_corrected.jpg?v=${VERSION}`); // west comm tower wide shot
     list.push(`images/public/077_sam_alex_west_comm_sneak.jpg?v=${VERSION}`); // family night
     list.push(`images/public/090_sam_alex_kelli_west_comm.jpg?v=${VERSION}`); // family night
     list.push(`images/public/095_sam_alex_west_comm.jpg?v=${VERSION}`); // sam and alex sneak into west comm
@@ -343,9 +343,29 @@ document.querySelectorAll(".fade, .decode").forEach(el => {
     idx = normalizedIdx;
   }
 
-  function startRotation() {
-    const HOLD_MS = window.innerWidth < 700 ? 12000 : 7000;
-  
+  function startRotation(holdOverride) {
+    const isMobile = window.innerWidth < 700;
+    let HOLD_MS;
+
+    if (isMobile) {
+      HOLD_MS = 12000;
+    } else if (holdOverride) {
+      HOLD_MS = holdOverride;
+    } else {
+      const audio = document.getElementById("heroAudio");
+      const duration = audio && isFinite(audio.duration) ? audio.duration : null;
+
+      if (duration && images.length > 0) {
+        // Distribute slides evenly across the song duration
+        HOLD_MS = Math.round((duration / images.length) * 1000);
+        // Clamp: no faster than 3s, no slower than 15s per slide
+        HOLD_MS = Math.max(3000, Math.min(15000, HOLD_MS));
+        console.log(`Song duration: ${duration.toFixed(1)}s, ${images.length} slides → ${HOLD_MS}ms per slide`);
+      } else {
+        HOLD_MS = 7000; // fallback if audio metadata isn't ready
+      }
+    }
+
     if (intervalId) clearInterval(intervalId);
 
     intervalId = setInterval(() => {
