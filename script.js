@@ -158,7 +158,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         cinematicTimer = setTimeout(() => {
           hero.classList.remove("cinematic-start");
-        }, window.innerWidth < 700 ? 9000 : 12000);
+        }, window.innerWidth < 700 ? 9000 : 7000);
       }
 
       setTimeout(() => {
@@ -227,23 +227,35 @@ document.querySelectorAll(".fade, .decode").forEach(el => {
     const list = [];
 
     // ===== PUBLIC (no spoilers) =====
-    list.push(`images/public/005_sam_kelli_cornfield_church.jpg?v=${VERSION}`);          // porch swing
+    list.push(`images/public/005_alex_kelli_sin.jpg?v=${VERSION}`);          // porch swing
+    list.push(`images/public/008_alex_grabs_rock.jpg?v=${VERSION}`);          // porch swing
+    list.push(`images/public/009_sam_kelli_cornfield_church.jpg?v=${VERSION}`);          // porch swing
+    list.push(`images/public/011_kelli_alex_class_hairties.jpg?v=${VERSION}`);          // porch swing
+    list.push(`images/public/012_alex_kelli_locker.jpg?v=${VERSION}`);          // porch swing
+    list.push(`images/public/013_alex_mason_drainpipe.jpg?v=${VERSION}`);          // porch swing
+    list.push(`images/public/014_alex_mason_kiss.jpg?v=${VERSION}`);          // porch swing
+    list.push(`images/public/015_alex_cell_kuranis.jpg?v=${VERSION}`);          // porch swing
+    list.push(`images/public/018_alex_underwood_cocoa.jpg?v=${VERSION}`);          // porch swing
     list.push(`images/public/010_alex_kelli_porch.jpg?v=${VERSION}`);          // porch swing
     list.push(`images/public/020_alex_kelli_hair.jpg?v=${VERSION}`);           // hair dye
+    list.push(`images/public/021_kelli_alex_promise_hands.jpg?v=${VERSION}`);           // pizza pod
     list.push(`images/public/022_kelli_alex_promise.jpg?v=${VERSION}`);           // pizza pod
     list.push(`images/public/023_kelli_alex_slate_goodbye.jpg?v=${VERSION}`);           // pizza pod
     list.push(`images/public/024_sam_arienne_pendant.jpg?v=${VERSION}`);           // pizza pod
     list.push(`images/public/025_sam_arienne_kiss.jpg?v=${VERSION}`);           // pizza pod
     list.push(`images/public/026_sam_arienne.jpg?v=${VERSION}`);           // pizza pod
     list.push(`images/public/027_sam_arienne_dead.jpg?v=${VERSION}`);           // pizza pod
+    list.push(`images/public/027_alex_intake_proctor_argument.jpg?v=${VERSION}`);    // sam and alex scale wall
     list.push(`images/public/028_sam_alex_formation.jpg?v=${VERSION}`);    // sam and alex scale wall
+    list.push(`images/public/030_jamestown_alex_fight.jpg?v=${VERSION}`);    // sam and alex scale wall
+    list.push(`images/public/030_alex_leg_wound.jpg?v=${VERSION}`);    // sam and alex scale wall
     list.push(`images/public/030_sam_alex_scale_wall.jpg?v=${VERSION}`);    // sam and alex scale wall
     list.push(`images/public/040_sam_alex_running_recruits.jpg?v=${VERSION}`); // sam and alex running
     list.push(`images/public/045_sam_alex_bunks.jpg?v=${VERSION}`); // sam and alex bunks night
     list.push(`images/public/050_sam_alex_jamestown_mess_hall.jpg?v=${VERSION}`); // friends in mess hall
     list.push(`images/public/060_sam_alex_comfort.jpg?v=${VERSION}`); // sam holding alex in barracks
     list.push(`images/public/070_sam_alex_training_photo.jpg?v=${VERSION}`); // sam and alex pose in training gear
-    list.push(`images/public/075_west_comm_tower_wide_shot.jpg?v=${VERSION}`); // west comm tower wide shot
+    list.push(`images/public/west_comm_tower_corrected.jpg?v=${VERSION}`); // west comm tower wide shot
     list.push(`images/public/077_sam_alex_west_comm_sneak.jpg?v=${VERSION}`); // family night
     list.push(`images/public/090_sam_alex_kelli_west_comm.jpg?v=${VERSION}`); // family night
     list.push(`images/public/095_sam_alex_west_comm.jpg?v=${VERSION}`); // sam and alex sneak into west comm
@@ -332,7 +344,7 @@ document.querySelectorAll(".fade, .decode").forEach(el => {
   }
 
   function startRotation() {
-    const HOLD_MS = window.innerWidth < 700 ? 12000 : 12000;
+    const HOLD_MS = window.innerWidth < 700 ? 12000 : 7000;
   
     if (intervalId) clearInterval(intervalId);
 
