@@ -47,29 +47,9 @@
         <span class="music-label">Play Theme</span>
       </button>
 
-      <!-- <div class="music-credit">
-        “Frankincense and Myrrh” by
-        <a href="https://www.scottbuckley.com.au/" target="_blank" rel="noopener noreferrer">
-          Scott Buckley
-        </a>
-        — CC BY 4.0
-      </div>
-
-      <audio id="heroAudio" preload="none" loop>
-        <source src="audio/sb_frankincenseandmyrrh.mp3" type="audio/mpeg" />
-        Your browser does not support the audio element.
-      </audio> -->
-
-      <div class="music-credit">
-        “Cirrus” by
-        <a href="https://www.scottbuckley.com.au/" target="_blank" rel="noopener noreferrer">
-          Scott Buckley
-        </a>
-        — CC BY 4.0
-      </div>
+      <div class="music-credit" id="musicCredit"></div>
 
       <audio id="heroAudio" preload="metadata" loop>
-        <source src="audio/Cirrus.mp3" type="audio/mpeg" />
         Your browser does not support the audio element.
       </audio>
     </div>
@@ -169,6 +149,19 @@
         </select>
       </div>
     </section>
+
+    <section class="spoiler-settings" style="margin-top:1rem;">
+      <h3>Theme Music</h3>
+      <p>Choose the music that plays with the slideshow:</p>
+      <div>
+        <label class="sr-only" for="musicTrackSelect">Theme music</label>
+        <select id="musicTrackSelect" style="width:min(420px,90vw);padding:0.75rem 0.9rem;border-radius:10px;background:rgba(255,255,255,0.08);color:#eee;border:1px solid rgba(255,255,255,0.12);">
+          <option value="cirrus">Cirrus — Scott Buckley</option>
+          <option value="frankincense">Frankincense and Myrrh — Scott Buckley</option>
+        </select>
+      </div>
+    </section>
+
     <div class="copyright">
     © 2026 Luna Dumu Press •
     <a href="/privacy.html">Privacy Policy</a>

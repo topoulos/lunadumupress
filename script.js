@@ -182,6 +182,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
   } // ← closes if (musicToggle && heroAudio)
 
+  // --- Music track init ---
+  const savedTrack = localStorage.getItem("musicTrack") || "cirrus";
+  applyMusicTrack(savedTrack);
+
+  const musicTrackSelect = document.getElementById("musicTrackSelect");
+  if (musicTrackSelect) {
+    musicTrackSelect.value = savedTrack;
+    musicTrackSelect.addEventListener("change", (e) => {
+      applyMusicTrack(e.target.value);
+    });
+  }
+
 }); // ← closes DOMContentLoaded
 
 const observer = new IntersectionObserver(
@@ -431,3 +443,53 @@ document.querySelectorAll(".fade, .decode").forEach(el => {
     if (e.key === "spoilerLevel") rebuildFromSpoilerLevel();
   });
 })();
+
+// =========================
+//   MUSIC TRACK SELECTOR
+// =========================
+
+const MUSIC_TRACKS = {
+  cirrus: {
+    src: "audio/Cirrus.mp3",
+    creditHTML: `"Cirrus" by <a href="https://www.scottbuckley.com.au/" target="_blank" rel="noopener noreferrer">Scott Buckley</a> — CC BY 4.0`,
+  },
+  frankincense: {
+    src: "audio/sb_frankincenseandmyrrh.mp3",
+    creditHTML: `"Frankincense and Myrrh" by <a href="https://www.scottbuckley.com.au/" target="_blank" rel="noopener noreferrer">Scott Buckley</a> — CC BY 4.0`,
+  },
+};
+
+function applyMusicTrack(trackKey) {
+  const track = MUSIC_TRACKS[trackKey] || MUSIC_TRACKS["cirrus"];
+  const audio = document.getElementById("heroAudio");
+  const credit = document.getElementById("musicCredit");
+  const select = document.getElementById("musicTrackSelect");
+
+  const wasPlaying = audio && !audio.paused;
+
+  if (audio) {
+    if (wasPlaying) {
+      audio.pause();
+    }
+    // Swap source
+    audio.src = track.src;
+    audio.load();
+    // If it was playing, resume
+    if (wasPlaying) {
+      audio.play().catch(() => {});
+    }
+  }
+
+  if (credit) {
+    credit.innerHTML = track.creditHTML;
+  }
+
+  if (select) {
+    select.value = trackKey;
+  }
+
+  localStorage.setItem("musicTrack", trackKey);
+}
+
+// Expose globally so it can be called from other contexts if needed
+window.applyMusicTrack = applyMusicTrack;
