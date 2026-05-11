@@ -1,0 +1,1884 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Vow — Listening Companion · Luna Dumu Press</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="shortcut icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <meta name="apple-mobile-web-app-title" content="Luna Dumu" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <style>
+
+    /* =========================
+       COMPANION PAGE HERO
+    ========================= */
+
+    .companion-hero {
+      position: relative;
+      width: 100%;
+      min-height: 52vh;
+      display: flex;
+      align-items: flex-end;
+      overflow: hidden;
+      background: #0b0b0b;
+    }
+
+    .companion-hero-bg {
+      position: absolute;
+      inset: 0;
+      background-image: url("images/music/header-book1.jpg");
+      background-size: cover;
+      background-position: center 35%;
+      opacity: 0.55;
+      filter: brightness(0.75);
+      transition: opacity 0.8s ease;
+    }
+
+    .companion-hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        to bottom,
+        rgba(11,11,11,0.2) 0%,
+        rgba(11,11,11,0.15) 40%,
+        rgba(11,11,11,0.85) 80%,
+        rgba(11,11,11,1) 100%
+      );
+      z-index: 1;
+    }
+
+    .companion-hero-content {
+      position: relative;
+      z-index: 2;
+      padding: 3rem 3rem 3.5rem;
+      max-width: 860px;
+    }
+
+    .companion-hero-back {
+      display: inline-block;
+      margin-bottom: 1.5rem;
+      font-size: 0.8rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.4);
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    .companion-hero-back:hover {
+      color: #e6b14a;
+      text-decoration: none;
+    }
+
+    .companion-hero-eyebrow {
+      font-size: 0.75rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: #e6b14a;
+      margin-bottom: 0.6rem;
+    }
+
+    .companion-hero h1 {
+      font-size: clamp(2.2rem, 5vw, 4rem);
+      font-weight: 200;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #fff;
+      line-height: 1.1;
+      margin-bottom: 0.5rem;
+    }
+
+    .companion-hero-tagline {
+      font-size: 1rem;
+      color: rgba(255,255,255,0.5);
+      letter-spacing: 0.04em;
+      margin-bottom: 1.5rem;
+      max-width: 520px;
+      line-height: 1.6;
+    }
+
+    .companion-hero-meta {
+      display: flex;
+      gap: 2rem;
+      font-size: 0.78rem;
+      color: rgba(255,255,255,0.3);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      flex-wrap: wrap;
+    }
+
+    /* =========================
+       SPOILER FILTER BAR
+    ========================= */
+
+    .companion-filter-bar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(11,11,11,0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(255,255,255,0.07);
+      padding: 0.85rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .companion-filter-bar-label {
+      font-size: 0.72rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.35);
+      white-space: nowrap;
+    }
+
+    .companion-filter-buttons {
+      display: flex;
+      gap: 0.4rem;
+      flex-wrap: wrap;
+    }
+
+    .companion-filter-buttons button {
+      padding: 0.4rem 0.85rem;
+      font-size: 0.72rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      background: rgba(255,255,255,0.06);
+      color: rgba(255,255,255,0.6);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 999px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .companion-filter-buttons button:hover {
+      background: rgba(255,255,255,0.1);
+      color: #fff;
+    }
+
+    .companion-filter-buttons button.active {
+      background: #e6b14a;
+      color: #000;
+      border-color: #e6b14a;
+      font-weight: 600;
+    }
+
+    .companion-filter-select {
+      display: none;
+    }
+
+    .companion-filter-select select {
+      padding: 0.45rem 0.8rem;
+      border-radius: 8px;
+      background: rgba(255,255,255,0.08);
+      color: #eee;
+      border: 1px solid rgba(255,255,255,0.12);
+      font-size: 0.8rem;
+    }
+
+    @media (max-width: 600px) {
+      .companion-filter-buttons { display: none; }
+      .companion-filter-select { display: block; }
+    }
+
+    /* =========================
+       TRACK LISTING
+    ========================= */
+
+    .companion-body {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 3rem 2rem 6rem;
+    }
+
+    /* Act dividers */
+    .companion-act {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      margin: 3.5rem 0 2rem;
+      opacity: 0.5;
+    }
+
+    .companion-act::before,
+    .companion-act::after {
+      content: "";
+      flex: 1;
+      height: 1px;
+      background: rgba(255,255,255,0.12);
+    }
+
+    .companion-act-label {
+      font-size: 0.68rem;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.5);
+      white-space: nowrap;
+    }
+
+    /* Track card */
+    .track-card {
+      border: 1px solid rgba(255,255,255,0.07);
+      border-radius: 14px;
+      padding: 1.75rem 2rem;
+      margin-bottom: 1rem;
+      background: rgba(255,255,255,0.02);
+      transition: border-color 0.2s ease, background 0.2s ease;
+    }
+
+    .track-card:hover {
+      border-color: rgba(255,255,255,0.12);
+      background: rgba(255,255,255,0.035);
+    }
+
+    .track-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 1rem;
+      margin-bottom: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .track-scene-info {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .track-location {
+      font-size: 0.7rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.3);
+      margin-bottom: 0.35rem;
+      font-family: 'Courier New', monospace;
+    }
+
+    .track-scene-name {
+      font-size: 1.1rem;
+      font-weight: 400;
+      color: #fff;
+      letter-spacing: 0.02em;
+      line-height: 1.3;
+    }
+
+    .track-scene-tagline {
+      font-size: 0.82rem;
+      color: rgba(255,255,255,0.4);
+      margin-top: 0.25rem;
+      font-style: italic;
+      line-height: 1.5;
+    }
+
+    .track-info {
+      text-align: right;
+      flex-shrink: 0;
+    }
+
+    .track-name {
+      font-size: 0.95rem;
+      color: #e6b14a;
+      font-weight: 500;
+      line-height: 1.3;
+    }
+
+    .track-artist {
+      font-size: 0.78rem;
+      color: rgba(255,255,255,0.4);
+      margin-top: 0.2rem;
+    }
+
+    /* Platform links */
+    .track-links {
+      display: flex;
+      gap: 0.5rem;
+      margin-top: 0.6rem;
+      justify-content: flex-end;
+      flex-wrap: wrap;
+    }
+
+    .track-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+      padding: 0.28rem 0.7rem;
+      font-size: 0.68rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.5);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 999px;
+      text-decoration: none;
+      transition: all 0.18s ease;
+      white-space: nowrap;
+    }
+
+    .track-link:hover {
+      color: #fff;
+      border-color: rgba(255,255,255,0.3);
+      text-decoration: none;
+      background: rgba(255,255,255,0.06);
+    }
+
+    .track-link.yt { border-color: rgba(255,80,80,0.25); color: rgba(255,120,120,0.8); }
+    .track-link.yt:hover { border-color: rgba(255,80,80,0.6); color: #ff8080; background: rgba(255,80,80,0.08); }
+
+    .track-link.sp { border-color: rgba(30,215,96,0.25); color: rgba(30,215,96,0.7); }
+    .track-link.sp:hover { border-color: rgba(30,215,96,0.5); color: #1ed760; background: rgba(30,215,96,0.07); }
+
+    .track-link.ap { border-color: rgba(250,175,175,0.2); color: rgba(250,175,175,0.6); }
+    .track-link.ap:hover { border-color: rgba(250,175,175,0.4); color: #faaFaF; background: rgba(250,175,175,0.06); }
+
+    /* Notes */
+    .track-notes {
+      border-top: 1px solid rgba(255,255,255,0.06);
+      padding-top: 1rem;
+      margin-top: 0.25rem;
+    }
+
+    .track-note-public {
+      font-size: 0.9rem;
+      color: rgba(255,255,255,0.65);
+      line-height: 1.75;
+    }
+
+    .track-note-spoiler {
+      display: none;
+      margin-top: 1rem;
+      padding: 1rem 1.25rem;
+      background: rgba(230,177,74,0.05);
+      border-left: 2px solid rgba(230,177,74,0.35);
+      border-radius: 0 8px 8px 0;
+      font-size: 0.88rem;
+      color: rgba(255,255,255,0.6);
+      line-height: 1.75;
+    }
+
+    .track-note-spoiler.revealed {
+      display: block;
+    }
+
+    .track-note-spoiler-label {
+      font-size: 0.65rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: #e6b14a;
+      margin-bottom: 0.6rem;
+      opacity: 0.8;
+    }
+
+    /* Scott Buckley CC badge */
+    .cc-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      font-size: 0.65rem;
+      letter-spacing: 0.08em;
+      color: rgba(255,255,255,0.25);
+      border: 1px solid rgba(255,255,255,0.08);
+      padding: 0.2rem 0.6rem;
+      border-radius: 999px;
+      margin-top: 0.4rem;
+    }
+
+    /* =========================
+       RESPONSIVE
+    ========================= */
+
+    @media (max-width: 700px) {
+      .companion-hero-content {
+        padding: 2rem 1.5rem 2.5rem;
+      }
+
+      .companion-hero h1 {
+        font-size: 2.2rem;
+      }
+
+      .companion-body {
+        padding: 2rem 1.25rem 5rem;
+      }
+
+      .track-header {
+        flex-direction: column;
+      }
+
+      .track-info {
+        text-align: left;
+      }
+
+      .track-links {
+        justify-content: flex-start;
+      }
+
+      .track-card {
+        padding: 1.25rem 1.25rem;
+      }
+    }
+
+  </style>
+</head>
+<body>
+<div id="pageFade"></div>
+
+<!-- HERO -->
+<div class="companion-hero">
+  <div class="companion-hero-bg"></div>
+  <div class="companion-hero-overlay"></div>
+  <div class="companion-hero-content fade visible">
+    <a href="/music.html" class="companion-hero-back">← The Music</a>
+    <div class="companion-hero-eyebrow">Book One · The Dolphin · Listening Companion</div>
+    <h1>Vow</h1>
+    <p class="companion-hero-tagline">From Kite Flats to Luna City — the beginning of everything</p>
+    <div class="companion-hero-meta">
+      <span>47 tracks</span>
+      <span>Tony Anderson</span>
+      <span>Elijah Siegler</span>
+      <span>Judah Earl</span>
+      <span>Scott Buckley</span>
+    </div>
+  </div>
+</div>
+
+<!-- STICKY FILTER BAR -->
+<div class="companion-filter-bar">
+  <span class="companion-filter-bar-label">Spoiler filter</span>
+  <div class="companion-filter-buttons">
+    <button type="button" onclick="setSpoiler('none')" id="cfb-none">No Spoilers</button>
+    <button type="button" onclick="setSpoiler('book1')" id="cfb-book1">I've read Book 1</button>
+    <button type="button" onclick="setSpoiler('book2')" id="cfb-book2">I've read Book 2</button>
+    <button type="button" onclick="setSpoiler('book3')" id="cfb-book3">I've read Book 3</button>
+  </div>
+  <div class="companion-filter-select">
+    <select id="companionSpoilerSelect">
+      <option value="none">No Spoilers</option>
+      <option value="book1">I've read Book 1</option>
+      <option value="book2">I've read Book 2</option>
+      <option value="book3">I've read Book 3</option>
+    </select>
+  </div>
+</div>
+
+<!-- COMPANION BODY -->
+<div class="companion-body">
+
+  <!-- ==================== ACT ONE ==================== -->
+  <div class="companion-act"><span class="companion-act-label">Prologue &amp; Act One — Kite Flats</span></div>
+
+  <!-- 01 Song of Refract Hope -->
+  <div class="track-card fade">
+    <div class="track-header">
+      <div class="track-scene-info">
+        <div class="track-location">The Shard — Before Time · Prologue</div>
+        <div class="track-scene-name">Song of Refract Hope</div>
+        <div class="track-scene-tagline">The Prophecy. The Dolphin Blessed.</div>
+      </div>
+      <div class="track-info">
+        <div class="track-name">Low Tide</div>
+        <div class="track-artist">Tony Anderson</div>
+        <div class="track-links">
+          <a class="track-link yt" href="https://www.youtube.com/watch?v=DH5AzryVR94" target="_blank" rel="noopener">▶ YouTube</a>
+          <a class="track-link sp" href="https://open.spotify.com/track/7u7YhPEv1sSBJTMdXG2wmM" target="_blank" rel="noopener">Spotify</a>
+          <a class="track-link ap" href="https://music.apple.com/us/album/low-tide/1544556199?i=1544556206" target="_blank" rel="noopener">Apple</a>
+        </div>
+      </div>
+    </div>
+    <div class="track-notes">
+      <div class="track-note-public">The book opens in darkness before the world begins. A prophecy. A pendant. A light that creates rather than reveals. Tony Anderson's <em>Low Tide</em> opens the same way — ethereal pads and voices breathing in the dark before a reverberated piano strikes like thunder. That interval, low to high, high to low, feels less like a melody beginning than a universe being called into existence. The pads around it are holy. The piano is heroic and grief-touched simultaneously. It builds toward something that sounds like an angel choir standing in a storm. This is the sound of a promise being made before anyone knows what it will cost.</div>
+    </div>
+  </div>
+
+  <!-- 02 Two Teenage Girls -->
+  <div class="track-card fade">
+    <div class="track-header">
+      <div class="track-scene-info">
+        <div class="track-location">Kite Flats — 2466 · Afternoon</div>
+        <div class="track-scene-name">Two Teenage Girls</div>
+        <div class="track-scene-tagline">Kelli and Alex show us how love works.</div>
+      </div>
+      <div class="track-info">
+        <div class="track-name">From the Depths of the Earth</div>
+        <div class="track-artist">Elijah Siegler</div>
+        <div class="track-links">
+          <a class="track-link yt" href="https://www.youtube.com/watch?v=uwP11CVjkvI" target="_blank" rel="noopener">▶ YouTube</a>
+        </div>
+      </div>
+    </div>
+    <div class="track-notes">
+      <div class="track-note-public">Two teenage girls have a fight about God in a cornfield and hug it out walking home. Elijah Siegler's piece plays softly underneath — holy and sad and hopeful all at once, slightly more epic than the moment seems to deserve. It's the kind of music that makes you feel like you're watching something that matters without knowing why yet.</div>
+      <div class="track-note-spoiler" data-spoiler-note="book1">
+        <div class="track-note-spoiler-label">If you've read Book 1</div>
+        It matters because if these two girls had walked away from each other that afternoon, the universe would have been lost. Their friendship — their love and sisterhood — is the structural foundation on which everything that follows is built. The music already knows what the reader doesn't. It's playing at the register of salvation while two seventeen-year-old farmgirls joke and squabble in the dirt. That gap between what the scene looks like and what it actually is — that's the whole series in miniature.
+      </div>
+    </div>
+  </div>
+
+  <!-- 03 Lambert's Class -->
+  <div class="track-card fade">
+    <div class="track-header">
+      <div class="track-scene-info">
+        <div class="track-location">Kite Flats Secondary School — 2466-09-08 · Morning</div>
+        <div class="track-scene-name">Lambert's Class</div>
+        <div class="track-scene-tagline">Kite Flats 2466.</div>
+      </div>
+      <div class="track-info">
+        <div class="track-name">Cold Moon</div>
+        <div class="track-artist">Sultan Shepard</div>
+        <div class="track-links">
+          <a class="track-link yt" href="https://youtu.be/-g7wVrpTbno" target="_blank" rel="noopener">▶ YouTube</a>
+          <a class="track-link sp" href="https://open.spotify.com/track/6m8Sqe2fPp9AH8H1gXJtFr" target="_blank" rel="noopener">Spotify</a>
+          <a class="track-link ap" href="https://music.apple.com/us/album/cold-moon/1713517280?i=1713517289" target="_blank" rel="noopener">Apple</a>
+        </div>
+      </div>
+    </div>
+    <div class="track-notes">
+      <div class="track-note-public">Lockers. Skateboards. Kids walking home. Kite Flats in 2466 looks a lot like anywhere you grew up. Sultan Shepard's breezy techno pulse is the Kite Flats teen theme — fun, light, a little restless. It's a deliberate signal: the future isn't foreign. These are your kids. This is your neighborhood. The red Earth hanging overhead is the only thing that's different.</div>
+    </div>
+  </div>
+
+  <!-- 04 Alex Lives Here -->
+  <div class="track-card fade">
+    <div class="track-header">
+      <div class="track-scene-info">
+        <div class="track-location">Kite Flats — 2466-09-15 · Evening</div>
+        <div class="track-scene-name">Alex Lives Here</div>
+        <div class="track-scene-tagline">Loneliness and a life of dead ends.</div>
+      </div>
+      <div class="track-info">
+        <div class="track-name">Perennial</div>
+        <div class="track-artist">Tony Anderson</div>
+        <div class="track-links">
+          <a class="track-link yt" href="https://youtu.be/xuGJNN6_Z-s" target="_blank" rel="noopener">▶ YouTube</a>
+          <a class="track-link sp" href="https://open.spotify.com/track/08LstU3DeZbyYCmkZ1XhTX" target="_blank" rel="noopener">Spotify</a>
+          <a class="track-link ap" href="https://music.apple.com/us/album/perennial/1554300881?i=1554300891" target="_blank" rel="noopener">Apple</a>
+        </div>
+      </div>
+    </div>
+    <div class="track-notes">
+      <div class="track-note-public">Slow piano. A droning reverb underneath like a room that never quite goes quiet. Tony Anderson's <em>Perennial</em> sounds like a small town at night — airy and beautiful and very sad. It yearns without demanding anything back. It's the sound of someone who has made peace with a life that was never chosen.</div>
+      <div class="track-note-spoiler" data-spoiler-note="book1">
+        <div class="track-note-spoiler-label">If you've read Book 1</div>
+        This is Alex's theme at seventeen. Her mother is there — technically. Present in the house, absent from the world, drowning her own grief in whatever keeps the pain at bay. She brings home rough men. The house is barely holding together. Alex keeps the lights on anyway — fixes what's broken, works jobs no one her age should have to work. Her room has a sign on the door that says everything she can't say out loud. She's technically brilliant and completely trapped. Kelli is the only reason this life is bearable — and Kelli is leaving. <em>Perennial</em> is the sound of resigning yourself to a fate you didn't pick. The hope in it is almost worse than despair. It means she hasn't stopped yearning. She just doesn't know for what yet.
+      </div>
+    </div>
+  </div>
+
+  <!-- 05 The Date -->
+  <div class="track-card fade">
+    <div class="track-header">
+      <div class="track-scene-info">
+        <div class="track-location">Kite Flats — 2466-09-22 · Late Afternoon</div>
+        <div class="track-scene-name">The Date</div>
+        <div class="track-scene-tagline">Alex gets a kiss.</div>
+      </div>
+      <div class="track-info">
+        <div class="track-name">A Million Different Ways</div>
+        <div class="track-artist">Tony Anderson</div>
+        <div class="track-links">
+          <a class="track-link yt" href="https://youtu.be/uHKmFmVz21Y" target="_blank" rel="noopener">▶ YouTube</a>
+          <a class="track-link sp" href="https://open.spotify.com/track/01m3dv7m5c7RVm9Lm2X1hl" target="_blank" rel="noopener">Spotify</a>
+          <a class="track-link ap" href="https://music.apple.com/us/album/a-million-different-ways/1832630979?i=1832630980" target="_blank" rel="noopener">Apple</a>
+        </div>
+      </div>
+    </div>
+    <div class="track-notes">
+      <div class="track-note-public">Warm piano. Rural and pastoral and quietly hopeful. Tony Anderson's <em>A Million Different Ways</em> sounds like golden hour in a cornfield — sweet and a little giddy, yearning without weight. It's the sound of a good thing happening to someone who doesn't get many good things.</div>
+      <div class="track-note-spoiler" data-spoiler-note="book1">
+        <div class="track-note-spoiler-label">If you've read Book 1</div>
+        Alex is seventeen and she's decided to do something just for herself. Not for her mother. Not for Kelli. For her. A girl. A cornfield. A silly kiss. It's small and warm and completely hers. For someone who has spent her whole life absorbing what the world hands her, this moment of reaching toward something — choosing something — is its own quiet revolution. <em>A Million Different Ways</em> plays at exactly that register. Not triumphant. Just warm. Just hopeful. Just a girl in a field deciding she deserves something good.
+      </div>
+    </div>
+  </div>
+
+  <!-- 06 Detention -->
+  <div class="track-card fade">
+    <div class="track-header">
+      <div class="track-scene-info">
+        <div class="track-location">Kite Flats Detention Center — 2466-09-22 · Night</div>
+        <div class="track-scene-name">Detention</div>
+        <div class="track-scene-tagline">Alex gets a choice — the loneliness is a choice.</div>
+      </div>
+      <div class="track-info">
+        <div class="track-name">Perennial</div>
+        <div class="track-artist">Tony Anderson</div>
+        <div class="track-links">
+          <a class="track-link yt" href="https://youtu.be/xuGJNN6_Z-s" target="_blank" rel="noopener">▶ YouTube</a>
+          <a class="track-link sp" href="https://open.spotify.com/track/08LstU3DeZbyYCmkZ1XhTX" target="_blank" rel="noopener">Spotify</a>
+          <a class="track-link ap" href="https://music.apple.com/us/album/perennial/1554300881?i=1554300891" target="_blank" rel="noopener">Apple</a>
+        </div>
+      </div>
+    </div>
+    <div class="track-notes">
+      <div class="track-note-public">The hopeful pastoral warmth of the previous scene doesn't last. <em>Perennial</em> returns — slow, droning, resigned. The yearning is still there but the trap has snapped shut again. Something good turned into something uncertain very fast. The music sits with that uncertainty without resolving it.</div>
+      <div class="track-note-spoiler" data-spoiler-note="book1">
+        <div class="track-note-spoiler-label">If you've read Book 1</div>
+        Alex crushed Brandon's windpipe with her bare hands and ended up in detention. The men her mother brought home taught her to fight back. She got too good at it. Now she's sitting in a cell wondering if she just destroyed her only way out — the Moon Guns. Then Kuranis walks in. He's not angry. He's impressed. He wants her. Tells her to keep her nose clean. The loneliness was always a choice. She just didn't know it until someone showed up and chose her first.
+      </div>
+    </div>
+  </div>
+
+  <!-- 07 Cocoa and Static / The Pipe Fix -->
+  <div class="track-card fade">
+    <div class="track-header">
+      <div class="track-scene-info">
+        <div class="track-location">Old Cornfield Church — 2466-09-29 / 2466-10-06 · Afternoons</div>
+        <div class="track-scene-name">Cocoa and Static / The Pipe Fix</div>
+        <div class="track-scene-tagline">Alex finds something to hold onto. Alex finds a friend.</div>
+      </div>
+      <div class="track-info">
+        <div class="track-name">A Million Different Ways</div>
+        <div class="track-artist">Tony Anderson</div>
+        <div class="track-links">
+          <a class="track-link yt" href="https://youtu.be/uHKmFmVz21Y" target="_blank" rel="noopener">▶ YouTube</a>
+          <a class="track-link sp" href="https://open.spotify.com/track/01m3dv7m5c7RVm9Lm2X1hl" target="_blank" rel="noopener">Spotify</a>
+          <a class="track-link ap" href="https://music.apple.com/us/album/a-million-different-ways/1832630979?i=1832630980" target="_blank" rel="noopener">Apple</a>
+        </div>
+      </div>
+    </div>
+    <div class="track-notes">
+      <div class="track-note-public">The pastoral warmth returns across two scenes — same music as the cornfield kiss, same register of agency. A busted pipe. A cursing pastor. Bad pay. Easy conversation. <em>A Million Different Ways</em> plays at the frequency of small good things happening to someone learning they're allowed to want them. A friendship takes root in the most unlikely soil.</div>
+      <div class="track-note-spoiler" data-spoiler-note="book1">
+        <div class="track-note-spoiler-label">If you've read Book 1</div>
+        Larry Underwood keeps being annoyingly kind to her. He's Kelli's uncle — Alex didn't know that yet. But something kept pulling her back. He's cursing at a pipe he can't fix and Alex finds that genuinely funny. He becomes a dad-shaped thing in her life when she didn't know she was missing one. She takes the job even though the pay is terrible. <em>A Million Different Ways</em> is Alex's agency theme. Same track as the kiss. Same meaning. She's choosing again. And the man she's building it with is going to matter more than either of them knows yet.
+      </div>
+    </div>
+  </div>
+
+  <!-- 08 Hair Dye and Gossip / Ink and Sisters -->
+  <div class="track-card fade">
+    <div class="track-header">
+      <div class="track-scene-info">
+        <div class="track-location">Kite Flats — 2466-10-13 / 2466-10-20 · Evenings</div>
+        <div class="track-scene-name">Hair Dye and Gossip / Ink and Sisters</div>
+        <div class="track-scene-tagline">Alex and Kelli — Sisterhood.</div>
+      </div>
+      <div class="track-info">
+        <div class="track-name">Pray for Rain</div>
+        <div class="track-artist">Moguai</div>
+        <div class="track-links">
+          <a class="track-link yt" href="https://youtu.be/uJJEsetUd0I" target="_blank" rel="noopener">▶ YouTube</a>
+          <a class="track-link sp" href="https://open.spotify.com/track/2fuvvQo4Yjkoc6Cg3h9SE4" target="_blank" rel="noopener">Spotify</a>
+          <a class="track-link ap" href="https://music.apple.com/us/album/pray-for-rain-extended-mix/1167545279?i=1167545430" target="_blank" rel="noopener">Apple</a>
+        </div>
+      </div>
+    </div>
+    <div class="track-notes">
+      <div class="track-note-public">Two scenes of pure joy. Kelli dying Alex's hair. Relentless teasing. Laughter that fills a room. <em>Pray for Rain</em> plays like a song already on in the background — fun, slightly sad, dancing with a little heart underneath. It's the sound of being young and knowing it. Not tragically. Just aware. The kind of moment that turns into a memory while it's still happening.</div>
+      <div class="track-note-spoiler" data-spoiler-note="book1">
+        <div class="track-note-spoiler-label">If you've read Book 1</div>
+        This is them when they were young. Before Mars. Before everything. The sadness in Moguai's track isn't grief — it's the specific ache of a beautiful moment you can already feel slipping. <em>"If your love came in showers / I would pray for rain."</em> A lyric about wanting more of something you already have. They have everything here. They just don't know yet how little time is left to be this version of themselves.
+      </div>
+    </div>
+  </div>
+
+  <!-- 09 Porch Swing -->
+  <div class="track-card fade">
+    <div class="track-header">
+      <div class="track-scene-info">
+        <div class="track-location">Randolph House — Kite Flats — 2466-11-14 · Night</div>
+        <div class="track-scene-name">Porch Swing</div>
+        <div class="track-scene-tagline">The last time we're young and here.</div>
+      </div>
+      <div class="track-info">
+        <div class="track-name">Pastoral</div>
+        <div class="track-artist">Tony Anderson</div>
+        <div class="track-links">
+          <a class="track-link yt" href="https://youtu.be/zDqvlvXn4TY" target="_blank" rel="noopener">▶ YouTube</a>
+          <a class="track-link sp" href="https://open.spotify.com/track/18wUBVmjDBF9kPSRgwGM2T" target="_blank" rel="noopener">Spotify</a>
+          <a class="track-link ap" href="https://music.apple.com/us/album/pastoral/1795807196?i=1795807198" target="_blank" rel="noopener">Apple</a>
+        </div>
+      </div>
+    </div>
+    <div class="track-notes">
+      <div class="track-note-public">Two reverberated notes. That's almost all <em>Pastoral</em> is — and it's enough. Kelli and Alex on the porch the night before everything changes. Cocoa going cold. The kind of conversation that only happens when you know you're running out of time to have it. Tony Anderson's track doesn't dramatize the moment. It just sits with them. The porch mourns quietly alongside two girls who don't want morning to come.</div>
+      <div class="track-note-spoiler" data-spoiler-note="book1">
+        <div class="track-note-spoiler-label">If you've read Book 1</div>
+        This is the last night of their childhood. Kelli names something here that will echo across the entire series: <em>Rooms not Streets.</em> Not a strategy yet. Just two teenagers on a porch figuring out how love actually works. They don't know they're shaping the foreign policy of the known universe. They think they're just saying goodbye. <em>Pastoral</em> knows the difference. That's why it aches the way it does.
+      </div>
+    </div>
+  </div>
+
+  <!-- 10 The Promise -->
+  <div class="track-card fade">
+    <div class="track-header">
+      <div class="track-scene-info">
+        <div class="track-location">Randolph House — Kite Flats — 2466-11-14 · Late Night</div>
+        <div class="track-scene-name">The Promise</div>
+        <div class="track-scene-tagline">A deep prophecy that will shake the universe is pronounced.</div>
+      </div>
+      <div class="track-info">
+        <div class="track-name">Ember</div>
+        <div class="track-artist">Tony Anderson</div>
+        <div class="track-links">
+          <a class="track-link yt" href="https://youtu.be/n0E-2juRHuI" target="_blank" rel="noopener">▶ YouTube</a>
+          <a class="track-link sp" href="https://open.spotify.com/track/3KDHazDZyngxhum4MakOQB" target="_blank" rel="noopener">Spotify</a>
+          <a class="track-link ap" href="https://music.apple.com/us/album/ember/1544553199?i=1544553200" target="_blank" rel="noopener">Apple</a>
+        </div>
+      </div>
+    </div>
+    <div class="track-notes">
+      <div class="track-note-public"><em>Ember</em> is a love song with something prophetic underneath it. Tony Anderson's wife performs haunting vocals that feel less like singing and more like witnessing. Two girls fall asleep holding hands, foreheads pressed together, already missing each other before the goodbye is even finished. A promise is made in the dark. Simple words. The kind you mean completely and hope you never have to keep. Some promises are just promises. Some are load-bearing walls.</div>
+      <div class="track-note-spoiler" data-spoiler-note="book1">
+        <div class="track-note-spoiler-label">If you've read Book 1</div>
+        Alex promises to hold Kelli's hand if the world falls apart. Even from Mars. Even across everything. They fall asleep like that — hands locked, the last hours of childhood ticking away. You've seen how the world falls apart. You know Alex kept her word.
+      </div>
+    </div>
+  </div>
+
+  <!-- 11 Terminal -->
+  <div class="track-card fade">
+    <div class="track-header">
+      <div class="track-scene-info">
+        <div class="track-location">Lang University Transit Terminal — Kite Flats — 2466-11-15 · Morning</div>
+        <div class="track-scene-name">Terminal</div>
+        <div class="track-scene-tagline">Time pushes in — Saying goodbye.</div>
+      </div>
+      <div class="track-info">
+        <div class="track-name">Morning's Wings</div>
+        <div class="track-artist">Tony Anderson</div>
+        <div class="track-links">
+          <a class="track-link yt" href="https://youtu.be/PbDEjY_IfAg" target="_blank" rel="noopener">▶ YouTube</a>
+          <a class="track-link sp" href="https://open.spotify.com/track/7oR52pTFA101oebY83ZIRr" target="_blank" rel="noopener">Spotify</a>
+          <a class="track-link ap" href="https://music.apple.com/us/album/mornings-wings/1544556199?i=1544556219" target="_blank" rel="noopener">Apple</a>
+        </div>
+      </div>
+    </div>
+    <div class="track-notes">
+      <div class="track-note-public"><em>Morning's Wings</em> moves like time that won't slow down. It aches and rushes simultaneously — the sound of a goodbye that isn't finished when the door closes anyway. Tony Anderson builds tension like a band pulled taut between two people walking in opposite directions. Then it snaps. Not violently. Just finally. The way goodbyes do when you've run out of reasons to stay one more minute.</div>
+      <div class="track-note-spoiler" data-spoiler-note="book1">
+        <div class="track-note-spoiler-label">If you've read Book 1</div>
+        This is the last time Alex and Kelli are in the same place as the girls they were on that porch. Everything after this is the world they build from the wreckage of this morning. The music knows it. They know it. They just can't say it out loud because the shuttle doesn't wait.
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== ACT TWO ==================== -->
+  <div class="companion-act"><span class="companion-act-label">Act Two — Uthul &amp; Kite Flats</span></div>
+
+  <!-- 12 Arienne -->
+  <div class="track-card fade">
+    <div class="track-header">
+      <div class="track-scene-info">
+        <div class="track-location">Uthul Orphanage — West Comm Tower — 2478-03-12 · Afternoon</div>
+        <div class="track-scene-name">Arienne</div>
+        <div class="track-scene-tagline">Hopeful though sick — Sam finds the dolphin.</div>
+      </div>
+      <div class="track-info">
+        <div class="track-name">Becoming</div>
+        <div class="track-artist">Judah Earl</div>
+        <div class="track-links">
+          <a class="track-link yt" href="https://youtu.be/GlpiYCVaRFM" target="_blank" rel="noopener">▶ YouTube</a>
+          <a class="track-link sp" href="https://open.spotify.com/track/7HIAkbS5sb1tBzFmLC1Uey" target="_blank" rel="noopener">Spotify</a>
+          <a class="track-link ap" href="https://music.apple.com/us/album/becoming/1532642245?i=1532642246" target="_blank" rel="noopener">Apple</a>
+        </div>
+      </div>
+    </div>
+    <div class="track-notes">
+      <div class="track-note-public">Sad piano and cello that climbs out angelically into hope and bliss. Female chorus. <em>Becoming</em> doesn't fit Uthul — a place designed to break children into soldiers. It fits her. She has a buzzed head and is too sick and too cheerful for where she is. She tells Sam about dolphins — how they never leave anyone behind, how they stay. Her father gave her the pendant before he was gone. Some people carry light into dark places without knowing they're doing it.</div>
+      <div class="track-note-spoiler" data-spoiler-note="book1">
+        <div class="track-note-spoiler-label">If you've read Book 1</div>
+        Arienne is the first person Sam loves in this world. The pendant comes to him through her hands. In a place built to break people, she is inexplicably, impossibly whole — and that wholeness is contagious. She is based on Nightbirde — Jane Marczewski — whose audition on America's Got Talent stopped the world for a few minutes. Same impossible lightness. Same refusal to let suffering be the loudest thing in the room. Same sense that you are watching someone who has decided, against all evidence, that life is worth the full cost of loving it.
+      </div>
+    </div>
+  </div>
+
+  <!-- 13 The Yard -->
+  <div class="track-card fade">
+    <div class="track-header">
+      <div class="track-scene-info">
+        <div class="track-location">Uthul Orphanage — The Yard — 2478-03-19 · Afternoon</div>
+        <div class="track-scene-name">The Yard</div>
+        <div class="track-scene-tagline">A relationship begins.</div>
+      </div>
+      <div class="track-info">
+        <div class="track-name">A Longing</div>
+        <div class="track-artist">Elijah Siegler</div>
+        <div class="track-links">
+          <a class="track-link yt" href="https://youtu.be/6rouf0WPJSw" target="_blank" rel="noopener">▶ YouTube</a>
+        </div>
+      </div>
+    </div>
+    <div class="track-notes">
+      <div class="track-note-public">Elijah Siegler's <em>A Longing</em> carries the weight Uthul deserves — sad, aching, searching. She collapses in the mud. He carries her back. Promises to bring her lunch. Does. She teases him for it. They fall harder for each other in the margins of a place designed to leave no room for anything tender. The music holds the sadness so they don't have to.</div>
+      <div class="track-note-spoiler" data-spoiler-note="book1">
+        <div class="track-note-spoiler-label">If you've read Book 1</div>
+        This is Sam learning what it means to stay. Arienne showed him the pendant and told him dolphins never leave anyone behind. Now he's proving he understood. He brings her lunch in a labor camp because that's what staying looks like when you have nothing else to give. <em>A Longing</em> plays underneath because Sam already knows this can't last. He just hasn't let himself say it yet.
+      </div>
+    </div>
+  </div>
+
+  <!-- 14 Lunch / Before Lights Out -->
+  <div class="track-card fade">
+    <div class="track-header">
+      <div class="track-scene-info">
+        <div class="track-location">Uthul Orphanage — 2478-03-19 · Afternoon / Night</div>
+        <div class="track-scene-name">Lunch / Before Lights Out</div>
+        <div class="track-scene-tagline">A day of rest and love.</div>
+      </div>
+      <div class="track-info">
+        <div class="track-name">My Memory Belongs to You</div>
+        <div class="track-artist">Elijah Siegler</div>
+        <div class="track-links">
+          <a class="track-link yt" href="https://youtu.be/fmm1kHRiS4c" target="_blank" rel="noopener">▶ YouTube</a>
+        </div>
+      </div>
+    </div>
+    <div class="track-notes">
+      <div class="track-note-public">A string quartet — sad and romantic and intimate. Two people eating together, teasing each other, finding every reason to stay in the same space a little longer. Then the porch at curfew, the conversation going deeper than either of them planned. <em>My Memory Belongs to You</em> plays at the register of something precious being held carefully because both people can feel how fragile it is. She makes him a promise before lights out. He takes it literally. She means it eternally. They're both right.</div>
+      <div class="track-note-spoiler" data-spoiler-note="book1">
+        <div class="track-note-spoiler-label">If you've read Book 1</div>
+        She promises to find him the next day no matter what. Sam hears a practical promise. Arienne knows what she's saying. Sam isn't ready to know yet. <em>My Memory Belongs to You</em> is the title of the track and the content of the scene simultaneously. She's giving him something to keep. He just doesn't know yet that keeping it is all he'll have.
+      </div>
+    </div>
+  </div>
+
+  <!-- 15 The Pendant -->
+  <div class="track-card fade">
+    <div class="track-header">
+      <div class="track-scene-info">
+        <div class="track-location">Uthul Orphanage — Processing Ward — 2478-03-20 · Dawn</div>
+        <div class="track-scene-name">The Pendant</div>
+        <div class="track-scene-tagline">Saying goodbye and searing the heart with a vow.</div>
+      </div>
+      <div class="track-info">
+        <div class="track-name">We Are One</div>
+        <div class="track-artist">Elijah Siegler</div>
+        <div class="track-links">
+          <a class="track-link yt" href="https://youtu.be/LY_u9iiQEsI" target="_blank" rel="noopener">▶ YouTube</a>
+        </div>
+      </div>
+    </div>
+    <div class="track-notes">
+      <div class="track-note-public">A male falsetto crying something holy into the dark. Angelic choirs joining him. <em>We Are One</em> sounds like grief that has decided not to stay grief — like mourning that keeps climbing toward something it refuses to name as hope but can't stop reaching for anyway. Sam finds her too late. He goes to her anyway. He stays. He kisses her. He takes the pendant. He makes a vow. The dolphin is with him now. It will never leave anyone behind.</div>
+      <div class="track-note-spoiler" data-spoiler-note="book1">
+        <div class="track-note-spoiler-label">If you've read Book 1</div>
+        This is where the title object finds its permanent keeper. The vow he forms here is the spine of everything that follows. Every relationship, every sacrifice, every impossible act of staying — it starts on this slab, in this room, with this kiss. <em>We Are One</em> is playing because it's true. She's gone and it's still true. Her last words to Sam were Nightbirde's words. It felt fitting.
+      </div>
+    </div>
+  </div>
+
+  <!-- 16 The Dolphin Box -->
+  <div class="track-card fade">
+    <div class="track-header">
+      <div class="track-scene-info">
+        <div class="track-location">Uthul Orphanage — Woodshop — 2478-07-14 · Afternoon</div>
+        <div class="track-scene-name">The Dolphin Box</div>
+        <div class="track-scene-tagline">A box is built, but a heart is commemorated.</div>
+      </div>
+      <div class="track-info">
+        <div class="track-name">To The Forgotten</div>
+        <div class="track-artist">Elijah Siegler</div>
+        <div class="track-links">
+          <a class="track-link yt" href="https://youtu.be/ox0dvXdf58o" target="_blank" rel="noopener">▶ YouTube</a>
+        </div>
+      </div>
+    </div>
+    <div class="track-notes">
+      <div class="track-note-public">Ethereal and oceanic — the sound of open water, of something vast and unhurried. Elijah Siegler's <em>To The Forgotten</em> sounds like the deep places where dolphins swim. Where things are remembered without words. Sam is alone in the woodshop. He decides to build a box — something to hold the pendant when he isn't wearing it. Some memorials are built in stone. Some are built in a woodshop by a teenager with a chisel and something to prove to the universe.</div>
+      <div class="track-note-spoiler" data-spoiler-note="book1">
+        <div class="track-note-spoiler-label">If you've read Book 1</div>
+        Months have passed since Arienne. The box is his first act of deliberate remembrance. His first attempt to build something that holds grief rather than just carrying it. It's also the first thing he makes with his hands that isn't a weapon or a tool. That matters. <em>To The Forgotten</em> plays like the ocean Arienne never saw. Like something honoring her anyway.
+      </div>
+    </div>
+  </div>
+
+  <!-- 17 The Exit Test -->
+  <div class="track-card fade">
+    <div class="track-header">
+      <div class="track-scene-info">
+        <div class="track-location">Uthul Orphanage — Termination Yard — 2478-08-30 · Morning</div>
+        <div class="track-scene-name">The Exit Test</div>
+        <div class="track-scene-tagline">A message that burns his heart forever.</div>
+      </div>
+      <div class="track-info">
+        <div class="track-name">Channel</div>
+        <div class="track-artist">Judah Earl &amp; Inola</div>
+        <div class="track-links">
+          <a class="track-link yt" href="https://youtu.be/fvXuXGuSla0" target="_blank" rel="noopener">▶ YouTube</a>
+          <a class="track-link sp" href="https://open.spotify.com/track/6hY5AwjrvddqwNZXtGdkdm" target="_blank" rel="noopener">Spotify</a>
+          <a class="track-link ap" href="https://music.apple.com/us/album/channel/1626864195?i=1626864213" target="_blank" rel="noopener">Apple</a>
+        </div>
+      </div>
+    </div>
+    <div class="track-notes">
+      <div class="track-note-public">Soft oceanic breeze. A light organ underneath. Pads breathing slowly. <em>Channel</em> is haunting without being heavy — the sound of something being transmitted across a distance that shouldn't be crossable. A message arrives from somewhere it shouldn't be able to come from anymore. Sam makes a choice that has nothing to do with following orders and everything to do with what he's decided to stay for. The music doesn't score the fighting. It scores what's happening in his chest while it happens.</div>
+      <div class="track-note-spoiler" data-spoiler-note="book1">
+        <div class="track-note-spoiler-label">If you've read Book 1</div>
+        Aesh-Nine carried her message across months of silence: <em>"Tell him it's okay. Tell him if he feels lost, he won't be."</em> Sam lets the robot go. Kuranis watches a teenager dismantle trained soldiers because a machine told him a dead girl said it was okay. Sam doesn't negotiate from strength. He negotiates from clarity: I'm done being lost. I'll be your Moon Gun. But I want a house. I want a place. <em>Channel</em> is Arienne's last transmission. It lands exactly where she aimed it.
+      </div>
+    </div>
+  </div>
+
+  <!-- 18 The Ridge -->
+  <div class="track-card fade">
+    <div class="track-header">
+      <div class="track-scene-info">
+        <div class="track-location">West Comm Tower — Kite Flats — 2478-09-14 · Evening</div>
+        <div class="track-scene-name">The Ridge</div>
+        <div class="track-scene-tagline">A call of hearts connecting across space.</div>
+      </div>
+      <div class="track-info">
+        <div class="track-name">Recede</div>
+        <div class="track-artist">Judah Earl &amp; Inola</div>
+        <div class="track-links">
+          <a class="track-link yt" href="https://youtu.be/ThmBEyoNr_U" target="_blank" rel="noopener">▶ YouTube</a>
+          <a class="track-link sp" href="https://open.spotify.com/track/4Q7DJEoBBtyQ7XneIbShnn" target="_blank" rel="noopener">Spotify</a>
+          <a class="track-link ap" href="https://music.apple.com/us/album/recede/1626864195?i=1626864200" target="_blank" rel="noopener">Apple</a>
+        </div>
+      </div>
+    </div>
+    <div class="track-notes">
+      <div class="track-note-public">Two notes. Yearning and achy. Pads and strings breathing softly underneath. <em>Recede</em> sounds like the space between people who love each other and the relief of crossing it — however briefly, however imperfectly. Standard comms can't reach Mars tonight. Sam knows a tower strong enough. He takes them there. Alex and Kelli find each other across the static and the distance. Sam watches. The music holds all three of them.</div>
+      <div class="track-note-spoiler" data-spoiler-note="book1">
+        <div class="track-note-spoiler-label">If you've read Book 1</div>
+        Sam brought them to West Comm Tower. The same place where he met Arienne. Where she collapsed in the mud and he carried her back. He didn't say that. He just knew the tower would work and brought Alex here and it did. He stands back and watches two sisters reach each other across space and says nothing. <em>Recede</em> plays because that's what Sam does in moments like this — he makes the thing possible and then gets out of the way and lets love do what it came to do.
+      </div>
+    </div>
+  </div>
+
+  <!-- 19 The Obstacle Course -->
+  <div class="track-card fade">
+    <div class="track-header">
+      <div class="track-scene-info">
+        <div class="track-location">Moon Gun Training Facility — Kite Flats — 2478-10-03 · Morning</div>
+        <div class="track-scene-name">The Obstacle Course</div>
+        <div class="track-scene-tagline">Training montage.</div>
+      </div>
+      <div class="track-info">
+        <div class="track-name">To Glory</div>
+        <div class="track-artist">Two Steps From Hell</div>
+        <div class="track-links">
+          <a class="track-link yt" href="https://youtu.be/abjE9Qx0O60" target="_blank" rel="noopener">▶ YouTube</a>
+          <a class="track-link sp" href="https://open.spotify.com/track/3fiW0wv25W6ItQJ8rGUna1" target="_blank" rel="noopener">Spotify</a>
+          <a class="track-link ap" href="https://music.apple.com/us/album/to-glory/1781877502?i=1781877906" target="_blank" rel="noopener">Apple</a>
+        </div>
+      </div>
+    </div>
+    <div class="track-notes">
+      <div class="track-note-public">Metal guitars. Horns. Drums. <em>To Glory</em> is the one track on this companion that doesn't ask you to feel anything quietly. It just grabs you and runs. Sam and Alex in basic training — not just surviving it but excelling at it, moving together like they've been doing this their whole lives. One body. One mind. This is what it looks like when two people are built for each other before they know it.</div>
+      <div class="track-note-spoiler" data-spoiler-note="book1">
+        <div class="track-note-spoiler-label">If you've read Book 1</div>
+        Alex didn't like him at first. None of that matters on the obstacle course. They are one thing — fearsome and formidable and completely synchronized in a way that has nothing to do with strategy and everything to do with the fact that their hearts are already beating at the same frequency. They don't name it yet. They don't need to. <em>To Glory</em> names it for them. The quiet tracks built this. This track shows what it built.
+      </div>
+    </div>
+  </div>
+
+  <!-- 20 Second Window -->
+  <div class="track-card fade">
+    <div class="track-header">
+      <div class="track-scene-info">
+        <div class="track-location">West Comm Tower — Kite Flats — 2479-03-07 · Evening</div>
+        <div class="track-scene-name">Second Window</div>
+        <div class="track-scene-tagline">Is this what family is?</div>
+      </div>
+      <div class="track-info">
+        <div class="track-name">Like Wind</div>
+        <div class="track-artist">Judah Earl</div>
+        <div class="track-links">
+          <a class="track-link yt" href="https://youtu.be/599mugzJhKw" target="_blank" rel="noopener">▶ YouTube</a>
+          <a class="track-link sp" href="https://open.spotify.com/track/39jFE6dY3u4zu8UyQ8mezj" target="_blank" rel="noopener">Spotify</a>
+          <a class="track-link ap" href="https://music.apple.com/us/album/like-wind/1697201502?i=1697201503" target="_blank" rel="noopener">Apple</a>
+        </div>
+      </div>
+    </div>
+    <div class="track-notes">
+      <div class="track-note-public">Soft and warm and slightly uncertain. <em>Like Wind</em> moves the way a conversation moves when it goes somewhere neither person expected. Kelli is coming home for summer. Something is shifting between the people left behind to wait for her. They sit on the floor after the call and talk until they figure out what they are to each other. Family turns out to be the right answer.</div>
+      <div class="track-note-spoiler" data-spoiler-note="book1">
+        <div class="track-note-spoiler-label">If you've read Book 1</div>
+        Alex tells him not to touch Kelli. He tells her what he looks for in a woman. Someone who drowns quiet. Alex freezes. That's not a phrase anyone says. That's from the porch. That's sacred language between her and Kelli. Sam is standing in that register without knowing it exists. Alex decides family is the right answer because it's the only answer that keeps everyone safe. But she files that phrase away somewhere she won't look at directly for a long time.
+      </div>
+    </div>
+  </div>
+
+  <!-- 21 Reunion -->
+  <div class="track-card fade">
+    <div class="track-header">
+      <div class="track-scene-info">
+        <div class="track-location">Randolph House — Kite Flats — 2479-06-14 · Afternoon</div>
+        <div class="track-scene-name">Reunion</div>
+        <div class="track-scene-tagline">Sam watches what sisters look like — Sam falls in love hard.</div>
+      </div>
+      <div class="track-info">
+        <div class="track-name">Recede</div>
+        <div class="track-artist">Judah Earl &amp; Inola</div>
+        <div class="track-links">
+          <a class="track-link yt" href="https://youtu.be/ThmBEyoNr_U" target="_blank" rel="noopener">▶ YouTube</a>
+          <a class="track-link sp" href="https://open.spotify.com/track/4Q7DJEoBBtyQ7XneIbShnn" target="_blank" rel="noopener">Spotify</a>
+          <a class="track-link ap" href="https://music.apple.com/us/album/recede/1626864195?i=1626864200" target="_blank" rel="noopener">Apple</a>
+        </div>
+      </div>
+    </div>
+    <div class="track-notes">
+      <div class="track-note-public"><em>Recede</em> again — that soft two note theme, yearning and sweet. Kelli comes home from Mars and two sisters find each other at full speed in a field and completely fall apart in the best possible way. Sam watches from the porch. Something opens in his chest that he hasn't felt in a long time. The music already knows what it is.</div>
+      <div class="track-note-spoiler" data-spoiler-note="book1">
+        <div class="track-note-spoiler-label">If you've read Book 1</div>
+        Sam hadn't felt this since Arienne. He's just standing on a porch watching two women who love each other with everything they have, and something in him that has been very quiet for a very long time wakes up and says <em>yes. this. here.</em> The pendant is around his neck. Arienne taught him what staying looks like. He's about to find out what it costs. <em>Recede</em> plays because this is the moment everything starts receding toward — every scene before this, every track, every quiet conversation.
+      </div>
+    </div>
+  </div>
+
+  <!-- 22 Kindness -->
+  <div class="track-card fade">
+    <div class="track-header">
+      <div class="track-scene-info">
+        <div class="track-location">Randolph House — Kite Flats — 2479-06-16 · Evening</div>
+        <div class="track-scene-name">Kindness</div>
+        <div class="track-scene-tagline">Porch swing family begins — A legacy is born.</div>
+      </div>
+      <div class="track-info">
+        <div class="track-name">Recede</div>
+        <div class="track-artist">Judah Earl &amp; Inola</div>
+        <div class="track-links">
+          <a class="track-link yt" href="https://youtu.be/ThmBEyoNr_U" target="_blank" rel="noopener">▶ YouTube</a>
+          <a class="track-link sp" href="https://open.spotify.com/track/4Q7DJEoBBtyQ7XneIbShnn" target="_blank" rel="noopener">Spotify</a>
+          <a class="track-link ap" href="https://music.apple.com/us/album/recede/1626864195?i=1626864200" target="_blank" rel="noopener">Apple</a>
+        </div>
+      </div>
+    </div>
+    <div class="track-notes">
+      <div class="track-note-public"><em>Recede</em> plays one final time — and earns its trilogy. Alex is asleep between them, bare feet in Sam's face. Kelli is pig-snort laughing. Sam and Kelli are talking quietly underneath all of it and finding out who the other person actually is. This is what family feels like before anyone calls it that.</div>
+      <div class="track-note-spoiler" data-spoiler-note="book1">
+        <div class="track-note-spoiler-label">If you've read Book 1</div>
+        They visited Alex's mother's grave today. Alex fell asleep between two people who showed up for her and the weight went out of her completely — feet in Sam's face, dead to the world, completely safe. Kelli watches Sam not move. Not complain. She already knows. The porch swing has always known. Three people becoming something permanent without signing anything or saying anything out loud. The legacy that begins here will outlast everything the universe throws at it.
+      </div>
+    </div>
+  </div>
+
+  <!-- 23 Sam's House -->
+  <div class="track-card fade">
+    <div class="track-header">
+      <div class="track-scene-info">
+        <div class="track-location">Sam's Quarters — Moon Gun Barracks — Kite Flats — 2479-06-17 · Night</div>
+        <div class="track-scene-name">Sam's House</div>
+        <div class="track-scene-tagline">Kelli and Sam fall in love — The pendant explained — Forever begins here.</div>
+      </div>
+      <div class="track-info">
+        <div class="track-name">Der Har Meg (Instrumental)</div>
+        <div class="track-artist">Judah Earl</div>
+        <div class="track-links">
+          <a class="track-link yt" href="https://youtu.be/klX9AsiQfTg" target="_blank" rel="noopener">▶ YouTube</a>
+          <a class="track-link sp" href="https://open.spotify.com/track/1AvWRGso9MEMJA5Y4xOmeR" target="_blank" rel="noopener">Spotify</a>
+          <a class="track-link ap" href="https://music.apple.com/us/album/du-har-meg-instrumental/1791015165?i=1791015891" target="_blank" rel="noopener">Apple</a>
+        </div>
+      </div>
+    </div>
+    <div class="track-notes">
+      <div class="track-note-public">Deep cellos. Soft chorus. Something that sounds like stages of love moving through a single piece of music — tender, then holy, then uplifting, then quietly aching. <em>Der Har Meg</em> is enormous and intimate simultaneously. A night that starts funny ends as something permanent. Someone decides this is forever. The other person agrees.</div>
+      <div class="track-note-spoiler" data-spoiler-note="book1">
+        <div class="track-note-spoiler-label">If you've read Book 1</div>
+        Kelli sees the pendant. Sam tells her about Arienne — all of it. Kelli listens and then chooses him anyway. All of him. The grief included. Then Alex and Edie burst through the door completely blitzed and pass out on the floor and Kelli laughs so hard she can't speak. Kelli looks at all of it and decides this is exactly what family looks like. Perfect and ridiculous and completely hers. <em>Der Har Meg</em> plays in stages because that's what love does. It moves through you in stages. Each one feels like the whole thing until the next one arrives.
+      </div>
+    </div>
+  </div>
+
+  <!-- 24 The Mark -->
+  <div class="track-card fade">
+    <div class="track-header">
+      <div class="track-scene-info">
+        <div class="track-location">Kite Flats Tattoo Parlor — 2479-06-19 · Afternoon</div>
+        <div class="track-scene-name">The Mark</div>
+        <div class="track-scene-tagline">Dolphins chosen and commitment sealed.</div>
+      </div>
+      <div class="track-info">
+        <div class="track-name">When I Was In Your World</div>
+        <div class="track-artist">Elijah Siegler</div>
+        <div class="track-links">
+          <a class="track-link yt" href="https://youtu.be/in-gI3hxqgs" target="_blank" rel="noopener">▶ YouTube</a>
+        </div>
+      </div>
+    </div>
+    <div class="track-notes">
+      <div class="track-note-public">Oceanic and crying and sweet. Elijah Siegler writes water into his music the way other composers write light — it moves through everything, finds every low place, fills it. Two women get matching tattoos above their hearts. A symbol that says we share this. A photograph is taken. Someone is wrecked by it in the best possible way.</div>
+      <div class="track-note-spoiler" data-spoiler-note="book1">
+        <div class="track-note-spoiler-label">If you've read Book 1</div>
+        They tell him he is their shared heart. That's why the dolphin. His symbol. Arienne's symbol. The thing that means <em>I don't leave anyone behind</em> — they're tattooing it over their hearts and telling him it's because of him. The pendant came from Arienne to Sam. Now it lives in their skin. The dolphin is no longer something he carries alone. It never was, really. Arienne sent it forward. It was always meant to multiply.
+      </div>
+    </div>
+  </div>
+
+  <!-- 25 Kelli Departs for Lang U -->
+  <div class="track-card fade">
+    <div class="track-header">
+      <div class="track-scene-info">
+        <div class="track-location">Kite Flats Shuttleport — 2479-06-21 · Morning</div>
+        <div class="track-scene-name">Kelli Departs for Lang U</div>
+        <div class="track-scene-tagline">Time is the killer of family.</div>
+      </div>
+      <div class="track-info">
+        <div class="track-name">Ember</div>
+        <div class="track-artist">Tony Anderson</div>
+        <div class="track-links">
+          <a class="track-link yt" href="https://youtu.be/n0E-2juRHuI" target="_blank" rel="noopener">▶ YouTube</a>
+          <a class="track-link sp" href="https://open.spotify.com/track/3KDHazDZyngxhum4MakOQB" target="_blank" rel="noopener">Spotify</a>
+          <a class="track-link ap" href="https://music.apple.com/us/album/ember/1544553199?i=1544553200" target="_blank" rel="noopener">Apple</a>
+        </div>
+      </div>
+    </div>
+    <div class="track-notes">
+      <div class="track-note-public"><em>Ember</em> returns. Same track as the last goodbye. Same feeling of time compressing around people who love each other — moments being eaten faster than anyone can hold onto them. Tony Anderson's haunting vocals underneath everything like a witness who already knows how this goes. Alex is wrecked. Sam holds her while the shuttle lifts. Some goodbyes teach you something about love you didn't know before you watched them happen to someone else.</div>
+      <div class="track-note-spoiler" data-spoiler-note="book1">
+        <div class="track-note-spoiler-label">If you've read Book 1</div>
+        Alex falls apart like Kelli is dying. Kelli almost stays. Almost. Then she pushes on. Sam holds Alex while the shuttle takes Kelli back to Mars and something shifts in him about what these women are to each other and what he's been let into. <em>Ember</em> plays because some themes in a life just keep returning until you understand what they're telling you. Time is the killer of family. The only answer is to stay as close as you can for as long as you can.
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== ACT THREE ==================== -->
+  <div class="companion-act"><span class="companion-act-label">Act Three — Luna City</span></div>
+
+  <!-- 26 Comfort -->
+  <div class="track-card fade">
+    <div class="track-header">
+      <div class="track-scene-info">
+        <div class="track-location">Sam's Quarters — Moon Gun Barracks — Luna — 2479-09-14 · Evening</div>
+        <div class="track-scene-name">Comfort</div>
+        <div class="track-scene-tagline">Sam holds Alex and lets her be vulnerable.</div>
+      </div>
+      <div class="track-info">
+        <div class="track-name">Eschaton Rework</div>
+        <div class="track-artist">Tony Anderson</div>
+        <div class="track-links">
+          <a class="track-link yt" href="https://youtu.be/7OsE-E4bpZc" target="_blank" rel="noopener">▶ YouTube</a>
+          <a class="track-link sp" href="https://open.spotify.com/track/05bMvNJ2HgYXKNwHEqskXX" target="_blank" rel="noopener">Spotify</a>
+          <a class="track-link ap" href="https://music.apple.com/us/album/eschaton-tony-anderson-rework/1544556253?i=1544556255" target="_blank" rel="noopener">Apple</a>
+        </div>
+      </div>
+    </div>
+    <div class="track-notes">
+      <div class="track-note-public">Soft and quiet. Tony Anderson at his most restrained — just enough music to hold the room without filling it. <em>Eschaton Rework</em> sounds like someone deciding it's safe to come apart. Like the specific relief of being held by someone who isn't going to need you to be okay right now. He takes her off base. She curls into him on the sofa and cries. He stays. That's the whole scene. Sometimes that's everything.</div>
+      <div class="track-note-spoiler" data-spoiler-note="book1">
+        <div class="track-note-spoiler-label">If you've read Book 1</div>
+        He holds her and she cries and it leans romantic and they both feel it and Sam carries the guilt of that feeling straight to Kelli. Kelli doesn't flinch. <em>She's half my heart. You had better love her and hold her and take care of her.</em> Not permission. Correction. They are a pod. Jealousy has no architecture here. Love doesn't subtract — it compounds. Sam is still learning the geometry of what he's been let into.
+      </div>
+    </div>
+  </div>
+
+  <!-- 27 Photograph -->
+  <div class="track-card fade">
+    <div class="track-header">
+      <div class="track-scene-info">
+        <div class="track-location">Kite Flats Tattoo Parlor / Moon Gun Barracks — 2479-12-25 · Late Evening</div>
+        <div class="track-scene-name">Photograph</div>
+        <div class="track-scene-tagline">Sam gets the photograph tattoo — He loves them both.</div>
+      </div>
+      <div class="track-info">
+        <div class="track-name">When I Was In Your World</div>
+        <div class="track-artist">Elijah Siegler</div>
+        <div class="track-links">
+          <a class="track-link yt" href="https://youtu.be/in-gI3hxqgs" target="_blank" rel="noopener">▶ YouTube</a>
+        </div>
+      </div>
+    </div>
+    <div class="track-notes">
+      <div class="track-note-public">Soft piano and pads. Holy and quiet. <em>When I Was In Your World</em> plays at the register of something being made permanent — not loudly, not ceremonially. Just a man alone on Christmas night deciding to carry something on his body because carrying it in his chest isn't enough anymore. He goes outside after. Looks up. Cries quietly where no one can see him. Some decisions you make in private because they're too important to perform.</div>
+      <div class="track-note-spoiler" data-spoiler-note="book1">
+        <div class="track-note-spoiler-label">If you've read Book 1</div>
+        The photo he took at the tattoo parlor — Kelli and Alex pulling their tank straps aside to show their fresh sister-dolphins, both of them laughing — he had it tattooed on his chest on Christmas night. A portrait of both women. Both dolphins. Together. He already chose them in ink before he ever said it out loud. He has something now he didn't have before. Levers. Things he's terrified to lose. The tattoo is a contract. He signed it.
+      </div>
+    </div>
+  </div>
+
+  <!-- 28 Muster -->
+  <div class="track-card fade">
+    <div class="track-header">
+      <div class="track-scene-info">
+        <div class="track-location">Moon Gun Troop Carrier — Luna — 2480-02-14 · Night</div>
+        <div class="track-scene-name">Muster</div>
+        <div class="track-scene-tagline">The troops prepare for battle.</div>
+      </div>
+      <div class="track-info">
+        <div class="track-name">You Don't Know Where I've Been</div>
+        <div class="track-artist">Mixed Signals</div>
+        <div class="track-links">
+          <a class="track-link yt" href="https://youtu.be/U3wK6xEDfjg" target="_blank" rel="noopener">▶ YouTube</a>
+        </div>
+      </div>
+    </div>
+    <div class="track-notes">
+      <div class="track-note-public">Dark techno pulse. Forward momentum. No sentiment. Just the sound of a troop carrier moving through the dark toward something that can't be undone once it starts. First assignment. Everyone is terrified. The beat doesn't care.</div>
+      <div class="track-note-spoiler" data-spoiler-note="book1">
+        <div class="track-note-spoiler-label">If you've read Book 1</div>
+        The Killtech gang has taken a water tower. Families on Luna are being rationed. Sam and Alex are backup — green, trained, terrified, and moving anyway. There's nothing holy about this yet. No pendant energy, no porch swing warmth. Just a beat and a carrier and two people about to find out what they're actually made of when it stops being an obstacle course. <em>You Don't Know Where I've Been</em> is the title and the subtext. They're about to add something to that answer.
+      </div>
+    </div>
+  </div>
+
+  <!-- 29 Tower Battle -->
+  <div class="track-card fade">
+    <div class="track-header">
+      <div class="track-scene-info">
+        <div class="track-location">West Water Tower — Luna — 2480-02-14 · Night</div>
+        <div class="track-scene-name">Tower Battle</div>
+        <div class="track-scene-tagline">Taking back the tower.</div>
+      </div>
+      <div class="track-info">
+        <div class="track-name">The Dome</div>
+        <div class="track-artist">Elijah Siegler</div>
+        <div class="track-links">
+          <a class="track-link yt" href="https://youtu.be/wUBxHYoohwQ" target="_blank" rel="noopener">▶ YouTube</a>
+        </div>
+      </div>
+    </div>
+    <div class="track-notes">
+      <div class="track-note-public">Loud. Operatic. Full orchestral action — John Williams by way of Alan Silvestri. <em>The Dome</em> sounds like a Marvel title card and means it. Elijah Siegler, who elsewhere on this companion writes oceanic whispers and crying falsetto, here writes something that could score an Avengers set piece without apologizing for a single note. The music commits completely.</div>
+      <div class="track-note-spoiler" data-spoiler-note="book1">
+        <div class="track-note-spoiler-label">If you've read Book 1</div>
+        This is their first real fight and they're good at it. The synchronized instinct from the obstacle course shows up when it counts. Jamestown is there — which matters more than this scene lets on yet. Siegler writing both <em>We Are One</em> and <em>The Dome</em> is the composer flex of the entire companion. The man who scored Arienne's death in falsetto and angel choir can also score a tactical assault with full orchestral authority. MGS needs both registers. So does he.
+      </div>
+    </div>
+  </div>
+
+  <!-- 30 Silence -->
+  <div class="track-card fade">
+    <div class="track-header">
+      <div class="track-scene-info">
+        <div class="track-location">Luna City Memorial Grounds — 2480-02-17 · Afternoon</div>
+        <div class="track-scene-name">Silence</div>
+        <div class="track-scene-tagline">The funeral hits deeper than bone.</div>
+      </div>
+      <div class="track-info">
+        <div class="track-name">Anthology of Beauty</div>
+        <div class="track-artist">Elijah Siegler</div>
+        <div class="track-links">
+          <a class="track-link yt" href="https://youtu.be/a3nM6NWUdeE" target="_blank" rel="noopener">▶ YouTube</a>
+        </div>
+      </div>
+    </div>
+    <div class="track-notes">
+      <div class="track-note-public">Not ethereal this time — sad and sweeping and fully orchestral. Elijah Siegler in the register of Williams and Howard Shore, the kind of music that plays at the end of something and means it. A battle ends. A woman's hair is stroked by someone who didn't know her. A funeral follows. Someone finds someone unexpected in the crowd and runs to them. <em>"You're not that bad."</em> That's the whole scene.</div>
+      <div class="track-note-spoiler" data-spoiler-note="book1">
+        <div class="track-note-spoiler-label">If you've read Book 1</div>
+        Alex puts it together at the funeral — the church, the pipes, the potluck, the man who kept being annoyingly kind to her — his daughter died where Alex was standing. She runs to him after. Holds him. Tells him his daughter had to love him because she does and he's not that bad. Rooms not Streets. She learned it on a porch from Kelli. She's living it at a funeral. Underwood is going to carry things for a very long time. He starts carrying them here.
+      </div>
+    </div>
+  </div>
+
+  <!-- 31 Rinse -->
+  <div class="track-card fade">
+    <div class="track-header">
+      <div class="track-scene-info">
+        <div class="track-location">Moon Gun Barracks — Luna — 2480-02-17 · Evening</div>
+        <div class="track-scene-name">Rinse</div>
+        <div class="track-scene-tagline">Sam and Alex realize they are family and they are one.</div>
+      </div>
+      <div class="track-info">
+        <div class="track-name">True Friends</div>
+        <div class="track-artist">Afternova</div>
+        <div class="track-links">
+          <a class="track-link yt" href="https://youtu.be/NP0i_9dRfV4" target="_blank" rel="noopener">▶ YouTube</a>
+          <a class="track-link sp" href="https://open.spotify.com/track/1hHP6dzoOxmeWaPrDtb1Jj" target="_blank" rel="noopener">Spotify</a>
+          <a class="track-link ap" href="https://music.apple.com/us/album/true-friends/993779545?i=993781150" target="_blank" rel="noopener">Apple</a>
+        </div>
+      </div>
+    </div>
+    <div class="track-notes">
+      <div class="track-note-public">A trumpet resolving into soft strings — military honor bleeding into something warmer, more private. Afternova finding the Thomas Newman register underneath the Saving Private Ryan surface. <em>True Friends</em> sounds like the end of a very long day when the adrenaline finally drains and what's left is just two people who made it through something together. An honest conversation about being afraid. Then something seen that breaks everything open in the best possible way.</div>
+      <div class="track-note-spoiler" data-spoiler-note="book1">
+        <div class="track-note-spoiler-label">If you've read Book 1</div>
+        Then she sees the tattoo. Her face. Kelli's face. Both dolphins. Over his heart. He had it put there on Christmas night alone and never mentioned it and now she's seeing it for the first time in a shower after the worst day of her life. Alex breaks open. The tattoo is a contract. She just found out she was already signed.
+      </div>
+    </div>
+  </div>
+
+  <!-- 32 Kelli and Sam -->
+  <div class="track-card fade">
+    <div class="track-header">
+      <div class="track-scene-info">
+        <div class="track-location">Sam's Quarters — Moon Gun Barracks — Luna — 2480-12-25 · Night</div>
+        <div class="track-scene-name">Kelli and Sam</div>
+        <div class="track-scene-tagline">Love. And Socks. Love in socks.</div>
+      </div>
+      <div class="track-info">
+        <div class="track-name">Boundless</div>
+        <div class="track-artist">Judah Earl &amp; Inola</div>
+        <div class="track-links">
+          <a class="track-link yt" href="https://youtu.be/E43RPS3iQOI" target="_blank" rel="noopener">▶ YouTube</a>
+          <a class="track-link sp" href="https://open.spotify.com/track/54hV6bgWVexafGjhamt7f8" target="_blank" rel="noopener">Spotify</a>
+          <a class="track-link ap" href="https://music.apple.com/us/album/boundless/1693813968?i=1693813977" target="_blank" rel="noopener">Apple</a>
+        </div>
+      </div>
+    </div>
+    <div class="track-notes">
+      <div class="track-note-public">Soft and reverent. <em>Boundless</em> sounds like the inside of something that has been carefully built and is now being fully inhabited for the first time. Judah Earl and Inola at their warmest — no ache, no yearning, just arrival. Two people already committed falling deeper anyway because apparently there's no floor to this. Christmas night. Socks. Love declared at full volume in a small room.</div>
+      <div class="track-note-spoiler" data-spoiler-note="book1">
+        <div class="track-note-spoiler-label">If you've read Book 1</div>
+        She's wearing Christmas socks and nothing else and that is somehow the most Kelli thing that has ever happened. She sees the tattoo and melts completely. <em>Boundless</em> is the right title. Every time they think they've reached the full depth of it there's more. The socks stay on. This is canon and it matters.
+      </div>
+    </div>
+  </div>
+
+  <!-- 33 I'm Pregnant -->
+  <div class="track-card fade">
+    <div class="track-header">
+      <div class="track-scene-info">
+        <div class="track-location">Sam's Quarters — Moon Gun Barracks — Luna — 2481-01-14 · Evening</div>
+        <div class="track-scene-name">I'm Pregnant</div>
+        <div class="track-scene-tagline">Love. Glowsticks. And bad news.</div>
+      </div>
+      <div class="track-info">
+        <div class="track-name">Boundless</div>
+        <div class="track-artist">Judah Earl &amp; Inola</div>
+        <div class="track-links">
+          <a class="track-link yt" href="https://youtu.be/E43RPS3iQOI" target="_blank" rel="noopener">▶ YouTube</a>
+          <a class="track-link sp" href="https://open.spotify.com/track/54hV6bgWVexafGjhamt7f8" target="_blank" rel="noopener">Spotify</a>
+          <a class="track-link ap" href="https://music.apple.com/us/album/boundless/1693813968?i=1693813977" target="_blank" rel="noopener">Apple</a>
+        </div>
+      </div>
+    </div>
+    <div class="track-notes">
+      <div class="track-note-public"><em>Boundless</em> returns immediately — same warmth, same register, no gap. A stick. A tackle. A bed. Ecstatic doesn't cover it. Then the room gets complicated. Sam makes a choice about which thing gets to be tonight's thing.</div>
+      <div class="track-note-spoiler" data-spoiler-note="book1">
+        <div class="track-note-spoiler-label">If you've read Book 1</div>
+        Kelli launches herself off the toilet and tackles him onto the bed and that is the correct response to this news. But a corporate decision Kelli made at work is being weaponized. The shadow is in the room. Sam looks at his pregnant wife wearing the biggest smile he's ever seen and decides the shadow can wait until morning. He chooses right.
+      </div>
+    </div>
+  </div>
+
+  <!-- 34 The Vigil -->
+  <div class="track-card fade">
+    <div class="track-header">
+      <div class="track-scene-info">
+        <div class="track-location">Kite Flats Memorial Field — 2481-03-22 · Night</div>
+        <div class="track-scene-name">The Vigil</div>
+        <div class="track-scene-tagline">Lanterns. Letting go. Finding hope.</div>
+      </div>
+      <div class="track-info">
+        <div class="track-name">Sea of Light</div>
+        <div class="track-artist">Judah Earl &amp; Inola</div>
+        <div class="track-links">
+          <a class="track-link yt" href="https://youtu.be/054f3p3MqbM" target="_blank" rel="noopener">▶ YouTube</a>
+          <a class="track-link sp" href="https://open.spotify.com/track/6A69LSx4aTZT0mXOFwLhky" target="_blank" rel="noopener">Spotify</a>
+          <a class="track-link ap" href="https://music.apple.com/us/album/sea-of-light/1676772660?i=1676772670" target="_blank" rel="noopener">Apple</a>
+        </div>
+      </div>
+    </div>
+    <div class="track-notes">
+      <div class="track-note-public">Soft and holy. <em>Sea of Light</em> sounds like something being released upward — grief finding a direction, rising instead of settling. Larry Underwood leads the lantern release. Lights go up into the dark one by one. People stand together beneath them because that's all you can do sometimes. Wedding plans are being made in the same breath. Life insisting on itself.</div>
+      <div class="track-note-spoiler" data-spoiler-note="book1">
+        <div class="track-note-spoiler-label">If you've read Book 1</div>
+        Hundreds of families are dead in the crater. Kelli's name was on the decision that was weaponized to kill them. She didn't know. Kuranis has threatened Sam. He carries that alone while standing at a lantern vigil with his pregnant wife. Sam watches the light go up and carries his secret and lets Kelli have this moment clean. That's the rooms not streets answer to an impossible situation. You stay. You hold it. You let the light go up.
+      </div>
+    </div>
+  </div>
+
+  <!-- 35 The Wedding -->
+  <div class="track-card fade">
+    <div class="track-header">
+      <div class="track-scene-info">
+        <div class="track-location">Old Cornfield Church Gazebo — Kite Flats — 2481-04-12 · Afternoon</div>
+        <div class="track-scene-name">The Wedding</div>
+        <div class="track-scene-tagline">Sam and Kelli unite.</div>
+      </div>
+      <div class="track-info">
+        <div class="track-name">The King</div>
+        <div class="track-artist">Tony Anderson</div>
+        <div class="track-links">
+          <a class="track-link yt" href="https://youtu.be/DqX0VcA0yus" target="_blank" rel="noopener">▶ YouTube</a>
+          <a class="track-link sp" href="https://open.spotify.com/track/06r64aCezKAJzJ3E9IjhhV" target="_blank" rel="noopener">Spotify</a>
+          <a class="track-link ap" href="https://music.apple.com/us/album/the-king/1544556199?i=1544556217" target="_blank" rel="noopener">Apple</a>
+        </div>
+      </div>
+    </div>
+    <div class="track-notes">
+      <div class="track-note-public">Cellos leading a full string ensemble into something regal and majestic and warm. <em>The King</em> sounds like a march for royalty — but royalty that grew up on a porch swing, that fixed pipes for bad pay, that stood in cornfields and made promises in the dark. A gazebo. A cornfield church. Larry Underwood officiating. Something beautiful happening in a small place. Tony Anderson wrote this track and it sounds like it was written for a throne room. It plays over a backyard wedding. That gap is the whole point.</div>
+      <div class="track-note-spoiler" data-spoiler-note="book1">
+        <div class="track-note-spoiler-label">If you've read Book 1</div>
+        The universe is marking something the guests don't have clearance to understand yet. This is their formal beginning. Standing in a gazebo in Kite Flats, saying I do while <em>The King</em> plays like a coronation nobody called a coronation. The prophecy that opened the book — this is what it was moving toward. Not a throne room. A gazebo. The universe just doesn't know it yet.
+      </div>
+    </div>
+  </div>
+
+  <!-- 36 Lila's Birth -->
+  <div class="track-card fade">
+    <div class="track-header">
+      <div class="track-scene-info">
+        <div class="track-location">Luna City Hospital — 2481-06-03 · Morning</div>
+        <div class="track-scene-name">Lila's Birth</div>
+        <div class="track-scene-tagline">Daughter of Sam and Kelli.</div>
+      </div>
+      <div class="track-info">
+        <div class="track-name">High Tide</div>
+        <div class="track-artist">Tony Anderson</div>
+        <div class="track-links">
+          <a class="track-link yt" href="https://youtu.be/qGXbigEVIJU" target="_blank" rel="noopener">▶ YouTube</a>
+          <a class="track-link sp" href="https://open.spotify.com/track/6GKgIiUoGmiLOYdRYol3zy" target="_blank" rel="noopener">Spotify</a>
+          <a class="track-link ap" href="https://music.apple.com/us/album/high-tide/1544556199?i=1544556213" target="_blank" rel="noopener">Apple</a>
+        </div>
+      </div>
+    </div>
+    <div class="track-notes">
+      <div class="track-note-public"><em>High Tide</em> is <em>Low Tide</em> answered. Same composer, same architecture, more light. Where <em>Low Tide</em> opened the book in darkness before the world began — prophetic, enormous, waiting — <em>High Tide</em> arrives like the thing that was being waited for. Uplifting and epic and warm. Something big is happening in a hospital room in Luna City. Kelli calls her the light in a dark world. The music agrees completely.</div>
+      <div class="track-note-spoiler" data-spoiler-note="book1">
+        <div class="track-note-spoiler-label">If you've read Book 1</div>
+        The book opened with a pendant forming in darkness. It was never the pendant. It was always Lila. The pendant was her symbol before she existed — a placeholder, a promise, pointing forward at something it couldn't name yet. Sam carried it through Uthul and a woodshop and a tower battle and a gazebo wedding and the whole time it was just an arrow. <em>High Tide</em> plays because she's here now. The arrow found its mark. Lila is the dolphin. She always was.
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== ACT FOUR ==================== -->
+  <div class="companion-act"><span class="companion-act-label">Act Four — The Long Watch</span></div>
+
+  <!-- 37 The River Dream -->
+  <div class="track-card fade">
+    <div class="track-header">
+      <div class="track-scene-info">
+        <div class="track-location">Randolph House — Kite Flats — 2481-08-03 · Night</div>
+        <div class="track-scene-name">The River Dream</div>
+        <div class="track-scene-tagline">Kelli sees the dream and awakens — Alex must choose.</div>
+      </div>
+      <div class="track-info">
+        <div class="track-name">Skønnhet (Reprise) — Beginning</div>
+        <div class="track-artist">Judah Earl &amp; Hannah Yoo</div>
+        <div class="track-links">
+          <a class="track-link yt" href="https://youtu.be/scJgbM9PDmE" target="_blank" rel="noopener">▶ YouTube</a>
+          <a class="track-link sp" href="https://open.spotify.com/track/1PDRuKNWtEtt2uEO0w6rih" target="_blank" rel="noopener">Spotify</a>
+          <a class="track-link ap" href="https://music.apple.com/us/album/skjønnhet-reprise/1566217966?i=1566217972" target="_blank" rel="noopener">Apple</a>
+        </div>
+      </div>
+    </div>
+    <div class="track-notes">
+      <div class="track-note-public">Ethereal cellos and choir. Holy and searching. <em>Skønnhet</em> opens like something trying to surface from deep water — beautiful and troubled simultaneously, the sound of meaning arriving before understanding does. A dream. A river. Someone standing in rising water between two shores, unable to choose. Kelli wakes up crying because something in it was real even if she can't say what. Some dreams are just dreams. Some are instructions you don't have the translation for yet.</div>
+      <div class="track-note-spoiler" data-spoiler-note="book1">
+        <div class="track-note-spoiler-label">If you've read Book 1</div>
+        Kelli doesn't know what Alex needs to choose. She just knows the way you know things in your chest before your mind catches up. <em>Skønnhet</em> means beauty in Norwegian. Hannah Yoo's voice carries it like something precious being held at arm's length over deep water. That's the dream. That's Kelli. That's what it costs to love someone you can see and not be able to change what's coming.
+      </div>
+    </div>
+  </div>
+
+  <!-- 38 Promises in the Park -->
+  <div class="track-card fade">
+    <div class="track-header">
+      <div class="track-scene-info">
+        <div class="track-location">Kite Flats Community Park — 2481-08-07 · Afternoon</div>
+        <div class="track-scene-name">Promises in the Park</div>
+        <div class="track-scene-tagline">A promise revisited — Sisterhood intact.</div>
+      </div>
+      <div class="track-info">
+        <div class="track-name">Losing Hope</div>
+        <div class="track-artist">Elijah Siegler</div>
+        <div class="track-links">
+          <a class="track-link yt" href="https://youtu.be/_HNESh0SOak" target="_blank" rel="noopener">▶ YouTube</a>
+        </div>
+      </div>
+    </div>
+    <div class="track-notes">
+      <div class="track-note-public">The title says one thing, the music says another. <em>Losing Hope</em> opens sad and then finds its way toward something reverent — not hopeless at all, just honest about the weight of what it's carrying. Lila runs and plays. Two sisters sit together and talk about something neither of them fully understands. A promise gets made anyway because that's what you do when you love someone and the path isn't clear — you hold their hand and you mean it.</div>
+      <div class="track-note-spoiler" data-spoiler-note="book1">
+        <div class="track-note-spoiler-label">If you've read Book 1</div>
+        Kelli tells Alex about the river dream. Alex doesn't do religion but she does do Kelli. She says it again in the park while Lila runs in the grass: I'm all in. Whatever you need me to choose, I'll choose it. <em>Losing Hope</em> plays like it already knows this promise is going to cost something enormous to keep. But it also plays like it knows Alex will keep it anyway. Not hopeless. Just clear-eyed about the road.
+      </div>
+    </div>
+  </div>
+
+  <!-- 39 Christmas at Kite Flats -->
+  <div class="track-card fade">
+    <div class="track-header">
+      <div class="track-scene-info">
+        <div class="track-location">Randolph House — Kite Flats — 2481-12-25 · Morning</div>
+        <div class="track-scene-name">Christmas at Kite Flats</div>
+        <div class="track-scene-tagline">Family Found.</div>
+      </div>
+      <div class="track-info">
+        <div class="track-name">Skønnhet (Reprise) — Ending</div>
+        <div class="track-artist">Judah Earl &amp; Hannah Yoo</div>
+        <div class="track-links">
+          <a class="track-link yt" href="https://youtu.be/scJgbM9PDmE?t=74" target="_blank" rel="noopener">▶ YouTube</a>
+          <a class="track-link sp" href="https://open.spotify.com/track/1PDRuKNWtEtt2uEO0w6rih" target="_blank" rel="noopener">Spotify</a>
+          <a class="track-link ap" href="https://music.apple.com/us/album/skjønnhet-reprise/1566217966?i=1566217972" target="_blank" rel="noopener">Apple</a>
+        </div>
+      </div>
+    </div>
+    <div class="track-notes">
+      <div class="track-note-public">Dual violins bubbling up into something playful and sweet and completely joyful. <em>Skønnhet</em> ends the way it couldn't begin — light and warm and full of people who found each other. The same piece of music that opened in ethereal searching closes here in a Randolph house Christmas and means something completely different. This is what they built. This is what all of it was for.</div>
+      <div class="track-note-spoiler" data-spoiler-note="book1">
+        <div class="track-note-spoiler-label">If you've read Book 1</div>
+        The river dream plays under the beginning of this track. The Christmas morning plays under the end. Judah Earl wrote both poles into the same composition — the nightmare and the joy — and the Randolphs are living in the warm half right now without knowing the other half is coming. These early Christmases. Remember this one. Lila is here. Sam is here. Kelli is here. The cornfield is outside. <em>This</em> is family found. Enjoy it. The road isn't done.
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== ACT FIVE ==================== -->
+  <div class="companion-act"><span class="companion-act-label">Act Five — Gethsemane &amp; After</span></div>
+
+  <!-- 40 The Night Before the Launch -->
+  <div class="track-card fade">
+    <div class="track-header">
+      <div class="track-scene-info">
+        <div class="track-location">Randolph House — Kite Flats — 2481-08-19 · Night</div>
+        <div class="track-scene-name">The Night Before the Launch</div>
+        <div class="track-scene-tagline">She hopes her feeling is wrong — Alex stays awake with her.</div>
+      </div>
+      <div class="track-info">
+        <div class="track-name">In Search of Solitude — I</div>
+        <div class="track-artist">Scott Buckley</div>
+        <div class="track-links">
+          <a class="track-link yt" href="https://youtu.be/XifoyWDCzB0" target="_blank" rel="noopener">▶ YouTube</a>
+          <a class="track-link sp" href="https://open.spotify.com/track/1or6AbBoUpCxicmtcRxXST" target="_blank" rel="noopener">Spotify</a>
+          <a class="track-link ap" href="https://music.apple.com/us/album/in-search-of-solitude/1626698952?i=1626698953" target="_blank" rel="noopener">Apple</a>
+        </div>
+        <div class="cc-badge">CC BY 4.0 · Scott Buckley</div>
+      </div>
+    </div>
+    <div class="track-notes">
+      <div class="track-note-public">Four piano notes. Holy pads and strings breathing over them like something enormous and patient waiting just outside the light. Scott Buckley's <em>In Search of Solitude</em> opens like Brian Eno's Dune prophecy music grown to full size — vast and sad and completely certain of itself. Kelli reads her Bible. She's scared. Alex hears and comes to sit with her. They stay up through the night together. Some fears can't be argued away. Some nights you just need someone to stay in the room.</div>
+      <div class="track-note-spoiler" data-spoiler-note="book1">
+        <div class="track-note-spoiler-label">If you've read Book 1</div>
+        This is Kelli's Gethsemane. She's begging God not to ask this of her. She doesn't trust her company. Zel warned her before he left — watch your back, trust Garax, trust no one else. Alex hears her crying and comes and sits with her and doesn't leave. Unlike Christ in the garden, she is afforded that small mercy — her person stays awake. Alex doesn't know how to pray. But she knows how to stay and she does. She goes anyway. That's the whole of her.
+      </div>
+    </div>
+  </div>
+
+  <!-- 41 BG-0239 Lift-Off -->
+  <div class="track-card fade">
+    <div class="track-header">
+      <div class="track-scene-info">
+        <div class="track-location">Kite Flats Launch Terminal — 2481-08-20 · Morning</div>
+        <div class="track-scene-name">BG-0239 Lift-Off</div>
+        <div class="track-scene-tagline">Promises are made — The ship departs for Mars.</div>
+      </div>
+      <div class="track-info">
+        <div class="track-name">In Search of Solitude — II</div>
+        <div class="track-artist">Scott Buckley</div>
+        <div class="track-links">
+          <a class="track-link yt" href="https://youtu.be/XifoyWDCzB0?t=186" target="_blank" rel="noopener">▶ YouTube</a>
+          <a class="track-link sp" href="https://open.spotify.com/track/1or6AbBoUpCxicmtcRxXST" target="_blank" rel="noopener">Spotify</a>
+          <a class="track-link ap" href="https://music.apple.com/us/album/in-search-of-solitude/1626698952?i=1626698953" target="_blank" rel="noopener">Apple</a>
+        </div>
+        <div class="cc-badge">CC BY 4.0 · Scott Buckley</div>
+      </div>
+    </div>
+    <div class="track-notes">
+      <div class="track-note-public">Softer. A little more ominous underneath the sadness. The middle movement carries the weight of the night before without resolving it — just holds it as the ground falls away. Three people on a launch pad getting smaller. One person on a shuttle getting farther. A little girl who knows something is wrong even if she can't say what. The shuttle lifts. The sky takes her.</div>
+      <div class="track-note-spoiler" data-spoiler-note="book1">
+        <div class="track-note-spoiler-label">If you've read Book 1</div>
+        Lila is scared she won't come back. Children know things before they have words for them. Kelli spent the night in Gethsemane and went anyway. She has Garax's name and Zel's warning and her green Bible with the colored tabs. The second movement plays like the space between a prayer being spoken and an answer arriving. Sam takes Lila home. Alex takes the long way. The pendant is around Sam's neck. The dolphins are on their hearts. The shuttle is gone.
+      </div>
+    </div>
+  </div>
+
+  <!-- 42 Watching the Watchers -->
+  <div class="track-card fade">
+    <div class="track-header">
+      <div class="track-scene-info">
+        <div class="track-location">Luna City — Lang District — 2481-08-24 · Evening</div>
+        <div class="track-scene-name">Watching the Watchers</div>
+        <div class="track-scene-tagline">Sam watches Harmonix being deployed on civilians.</div>
+      </div>
+      <div class="track-info">
+        <div class="track-name">The Wife</div>
+        <div class="track-artist">Anne-Kathrin Dern</div>
+        <div class="track-links">
+          <a class="track-link yt" href="https://youtu.be/4IY3v1lJcCE" target="_blank" rel="noopener">▶ YouTube</a>
+          <a class="track-link sp" href="https://open.spotify.com/track/2tK1tOa1CHYE9G3C2YaX6Y" target="_blank" rel="noopener">Spotify</a>
+          <a class="track-link ap" href="https://music.apple.com/us/album/the-wife/1785710116?i=1785710270" target="_blank" rel="noopener">Apple</a>
+        </div>
+      </div>
+    </div>
+    <div class="track-notes">
+      <div class="track-note-public">Noir and mysterious. A sad orchestral progression that sounds like it wandered in from a 1940s detective picture and never left. Anne-Kathrin Dern writing the kind of music that plays when someone is watching something they weren't supposed to see and can't unsee. Sam follows a rover. Watches something illegal happening to ordinary people on an ordinary street. Some things you can't unknow once you know them.</div>
+      <div class="track-note-spoiler" data-spoiler-note="book1">
+        <div class="track-note-spoiler-label">If you've read Book 1</div>
+        Harmonix is military technology. It's not supposed to touch civilians. Lang is using it on Susan's street and Sam watches it happen in real time. People falling over. Minds being tuned like instruments without consent. Kelli's company. Kelli's name. Again. The noir register is doing something precise here — this isn't action movie villainy, it's institutional evil. The kind that happens in boardrooms. Sam is watching the machinery of it from a rooftop and it is as old as power itself.
+      </div>
+    </div>
+  </div>
+
+  <!-- 43/44/45 Stories trilogy -->
+  <div class="track-card fade">
+    <div class="track-header">
+      <div class="track-scene-info">
+        <div class="track-location">Veil Tram · West Comm Tower · Randolph House — 2481-09-07 through 2481-10-14</div>
+        <div class="track-scene-name">Sam and Lila on the Veil Tram / Calling Mom / Preparing for the Welcome Home</div>
+        <div class="track-scene-tagline">Three movements of waiting.</div>
+      </div>
+      <div class="track-info">
+        <div class="track-name">Stories</div>
+        <div class="track-artist">Judah Earl</div>
+        <div class="track-links">
+          <a class="track-link yt" href="https://youtu.be/LvneuIz2FOc" target="_blank" rel="noopener">▶ YouTube</a>
+          <a class="track-link sp" href="https://open.spotify.com/track/6DiDIsJfwrq2MnrGc8opcn" target="_blank" rel="noopener">Spotify</a>
+          <a class="track-link ap" href="https://music.apple.com/us/album/stories/1696659030?i=1696659035" target="_blank" rel="noopener">Apple</a>
+        </div>
+      </div>
+    </div>
+    <div class="track-notes">
+      <div class="track-note-public">Hopeful minimal piano. Small town Americana with strings holding back, staying ethereal, a violin echoing the throughline softly. <em>Stories</em> plays across three scenes — a father and daughter on a tram looking at new construction, a scratchy transmission reaching Mars, and finally: banners, balloons, pizza ordered, everyone piling into the rover to go pick up mom. The track has been patient and warm and minimal because that's what waiting for someone you love actually feels like. Not dramatic. Just present.</div>
+      <div class="track-note-spoiler" data-spoiler-note="book1">
+        <div class="track-note-spoiler-label">If you've read Book 1</div>
+        Three movements of <em>Stories</em> scoring the full arc of waiting. The tram daydream. The scratchy transmission with Lila convinced she's in trouble. And now: the banners Lila helped make, Alex's too much pizza, Sam up since before dawn. The rover pulls out toward the shuttleport and <em>Stories</em> plays like it's been saving this feeling the whole time — the specific lightness of going to get someone instead of watching them go. Remember this rover ride. Remember the banners. <em>Stories</em> ends here. What comes next has a different sound.
+      </div>
+    </div>
+  </div>
+
+  <!-- 46 The Angel Goes Home -->
+  <div class="track-card fade">
+    <div class="track-header">
+      <div class="track-scene-info">
+        <div class="track-location">Luna City Hospital — 2481-10-14 · Evening</div>
+        <div class="track-scene-name">The Angel Goes Home</div>
+        <div class="track-scene-tagline">A goodbye and fracture. All you can do is hold hands, hug, and cry.</div>
+      </div>
+      <div class="track-info">
+        <div class="track-name">Farthest Seas</div>
+        <div class="track-artist">Tony Anderson</div>
+        <div class="track-links">
+          <a class="track-link yt" href="https://youtu.be/E45n2CeWVJQ" target="_blank" rel="noopener">▶ YouTube</a>
+          <a class="track-link sp" href="https://open.spotify.com/track/3YqggTtARyvSe2BjQMDsDn" target="_blank" rel="noopener">Spotify</a>
+          <a class="track-link ap" href="https://music.apple.com/us/album/farthest-seas/1544556199?i=1544556215" target="_blank" rel="noopener">Apple</a>
+        </div>
+      </div>
+    </div>
+    <div class="track-notes">
+      <div class="track-note-public">Soft piano. Then strings arriving like something that has been waiting a long time to be needed. <em>Farthest Seas</em> sounds like the distance between here and somewhere you can't follow. Tony Anderson writing music that knows how to hold the unholdable. Something happens at Luna City Hospital on arrival day. The music doesn't explain it. It just stays.</div>
+      <div class="track-note-spoiler" data-spoiler-note="book1">
+        <div class="track-note-spoiler-label">If you've read Book 1</div>
+        BG-0239 burned on landing. They pulled her out alive. She died at Luna City Hospital with Sam at her side. <em>"Kiss me, lawman."</em> Alex held her hand and her skin came off in her hands. Sam took her last breath in a kiss. The nurse hands him a plastic bag with her belongings. Her Christmas socks were not burned. She was wearing them for him today — the ones from the scene with <em>Boundless</em> playing, love in socks, love declared at full volume in a small room. She put them on this morning to come home to him. The nurse puts them in a plastic bag. That's the whole book right there.
+      </div>
+    </div>
+  </div>
+
+  <!-- The Funeral — two tracks -->
+  <div class="track-card fade">
+    <div class="track-header">
+      <div class="track-scene-info">
+        <div class="track-location">Old Cornfield Church — Kite Flats — 2481-10-18 · Morning &amp; Afternoon</div>
+        <div class="track-scene-name">How Great Thou Art</div>
+        <div class="track-scene-tagline">The funeral procession — The vision in the Swale.</div>
+      </div>
+      <div class="track-info">
+        <div class="track-name">How Great Thou Art</div>
+        <div class="track-artist">Garrett &amp; Kate</div>
+        <div class="track-links">
+          <a class="track-link yt" href="https://youtu.be/1rSbFAw6F9Q" target="_blank" rel="noopener">▶ YouTube</a>
+          <a class="track-link sp" href="https://open.spotify.com/track/19ESxUNdj7Gbn1ox7Egz8T" target="_blank" rel="noopener">Spotify</a>
+          <a class="track-link ap" href="https://music.apple.com/us/album/how-great-thou-art/1776234452?i=1776234453" target="_blank" rel="noopener">Apple</a>
+        </div>
+        <div style="margin-top:0.5rem;">
+          <div class="track-name" style="font-size:0.85rem;">+ Heartfelt</div>
+          <div class="track-artist">Afternova ft. Sarah Joy</div>
+          <div class="track-links" style="justify-content:flex-end;">
+            <a class="track-link yt" href="https://youtu.be/MjrrbuE1wco" target="_blank" rel="noopener">▶ YouTube</a>
+            <a class="track-link sp" href="https://open.spotify.com/track/52SylV0zx6egRivtaFpEiA" target="_blank" rel="noopener">Spotify</a>
+            <a class="track-link ap" href="https://music.apple.com/us/album/heartfelt-feat-sarah-joy/1445871606?i=1445871997" target="_blank" rel="noopener">Apple</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="track-notes">
+      <div class="track-note-public">A hymn. Simple and clean and exactly what it is. Larry Underwood at the pulpit. A congregation that knew her. Music she would have chosen. Then outside in the golden hour: Sarah Joy's cello tears the sky open and the sky cries back. <em>Heartfelt</em> is the sound of grief that has gone past language into something purely physical. Two people holding each other trying to find the floor. Sam looks out across the Swale. Then looks away. Then looks back.</div>
+      <div class="track-note-spoiler" data-spoiler-note="book1">
+        <div class="track-note-spoiler-label">If you've read Book 1</div>
+        Underwood remembers that Kelli could not sing. She sang anyway — loudly, joyfully, completely unself-consciously. He tells the congregation this and someone laughs through their tears. He stands at that pulpit and preaches her home because that's what she would have wanted. Then golden hour. Lila asleep on Jamestown's lap. Sam looks out across the Swale and sees Kelli standing there. Crying. Saying she's sorry. Not goodbye. <em>Sorry.</em> He looks away. Looks back. She's gone. <em>Sorry</em> is not what the dead say. Remember that. File it away. Let it sit.
+      </div>
+    </div>
+  </div>
+
+  <!-- 47 Spiral -->
+  <div class="track-card fade">
+    <div class="track-header">
+      <div class="track-scene-info">
+        <div class="track-location">Luna City — Susan's Apartment — 2481-11-07 · Evening</div>
+        <div class="track-scene-name">Spiral</div>
+        <div class="track-scene-tagline">Susan's Fall.</div>
+      </div>
+      <div class="track-info">
+        <div class="track-name">The Wife</div>
+        <div class="track-artist">Anne-Kathrin Dern</div>
+        <div class="track-links">
+          <a class="track-link yt" href="https://youtu.be/4IY3v1lJcCE" target="_blank" rel="noopener">▶ YouTube</a>
+          <a class="track-link sp" href="https://open.spotify.com/track/2tK1tOa1CHYE9G3C2YaX6Y" target="_blank" rel="noopener">Spotify</a>
+          <a class="track-link ap" href="https://music.apple.com/us/album/the-wife/1785710116?i=1785710270" target="_blank" rel="noopener">Apple</a>
+        </div>
+      </div>
+    </div>
+    <div class="track-notes">
+      <div class="track-note-public"><em>The Wife</em> returns. Same composer, same sad mysterious noir register as when Sam watched something illegal happening on a civilian street. The distance between watching it happen to strangers and watching it happen to someone you know is the distance between these two scenes. Susan is coming apart. The music already knew this was coming.</div>
+      <div class="track-note-spoiler" data-spoiler-note="book1">
+        <div class="track-note-spoiler-label">If you've read Book 1</div>
+        Sam watched Harmonix deployed on Susan's street weeks ago. Now he's watching what sustained illegal civilian tuning does to a person from the inside. <em>The Wife</em> plays the same way both times — sad, noir, inevitable. Some things you watch happen from a rooftop. Some things you watch happen in a living room. The machinery is the same either way.
+      </div>
+    </div>
+  </div>
+
+  <!-- 48 The Drowning Light -->
+  <div class="track-card fade">
+    <div class="track-header">
+      <div class="track-scene-info">
+        <div class="track-location">Luna City — Kite Flats — 2481-10-19 through 2481-11-14 · Various</div>
+        <div class="track-scene-name">The Drowning Light</div>
+        <div class="track-scene-tagline">Weeks of research and missing.</div>
+      </div>
+      <div class="track-info">
+        <div class="track-name">All The Places I Will Never Go</div>
+        <div class="track-artist">Elijah Siegler</div>
+        <div class="track-links">
+          <a class="track-link yt" href="https://youtu.be/od7m8G1Snkc" target="_blank" rel="noopener">▶ YouTube</a>
+          <a class="track-link sp" href="https://open.spotify.com/track/4cH3XkPvdvxIDmjxb6FmDM" target="_blank" rel="noopener">Spotify</a>
+          <a class="track-link ap" href="https://music.apple.com/us/album/all-the-places-i-will-never-go/1872760982?i=1872760992" target="_blank" rel="noopener">Apple</a>
+        </div>
+      </div>
+    </div>
+    <div class="track-notes">
+      <div class="track-note-public">Grief and loss and a violin solo that swells through pads and strings with massive reverb. Elijah Siegler writing music that changes shape the way surviving does — not one feeling, not one register, just the long uneven terrain of weeks that have to be lived through one at a time. The track title says everything the no-spoiler version needs to say.</div>
+      <div class="track-note-spoiler" data-spoiler-note="book1">
+        <div class="track-note-spoiler-label">If you've read Book 1</div>
+        Sam and Alex are trying to understand how BG-0239 burned. Trying to hold Lila through the implosion. Alex gets a message from God for the first time in her life. It arrives in a bar fight because of course it does — Alex would never receive a quiet revelation. Then a dream. Kelli. The meaning just out of reach. <em>All The Places I Will Never Go</em> changes shape several times because this stretch isn't one scene — it's weeks of surviving that blur together. The violin solo keeps finding its way back. Like Alex. Like Sam. Like people who don't know how to stop looking.
+      </div>
+    </div>
+  </div>
+
+  <!-- 49 Antidote -->
+  <div class="track-card fade">
+    <div class="track-header">
+      <div class="track-scene-info">
+        <div class="track-location">Luna City Streets — Luna City Hospital — 2481-12-04 · Night</div>
+        <div class="track-scene-name">Antidote</div>
+        <div class="track-scene-tagline">Sam runs with Alex.</div>
+      </div>
+      <div class="track-info">
+        <div class="track-name">Allure</div>
+        <div class="track-artist">Tony Anderson</div>
+        <div class="track-links">
+          <a class="track-link yt" href="https://youtu.be/ZKrRupWztek" target="_blank" rel="noopener">▶ YouTube</a>
+          <a class="track-link sp" href="https://open.spotify.com/track/4HDoYcQWmEvHiVwHzsP8a2" target="_blank" rel="noopener">Spotify</a>
+          <a class="track-link ap" href="https://music.apple.com/us/album/allure/1544556199?i=1544556203" target="_blank" rel="noopener">Apple</a>
+        </div>
+      </div>
+    </div>
+    <div class="track-notes">
+      <div class="track-note-public">Haunting and somber. Eerie underneath the sadness. <em>Allure</em> sounds like a decision being made that can't be unmade — not triumphant, not defeated, just the specific weight of a choice that had only one answer and cost everything anyway. Sam runs. He gets there in time. The music doesn't celebrate.</div>
+      <div class="track-note-spoiler" data-spoiler-note="book1">
+        <div class="track-note-spoiler-label">If you've read Book 1</div>
+        The Arbitor poisoned Alex and left the antidote at the hospital and left Sam the terms. Save Alex and a child close to Sam pays the debt. Let Alex die and it's over. What else can he do. He runs. He gets her there in time. The antidote works. Alex lives. And now Sam sits with what he chose and what it's going to cost. He saved her. Something is coming for a child because he saved her. Both of those things are true and neither cancels the other out.
+      </div>
+    </div>
+  </div>
+
+  <!-- 50 Sam's Collapse -->
+  <div class="track-card fade">
+    <div class="track-header">
+      <div class="track-scene-info">
+        <div class="track-location">Randolph House — Kite Flats — 2481-12-14 · Night</div>
+        <div class="track-scene-name">Sam's Collapse</div>
+        <div class="track-scene-tagline">This is a world falling apart.</div>
+      </div>
+      <div class="track-info">
+        <div class="track-name">In Search of Solitude — III (from 4:28)</div>
+        <div class="track-artist">Scott Buckley</div>
+        <div class="track-links">
+          <a class="track-link yt" href="https://youtu.be/XifoyWDCzB0?t=268" target="_blank" rel="noopener">▶ YouTube</a>
+          <a class="track-link sp" href="https://open.spotify.com/track/4IhYDMbdbPUuXeCAvad08O" target="_blank" rel="noopener">Spotify</a>
+          <a class="track-link ap" href="https://music.apple.com/us/album/in-search-of-solitude/1626698952?i=1626698953" target="_blank" rel="noopener">Apple</a>
+        </div>
+        <div class="cc-badge">CC BY 4.0 · Scott Buckley</div>
+      </div>
+    </div>
+    <div class="track-notes">
+      <div class="track-note-public">The third movement of <em>In Search of Solitude</em> arrives more holy than it left. Sadder. More prophetic. Scott Buckley's piano notes returning like something that has been waiting to complete a thought it started on the night before a shuttle launched. Two people who love each other say things that can't be unsaid. Then they're each alone crying in different rooms. Then a little girl runs in because she misses her mom. The camera pulls back. The hall is long. The door is closed. The book ends here.</div>
+      <div class="track-note-spoiler" data-spoiler-note="book1">
+        <div class="track-note-spoiler-label">If you've read Book 1</div>
+        They fight about Kelli. Sam says she was ignorant for trusting a stranger on Mars. Alex hits him. It breaks her the moment she does it. She runs to her rover and cries alone. Sam cries alone in his bedroom. Then the socks are hanging out of the drawer by his face. He pulls them out. Breathes them in. The last remnants of her — just the smell of her feet from Christmas morning when she was alive and wearing them for him. He completely collapses. Lila runs in crying for her mom. Sam holds her until she's asleep and then stares down the hall at the closed door. He can't lose Alex too. He knew it before he said the thing he said. He said it anyway because grief makes weapons out of the people you love most. <em>In Search of Solitude</em> completes its arc — three movements across the spine of the book, from the night before the shuttle left to this bedroom, this drawer, these socks. The Pod is fractured. Lila is asleep. The hall is dark. Book Two begins in the morning.
+      </div>
+    </div>
+  </div>
+
+  <!-- End note -->
+  <div style="text-align:center; padding: 3rem 0 1rem; opacity: 0.3; font-size: 0.78rem; letter-spacing: 0.15em; text-transform: uppercase;">
+    End of Book One — The Dolphin · Vow
+  </div>
+  <div style="text-align:center; padding-bottom: 2rem;">
+    <a href="/music.html" style="font-size:0.82rem; letter-spacing:0.1em; text-transform:uppercase; color:#e6b14a; text-decoration:none;">← Back to The Music</a>
+  </div>
+
+</div><!-- end companion-body -->
+
+<footer>
+  <section class="spoiler-settings">
+    <h3>Spoiler Filter</h3>
+    <p>Show extras based on how far you've read:</p>
+    <div class="spoiler-buttons">
+      <button type="button" onclick="setSpoiler('none')">No Spoilers</button>
+      <button type="button" onclick="setSpoiler('book1')">I've read Book 1</button>
+      <button type="button" onclick="setSpoiler('book2')">I've read Book 2</button>
+      <button type="button" onclick="setSpoiler('book3')">I've read Book 3</button>
+    </div>
+    <div class="spoiler-select">
+      <label class="sr-only" for="spoilerLevel">Spoiler level</label>
+      <select id="spoilerLevel">
+        <option value="none">No Spoilers</option>
+        <option value="book1">I've read Book 1</option>
+        <option value="book2">I've read Book 2</option>
+        <option value="book3">I've read Book 3</option>
+      </select>
+    </div>
+  </section>
+
+  <div class="copyright">
+    © 2026 Luna Dumu Press •
+    <a href="/privacy.html">Privacy Policy</a>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+<script>
+  // Companion page spoiler logic
+  function applyCompanionSpoilers() {
+    const level = localStorage.getItem("spoilerLevel") || "none";
+    const order = ["none", "book1", "book2", "book3"];
+
+    // Reveal spoiler notes
+    document.querySelectorAll("[data-spoiler-note]").forEach(el => {
+      const required = el.dataset.spoilerNote;
+      if (order.indexOf(level) >= order.indexOf(required)) {
+        el.classList.add("revealed");
+      } else {
+        el.classList.remove("revealed");
+      }
+    });
+
+    // Highlight filter bar buttons
+    ["none","book1","book2","book3"].forEach(l => {
+      const btn = document.getElementById("cfb-" + l);
+      if (btn) btn.classList.toggle("active", l === level);
+    });
+
+    // Sync mobile dropdown
+    const sel = document.getElementById("companionSpoilerSelect");
+    if (sel) sel.value = level;
+  }
+
+  document.addEventListener("DOMContentLoaded", () => {
+    applyCompanionSpoilers();
+
+    const sel = document.getElementById("companionSpoilerSelect");
+    if (sel) {
+      sel.addEventListener("change", (e) => {
+        setSpoiler(e.target.value);
+      });
+    }
+  });
+
+  // Hook into global setSpoiler
+  const _origSet2 = window.setSpoiler;
+  window.setSpoiler = function(level) {
+    if (typeof _origSet2 === "function") _origSet2(level);
+    applyCompanionSpoilers();
+  };
+</script>
+
+<!-- MailerLite Universal -->
+<script>
+    (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
+    .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
+    n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
+    (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
+    ml('account', '2151427');
+</script>
+
+</body>
+</html>

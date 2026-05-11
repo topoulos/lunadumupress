@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>The Music — Luna Dumu Press</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="shortcut icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <meta name="apple-mobile-web-app-title" content="Luna Dumu" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <style>
+    /* ========================= 
+       MUSIC HUB PAGE STYLES
+    ========================= */
+
+    .music-page-hero {
+      position: relative;
+      width: 100%;
+      min-height: 38vh;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      overflow: hidden;
+      padding-bottom: 3rem;
+      background: #0b0b0b;
+    }
+
+    .music-page-hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: 
+        radial-gradient(ellipse at 60% 40%, rgba(180,120,60,0.18) 0%, transparent 65%),
+        radial-gradient(ellipse at 20% 70%, rgba(30,80,80,0.22) 0%, transparent 55%),
+        #0b0b0b;
+      z-index: 0;
+    }
+
+    .music-page-hero-content {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      padding: 2rem;
+    }
+
+    .music-page-hero-content .back-link {
+      display: inline-block;
+      margin-bottom: 1.5rem;
+      font-size: 0.85rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.45);
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    .music-page-hero-content .back-link:hover {
+      color: #e6b14a;
+      text-decoration: none;
+    }
+
+    .music-page-hero-content h1 {
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      font-weight: 300;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: #fff;
+      margin-bottom: 0.5rem;
+    }
+
+    .music-page-hero-content p {
+      font-size: 1rem;
+      color: rgba(255,255,255,0.55);
+      letter-spacing: 0.08em;
+      max-width: 560px;
+      margin: 0 auto;
+      line-height: 1.7;
+    }
+
+    .music-divider {
+      width: 60px;
+      height: 1px;
+      background: rgba(230,177,74,0.5);
+      margin: 1.5rem auto;
+    }
+
+    /* ========================= 
+       BOOK COMPANION CARDS
+    ========================= */
+
+    .music-books-section {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 3rem 2rem 6rem;
+    }
+
+    .music-books-section h2 {
+      text-align: center;
+      font-size: 0.8rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.35);
+      margin-bottom: 3rem;
+    }
+
+    .music-book-cards {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    .music-book-card {
+      display: grid;
+      grid-template-columns: 200px 1fr;
+      gap: 0;
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 16px;
+      overflow: hidden;
+      background: rgba(255,255,255,0.03);
+      transition: border-color 0.25s ease, background 0.25s ease;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .music-book-card:hover {
+      border-color: rgba(230,177,74,0.3);
+      background: rgba(255,255,255,0.05);
+      text-decoration: none;
+    }
+
+    .music-book-card-image {
+      position: relative;
+      overflow: hidden;
+      min-height: 220px;
+      background: #111;
+    }
+
+    .music-book-card-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      filter: grayscale(20%);
+      transition: filter 0.3s ease, transform 0.3s ease;
+    }
+
+    .music-book-card:hover .music-book-card-image img {
+      filter: grayscale(0%);
+      transform: scale(1.03);
+    }
+
+    .music-book-card-image-placeholder {
+      width: 100%;
+      height: 100%;
+      min-height: 220px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 3rem;
+      opacity: 0.15;
+    }
+
+    .music-book-card-body {
+      padding: 2rem 2.5rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 0.75rem;
+    }
+
+    .music-book-card-eyebrow {
+      font-size: 0.72rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: #e6b14a;
+    }
+
+    .music-book-card-title {
+      font-size: 1.5rem;
+      font-weight: 300;
+      letter-spacing: 0.06em;
+      color: #fff;
+      line-height: 1.3;
+    }
+
+    .music-book-card-subtitle {
+      font-size: 0.9rem;
+      color: rgba(255,255,255,0.45);
+      letter-spacing: 0.04em;
+    }
+
+    .music-book-card-meta {
+      display: flex;
+      gap: 1.5rem;
+      font-size: 0.78rem;
+      color: rgba(255,255,255,0.3);
+      letter-spacing: 0.06em;
+      margin-top: 0.25rem;
+    }
+
+    .music-book-card-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-top: 0.5rem;
+      font-size: 0.82rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #e6b14a;
+      transition: gap 0.2s ease;
+    }
+
+    .music-book-card:hover .music-book-card-cta {
+      gap: 0.8rem;
+    }
+
+    .music-book-card-locked {
+      opacity: 0.35;
+      pointer-events: none;
+      cursor: default;
+    }
+
+    .music-book-card-locked .music-book-card-cta {
+      color: rgba(255,255,255,0.3);
+    }
+
+    .lock-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.72rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.3);
+      border: 1px solid rgba(255,255,255,0.12);
+      padding: 0.3rem 0.7rem;
+      border-radius: 999px;
+      margin-top: 0.5rem;
+    }
+
+    /* ========================= 
+       ABOUT THE COMPANION
+    ========================= */
+
+    .music-about {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 0 2rem 5rem;
+      text-align: center;
+    }
+
+    .music-about h3 {
+      font-size: 0.75rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.3);
+      margin-bottom: 1.25rem;
+    }
+
+    .music-about p {
+      font-size: 0.97rem;
+      color: rgba(255,255,255,0.6);
+      line-height: 1.8;
+      margin-bottom: 1rem;
+    }
+
+    /* Spoiler note */
+    .spoiler-note {
+      display: inline-block;
+      margin-top: 1.5rem;
+      font-size: 0.78rem;
+      color: rgba(255,255,255,0.3);
+      letter-spacing: 0.06em;
+      border: 1px solid rgba(255,255,255,0.08);
+      padding: 0.6rem 1.2rem;
+      border-radius: 999px;
+    }
+
+    /* ========================= 
+       RESPONSIVE
+    ========================= */
+
+    @media (max-width: 700px) {
+      .music-book-card {
+        grid-template-columns: 1fr;
+      }
+
+      .music-book-card-image {
+        min-height: 180px;
+        max-height: 220px;
+      }
+
+      .music-book-card-body {
+        padding: 1.5rem;
+      }
+
+      .music-book-card-title {
+        font-size: 1.25rem;
+      }
+    }
+  </style>
+</head>
+<body>
+<div id="pageFade"></div>
+
+<!-- HERO -->
+<div class="music-page-hero">
+  <div class="music-page-hero-content fade visible">
+    <a href="/" class="back-link">← Luna Dumu Press</a>
+    <h1>The Music</h1>
+    <div class="music-divider"></div>
+    <p>Every book in the Moon Gun Sam series has a listening companion — a curated soundtrack with notes on why each track was chosen and what it means in context.</p>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<div class="music-about fade">
+  <h3>How It Works</h3>
+  <p>Each entry includes the scene header from the book, the track and artist, links to listen, and two tiers of notes — one safe for anyone, one for readers who've finished the book.</p>
+  <p>Use the Spoiler Filter at the bottom of any page to unlock the deeper commentary as you read.</p>
+  <span class="spoiler-note">Spoiler filter carries across all pages</span>
+</div>
+
+<!-- BOOK CARDS -->
+<div class="music-books-section">
+  <h2>Listening Companions</h2>
+
+  <div class="music-book-cards">
+
+    <!-- BOOK 1 — always visible -->
+    <a href="/music-book1.html" class="music-book-card fade">
+      <div class="music-book-card-image">
+        <!-- Replace src with your generated pendant header image -->
+        <img src="images/music/header-book1.jpg" alt="The Dolphin — Vow listening companion header"
+          onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+        <div class="music-book-card-image-placeholder" style="display:none;">🐬</div>
+      </div>
+      <div class="music-book-card-body">
+        <span class="music-book-card-eyebrow">Book One · The Dolphin</span>
+        <div class="music-book-card-title">Vow</div>
+        <div class="music-book-card-subtitle">From Kite Flats to Luna City — the beginning of everything</div>
+        <div class="music-book-card-meta">
+          <span>47 tracks</span>
+          <span>Tony Anderson · Elijah Siegler · Judah Earl · Scott Buckley</span>
+        </div>
+        <span class="music-book-card-cta">Read the Companion →</span>
+      </div>
+    </a>
+
+    <!-- BOOK 2 — visible to book1+ readers -->
+    <div class="music-book-card music-book-card-locked" data-spoiler-card="book1" id="book2-card">
+      <div class="music-book-card-image">
+        <div class="music-book-card-image-placeholder">🔥</div>
+      </div>
+      <div class="music-book-card-body">
+        <span class="music-book-card-eyebrow">Book Two · The Dolphin</span>
+        <div class="music-book-card-title">Ember</div>
+        <div class="music-book-card-subtitle">Coming soon</div>
+        <span class="lock-badge">🔒 Finish Book 1 to unlock</span>
+      </div>
+    </div>
+
+    <!-- BOOK 3 — visible to book2+ readers -->
+    <div class="music-book-card music-book-card-locked" data-spoiler-card="book2" id="book3-card">
+      <div class="music-book-card-image">
+        <div class="music-book-card-image-placeholder" style="color: teal;">⚔</div>
+      </div>
+      <div class="music-book-card-body">
+        <span class="music-book-card-eyebrow">Book Three</span>
+        <div class="music-book-card-title">Psalms of Chaos</div>
+        <div class="music-book-card-subtitle">Coming soon</div>
+        <span class="lock-badge">🔒 Finish Book 2 to unlock</span>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<footer>
+  <section class="spoiler-settings">
+    <h3>Spoiler Filter</h3>
+    <p>Show extras based on how far you've read:</p>
+    <div class="spoiler-buttons">
+      <button type="button" onclick="setSpoiler('none')">No Spoilers</button>
+      <button type="button" onclick="setSpoiler('book1')">I've read Book 1</button>
+      <button type="button" onclick="setSpoiler('book2')">I've read Book 2</button>
+      <button type="button" onclick="setSpoiler('book3')">I've read Book 3</button>
+    </div>
+    <div class="spoiler-select">
+      <label class="sr-only" for="spoilerLevel">Spoiler level</label>
+      <select id="spoilerLevel">
+        <option value="none">No Spoilers</option>
+        <option value="book1">I've read Book 1</option>
+        <option value="book2">I've read Book 2</option>
+        <option value="book3">I've read Book 3</option>
+      </select>
+    </div>
+  </section>
+
+  <div class="copyright">
+    © 2026 Luna Dumu Press •
+    <a href="/privacy.html">Privacy Policy</a>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+<script>
+  // Music hub spoiler card logic
+  function applyMusicHubSpoilers() {
+    const level = localStorage.getItem("spoilerLevel") || "none";
+    const order = ["none", "book1", "book2", "book3"];
+
+    // Book 2 card
+    const book2 = document.getElementById("book2-card");
+    if (book2) {
+      if (order.indexOf(level) >= order.indexOf("book1")) {
+        book2.classList.remove("music-book-card-locked");
+        // When book2 companion is ready, swap to an <a> tag
+      }
+    }
+
+    // Book 3 card
+    const book3 = document.getElementById("book3-card");
+    if (book3) {
+      if (order.indexOf(level) >= order.indexOf("book2")) {
+        book3.classList.remove("music-book-card-locked");
+      }
+    }
+  }
+
+  document.addEventListener("DOMContentLoaded", () => {
+    applyMusicHubSpoilers();
+  });
+
+  // Re-run when spoiler level changes
+  const _origSet = window.setSpoiler;
+  window.setSpoiler = function(level) {
+    if (typeof _origSet === "function") _origSet(level);
+    applyMusicHubSpoilers();
+  };
+</script>
+
+<!-- MailerLite Universal -->
+<script>
+    (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
+    .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
+    n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
+    (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
+    ml('account', '2151427');
+</script>
+
+</body>
+</html>
