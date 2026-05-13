@@ -242,6 +242,7 @@ document.querySelectorAll(".fade, .decode").forEach(el => {
     list.push(`images/public/005_alex_kelli_sin.jpg?v=${VERSION}`);          // porch swing
     list.push(`images/public/008_alex_grabs_rock.jpg?v=${VERSION}`);          // porch swing
     list.push(`images/public/009_sam_kelli_cornfield_church.jpg?v=${VERSION}`);          // porch swing
+    list.push(`images/public/alex_kelli_bible_front.jpg?v=${VERSION}`);          // porch swing
     list.push(`images/public/011_kelli_alex_class_hairties.jpg?v=${VERSION}`);          // porch swing
     list.push(`images/public/012_alex_kelli_locker.jpg?v=${VERSION}`);          // porch swing
     list.push(`images/public/013_alex_mason_drainpipe.jpg?v=${VERSION}`);          // porch swing
@@ -252,7 +253,7 @@ document.querySelectorAll(".fade, .decode").forEach(el => {
     list.push(`images/public/010_alex_kelli_porch.jpg?v=${VERSION}`);          // porch swing
     list.push(`images/public/021_alex_kelli_promise_hands.jpg?v=${VERSION}`);           // pizza pod
     list.push(`images/public/022_kelli_alex_promise.jpg?v=${VERSION}`);           // pizza pod
-    list.push(`images/public/023_kelli_alex_slate_goodbye.jpg?v=${VERSION}`);           // pizza pod
+    list.push(`images/public/023_kelli_alex_slate_corrected.png?v=${VERSION}`);           // pizza pod
     list.push(`images/public/024_sam_arienne_pendant.jpg?v=${VERSION}`);           // pizza pod
     list.push(`images/public/025_sam_arienne_kiss.jpg?v=${VERSION}`);           // pizza pod
     list.push(`images/public/026_sam_arienne.jpg?v=${VERSION}`);           // pizza pod
@@ -297,8 +298,10 @@ document.querySelectorAll(".fade, .decode").forEach(el => {
       list.push(`images/book1/012_shoemaker_families.jpg?v=${VERSION}`);
       list.push(`images/book1/015_shoemaker_disaster.jpg?v=${VERSION}`); // toggle on/off
       list.push(`images/book1/040_spaghetti_night.jpg?v=${VERSION}`); // toggle on/off
-      list.push(`images/book1/070_lila_doesnt_want_to_say_goodbye.jpg?v=${VERSION}`); // toggle on/off
-      list.push(`images/book1/080_kelli_waves_goodbye.jpg?v=${VERSION}`); // toggle on/off
+      list.push(`images/book1/lila_upset_with_kelli_leaving.png?v=${VERSION}`); // toggle on/off
+      list.push(`images/book1/kell_waving_goodbye_corrected.png?v=${VERSION}`); // toggle on/off
+      list.push(`images/book1/galleys_leave_shoemaker.jpg?v=${VERSION}`); // toggle on/off
+      
       list.push(`images/book1/085_arbitor.jpg?v=${VERSION}`); // toggle on/off
     }
 
