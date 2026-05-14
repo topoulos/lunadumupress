@@ -454,11 +454,11 @@ document.querySelectorAll(".fade, .decode").forEach(el => {
 const MUSIC_TRACKS = {
   cirrus: {
     src: "audio/Cirrus.mp3",
-    creditHTML: `"Cirrus" by <a href="https://www.scottbuckley.com.au/" target="_blank" rel="noopener noreferrer">Scott Buckley</a> — <span class="license-tag">— CC BY 4.0</span>`,
+    creditHTML: `"Cirrus" by <a href="https://www.scottbuckley.com.au/" target="_blank" rel="noopener noreferrer">Scott Buckley</a> <span class="license-tag">— CC BY 4.0</span>`,
   },
   frankincense: {
     src: "audio/sb_frankincenseandmyrrh.mp3",
-    creditHTML: `"Frankincense and Myrrh" by <a href="https://www.scottbuckley.com.au/" target="_blank" rel="noopener noreferrer">Scott Buckley</a> — <span class="license-tag">— CC BY 4.0</span>`,
+    creditHTML: `"Frankincense and Myrrh" by <a href="https://www.scottbuckley.com.au/" target="_blank" rel="noopener noreferrer">Scott Buckley</a> <span class="license-tag">— CC BY 4.0</span>`,
   },
 };
 
