@@ -110,7 +110,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const isPlaying = !heroAudio.paused;
       musicToggle.classList.toggle("playing", isPlaying);
 
-      if (label) label.textContent = isPlaying ? "Pause Theme" : "Play Theme";
+      if (label) label.textContent = isPlaying ? "Pause Presentation" : "Play Presentation";
       if (icon) icon.textContent = "♪";
 
       musicToggle.setAttribute(
