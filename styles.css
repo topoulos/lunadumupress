@@ -606,10 +606,83 @@ h3 {
   transition: transform 0.18s ease, opacity 0.18s ease;
 }
 
-.book-grid img:hover {
+/* .book-grid img:hover {
   transform: translateY(-4px);
   opacity: 0.96;
+} */
+
+
+.book-cover-link {
+  position: relative;
+  display: block;
+  width: 220px;
+  border-radius: 12px;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.18s ease, opacity 0.18s ease;
 }
+
+.book-cover-link img {
+  width: 100%;
+  display: block;
+  border-radius: 12px;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.55);
+}
+
+.book-cover-link:hover {
+  transform: translateY(-4px);
+  opacity: 0.96;
+  text-decoration: none;
+}
+
+.book-cover-cta {
+  display: block;
+  margin-top: 0.65rem;
+  text-align: center;
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #e6b14a;
+  opacity: 0.85;
+}
+
+.book-cover-soon {
+  cursor: default;
+  opacity: 0.78;
+}
+
+.book-cover-soon:hover {
+  transform: none;
+  opacity: 0.78;
+}
+
+.book-cover-soon::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 12px;
+  background: rgba(0,0,0,0.34);
+  pointer-events: none;
+}
+
+.book-cover-watermark {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 2;
+  transform: translate(-50%, -50%) rotate(-8deg);
+  padding: 0.45rem 0.8rem;
+  border: 1px solid rgba(255,255,255,0.28);
+  border-radius: 999px;
+  color: rgba(255,255,255,0.72);
+  background: rgba(0,0,0,0.38);
+  font-size: 0.62rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  backdrop-filter: blur(3px);
+}
+
 
 /* =========================
    MAILING LIST
