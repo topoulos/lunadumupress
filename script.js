@@ -298,7 +298,7 @@ document.querySelectorAll(".fade, .decode").forEach(el => {
       list.push(`images/book1/012_shoemaker_families.jpg?v=${VERSION}`);
       list.push(`images/book1/015_shoemaker_disaster.jpg?v=${VERSION}`); // toggle on/off
       list.push(`images/book1/040_spaghetti_night.jpg?v=${VERSION}`); // toggle on/off
-      list.push(`images/book1/lila_upset_with_kelli_leaving.png?v=${VERSION}`); // toggle on/off
+      list.push(`images/book1/lila_upset_with_kelli_leaving2.png?v=${VERSION}`); // toggle on/off
       list.push(`images/book1/kell_waving_goodbye_corrected.png?v=${VERSION}`); // toggle on/off
       list.push(`images/book1/galleys_leave_shoemaker.jpg?v=${VERSION}`); // toggle on/off
       
