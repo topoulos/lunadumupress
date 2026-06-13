@@ -1177,4 +1177,76 @@ footer a:hover {
   .hero.cinematic-start .hero-stage::after {
     animation: heroIntroPush 9s ease forwards;
   }
+
+  .readmore-hero,
+.readmore-section {
+max-width: 960px;
+margin: 0 auto;
+padding: 5rem 2rem;
+text-align: center;
+}
+
+.readmore-hero {
+min-height: 70vh;
+display: flex;
+flex-direction: column;
+justify-content: center;
+}
+
+.readmore-hero h1 {
+font-size: clamp(2.5rem, 6vw, 4.5rem);
+font-weight: 300;
+letter-spacing: 0.18em;
+text-transform: uppercase;
+color: #fff;
+}
+
+.readmore-hero p,
+.readmore-section p {
+color: rgba(255,255,255,0.68);
+line-height: 1.8;
+font-size: 1rem;
+}
+
+.readmore-divider {
+width: 70px;
+height: 1px;
+background: rgba(230,177,74,0.5);
+margin: 2rem auto;
+}
+
+.readmore-ctas,
+.readmore-book-links,
+.readmore-extras {
+display: flex;
+justify-content: center;
+flex-wrap: wrap;
+gap: 1rem;
+margin-top: 2rem;
+}
+
+.readmore-section h2 {
+font-size: 0.85rem;
+letter-spacing: 0.25em;
+text-transform: uppercase;
+color: rgba(255,255,255,0.4);
+margin-bottom: 1rem;
+}
+
+.readmore-book-links a,
+.readmore-extras a {
+padding: 0.9rem 1.4rem;
+border-radius: 999px;
+text-decoration: none;
+color: #eee;
+border: 1px solid rgba(255,255,255,0.12);
+background: rgba(255,255,255,0.04);
+}
+
+.readmore-book-links a:hover,
+.readmore-extras a:hover {
+background: rgba(255,255,255,0.08);
+color: #e6b14a;
+}
+
 }
