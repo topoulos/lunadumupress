@@ -963,22 +963,30 @@ footer .copyright {
   margin-top: 0.75rem;
 }
 
-.spoiler-select select {
-  width: min(420px, 90vw);
-  padding: 0.75rem 0.9rem;
-  border-radius: 10px;
-  background: rgba(255,255,255,0.08);
-  color: #eee;
-  border: 1px solid rgba(255,255,255,0.12);
+.spoiler-select select,
+#musicTrackSelect {
+  width: 100% !important;
+  max-width: 420px;
+  box-sizing: border-box;
+}
+
+.spoiler-settings {
+  overflow: hidden;
 }
 
 /* Make dropdown usable on mobile */
 @media (max-width: 600px) {
-  .spoiler-buttons {
-    display: none;
+  .spoiler-settings {
+    width: 100%;
+    max-width: calc(100vw - 2rem);
+    padding: 1.25rem;
   }
-  .spoiler-select {
-    display: block;
+
+  .spoiler-select,
+  .spoiler-select select,
+  #musicTrackSelect {
+    width: 100% !important;
+    max-width: 100%;
   }
 }
 
@@ -1247,6 +1255,23 @@ background: rgba(255,255,255,0.04);
 .readmore-extras a:hover {
 background: rgba(255,255,255,0.08);
 color: #e6b14a;
+}
+
+@media (max-width: 800px) {
+  .book-cover-link {
+    width: min(260px, 70vw);
+  }
+
+  .book-cover-link img {
+    width: 100%;
+  }
+
+  .book-cover-watermark {
+    font-size: 0.55rem;
+    padding: 0.4rem 0.65rem;
+    max-width: 90%;
+    text-align: center;
+  }
 }
 
 }
