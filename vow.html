@@ -175,6 +175,36 @@
         margin:0 auto;
       }
     }
+
+    .vow-title-wrap {
+  position:absolute;
+  top:5.5vh;
+  left:50%;
+  transform:translateX(-50%);
+  width:min(760px,82vw);
+  opacity:.38;
+  z-index:2;
+  pointer-events:none;
+  filter:drop-shadow(0 6px 18px rgba(0,0,0,.65));
+}
+
+.vow-title-wrap img {
+  display:block;
+  width:100%;
+  height:auto;
+}
+
+@media (max-width:700px) {
+  .vow-title-wrap {
+    top:3vh;
+    width:min(88vw,620px);
+    opacity:.28;
+  }
+
+  .vow-hero-content {
+    padding-top:5.5rem;
+  }
+}
   </style>
 </head>
 <body>
@@ -182,14 +212,18 @@
   <main class="vow-hero">
     <div class="vow-hero-bg"></div>
     <div class="vow-hero-overlay"></div>
+
+    <div class="vow-title-wrap" aria-hidden="true">
+        <img src="images/mgs-title.png" alt="" />
+      </div>
+
 <section class="vow-hero-content fade visible">
   <a href="/" class="vow-back">← Luna Dumu Press</a>
   <div class="vow-eyebrow">Moon Gun Sam · Book One · Vow</div>
   <h1>Vow</h1>
   <h2>You watched the trailer. Now read the beginning.</h2>
   <p class="vow-copy">
-    Everything starts with Sam, Alex, and Kelli — before the war, before the legends, before the promises become impossible to keep.
-  </p>
+    Everything starts with Sam, Alex, and Kelli—a broken little family trying to build a home before war asks them to sacrifice everything.  </p>
   <a class="vow-cta" target="_blank" href="https://dl.bookfunnel.com/1uuimb68pd">Read the First Half Free</a>
   <div class="vow-note">
     Delivered through BookFunnel · Read on Kindle, phone, tablet, or browser
@@ -200,15 +234,16 @@
     <div class="vow-card fade">
       <img src="images/dolphin1.jpg" alt="Moon Gun Sam: The Dolphin — Vow book cover" />
   <div>
-    <h3>What You Get</h3>
+    <h3>WHY READ?</h3>
     <p>
-      Get the complete opening act of <em>Vow</em> — roughly the first half of Book One — and enter The Pod for future updates from the world of <em>Moon Gun Sam</em>.
+       Meet the family at the heart of Moon Gun Sam.<br>
+       Inside you'll find:<br>
     </p>
     <ul class="vow-list">
-      <li>Instant access through BookFunnel</li>
-      <li>Read on Kindle, phone, tablet, or browser</li>
-      <li>Behind-the-scenes extras, art, music, and launch news</li>
-      <li>No spam. No noise. Just the story and the world growing around it.</li>
+      <li>The complete opening act of Vow</li>
+      <li>Sam, Alex, Kelli and Lila before everything changes</li>
+      <li>A hopeful science-fiction story about love surviving impossible loss</li>
+      <li>Behind-the-scenes extras and future adventures through The Pod</li>
     </ul>
   </div>
 </div>
