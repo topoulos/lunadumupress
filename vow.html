@@ -1,300 +1,898 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18230546993"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18230546993"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'AW-18230546993');
+    gtag('config', 'G-9HLFJCJ650');
 
-        gtag('config', 'AW-18230546993');
-        gtag('config', 'G-9HLFJCJ650');
-    </script>
-   <!-- Vow BookFunnel click conversion -->
-    <script>
-        function reportVowBookFunnelClick() {
-            gtag('event', 'conversion', {
-                'send_to': 'AW-18230546993/eqrTCM-cycwcELGkgPVD'
-            });
+    function trackVowEvent(name, params) {
+      if (typeof gtag === 'function') {
+        gtag('event', name, params || {});
+      }
+    }
 
-            gtag('event', 'vow_download_click');
-        }
+    function reportVowBookFunnelClick() {
+      gtag('event', 'conversion', {
+        'send_to': 'AW-18230546993/eqrTCM-cycwcELGkgPVD'
+      });
+      trackVowEvent('vow_download_click', { placement: 'vow_landing_page' });
+    }
   </script>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Read Vow Free · Moon Gun Sam</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Meet the family at the heart of Moon Gun Sam, watch the trailer, and read Chapter One of The Dolphin — Vow free." />
+  <title>Enter Moon Gun Sam · Read Vow Free</title>
   <link rel="stylesheet" href="styles.css" />
-  
   <style>
+    :root {
+      --night: #07090d;
+      --night-soft: #0d1118;
+      --panel: #111722;
+      --ink: #f5f3ed;
+      --muted: #aeb4bf;
+      --gold: #e6b14a;
+      --gold-soft: #f2cd7e;
+      --cyan: #6bd6ec;
+      --line: rgba(255,255,255,.11);
+      --display: "Avenir Next", Avenir, Montserrat, "Helvetica Neue", sans-serif;
+      --reader: Iowan Old Style, Palatino Linotype, Palatino, Georgia, serif;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
     body {
-      background:#0b0b0b;
-      color:#fff;
-      margin:0;
+      margin: 0;
+      background: var(--night);
+      color: var(--ink);
+      font-family: var(--display);
+      overflow-x: hidden;
     }
-    .vow-hero {
-      position:relative;
-      min-height:100vh;
-      display:flex;
-      align-items:flex-end;
-      overflow:hidden;
-      background:#0b0b0b;
+    img { display: block; max-width: 100%; }
+    a { color: inherit; }
+    .skip-link {
+      position: fixed;
+      left: 1rem;
+      top: -5rem;
+      z-index: 100;
+      padding: .8rem 1rem;
+      color: #000;
+      background: var(--gold);
+      border-radius: .4rem;
     }
-    .vow-hero-bg {
-      position:absolute;
-      inset:0;
-      background-image:url("images/book1/family-couch-photo.jpg");
-      background-size:cover;
-      background-position:center;
-      opacity:.62;
-      filter:brightness(.72);
+    .skip-link:focus { top: 1rem; }
+    .reading-progress {
+      position: fixed;
+      inset: 0 auto auto 0;
+      z-index: 99;
+      width: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--gold), var(--cyan));
+      box-shadow: 0 0 12px rgba(107,214,236,.5);
     }
-    .vow-hero-overlay {
-      position:absolute;
-      inset:0;
+
+    .site-nav {
+      position: absolute;
+      inset: 0 0 auto;
+      z-index: 10;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: 1.25rem clamp(1.25rem, 4vw, 4rem);
+    }
+    .site-nav a { text-decoration: none; }
+    .home-link {
+      color: rgba(255,255,255,.7);
+      font-size: .75rem;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+    }
+    .nav-mark { width: min(240px, 42vw); opacity: .8; }
+    .nav-mark img { width: 100%; }
+
+    .hero {
+      position: relative;
+      min-height: 100svh;
+      display: grid;
+      align-items: end;
+      isolation: isolate;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -2;
+      background: url("images/book1/family-couch-photo.jpg") center 35% / cover no-repeat;
+      filter: saturate(.72) contrast(1.04);
+      transform: scale(1.015);
+    }
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -1;
       background:
-        linear-gradient(to bottom, rgba(11,11,11,.18), rgba(11,11,11,.9) 78%, #0b0b0b 100%),
-        linear-gradient(to right, rgba(11,11,11,.8), rgba(11,11,11,.22));
-      z-index:1;
+        linear-gradient(90deg, rgba(7,9,13,.96) 0%, rgba(7,9,13,.68) 48%, rgba(7,9,13,.24) 78%),
+        linear-gradient(0deg, var(--night) 0%, transparent 36%, rgba(7,9,13,.18) 100%);
     }
-    .vow-hero-content {
-      position:relative;
-      z-index:2;
-      max-width:760px;
-      padding:3rem;
+    .hero-content {
+      width: min(760px, 92vw);
+      padding: 8rem clamp(1.4rem, 6vw, 6rem) clamp(4rem, 9vh, 7rem);
     }
-    .vow-back {
-      display:inline-block;
-      margin-bottom:1.5rem;
-      font-size:.75rem;
-      letter-spacing:.16em;
-      text-transform:uppercase;
-      color:rgba(255,255,255,.45);
-      text-decoration:none;
+    .kicker, .section-kicker {
+      margin: 0 0 .85rem;
+      color: var(--gold-soft);
+      font-size: .72rem;
+      font-weight: 700;
+      letter-spacing: .24em;
+      text-transform: uppercase;
     }
-    .vow-back:hover {
-      color:#e6b14a;
-      text-decoration:none;
+    .hero h1 {
+      margin: 0;
+      max-width: 680px;
+      font-size: clamp(3.15rem, 8.5vw, 7.2rem);
+      font-weight: 250;
+      line-height: .91;
+      letter-spacing: -.045em;
+      text-wrap: balance;
     }
-    .vow-eyebrow {
-      font-size:.75rem;
-      letter-spacing:.24em;
-      text-transform:uppercase;
-      color:#e6b14a;
-      margin-bottom:.8rem;
+    .hero h1 span { color: var(--gold-soft); }
+    .hero-lede {
+      max-width: 610px;
+      margin: 1.6rem 0 0;
+      color: rgba(255,255,255,.77);
+      font-size: clamp(1rem, 2vw, 1.2rem);
+      line-height: 1.7;
     }
-    .vow-hero h1 {
-      font-size:clamp(2.6rem,7vw,5.4rem);
-      font-weight:200;
-      letter-spacing:.13em;
-      text-transform:uppercase;
-      margin:0 0 1rem;
-      line-height:1;
+    .hero-actions, .pod-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .85rem;
+      margin-top: 2rem;
     }
-    .vow-hero h2 {
-      font-size:clamp(1.35rem,3vw,2.2rem);
-      font-weight:300;
-      line-height:1.25;
-      margin:0 0 1rem;
-      max-width:680px;
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      padding: .9rem 1.35rem;
+      border: 1px solid transparent;
+      border-radius: 999px;
+      background: var(--gold);
+      color: #090909;
+      font-size: .78rem;
+      font-weight: 800;
+      letter-spacing: .08em;
+      text-decoration: none;
+      text-transform: uppercase;
+      box-shadow: 0 10px 35px rgba(230,177,74,.2);
+      transition: transform .2s ease, filter .2s ease, border-color .2s ease;
     }
-    .vow-copy {
-      color:rgba(255,255,255,.7);
-      font-size:1.05rem;
-      line-height:1.65;
-      max-width:620px;
-      margin-bottom:2rem;
+    .button:hover { transform: translateY(-2px); filter: brightness(1.07); }
+    .button.secondary {
+      border-color: rgba(255,255,255,.28);
+      background: rgba(7,9,13,.45);
+      color: #fff;
+      box-shadow: none;
+      backdrop-filter: blur(8px);
     }
-    .vow-cta {
-      display:inline-block;
-      background:#e6b14a;
-      color:#000;
-      padding:1rem 1.55rem;
-      border-radius:999px;
-      font-weight:800;
-      letter-spacing:.07em;
-      text-transform:uppercase;
-      text-decoration:none;
-      box-shadow:0 0 28px rgba(230,177,74,.24);
-    }
-    .vow-cta:hover {
-      text-decoration:none;
-      filter:brightness(1.08);
-    }
-    .vow-note {
-      margin-top:1rem;
-      font-size:.78rem;
-      color:rgba(255,255,255,.45);
-      letter-spacing:.05em;
-    }
-    .vow-section {
-      max-width:940px;
-      margin:0 auto;
-      padding:4rem 2rem;
-    }
-    .vow-card {
-      border:1px solid rgba(255,255,255,.08);
-      border-radius:18px;
-      background:rgba(255,255,255,.025);
-      padding:2rem;
-      display:grid;
-      grid-template-columns:220px 1fr;
-      gap:2rem;
-      align-items:center;
-    }
-    .vow-card img {
-      width:100%;
-      border-radius:6px;
-      box-shadow:0 12px 40px rgba(0,0,0,.45);
-    }
-    .vow-card h3 {
-      color:#e6b14a;
-      letter-spacing:.18em;
-      text-transform:uppercase;
-      font-size:.8rem;
-      margin:0 0 .75rem;
-    }
-    .vow-card p {
-      color:rgba(255,255,255,.65);
-      line-height:1.7;
-      font-size:1rem;
-      margin:0 0 1rem;
-    }
-    .vow-list {
-      list-style:none;
-      padding:0;
-      margin:1.15rem 0 0;
-      color:rgba(255,255,255,.68);
-      line-height:1.8;
-      font-size:.98rem;
-    }
-    .vow-list li::before {
-      content:"✓";
-      color:#e6b14a;
-      margin-right:.65rem;
-      font-weight:700;
-    }
-    .vow-footer-cta {
-      text-align:center;
-      padding:1rem 2rem 5rem;
-    }
-    @media (max-width:700px) {
-      .vow-hero {
-        min-height:92vh;
-      }
-      .vow-hero-bg {
-        background-position:center top;
-      }
-      .vow-hero-content {
-        padding:2rem 1.35rem 2.5rem;
-      }
-      .vow-card {
-        grid-template-columns:1fr;
-      }
-      .vow-card img {
-        max-width:220px;
-        margin:0 auto;
-      }
+    .trust-line {
+      margin: 1rem 0 0;
+      color: rgba(255,255,255,.5);
+      font-size: .78rem;
+      letter-spacing: .03em;
     }
 
-    .vow-title-wrap {
-  position:absolute;
-  top:5.5vh;
-  left:50%;
-  transform:translateX(-50%);
-  width:min(760px,82vw);
-  opacity:.42;
-  z-index:2;
-  pointer-events:none;
-  filter:drop-shadow(0 6px 18px rgba(0,0,0,.65));
-}
+    .section-shell {
+      width: min(1180px, calc(100% - 2.6rem));
+      margin: 0 auto;
+      padding: clamp(4.5rem, 10vw, 8rem) 0;
+    }
+    .section-heading {
+      margin: 0;
+      max-width: 820px;
+      font-size: clamp(2.1rem, 5vw, 4.5rem);
+      font-weight: 300;
+      line-height: 1.04;
+      letter-spacing: -.035em;
+      text-wrap: balance;
+    }
+    .section-intro {
+      max-width: 720px;
+      margin: 1.25rem 0 0;
+      color: var(--muted);
+      font-size: clamp(1rem, 1.6vw, 1.14rem);
+      line-height: 1.75;
+    }
 
-.vow-title-wrap img {
-  display:block;
-  width:100%;
-  height:auto;
-}
+    .trailer-section,
+    .artifact-section,
+    .chapter-section,
+    .universe-section,
+    .pod-section {
+      max-width: none;
+      margin: 0;
+      padding: 0;
+    }
+    .trailer-section { background: linear-gradient(180deg, var(--night), #0c1119 55%, var(--night)); }
+    .trailer-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.7fr) minmax(260px, .7fr);
+      gap: clamp(1.5rem, 4vw, 4rem);
+      align-items: center;
+    }
+    .video-frame {
+      position: relative;
+      aspect-ratio: 16 / 9;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      background: #000;
+      box-shadow: 0 35px 90px rgba(0,0,0,.45);
+    }
+    .video-frame iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+    .trailer-copy h2 {
+      margin: 0;
+      font-size: clamp(1.8rem, 4vw, 3.1rem);
+      font-weight: 350;
+      line-height: 1.08;
+    }
+    .trailer-copy p { color: var(--muted); line-height: 1.72; }
+    .story-beat {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      margin-top: 2.25rem;
+      border-top: 1px solid var(--line);
+    }
+    .story-beat div { padding: 1.15rem 1rem 0 0; }
+    .story-beat strong { display: block; color: var(--gold-soft); font-size: .76rem; letter-spacing: .14em; text-transform: uppercase; }
+    .story-beat span { display: block; margin-top: .35rem; color: #c6cad1; font-size: .9rem; line-height: 1.5; }
 
-@media (max-width:700px) {
-  .vow-title-wrap {
-    top:3vh;
-    width:min(88vw,620px);
-    opacity:.32;
-  }
+    .artifact-section { position: relative; }
+    .artifact-section::before {
+      content: "";
+      position: absolute;
+      inset: 10% 0;
+      z-index: -1;
+      background: radial-gradient(circle at 20% 50%, rgba(107,214,236,.09), transparent 34%), radial-gradient(circle at 80% 50%, rgba(230,177,74,.08), transparent 34%);
+    }
+    .artifact-card {
+      display: grid;
+      grid-template-columns: .78fr 1.22fr;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      background: linear-gradient(135deg, rgba(255,255,255,.04), rgba(255,255,255,.015));
+      box-shadow: 0 30px 80px rgba(0,0,0,.3);
+    }
+    .artifact-mark {
+      min-height: 430px;
+      background: url("images/music/dolphin_vow_intro.jpg") 57% center / cover no-repeat;
+    }
+    .artifact-copy { padding: clamp(2rem, 5vw, 4.5rem); align-self: center; }
+    .artifact-copy blockquote {
+      margin: 1.6rem 0;
+      font-family: var(--reader);
+      font-size: clamp(1.35rem, 3vw, 2.2rem);
+      line-height: 1.55;
+    }
+    .artifact-copy cite { color: var(--muted); font-size: .8rem; font-style: normal; letter-spacing: .12em; text-transform: uppercase; }
 
-  .vow-hero-content {
-    padding-top:5.5rem;
-  }
-}
+    .chapter-section {
+      border-top: 1px solid var(--line);
+      background: linear-gradient(180deg, #251a12 0, #130f0c 52rem, var(--night) 74rem);
+    }
+    .chapter-stage {
+      position: relative;
+      min-height: min(1000px, 112svh);
+      display: grid;
+      align-items: start;
+      background: #251a12 url("images/vow/chapter-one-background-color.jpg") top center / 100% auto no-repeat;
+      overflow: hidden;
+    }
+    .chapter-stage::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, transparent 0 38%, rgba(28,18,11,.22) 46%, #251a12 68%);
+      pointer-events: none;
+    }
+    .chapter-title {
+      position: relative;
+      z-index: 1;
+      width: min(880px, calc(100% - 3rem));
+      margin: clamp(12rem, 28vw, 23rem) auto 0;
+      text-align: right;
+      text-shadow: 0 2px 15px rgba(0,0,0,.75);
+    }
+    .chapter-title span { display: block; font-size: clamp(.9rem, 2vw, 1.25rem); letter-spacing: .12em; text-transform: uppercase; }
+    .chapter-title h2 { margin: .4rem 0 0; font-size: clamp(2.3rem, 7vw, 5.6rem); letter-spacing: .05em; line-height: .95; text-transform: uppercase; }
+    .chapter-location {
+      position: relative;
+      z-index: 1;
+      width: min(880px, calc(100% - 3rem));
+      margin: clamp(18rem, 43vw, 32rem) auto 0;
+      padding-top: 1.4rem;
+      border-top: 1px solid rgba(242,205,126,.3);
+      text-align: right;
+      font-family: var(--reader);
+    }
+    .chapter-location strong { display: block; font-size: clamp(1rem, 2vw, 1.3rem); font-weight: 400; }
+    .chapter-location span { display: block; margin-top: .55rem; color: #d1d1d1; }
+    .chapter-reader {
+      width: min(760px, calc(100% - 2.5rem));
+      margin: 0 auto;
+      padding: 0 0 clamp(5rem, 12vw, 9rem);
+      font-family: var(--reader);
+      font-size: clamp(1.08rem, 2.2vw, 1.3rem);
+      line-height: 1.82;
+      color: #ece9e1;
+    }
+    .chapter-reader p { margin: 0; text-indent: 1.5em; }
+    .chapter-reader p:first-child { text-indent: 0; }
+    .chapter-reader em { color: #ddd8cd; }
+    .chapter-reader::first-letter { font-size: 3.5em; line-height: .82; float: left; padding: .12em .1em 0 0; color: var(--gold-soft); }
+    .scene-break {
+      display: grid;
+      justify-items: end;
+      gap: .45rem;
+      margin: clamp(4rem, 9vw, 6.5rem) 0 clamp(2.75rem, 6vw, 4rem);
+      padding: 1.5rem 0 1.35rem;
+      border-top: 1px solid rgba(242,205,126,.42);
+      border-bottom: 1px solid rgba(255,255,255,.09);
+      text-align: right;
+      font-family: var(--reader);
+    }
+    .scene-break strong {
+      font-size: clamp(1.15rem, 2.5vw, 1.55rem);
+      font-weight: 600;
+      letter-spacing: .02em;
+    }
+    .scene-break span {
+      color: #cfc9bd;
+      font-size: clamp(.95rem, 1.8vw, 1.12rem);
+      letter-spacing: .04em;
+      text-transform: uppercase;
+    }
+    .scene-break + p { text-indent: 0; }
+    .chapter-end {
+      margin: 4rem auto 0;
+      text-align: center;
+      font-family: var(--display);
+    }
+    .chapter-end .glyph { color: var(--gold); font-size: 1.4rem; letter-spacing: .55em; }
+    .chapter-end h3 { margin: 1.3rem 0 .5rem; font-size: clamp(1.7rem, 4vw, 2.7rem); font-weight: 350; }
+    .chapter-end p { margin: 0 auto 1.5rem; max-width: 560px; color: var(--muted); font-family: var(--display); font-size: 1rem; line-height: 1.6; text-indent: 0; }
+
+    .universe-section { background: #0a0e15; }
+    .poster-banner {
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      background: #000;
+    }
+    .poster-banner img { width: 100%; }
+    .universe-grid {
+      display: grid;
+      grid-template-columns: minmax(220px, .65fr) 1.35fr;
+      gap: clamp(2rem, 5vw, 5rem);
+      margin-top: 4rem;
+      align-items: center;
+    }
+    .universe-poster { border-radius: 10px; box-shadow: 0 22px 60px rgba(0,0,0,.55); }
+    .universe-copy p { color: var(--muted); line-height: 1.75; }
+    .future-list {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: .8rem;
+      margin: 2rem 0 0;
+      padding: 0;
+      list-style: none;
+    }
+    .future-list li { padding: .95rem 1rem; border: 1px solid var(--line); border-radius: 12px; background: rgba(255,255,255,.025); color: #d4d7dc; }
+
+    .pod-section { position: relative; overflow: hidden; }
+    .pod-section::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      background: radial-gradient(circle at 50% 10%, rgba(61,143,173,.2), transparent 38%);
+    }
+    .pod-header { max-width: 800px; text-align: center; margin: 0 auto; }
+    .pod-header .section-intro { margin-inline: auto; }
+    .card-fan {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0,1fr));
+      gap: 1rem;
+      margin: 3.2rem 0;
+    }
+    .card-fan img {
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 18px 48px rgba(0,0,0,.48);
+      transition: transform .25s ease;
+    }
+    .card-fan img:nth-child(1) { transform: rotate(-2.5deg) translateY(12px); }
+    .card-fan img:nth-child(2) { transform: rotate(1.4deg); }
+    .card-fan img:nth-child(3) { transform: rotate(-1deg); }
+    .card-fan img:nth-child(4) { transform: rotate(2.5deg) translateY(12px); }
+    .pod-offer {
+      display: grid;
+      grid-template-columns: 1fr .72fr;
+      gap: 2rem;
+      padding: clamp(1.5rem, 4vw, 3rem);
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      background: rgba(255,255,255,.035);
+    }
+    .pod-offer h3 { margin: 0; font-size: clamp(1.55rem, 3vw, 2.4rem); font-weight: 350; }
+    .pod-offer ul { margin: 1.2rem 0 0; padding: 0; list-style: none; color: #c8ccd3; line-height: 1.9; }
+    .pod-offer li::before { content: "◆"; margin-right: .65rem; color: var(--gold); font-size: .62em; }
+    .pod-side { display: grid; align-content: center; justify-items: start; }
+    .pod-side img { width: min(220px, 80%); margin: 0 auto 1.2rem; }
+    .pod-actions { margin-top: 0; }
+    .pod-note { margin: 1rem 0 0; color: var(--muted); font-size: .82rem; line-height: 1.55; }
+
+    footer { padding: 2.5rem 1.25rem; border-top: 1px solid var(--line); color: #858b94; text-align: center; font-size: .8rem; }
+    footer a { color: #b7bbc2; }
+
+    @media (max-width: 860px) {
+      .trailer-grid, .artifact-card, .universe-grid, .pod-offer { grid-template-columns: 1fr; }
+      .artifact-mark { min-height: 320px; }
+      .card-fan { grid-template-columns: repeat(2, 1fr); gap: 1.25rem; }
+      .pod-side { justify-items: center; text-align: center; }
+      .pod-actions { justify-content: center; }
+      .story-beat { grid-template-columns: 1fr; }
+      .story-beat div { padding-bottom: .7rem; }
+      .chapter-stage { min-height: 920px; background-size: 760px auto; }
+      .chapter-title { margin-top: 13rem; }
+      .chapter-location { margin-top: 20rem; }
+    }
+    @media (max-width: 600px) {
+      .site-nav { align-items: flex-start; }
+      .nav-mark { display: none; }
+      .hero::before { background-position: 58% 25%; }
+      .hero::after { background: linear-gradient(0deg, var(--night) 0%, rgba(7,9,13,.55) 58%, rgba(7,9,13,.12) 100%); }
+      .hero-content { padding-top: 58vh; }
+      .hero h1 { font-size: clamp(3rem, 16vw, 4.7rem); }
+      .hero-actions .button { width: 100%; }
+      .chapter-stage { min-height: 760px; background-size: 620px auto; }
+      .chapter-title { width: calc(100% - 3rem); margin-top: 10.5rem; }
+      .chapter-location { width: calc(100% - 3rem); margin-top: 15.5rem; padding-top: 1rem; }
+      .chapter-reader { margin-top: 0; width: min(100% - 2rem, 680px); font-size: 1.08rem; line-height: 1.72; }
+      .future-list { grid-template-columns: 1fr; }
+      .card-fan { gap: .7rem; }
+      .card-fan img:nth-child(n) { transform: none; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { transition: none !important; }
+    }
   </style>
 </head>
 <body>
-  <div id="pageFade"></div>
-  <main class="vow-hero">
-    <div class="vow-hero-bg"></div>
-    <div class="vow-hero-overlay"></div>
+  <a class="skip-link" href="#main">Skip to the story</a>
+  <div class="reading-progress" id="readingProgress" aria-hidden="true"></div>
 
-    <div class="vow-title-wrap" aria-hidden="true">
-        <img src="images/mgs-title.png" alt="" />
+  <nav class="site-nav" aria-label="Primary navigation">
+    <a class="home-link" href="/">← Luna Dumu Press</a>
+    <a class="nav-mark" href="/" aria-label="Moon Gun Sam home">
+      <img src="images/mgs-title.png" alt="" />
+    </a>
+  </nav>
+
+  <main id="main">
+    <header class="hero">
+      <div class="hero-content">
+        <p class="kicker">Book One · The Dolphin</p>
+        <h1>It starts small.<br><span>It doesn’t stay that way.</span></h1>
+        <p class="hero-lede">
+          Two girls on Luna. A soldier who promises no one dies alone. A family built before any of them understand what is coming. <strong>Moon Gun Sam</strong> begins with the people—then opens into a universe of war, mystery, love, and impossible hope.
+        </p>
+        <div class="hero-actions">
+          <a class="button" href="#chapter" onclick="trackVowEvent('chapter_start_click', {placement:'hero'});">Read Chapter One</a>
+          <a class="button secondary" href="#trailer" onclick="trackVowEvent('trailer_navigate_click');">Watch the Trailer</a>
+        </div>
+        <p class="trust-line">No signup required. Start reading right here.</p>
+      </div>
+    </header>
+
+    <section class="trailer-section" id="trailer" aria-labelledby="trailer-title">
+      <div class="section-shell trailer-grid">
+        <div class="video-frame">
+          <iframe
+            src="https://www.youtube.com/embed/R8QleNS6L0s"
+            title="Moon Gun Sam Trailer"
+            allowfullscreen>
+          </iframe>
+        </div>
+        <div class="trailer-copy">
+          <p class="section-kicker">Welcome to Luna</p>
+          <h2>Meet the family.<br>Then watch the universe come for them.</h2>
+          <p>The scale gets wild. The characters stay at the center. Every battle matters because somebody you love is standing inside it.</p>
+          <div class="story-beat" aria-label="The series journey">
+            <div><strong>Begin</strong><span>Friendship, family, and a promise.</span></div>
+            <div><strong>Expand</strong><span>Luna, Mars, and a hidden war.</span></div>
+            <div><strong>Hold on</strong><span>The universe gets stranger from here.</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="artifact-section" aria-labelledby="artifact-title">
+      <div class="section-shell">
+        <div class="artifact-card">
+          <div class="artifact-mark" role="img" aria-label="A glowing dolphin pendant suspended against space"></div>
+          <div class="artifact-copy">
+            <p class="section-kicker">A mystery older than Luna</p>
+            <h2 class="section-heading" id="artifact-title">Something happened in 1945.</h2>
+            <blockquote>
+              “In the older age, the sky was torn,<br>
+              And the smallest seed of fire was broken.<br>
+              The heavens cracked, and a new world rose.”
+            </blockquote>
+            <cite>Song of Refract Hope · From the journals of Elias Pickman</cite>
+            <p class="section-intro">The people of Luna know the verse as myth. The truth is waiting underneath the story.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="chapter-section" id="chapter" aria-labelledby="chapter-heading">
+      <div class="chapter-stage">
+        <div class="chapter-title">
+          <span>Chapter One</span>
+          <h2 id="chapter-heading">Cornfield</h2>
+        </div>
+        <div class="chapter-location">
+          <strong>Old Cornfield Church</strong>
+          <span>2466-10-03 (Morning)</span>
+        </div>
       </div>
 
-<section class="vow-hero-content fade visible">
-  <a href="/" class="vow-back">← Luna Dumu Press</a>
-  <div class="vow-eyebrow">Book One</div>
-  <h1>Vow</h1>
-  <h2>MEET THE FAMILY. THEN WATCH THE UNIVERSE COME FOR THEM.</h2>
-  <p class="vow-copy">
-    Sam made a promise: no one dies alone. 
-    Alex just wants somewhere to belong. 
-    Kelli believes love can save anyone. 
-    And Lila is about to become the center of a war none of them understand.
-  </p>
-  
-  <a class="vow-cta"
-        target="_blank" rel="noopener"
-        href="https://dl.bookfunnel.com/1uuimb68pd"
-        onclick="reportVowBookFunnelClick();">
-        READ ACT I FREE
-  </a>
+      <article class="chapter-reader" id="chapterReader" aria-label="Chapter One: Cornfield">
+        <p>The word sin roared through the sanctuary. Kelli kept her eyes on Underwood and tried not to look left. If she felt it, she knew…</p>
+        <p><em>Don’t look at Alex. Of all the days I’d asked her to come to church with me, this day. Seriously. Am I about to lose my best friend over this? Please don’t be upset. Please don’t be upset…</em> Yep, she heard it too. She was giving the I’m-about-to-kick-something stare. Her shoulders were bunched up, tense like springs.</p>
+        <p>Then she kicked the pew in front of them so hard that the hymnals dislodged and the old lady sitting in front of them nearly lost her hat. Alex skittered over Kelli’s legs, scraping them with her combat boots, and launched herself toward the doors of the old church.<em> You’re not on fire, dumbass. Slow down.</em></p>
+        <p>“Oh—Alex—” Kelli said, gasping under breath, heat pooling up her face into red splotches. Half the congregation was gawking. Even Underwood stopped preaching. Then he looked at Kelli and chuckled, shaking his head, and continued on.</p>
+        <p>Kelli couldn’t decide who she was embarrassed for. She chased after her.</p>
+        <p>The heavy doors pushed back against her before she finally stepped out. Morning Veil light hit her eyes, making the porch boards look like old bones. Kelli waited for her eyes to stop aching from the sun before running after her in the cornfield surrounding the church.<em> Oh God, did I make a mistake inviting Alex today? She’s so pissed off. Shit.</em></p>
+        <p>Alex was already halfway down the path. Kelli jogged to catch up, holding her blue sundress down, the Veil wind skimming off the cornstalks, blowing dry husk weed into her long black hair.</p>
+        <p>“Alex! Wait!”</p>
+        <p>That came out more commanding than she had meant. This was a beg from a friend, not a stop-bitch.<em> Dammit</em> .</p>
+        <p>“Leave me alone, Kelli!”</p>
+        <p>Kelli couldn’t reach her in time; she was out of breath. Found a pebble and tossed it at her. She was spiraling, and she hoped this would stop it.<em> Oops. Struck way too close.</em></p>
+        <p>Alex ducked and spun around, already in retaliatory motion. Her lips were in a pout.</p>
+        <p>“Why, you bitch!”</p>
+        <p>“It missed you!” Kelli laughed despite herself.<em> Damn. Calm down, Alex.</em></p>
+        <p>Alex grabbed a pebble and slung it back. It pinged off Kelli’s shin.</p>
+        <p>“Ow! Savage!” That made her cry. “Ow!”</p>
+        <p>“You started it!”</p>
+        <p><em>No, you did, dummy.</em> “I didn’t mean to!”</p>
+        <p>Kelli threw another. It landed embarrassingly wide.</p>
+        <p>They froze. Kelli laughed. She realized how stupid they were being.</p>
+        <p>Alex whined or snorted. Or it was both. Tears flooded her eyes, anger collapsing under the weight of a friendship that was worth way more than this.</p>
+        <p>“Why do you keep inviting me here?” Alex’s voice scratched high. “I had to sit there while he talked about sin and shame and evil people—”</p>
+        <p>She choked.</p>
+        <p>“People like me.”</p>
+        <p>That hit Kelli harder than any pebble.</p>
+        <p>Kelli’s Bible slipped from her hands and plopped onto the dusty trail.</p>
+        <p>Alex turned her head away, letting the floodgates open, unwilling to look at Kelli, as if she were expecting judgment.</p>
+        <p>Kelli shook her head, slinging away fresh tears, and immediately stepped inside hugging range.</p>
+        <p>“Alex. Look at me.”</p>
+        <p>Alex didn’t.</p>
+        <p>“He wasn’t aiming at you,” Kelli said. Her voice was soft now.</p>
+        <p>Alex’s laugh cracked. “Kelli, he practically used my name. If he’d had a laser pointer, he’d have tagged my head.”</p>
+        <p>Kelli swallowed. “No, Al. He was aiming at activity, not people. He wasn’t even thinking about you.”</p>
+        <p>Alex gave her a look that could’ve breached iron.</p>
+        <p>“No... listen,” Kelli quickly interjected. “Sin doesn’t mean Alex. It’s… everybody’s actions. Mine. Yours. Mrs. Lambert’s, even. If God only wanted perfect people, churches would be empty. Lucky for us, he likes idiots.”</p>
+        <p>Alex’s chin shook, looking deeply offended anyway.</p>
+        <p>“I’m no better than anybody,” Kelli said. “I’m not cleaner. I break half the list before breakfast. If God waited for spotless people before loving them, He’d be waiting forever.”</p>
+        <p>Alex blinked and rubbed her eyes with her palms. “He makes it sound like being me is… unfixable.”</p>
+        <p>Kelli’s voice was trembling, but sure.</p>
+        <p>“Stop imagining that you need to fix anything. God does the fixing. God doesn’t love people after they get their life together.”</p>
+        <p>She stepped closer.</p>
+        <p>“He uses love to put them back together. That’s the whole point.”</p>
+        <p>Alex swallowed it hard, like downing stout medicine.</p>
+        <p>“And yeah,” Kelli added, “sometimes love says the things that suck to hear. But lying to the people we care about just to keep things easy?”</p>
+        <p>Kelli tilted her head until Alex had nowhere else to look.</p>
+        <p>“That’s cruel. That’s the thing I’m actually afraid of. I don’t ever want people to lie to me to make me feel better. Never.”</p>
+        <p>Alex stared through her, as if she were kicking over rocks to find judgment.</p>
+        <p>“You still think I’m wrong,” she whispered.</p>
+        <p>Kelli shook her head.</p>
+        <p>“I think you’re mine. And I’m not letting go. God sorts the rest out.”</p>
+        <p>Alex’s eyes softened. Her cheeks yanked that frown into a smile, lips be damned.</p>
+        <p>Kelli exhaled gently.</p>
+        <p>“You’re allowed to be hurt and argue. Throw rocks at me, apparently. But you don’t get to decide you’re not loved just because someone said a word you didn’t like.”</p>
+        <p>Alex broke off a corn stalk and started peeling the husk, giving her nerves somewhere to go.</p>
+        <p>“That’s… a lot.”</p>
+        <p>“It is,” Kelli admitted. “And you’re annoyingly important to me.”</p>
+        <p>That got a reluctant giggle from Alex.</p>
+        <p>“That’s unpaid hormonal labor, Kel.”</p>
+        <p>“Yup. Permanent position, too. Means you can’t quit, bitch.”</p>
+        <p>Alex bumped her shoulder.</p>
+        <p>“Don’t get smug.”</p>
+        <p>“See? You care.”</p>
+        <p>“Barely.”</p>
+        <p>Kelli nudged her back.</p>
+        <p>Alex shoved harder.</p>
+        <p>Kelli grabbed a corn stalk for balance; Alex laughed for real this time, her usual ornery snickering.</p>
+        <p>“There you are,” Kelli said. She grinned at her.</p>
+        <p>“Don’t,” Alex warned, still laughing. “I’m fuckin’ feral today.”</p>
+        <p>“You’re feral every day.”</p>
+        <p>They stood there, out of breath, letting the rest of the tension roll off them.</p>
+        <p>Underwood stuck his head out of the church doors.</p>
+        <p>“You little ladies okay out there?”</p>
+        <p>Kelli waved back. “Fine. Sorry.”</p>
+        <p>Underwood smiled and shook his head.</p>
+        <p>“Getting a headcount for the potluck. You gals in?”</p>
+        <p>Alex rolled her eyes.</p>
+        <p>“See?” Kelli said to Alex.</p>
+        <p>“No, thank you, Uncle Larry,” Kelli hollered back.</p>
+        <p>He waved and tottered back inside.</p>
+        <p>They started back toward the road.</p>
+        <p>Alex paused a moment, realizing Kelli’s old green Bible lay abandoned in the dirt.</p>
+        <p>“You think it’s mad at me?” she murmured.</p>
+        <p>“It’s a book, Alex. It’s not gonna sprout fangs.”</p>
+        <p>Alex poked it with a stick. “That’s what a mad book would want you to think.”</p>
+        <p>Kelli laughed hard at that. The image. “Just pick it up, dumbass.”</p>
+        <p>Alex scooped it, held it as if it might combust, then jogged to catch up. Their fingers brushed, then laced as they skipped off, holding hands.</p>
+        <p>Corn rustled as oxygen ducts pushed the morning air through the rows. High above, Earth hung red outside the Veil.</p>
+        <p>Off in the distance, watering Proctors flew in, optics evaluating crops for proper moisture levels.</p>
+        <p>The world had been built to hold them. This bond was strong enough to outlast whatever came next.</p>
+        <div class="scene-break" id="scene-kite-flats" aria-label="Scene: Kite Flats High School, 2466-10-04, morning">
+          <strong>Kite Flats High School</strong>
+          <span>2466-10-04 · Morning</span>
+        </div>
+        <p>Mrs. Lambert took attendance, groaning in a manner that suggested annoyance at their act of existence. The class didn’t care; they were too busy assaulting each other with school supplies and hair ties.</p>
+        <p>Alex definitely wasn’t paying much attention either.</p>
+        <p>She was deep in thought, scratching out a cool rendering of Mick Jagger, pencil flying as if she’d been commissioned by his estate.</p>
+        <p>Kelli didn’t understand the obsession, but she couldn’t stop watching. Alex always drew as if the world didn’t matter when she did it.</p>
+        <p>Up front, Mason Ellison kept glancing back every twelve seconds. Kelli counted; it was literally twelve seconds. Mason was leaning so far that she was basically horizontal. Mason seemed to have a thing for Alex.</p>
+        <p><em>Sit in her lap and get it over with.</em></p>
+        <p>Alex hummed an off-key little melody; the same melody she always sounded out when she didn’t want to think too hard about anything else. It settled Kelli. Alex knew how to make her feel better almost instantly, just by being herself and being present.</p>
+        <p>Lambert flicked the holo-projector on. A shimmering red Earth rotated above the desk.</p>
+        <p>“Today,” Lambert announced, “Chapter Thirteen.”</p>
+        <p><em>Dammit.</em> Her notes were for twelve.</p>
+        <p>Across the aisle, Alex saw Kelli’s panic and smirked at her.</p>
+        <p>Kelli pressed a dramatic hand to her heart.</p>
+        <p>Alex flipped her off under the table.</p>
+        <p>Kelli pig-snort laughed into her sleeve.</p>
+        <p>Lambert glared. “Something funny, Ms. Day?”</p>
+        <p>“No, ma’am.”</p>
+        <p><em>(Absolutely, yes.)</em></p>
+        <p>The class turned just long enough for Alex to jab Kelli in the arm.</p>
+        <p><em>Ow.</em> Kelli snapped a hair tie back at her.</p>
+        <p>Alex mouthed, I’m gonna get you for that.</p>
+        <p>Kelli mouthed, Catch me first.</p>
+        <p>Lambert’s patience thinned. “Why is the Earth red?”</p>
+        <p>Greg volunteered helpfully, “Because it’s on the rag.”</p>
+        <p>Lambert closed her eyes. A long sigh. Like she knew what can of stupid she’d just opened.</p>
+        <p>“No wait! Because Alex’s music killed it,” Greg added.</p>
+        <p>Without even looking up from her sketch, Alex murmured, bored, “Nah. It’s blushing after seeing Greg’s tiny dick.”</p>
+        <p>The class went nuts. A kid actually fell out of his chair. Kelli folded over her arm, trying desperately not to die.</p>
+        <p>Lambert rubbed her eyes under her glasses. “Are we done?”</p>
+        <p>The laughter dissolved into guilty chokes.</p>
+        <p>“Mason.” Lambert sighed.</p>
+        <p>Someone started it, and it caught on like an infection, leaping from mouth to mouth: Teacher’s pet.</p>
+        <p>Mason ignored it. “After the oceans died, particulates altered the atmosphere; iron—”</p>
+        <p>“Correct.”</p>
+        <p>The holo dimmed, and the class went dark.</p>
+        <p>Red light washed across their desks, turning everyone into silhouettes. The image of a red Earth, no matter how many times you looked at it, always made you stop. Consider what was dead.</p>
+        <p>Even Alex grew still and stared for a brief moment.</p>
+        <p>Lambert went soft. “A Lunar poet wrote, ‘It burned so we could see ourselves in its light.’“</p>
+        <p>Silence filled the room to the point where even the faintest breaths felt loud.</p>
+        <p>Then the bell broke the trance.</p>
+        <p>In the hallway, Kelli trotted to catch up. Excitement and joy to share. “Alex, I got in. Lang U accepted me.”</p>
+        <p>Alex slammed her locker shut.</p>
+        <p>“Great,” Alex said. “Fantastic.”</p>
+        <p>“…That didn’t sound happy.”<em> I wish Alex could be happy for me, just this once.</em></p>
+        <p>“It’s on Mars, Kelli.” Her voice strained. “You leave and then what? I breathe this tin-can air alone? You’re my only—”</p>
+        <p>“Forget it,” Alex said quickly, cutting herself off.</p>
+        <p>She braced her shoulders the way she always did when she felt abandoned. Like she did when she talked about her dad leaving them.</p>
+        <p>Kelli moved closer. “It’s just college. I’ll call. We’ll talk every week. You’re not losing me.”</p>
+        <p>Alex bit the inside of her lip. “With you gone, it won’t take long before I’m out on the street. That’s what happens. People leave. No one cares what happens to me except you, Kel.”</p>
+        <p><em>Oh, Alex. No. No, sweetheart.</em></p>
+        <p>She touched Alex’s sleeve gently, like approaching a cornered, wounded cat.</p>
+        <p>“Never,” Kelli whispered. “I will never let you fall through the cracks.”</p>
+        <p>Alex didn’t argue or agree. She walked off faster than she needed to.</p>
+        <p>Kelli pressed her forehead to the locker, the metal cooling her nerves.<em> More to fix. Great.</em></p>
+        <p>She hated that Alex expected to be hurt more easily than breathing. Kelli heard her footsteps. “Mason?”</p>
+        <p>The girl held out a folded paper heart.</p>
+        <p>“Could you… give this to Alex? Please?”</p>
+        <p>Kelli accepted it. “Yeah. Of course.”</p>
+        <p>Mason brightened and darted off, hopeful.</p>
+        <p>Kelli felt the note in her fingers, thumb brushing the crease.</p>
+        <p>Maybe it would help.</p>
+        <p>Maybe Alex needed to know someone else saw her.</p>
+        <div class="scene-break" id="scene-klein-farmhouse" aria-label="Scene: Farm Belt, Klein Farmhouse, 2466-10-04, late afternoon">
+          <strong>Farm Belt · Klein Farmhouse</strong>
+          <span>2466-10-04 · Late Afternoon</span>
+        </div>
+        <p>The Klein farmhouse slumped at the end of a gravel track, old and tired-looking. Rusting equipment lay dead in the weeds, various farm equipment, and Proctors, including a stripped-down tractor Alex used to climb when she was small.</p>
+        <p>Kelli hated everything about this place. Something here wanted to infect you.</p>
+        <p>It was like a bruise you got that you weren’t convinced wasn’t a necrotic spider bite. This place had a way of leaving its venom in you and expected you to rot with it.</p>
+        <p>She stepped inside the house. Alex’s mom lay legs folded up on the couch. She stared at the wall, a lit cigarette dangling from her fingers. Today’s charming thug in the recliner looked at Kelli with a lazy, hungry interest that made her skin crawl.</p>
+        <p>Kelli didn’t hesitate; she walked down the hall straight to Alex’s room.</p>
+        <p>Alex’s door had its usual sign—PLEASE FUCK OFF—hanging crooked by one thumbtack.</p>
+        <p>“Yeah, come in,” Alex called.</p>
+        <p>Kelli pushed inside.</p>
+        <p>Blue light flickered over Alex. She was barefoot with her knees tucked up.</p>
+        <p>Bruises on her collarbone looked like fading fingerprints.</p>
+        <p>Alex didn’t bother hiding them anymore.</p>
+        <p>“Finishing Oswald,” she muttered, eyes still studying the screen. “It’s a killer.”</p>
+        <p>“Oswald can wait.”</p>
+        <p>Kelli plopped onto the bed beside her, looking at her bruises more carefully.</p>
+        <p>Alex noticed.</p>
+        <p>And didn’t flinch. That hurt worse. Alex had already decided this was normal.</p>
+        <p>“I can’t afford Mars,” Alex said. “And I can’t do life without you either.”</p>
+        <p>Kelli rested her hand on Alex’s shoulder.</p>
+        <p>“I’m not leaving you.”</p>
+        <p>“For three years,” Alex murmured, still not looking at her. “That’s a long time to be the girl who gets left behind.”</p>
+        <p>There it was. Where Alex clammed up, expecting the world to confirm her worst fears.</p>
+        <p>Alex kept her hand in her lap, fingers curled, protecting herself. Kelli reached for it anyway.</p>
+        <p>“Alex… I’m not letting you fall back into this house.”</p>
+        <p>Alex looked up. Expression of an eight-year-old.</p>
+        <p>But she shoved the softness away.</p>
+        <p>“I’ve been thinking about joining the Moon Guns,” Alex said.</p>
+        <p>Kelli frowned. “You’re serious? Moon Guns?”</p>
+        <p>“Totally serious. I can’t keep selling Dad’s junk and coming home to...”</p>
+        <p>She lifted her chin to show the new addition. Fresh belt welt under her shirtline.</p>
+        <p>Kelli’s breath shook.<em> How does this shit happen?</em> She couldn’t comprehend hurting someone you loved. What was worse, Alex didn’t register the pain of this hell she went through at home as being equal to the pain of Kelli leaving. That made Kelli feel worse about all of it.</p>
+        <p>Alex turned away, as if she’d already decided this wasn’t worth talking about.</p>
+        <p>“I’m not turning into her,” Alex whispered.</p>
+        <p>Kelli felt disappointment and hurt stab at her. She knew Alex loved her mother. But she was terrified of falling into the same trap. Drinking. Abusive boyfriends. Pass it on.</p>
+        <p>“Oh, honey…”</p>
+        <p>Alex cut her off. “Don’t say you’re sorry. Let’s just change the subject before I—”</p>
+        <p>A crash exploded in the hall. Something glass shattered, then the screaming started, then bodies hit the wall.</p>
+        <p>Alex was already moving,</p>
+        <p>Kelli was right behind her.</p>
+        <p>Alex’s mom was pinned against the drywall, the boyfriend’s hand around her throat. His arm drew back again.</p>
+        <p>Alex kicked him so hard in the nuts that he bent over face-first onto the floor.</p>
+        <p>He dropped her mother and caught Alex by the waistband and yanked her back.</p>
+        <p>“You little shit!”</p>
+        <p>The boyfriend ripped his belt free and whipped it across Alex’s back.</p>
+        <p>The sound cracked so hard that Kelli’s whole body recoiled.</p>
+        <p>Alex didn’t scream.</p>
+        <p>She clenched her teeth and swung the nearest whiskey bottle at his face, shattering it.</p>
+        <p>The motion was so practiced, Kelli wished Alex didn’t have this kind of thing as muscle memory.</p>
+        <p>He staggered.</p>
+        <p>“Run!” Alex shouted, grabbing Kelli’s wrist.</p>
+        <p>They tore through the doorway out into the cold, outside air.</p>
+        <p>The farmhouse shrank behind them as the weeds whipped their legs.</p>
+        <p>Kelli stopped when her knees finally gave out.</p>
+        <p>Alex dropped beside her, breathing loudly. She rubbed Kelli’s arms gently.</p>
+        <p>“Hey. Hey. It’s okay. Breathe,” Alex said.</p>
+        <p>Kelli didn’t realize she was crying until Alex thumbed a tear off her cheek.</p>
+        <p>“I’m supposed to be the one helping you,” Kelli said, voice shaking.</p>
+        <p>“Yeah, well.” Alex gave her a wry smile. “We can trade off.”</p>
+        <p>Kelli let out a trembling laugh. “You poor thing…”</p>
+        <p>Alex huffed, brushing dirt off her jeans. “Moon Guns gotta be better than that, am I right?”</p>
+        <p>“I guess so,” Kelli said. She laughed.</p>
+        <p>Then she remembered the note.</p>
+        <p>“Oh—Mason gave me this.” Kelli pulled the folded heart from her pocket.</p>
+        <p>Alex tore it open. Her eyes went wide.</p>
+        <p>“She wants to meet me at the cornfield tonight!”</p>
+        <p>Kelli managed a smile. “You going?”</p>
+        <p>“Damn right. And I’m borrowing your clothes.”</p>
+        <p>“You just want free dinner.”</p>
+        <p>“Absolutely.” Alex slung an arm around her shoulders. “Also, I need to look hot.”</p>
+        <p>Kelli hiccuped through another laugh.</p>
+        <p>Alex tightened her arm around her.</p>
+        <p>“Kelli,” Alex muttered, glancing down, “your mom’s gonna know you were crying if she hears those hiccups.”</p>
+        <p>“Oh, hic Alex. She hic eez.”</p>
+        <p>Alex snorted and pulled her closer as they walked.</p>
+        <p>Kelli leaned into her, grateful and terrified, more certain than ever:</p>
+        <p>Alex needed rescuing.</p>
+        <p>From this house.</p>
+        <p>From this life.</p>
+        <p>Before she needed rescuing from the things she couldn’t see coming.</p>
+        <div class="chapter-end">
+          <div class="glyph" aria-hidden="true">◆ ◆ ◆</div>
+          <h3>You’ve met Alex and Kelli.</h3>
+          <p>Their story is only beginning. Get the complete opening act of <em>Vow</em> free and come explore the universe with us.</p>
+          <a class="button" target="_blank" rel="noopener" href="https://dl.bookfunnel.com/1uuimb68pd" onclick="reportVowBookFunnelClick();">Get Act I Free</a>
+        </div>
+      </article>
+    </section>
 
-  <div class="vow-note">
-    No purchase. Delivered by email through BookFunnel.
-</div>
-</section>
+    <section class="universe-section" aria-labelledby="universe-title">
+      <div class="section-shell">
+        <div class="poster-banner">
+          <img src="images/vow/posters/enter-the-universe.jpg" alt="Enter the universe of Moon Gun Sam: Vow, Ember, Psalms of Chaos, and The War Ellipse" loading="lazy" />
+        </div>
+        <div class="universe-grid">
+          <img class="universe-poster" src="images/vow/posters/family-earth.jpg" alt="Moon Gun Sam Vow family poster" loading="lazy" />
+          <div class="universe-copy">
+            <p class="section-kicker">A story that keeps opening</p>
+            <h2 class="section-heading" id="universe-title">The family stays. The universe gets spectacular.</h2>
+            <p><em>Vow</em> begins close to home, giving you time to know the people at its heart. From there, Moon Gun Sam grows into a dense science-fantasy saga—without losing the love, humor, grief, and stubborn hope that made the journey matter.</p>
+            <ul class="future-list">
+              <li>Books and collector editions</li>
+              <li>Audiobooks in development</li>
+              <li>Trading cards arriving in 2026</li>
+              <li>Reader community coming soon</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="pod-section" id="join" aria-labelledby="pod-title">
+      <div class="section-shell">
+        <div class="pod-header">
+          <p class="section-kicker">Come sit with us</p>
+          <h2 class="section-heading" id="pod-title">The books tell the story.<br>The Pod explores the universe.</h2>
+          <p class="section-intro">Twice a month, we go behind the scenes of Moon Gun Sam: worldbuilding, character stories, artwork, cards, reader questions, and occasional evidence that the author should not be left unsupervised.</p>
+        </div>
+
+        <div class="card-fan" aria-label="A preview of Moon Gun Sam trading cards">
+          <img src="images/vow/cards/word-sin.jpg" alt="The Word Sin trading card" loading="lazy" />
+          <img src="images/vow/cards/pebble-fight.jpg" alt="Pebble Fight trading card" loading="lazy" />
+          <img src="images/vow/cards/making-amends.jpg" alt="Making Amends trading card" loading="lazy" />
+          <img src="images/vow/cards/the-promise.jpg" alt="The Promise trading card" loading="lazy" />
+        </div>
+
+        <div class="pod-offer">
+          <div>
+            <h3>Join The Pod and get:</h3>
+            <ul>
+              <li>The complete opening act of <em>Vow</em>, free</li>
+              <li>Trading-card previews before release</li>
+              <li>Worldbuilding, art, and behind-the-scenes stories</li>
+              <li>News about books, audio, events, and community plans</li>
+            </ul>
+          </div>
+          <div class="pod-side">
+            <img src="images/vow/posters/trading-cards.jpg" alt="Moon Gun Sam Vow trading card booster pack" loading="lazy" />
+            <div class="pod-actions">
+              <a class="button" href="https://podjoin.com" onclick="trackVowEvent('pod_join_click', {placement:'vow_landing_page'});">Join The Pod</a>
+              <a class="button secondary" href="https://preview.mailerlite.io/preview/2151427/emails/190689208018405203" target="_blank" rel="noopener" onclick="trackVowEvent('newsletter_preview_click');">Read a Sample</a>
+            </div>
+            <p class="pod-note">Two emails a month. No spam. We never sell or share your address—and yes, we hate annoying email too.</p>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
-  <section class="vow-section">
-    <div class="vow-card fade">
-      <img src="images/dolphin1.jpg" alt="Moon Gun Sam: The Dolphin — Vow book cover" />
-  <div>
-    <h3>What awaits you</h3>
-    <p>
-       Meet the family at the heart of Moon Gun Sam.<br>
-       Inside you'll find:<br>
-    </p>
-    <ul class="vow-list">
-      <li>The complete opening act of Vow</li>
-      <li>Sam, Alex, Kelli and Lila before everything changes</li>
-      <li>A hopeful science-fiction story about love surviving impossible loss</li>
-      <li>Behind-the-scenes extras and future adventures through The Pod</li>
-    </ul>
-  </div>
-</div>
-  </section>
-  <div class="vow-footer-cta">
-    <a class="vow-cta"
-        target="_blank" rel="noopener"
-        href="https://dl.bookfunnel.com/1uuimb68pd"
-        onclick="reportVowBookFunnelClick();">
-            Start Vow Free
-    </a>
-  </div>
+
   <footer>
-    <div class="copyright">
-      © 2026 Luna Dumu Press •
-      <a href="/privacy.html">Privacy Policy</a>
-    </div>
+    © 2026 Luna Dumu Press · <a href="/privacy.html">Privacy Policy</a> · <a href="https://shop.lunadumupress.com" target="_blank" rel="noopener">Visit the Store</a> · <a href="/beta.html">Beta Readers</a>
   </footer>
-  <script src="script.js"></script>
+
+  <script>
+    const progress = document.getElementById('readingProgress');
+    const reader = document.getElementById('chapterReader');
+
+    function updateReadingProgress() {
+      if (!progress || !reader) return;
+      const rect = reader.getBoundingClientRect();
+      const distance = reader.offsetHeight + window.innerHeight;
+      const read = Math.min(1, Math.max(0, (window.innerHeight - rect.top) / distance));
+      progress.style.width = `${read * 100}%`;
+    }
+
+    let chapterSeen = false;
+    const chapterObserver = new IntersectionObserver((entries) => {
+      if (!chapterSeen && entries.some(entry => entry.isIntersecting)) {
+        chapterSeen = true;
+        trackVowEvent('chapter_view', { chapter: 'cornfield' });
+      }
+    }, { threshold: .1 });
+
+    if (reader) chapterObserver.observe(reader);
+    addEventListener('scroll', updateReadingProgress, { passive: true });
+    addEventListener('resize', updateReadingProgress);
+    updateReadingProgress();
+  </script>
+
   <!-- MailerLite Universal -->
   <script>
     (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
