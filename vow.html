@@ -458,10 +458,28 @@
     @media (max-width: 600px) {
       .site-nav { align-items: flex-start; }
       .nav-mark { display: none; }
-      .hero::before { background-position: 58% 25%; }
-      .hero::after { background: linear-gradient(0deg, var(--night) 0%, rgba(7,9,13,.55) 58%, rgba(7,9,13,.12) 100%); }
-      .hero-content { padding-top: 58vh; }
-      .hero h1 { font-size: clamp(3rem, 16vw, 4.7rem); }
+      .hero { min-height: 100svh; }
+      .hero::before {
+        background-color: var(--night);
+        background-position: center top;
+        background-size: 130% auto;
+        transform: none;
+      }
+      .hero::after {
+        background: linear-gradient(0deg, var(--night) 0 45%, rgba(7,9,13,.82) 62%, rgba(7,9,13,.08) 100%);
+      }
+      .hero-content {
+        width: 100%;
+        padding: clamp(18rem, 39vh, 21rem) 1.25rem 3rem;
+      }
+      .hero h1 {
+        max-width: 20rem;
+        font-size: clamp(2.65rem, 12vw, 3.25rem);
+        line-height: .94;
+        letter-spacing: -.035em;
+      }
+      .hero-lede { margin-top: 1.25rem; line-height: 1.55; }
+      .hero-actions { margin-top: 1.5rem; }
       .hero-actions .button { width: 100%; }
       .chapter-stage { min-height: 760px; background-size: 620px auto; }
       .chapter-title { width: calc(100% - 3rem); margin-top: 10.5rem; }
@@ -470,6 +488,11 @@
       .future-list { grid-template-columns: 1fr; }
       .card-fan { gap: .7rem; }
       .card-fan img:nth-child(n) { transform: none; }
+    }
+    @media (max-width: 380px) {
+      .hero::before { background-size: 138% auto; }
+      .hero-content { padding-top: 17.5rem; }
+      .hero h1 { font-size: clamp(2.5rem, 11.5vw, 2.85rem); }
     }
     @media (prefers-reduced-motion: reduce) {
       html { scroll-behavior: auto; }
