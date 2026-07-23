@@ -1261,7 +1261,11 @@ color: #e6b14a;
   }
 
   .book-cover-link img {
+    display: block;
     width: 100%;
+    height: auto;
+    aspect-ratio: 2 / 3;
+    object-fit: cover;
   }
 
   .book-cover-watermark {

@@ -35,8 +35,8 @@
     <p class="hero-tagline">
       A literary speculative family saga.</br>
       28 years in the making.</br>
-      Eight books completed.</br>
-
+      Eight books completed.
+      </p>
       <div class="hero-ctas">
         <a class="cta" href="#join">Join the Pod</a>
         <a class="cta secondary" href="#trailer">Watch Trailer</a>
@@ -114,7 +114,7 @@ and when to stand and fight.
 
       <a class="book-cover-link" href="https://www.amazon.com/dp/B0H24KHZWJ/ref=sr_1_1?crid=3MXHG6UGVBL38&dib=eyJ2IjoiMSJ9.yDwmX5G9aKXM9u099qCx6mciX6nltE4xB-q3G1eL8oHVlySMkSmsiuGS3CaRVe9HoF3CSigJOsHS6lHTYSwg6GsrA3JEa-VEf92HCX8u_Zv3Z2Kivdo8nkPBbE19sQXEvfOK-PjY42DGKhf2rFT5AGOp6c5Y-zIb6k7XD5Oyl9MFyLVH3cDWDeYKTa3G09-N6MjJLCcJn6x3KhREi4IXF9z5RUmMOaF4JbpkV5ruHrA.3vKnMXJRO62tbECJ_FOMjvUzHGcjuY9w9o7zFWu0ffA&dib_tag=se&keywords=moon+gun+sam&qid=1779073160&sprefix=moon+gun+sam%2Caps%2C205&sr=8-1" target="_blank" rel="noopener noreferrer" aria-label="Pre-order Moon Gun Sam: The Dolphin — Vow">
     
-        <img src="images/dolphin1.jpg" alt="Moon Gun Sam: The Dolphin — Vow cover" />
+        <img src="images/Vow.jpg" alt="Moon Gun Sam: The Dolphin — Vow cover" width="1200" height="1800"/>
     
         <span class="book-cover-cta">Pre-order Vow</span>
     
@@ -122,7 +122,7 @@ and when to stand and fight.
     
       <a class="book-cover-link" href="https://www.amazon.com/gp/product/B0H24JJHBX?ref_=dbs_m_mng_rwt_calw_tkin_1&storeType=ebooks" target="_blank" rel="noopener noreferrer" aria-label="Pre-order Moon Gun Sam: The Dolphin — Ember">
     
-        <img src="images/dolphin2.jpg" alt="Moon Gun Sam: The Dolphin — Ember cover" />
+        <img src="images/Ember.jpg" alt="Moon Gun Sam: The Dolphin — Ember cover" width="1200" height="1800" />
     
         <span class="book-cover-cta">Pre-order Ember</span>
     
@@ -130,7 +130,7 @@ and when to stand and fight.
     
       <div class="book-cover-link book-cover-soon" aria-label="Moon Gun Sam: Psalms of Chaos coming soon">
     
-        <img src="images/psalms.jpg" alt="Moon Gun Sam: Psalms of Chaos cover" />
+        <img src="images/psalms.jpg" alt="Moon Gun Sam: Psalms of Chaos cover" width="1200" height="1800" />
     
         <span class="book-cover-watermark">Transmission Pending</span>
     
@@ -276,13 +276,37 @@ and when to stand and fight.
   <script src="script.js"></script>
 
   <!-- MailerLite Universal -->
-<script>
-  (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
-  .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
-  n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
-  (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
-  ml('account', '2151427');
-</script>
+  <script>
+    (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
+    .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
+    n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
+    (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
+    ml('account', '2151427');
+  </script>
+  
+  <script>
+    function restoreAnchorPosition() {
+      if (!window.location.hash) return;
+  
+      const target = document.querySelector(window.location.hash);
+  
+      if (target) {
+        target.scrollIntoView({
+          behavior: "auto",
+          block: "start"
+        });
+      }
+    }
+  
+    window.addEventListener("load", () => {
+      restoreAnchorPosition();
+      setTimeout(restoreAnchorPosition, 500);
+      setTimeout(restoreAnchorPosition, 1500);
+    });
+  </script>
+  
+  </body>
+  </html>
 <!-- End MailerLite Universal -->
 
 </body>
