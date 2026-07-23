@@ -595,26 +595,16 @@ h3 {
 
 .book-grid {
   display: flex;
-  gap: 2rem;
   justify-content: center;
+  align-items: flex-start;
+  gap: 2rem;
+  flex-wrap: wrap;
 }
-
-.book-grid img {
-  width: 220px;
-  border-radius: 12px;
-  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.55);
-  transition: transform 0.18s ease, opacity 0.18s ease;
-}
-
-/* .book-grid img:hover {
-  transform: translateY(-4px);
-  opacity: 0.96;
-} */
-
 
 .book-cover-link {
   position: relative;
   display: block;
+  flex: 0 0 220px;
   width: 220px;
   border-radius: 12px;
   text-decoration: none;
@@ -623,8 +613,11 @@ h3 {
 }
 
 .book-cover-link img {
-  width: 100%;
   display: block;
+  width: 100%;
+  height: auto !important;
+  aspect-ratio: auto;
+  object-fit: contain;
   border-radius: 12px;
   box-shadow: 0 10px 35px rgba(0, 0, 0, 0.55);
 }
@@ -659,16 +652,19 @@ h3 {
 .book-cover-soon::after {
   content: "";
   position: absolute;
-  inset: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  aspect-ratio: 2 / 3;
   border-radius: 12px;
-  background: rgba(0,0,0,0.34);
+  background: rgba(0, 0, 0, 0.34);
   pointer-events: none;
 }
 
 .book-cover-watermark {
   position: absolute;
   left: 50%;
-  top: 50%;
+  top: 45%;
   z-index: 2;
   transform: translate(-50%, -50%) rotate(-8deg);
   padding: 0.45rem 0.8rem;
@@ -683,6 +679,24 @@ h3 {
   backdrop-filter: blur(3px);
 }
 
+@media (max-width: 800px) {
+  .book-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .book-cover-link {
+    flex-basis: auto;
+    width: min(260px, 70vw);
+  }
+
+  .book-cover-watermark {
+    font-size: 0.55rem;
+    padding: 0.4rem 0.65rem;
+    max-width: 90%;
+    text-align: center;
+  }
+}
 
 /* =========================
    MAILING LIST
@@ -871,15 +885,6 @@ footer .copyright {
 
   .about img {
     width: 170px;
-  }
-
-  .book-grid {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .book-grid img {
-    width: min(260px, 70vw);
   }
 
   section {
@@ -1183,98 +1188,79 @@ footer a:hover {
   .hero.cinematic-start .hero-stage::after {
     animation: heroIntroPush 9s ease forwards;
   }
+}
 
-  .readmore-hero,
+.readmore-hero,
 .readmore-section {
-max-width: 960px;
-margin: 0 auto;
-padding: 5rem 2rem;
-text-align: center;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 5rem 2rem;
+  text-align: center;
 }
 
 .readmore-hero {
-min-height: 70vh;
-display: flex;
-flex-direction: column;
-justify-content: center;
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .readmore-hero h1 {
-font-size: clamp(2.5rem, 6vw, 4.5rem);
-font-weight: 300;
-letter-spacing: 0.18em;
-text-transform: uppercase;
-color: #fff;
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  font-weight: 300;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #fff;
 }
 
 .readmore-hero p,
 .readmore-section p {
-color: rgba(255,255,255,0.68);
-line-height: 1.8;
-font-size: 1rem;
+  color: rgba(255,255,255,0.68);
+  line-height: 1.8;
+  font-size: 1rem;
 }
 
 .readmore-divider {
-width: 70px;
-height: 1px;
-background: rgba(230,177,74,0.5);
-margin: 2rem auto;
+  width: 70px;
+  height: 1px;
+  background: rgba(230,177,74,0.5);
+  margin: 2rem auto;
 }
 
 .readmore-ctas,
 .readmore-book-links,
 .readmore-extras {
-display: flex;
-justify-content: center;
-flex-wrap: wrap;
-gap: 1rem;
-margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 2rem;
 }
 
 .readmore-section h2 {
-font-size: 0.85rem;
-letter-spacing: 0.25em;
-text-transform: uppercase;
-color: rgba(255,255,255,0.4);
-margin-bottom: 1rem;
+  font-size: 0.85rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.4);
+  margin-bottom: 1rem;
 }
 
 .readmore-book-links a,
 .readmore-extras a {
-padding: 0.9rem 1.4rem;
-border-radius: 999px;
-text-decoration: none;
-color: #eee;
-border: 1px solid rgba(255,255,255,0.12);
-background: rgba(255,255,255,0.04);
+  padding: 0.9rem 1.4rem;
+  border-radius: 999px;
+  text-decoration: none;
+  color: #eee;
+  border: 1px solid rgba(255,255,255,0.12);
+  background: rgba(255,255,255,0.04);
 }
 
 .readmore-book-links a:hover,
 .readmore-extras a:hover {
-background: rgba(255,255,255,0.08);
-color: #e6b14a;
+  background: rgba(255,255,255,0.08);
+  color: #e6b14a;
 }
 
-@media (max-width: 800px) {
-  .book-cover-link {
-    width: min(260px, 70vw);
-  }
-
-  .book-cover-link img {
-    display: block;
-    width: 100%;
-    height: auto;
-    aspect-ratio: 2 / 3;
-    object-fit: cover;
-  }
-
-  .book-cover-watermark {
-    font-size: 0.55rem;
-    padding: 0.4rem 0.65rem;
-    max-width: 90%;
-    text-align: center;
-  }
-}
 @media (max-width: 700px) {
   .free-act-section {
     width: calc(100% - 2rem);
@@ -1290,5 +1276,4 @@ color: #e6b14a;
     white-space: normal;
     line-height: 1.25;
   }
-}
 }
