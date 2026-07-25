@@ -572,6 +572,134 @@ h3 {
 }
 
 /* =========================
+   AUTHOR
+========================= */
+
+.author-page {
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at 72% 18%, rgba(230,177,74,0.08), transparent 34rem),
+    radial-gradient(circle at 16% 80%, rgba(78,96,124,0.12), transparent 38rem),
+    #0b0b0b;
+}
+
+.author-header {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.author-home-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  color: rgba(238,238,238,0.72);
+  font-size: 0.85rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.author-home-link::before {
+  content: "←";
+  color: #e6b14a;
+}
+
+.author-profile {
+  display: grid;
+  grid-template-columns: minmax(280px, 0.8fr) minmax(340px, 1.2fr);
+  gap: clamp(3rem, 7vw, 6rem);
+  align-items: center;
+  padding-top: clamp(2rem, 5vw, 5rem);
+  padding-bottom: 4rem;
+}
+
+.author-portrait-frame {
+  position: relative;
+  max-width: 430px;
+  margin: 0 auto;
+}
+
+.author-portrait-frame::before {
+  content: "";
+  position: absolute;
+  inset: -12px 12px 12px -12px;
+  border: 1px solid rgba(230,177,74,0.38);
+  border-radius: 4px;
+  z-index: 0;
+}
+
+.author-portrait {
+  position: relative;
+  z-index: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 2280 / 2636;
+  object-fit: cover;
+  border-radius: 4px;
+  box-shadow: 0 24px 70px rgba(0,0,0,0.55);
+}
+
+.author-kicker {
+  color: #e6b14a;
+  font-size: 0.82rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  margin-bottom: 0.8rem;
+}
+
+.author-copy h1 {
+  font-size: clamp(2.7rem, 6vw, 5.4rem);
+  line-height: 0.95;
+  letter-spacing: -0.04em;
+  font-weight: 600;
+  margin-bottom: 1.2rem;
+}
+
+.author-deck {
+  max-width: 36rem;
+  color: rgba(238,238,238,0.72);
+  font-size: clamp(1rem, 2vw, 1.18rem);
+  letter-spacing: 0.02em;
+  margin-bottom: 2.5rem;
+}
+
+.author-bio {
+  max-width: 42rem;
+}
+
+.author-bio p {
+  margin-bottom: 1.35rem;
+  color: rgba(238,238,238,0.9);
+  font-size: 1.03rem;
+}
+
+.author-bio em {
+  color: #ffd87a;
+}
+
+.author-closing {
+  margin-top: 2.4rem;
+  padding: 1.5rem 0 0 1.4rem;
+  border-left: 1px solid rgba(230,177,74,0.55);
+}
+
+.author-closing p {
+  margin-bottom: 0.35rem;
+}
+
+.author-motto {
+  color: #e6b14a;
+  font-size: 0.85rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.author-footer {
+  margin-top: 1rem;
+}
+
+/* =========================
    BOOKS
 ========================= */
 
@@ -878,6 +1006,28 @@ footer .copyright {
 }
 
 @media (max-width: 800px) {
+  .author-header {
+    padding: 1.4rem 1.5rem 0;
+  }
+
+  .author-profile {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    padding-top: 2rem;
+  }
+
+  .author-portrait-frame {
+    width: min(82vw, 390px);
+  }
+
+  .author-copy h1 {
+    font-size: clamp(2.7rem, 13vw, 4.4rem);
+  }
+
+  .author-deck {
+    margin-bottom: 2rem;
+  }
+
   .about {
     flex-direction: column;
     text-align: center;
