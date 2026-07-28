@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18230546993"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'AW-18230546993');
+    gtag('config', 'G-9HLFJCJ650');
+    gtag('event', 'audiobook_updates_thank_you_view', {
+      source: 'vow_landing_page'
+    });
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow" />
+  <meta name="description" content="You’re in the Moon Gun Sam Pod. Check your inbox for audiobook and Kickstarter updates." />
+  <title>You’re In · Moon Gun Sam Audiobook Updates</title>
+  <style>
+    :root {
+      --night: #07090d;
+      --ink: #f5f3ed;
+      --muted: #adb4c0;
+      --gold: #e6b14a;
+      --gold-soft: #f2cd7e;
+      --cyan: #6bd6ec;
+      --display: "Avenir Next", Avenir, Montserrat, "Helvetica Neue", sans-serif;
+    }
+
+    * { box-sizing: border-box; }
+    html { min-height: 100%; background: var(--night); }
+    body {
+      min-height: 100svh;
+      margin: 0;
+      color: var(--ink);
+      background: var(--night);
+      font-family: var(--display);
+    }
+    a { color: inherit; }
+
+    .thanks-page {
+      position: relative;
+      min-height: 100svh;
+      display: grid;
+      place-items: center;
+      isolation: isolate;
+      overflow: hidden;
+      padding: clamp(6rem, 12vh, 9rem) 1.25rem 3rem;
+    }
+    .thanks-page::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -3;
+      background: url("images/book1/family-couch-photo.jpg") center 35% / cover no-repeat;
+      filter: saturate(.72) contrast(1.04);
+      transform: scale(1.015);
+    }
+    .thanks-page::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -2;
+      background:
+        radial-gradient(circle at 50% 45%, rgba(7,9,13,.42), rgba(7,9,13,.84) 62%),
+        linear-gradient(180deg, rgba(7,9,13,.48), var(--night));
+    }
+    .ambient-glow {
+      position: absolute;
+      inset: auto auto -18rem -14rem;
+      z-index: -1;
+      width: 38rem;
+      height: 38rem;
+      border-radius: 50%;
+      background: rgba(107,214,236,.12);
+      filter: blur(85px);
+      pointer-events: none;
+    }
+
+    .site-nav {
+      position: absolute;
+      inset: 0 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: 1.25rem clamp(1.25rem, 4vw, 4rem);
+    }
+    .site-nav a { text-decoration: none; }
+    .home-link {
+      color: rgba(255,255,255,.7);
+      font-size: .75rem;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+    }
+    .nav-mark { width: min(240px, 42vw); opacity: .8; }
+    .nav-mark img { display: block; width: 100%; }
+
+    .thanks-card {
+      width: min(760px, 100%);
+      padding: clamp(2rem, 7vw, 4.5rem);
+      border: 1px solid rgba(255,255,255,.16);
+      border-radius: 28px;
+      background:
+        radial-gradient(circle at 90% 5%, rgba(107,214,236,.1), transparent 34%),
+        rgba(7,9,13,.72);
+      box-shadow: 0 40px 110px rgba(0,0,0,.55);
+      text-align: center;
+      backdrop-filter: blur(16px);
+    }
+    .signal {
+      display: inline-flex;
+      align-items: center;
+      gap: .65rem;
+      margin-bottom: 1.5rem;
+      color: var(--gold-soft);
+      font-size: .72rem;
+      font-weight: 750;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+    }
+    .signal-dot {
+      width: .58rem;
+      height: .58rem;
+      border-radius: 50%;
+      background: var(--cyan);
+      box-shadow: 0 0 0 .35rem rgba(107,214,236,.12), 0 0 18px rgba(107,214,236,.7);
+      animation: signal-pulse 2.4s ease-in-out infinite;
+    }
+    h1 {
+      margin: 0;
+      font-size: clamp(3.8rem, 12vw, 8rem);
+      font-weight: 250;
+      line-height: .86;
+      letter-spacing: -.055em;
+    }
+    h1 span {
+      display: block;
+      margin-top: .22em;
+      color: var(--gold-soft);
+      font-size: .56em;
+      line-height: 1;
+      letter-spacing: -.035em;
+    }
+    .lede {
+      max-width: 580px;
+      margin: 2rem auto 0;
+      color: #d7d9dd;
+      font-size: clamp(1.05rem, 2.5vw, 1.28rem);
+      line-height: 1.7;
+    }
+    .inbox-note {
+      max-width: 520px;
+      margin: 1rem auto 0;
+      color: var(--muted);
+      font-size: .9rem;
+      line-height: 1.65;
+    }
+    .thanks-actions {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: .85rem;
+      margin-top: 2rem;
+    }
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 50px;
+      padding: .9rem 1.4rem;
+      border: 1px solid transparent;
+      border-radius: 999px;
+      background: var(--gold);
+      color: #090909;
+      box-shadow: 0 12px 34px rgba(230,177,74,.22);
+      font-size: .78rem;
+      font-weight: 800;
+      letter-spacing: .08em;
+      text-decoration: none;
+      text-transform: uppercase;
+      transition: transform .2s ease, filter .2s ease;
+    }
+    .button:hover { transform: translateY(-2px); filter: brightness(1.07); }
+    .button.secondary {
+      border-color: rgba(255,255,255,.24);
+      background: rgba(7,9,13,.46);
+      color: #fff;
+      box-shadow: none;
+    }
+    .quiet-link {
+      display: inline-block;
+      margin-top: 1.4rem;
+      color: rgba(255,255,255,.55);
+      font-size: .78rem;
+      text-underline-offset: .22em;
+    }
+
+    @keyframes signal-pulse {
+      0%, 100% { opacity: .68; transform: scale(.9); }
+      50% { opacity: 1; transform: scale(1.08); }
+    }
+
+    @media (max-width: 600px) {
+      .thanks-page {
+        place-items: end center;
+        padding: 18rem 1rem 1rem;
+      }
+      .thanks-page::before {
+        background-color: var(--night);
+        background-position: center top;
+        background-size: 130% auto;
+        transform: none;
+      }
+      .thanks-page::after {
+        background: linear-gradient(0deg, var(--night) 0 54%, rgba(7,9,13,.76) 70%, rgba(7,9,13,.08) 100%);
+      }
+      .nav-mark { display: none; }
+      .thanks-card { padding: 2rem 1.25rem; border-radius: 22px; }
+      .signal { margin-bottom: 1.1rem; }
+      h1 { font-size: clamp(3.6rem, 19vw, 5.1rem); }
+      .lede { margin-top: 1.4rem; font-size: 1rem; line-height: 1.58; }
+      .inbox-note { font-size: .82rem; }
+      .thanks-actions { display: grid; }
+      .button { width: 100%; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .signal-dot { animation: none; }
+      .button { transition: none; }
+    }
+  </style>
+</head>
+<body>
+  <main class="thanks-page">
+    <nav class="site-nav" aria-label="Primary navigation">
+      <a class="home-link" href="index.html">← Luna Dumu Press</a>
+      <a class="nav-mark" href="index.html" aria-label="Moon Gun Sam home">
+        <img src="images/mgs-title.png" alt="" />
+      </a>
+    </nav>
+
+    <div class="ambient-glow" aria-hidden="true"></div>
+
+    <section class="thanks-card" aria-labelledby="thanks-title">
+      <div class="signal"><span class="signal-dot" aria-hidden="true"></span>Transmission received</div>
+      <h1 id="thanks-title">You’re in.<span>Check your inbox.</span></h1>
+      <p class="lede">Your place in the Pod is saved. Look for a message from Luna Dumu Press—and we’ll keep you posted as the <em>Moon Gun Sam</em> audiobooks and Kickstarter come together.</p>
+      <p class="inbox-note">If it doesn’t arrive in a few minutes, check your promotions or spam folder. Adding us to your contacts helps future transmissions land safely.</p>
+
+      <div class="thanks-actions">
+        <a class="button" href="vow.html#audiobook-preview">Listen to Scene One Again</a>
+        <a class="button secondary" href="vow.html#chapter">Read the Preview</a>
+      </div>
+      <a class="quiet-link" href="index.html">Return to Luna Dumu Press</a>
+    </section>
+  </main>
+</body>
+</html>
