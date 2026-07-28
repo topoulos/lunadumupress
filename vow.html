@@ -27,7 +27,7 @@
   </script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Meet the family at the heart of Moon Gun Sam, read a preview of The Dolphin — Vow, and get the complete opening act free." />
+  <meta name="description" content="Listen to Louise Porter narrate the opening scene of Moon Gun Sam: The Dolphin — Vow, and join the Pod for audiobook and Kickstarter updates." />
   <title>Enter Moon Gun Sam · Read Vow Free</title>
   <link rel="stylesheet" href="styles.css" />
   <style>
@@ -190,6 +190,45 @@
       font-size: .78rem;
       letter-spacing: .03em;
     }
+    .hero-audio {
+      max-width: 610px;
+      margin-top: 1.4rem;
+      padding: .95rem 1rem 1rem;
+      border: 1px solid rgba(255,255,255,.18);
+      border-radius: 16px;
+      background: rgba(7,9,13,.58);
+      box-shadow: 0 18px 45px rgba(0,0,0,.28);
+      backdrop-filter: blur(10px);
+    }
+    .hero-audio-heading {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+    .hero-audio-heading strong {
+      font-size: .92rem;
+      font-weight: 650;
+      letter-spacing: .01em;
+    }
+    .hero-audio-heading span {
+      color: rgba(255,255,255,.56);
+      font-size: .72rem;
+      white-space: nowrap;
+    }
+    .hero-audio audio {
+      display: block;
+      width: 100%;
+      height: 38px;
+      margin-top: .7rem;
+    }
+    .hero-reader-link {
+      display: inline-block;
+      margin-top: .9rem;
+      color: rgba(255,255,255,.7);
+      font-size: .78rem;
+      text-underline-offset: .22em;
+    }
 
     .section-shell {
       width: min(1180px, calc(100% - 2.6rem));
@@ -214,6 +253,7 @@
     }
 
     .trailer-section,
+    .audiobook-section,
     .artifact-section,
     .chapter-section,
     .universe-section,
@@ -223,6 +263,63 @@
       padding: 0;
     }
     .trailer-section { background: linear-gradient(180deg, var(--night), #0c1119 55%, var(--night)); }
+    .audiobook-section {
+      border-top: 1px solid var(--line);
+      background:
+        radial-gradient(circle at 15% 20%, rgba(107,214,236,.13), transparent 32%),
+        linear-gradient(180deg, #0b1018, var(--night));
+    }
+    .audiobook-signup-card {
+      display: grid;
+      grid-template-columns: 1.08fr .92fr;
+      gap: clamp(2rem, 6vw, 6rem);
+      align-items: center;
+    }
+    .audiobook-copy .section-intro { max-width: 640px; }
+    .audiobook-benefits {
+      display: grid;
+      gap: .65rem;
+      margin: 1.75rem 0 0;
+      padding: 0;
+      list-style: none;
+      color: #d4d7dc;
+    }
+    .audiobook-benefits li {
+      display: flex;
+      gap: .75rem;
+      line-height: 1.55;
+    }
+    .audiobook-benefits li::before {
+      content: "◆";
+      flex: 0 0 auto;
+      margin-top: .28em;
+      color: var(--gold);
+      font-size: .62em;
+    }
+    .audiobook-form-panel {
+      padding: clamp(1.5rem, 4vw, 2.75rem);
+      border: 1px solid rgba(242,205,126,.25);
+      border-radius: 22px;
+      background: rgba(255,255,255,.04);
+      box-shadow: 0 28px 70px rgba(0,0,0,.28);
+    }
+    .audiobook-form-panel h3 {
+      margin: 0;
+      font-size: clamp(1.55rem, 3vw, 2.2rem);
+      font-weight: 350;
+      line-height: 1.12;
+    }
+    .audiobook-form-panel > p {
+      margin: .8rem 0 1.2rem;
+      color: var(--muted);
+      line-height: 1.65;
+    }
+    .audiobook-form-panel .ml-embedded { width: 100%; }
+    .audiobook-form-panel .signup-note {
+      margin: .9rem 0 0;
+      color: #8f96a1;
+      font-size: .76rem;
+    }
     .trailer-grid {
       display: grid;
       grid-template-columns: minmax(0, 1.7fr) minmax(260px, .7fr);
@@ -556,7 +653,7 @@
     footer a { color: #b7bbc2; }
 
     @media (max-width: 860px) {
-      .trailer-grid, .artifact-card, .universe-grid, .pod-offer { grid-template-columns: 1fr; }
+      .trailer-grid, .audiobook-signup-card, .artifact-card, .universe-grid, .pod-offer { grid-template-columns: 1fr; }
       .artifact-mark { min-height: 320px; }
       .card-fan { grid-template-columns: repeat(2, 1fr); gap: 1.25rem; }
       .pod-side { justify-items: center; text-align: center; }
@@ -591,8 +688,11 @@
         letter-spacing: -.035em;
       }
       .hero-lede { margin-top: 1.25rem; line-height: 1.55; }
+      .hero-audio { margin-top: 1.15rem; }
+      .hero-audio-heading { align-items: flex-start; flex-direction: column; gap: .2rem; }
       .hero-actions { margin-top: 1.5rem; }
       .hero-actions .button { width: 100%; }
+      .hero-reader-link { display: block; text-align: center; }
       .chapter-bridge { padding-top: 3.25rem; }
       .preview-conversion .button { width: 100%; }
       .chapter-continuation summary { align-items: flex-start; font-size: .72rem; line-height: 1.45; }
@@ -629,18 +729,50 @@
   <main id="main">
     <header class="hero">
       <div class="hero-content">
-        <p class="kicker">Book One · The Dolphin</p>
+        <p class="kicker">Audiobook Preview · The Dolphin</p>
         <h1>It starts small.<br><span>It doesn’t stay that way.</span></h1>
         <p class="hero-lede">
-          Alex and Kelli are trying to survive school, family, and each other. Then an old promise pulls them toward a war that began long before Luna. <strong>Moon Gun Sam</strong> starts with the people—and opens into a universe of mystery, love, and impossible hope.
+          Meet Alex and Kelli—two girls on Luna trying to survive school, family, and each other. Listen to Louise Porter narrate Scene One, then join the Pod if you want audiobook production and Kickstarter updates.
         </p>
+        <div class="hero-audio" id="audiobook-preview">
+          <div class="hero-audio-heading">
+            <strong>Scene One: Cornfield</strong>
+            <span>Narrated by Louise Porter · 9:45</span>
+          </div>
+          <audio id="vowSceneAudio" controls preload="metadata" aria-label="Listen to Scene One: Cornfield, narrated by Louise Porter">
+            <source src="audio/vow-scene-one-louise.m4a" type="audio/mp4" />
+            Your browser does not support embedded audio.
+          </audio>
+        </div>
         <div class="hero-actions">
-          <a class="button" target="_blank" rel="noopener" href="https://dl.bookfunnel.com/1uuimb68pd" onclick="reportVowBookFunnelClick('hero');">Get the Free Opening Act</a>
+          <a class="button" href="#audiobook-updates" onclick="trackVowEvent('audiobook_updates_click', {placement:'hero'});">Get Audiobook Updates</a>
           <a class="button secondary" href="#chapter" onclick="trackVowEvent('preview_start_click', {placement:'hero'});">Read a 3-Minute Preview</a>
         </div>
-        <p class="trust-line">The opening act is free. Or start reading here—no signup required.</p>
+        <a class="hero-reader-link" target="_blank" rel="noopener" href="https://dl.bookfunnel.com/1uuimb68pd" onclick="reportVowBookFunnelClick('hero_text_link');">Prefer the ebook? Get the opening act free →</a>
+        <p class="trust-line">Pod members get audiobook and Kickstarter news. No spam. Unsubscribe anytime.</p>
       </div>
     </header>
+
+    <section class="audiobook-section" id="audiobook-updates" aria-labelledby="audiobook-title">
+      <div class="section-shell audiobook-signup-card">
+        <div class="audiobook-copy">
+          <p class="section-kicker">Audiobook in development</p>
+          <h2 class="section-heading" id="audiobook-title">Want the rest of the story in Louise’s voice?</h2>
+          <p class="section-intro">Join the Pod and we’ll let you know when the Moon Gun Sam audiobook Kickstarter launches. You’ll also get production notes, new narration samples, and release updates as the audio editions come together.</p>
+          <ul class="audiobook-benefits">
+            <li>Audiobook Kickstarter launch notification</li>
+            <li>New samples and behind-the-scenes production updates</li>
+            <li>The complete opening act of <em>Vow</em>, free</li>
+          </ul>
+        </div>
+        <div class="audiobook-form-panel">
+          <h3>Join the Pod for audiobook updates</h3>
+          <p>Leave your email and we’ll send the important audio news when it is ready.</p>
+          <div class="ml-embedded" data-form="9NV2sK"></div>
+          <p class="signup-note">Two emails a month at most. We never sell or share your address.</p>
+        </div>
+      </div>
+    </section>
 
     <section class="chapter-section" id="chapter" aria-labelledby="chapter-heading">
       <div class="chapter-stage">
@@ -964,9 +1096,9 @@
     <section class="pod-section" id="join" aria-labelledby="pod-title">
       <div class="section-shell">
         <div class="pod-header">
-          <p class="section-kicker">Come sit with us</p>
-          <h2 class="section-heading" id="pod-title">The books tell the story.<br>The Pod explores the universe.</h2>
-          <p class="section-intro">Twice a month, we go behind the scenes of Moon Gun Sam: worldbuilding, character stories, artwork, cards, reader questions, and occasional evidence that the author should not be left unsupervised.</p>
+          <p class="section-kicker">Stay close to the story</p>
+          <h2 class="section-heading" id="pod-title">Want the audiobook?<br>Join the Pod.</h2>
+          <p class="section-intro">We’ll tell Pod members when the audiobook Kickstarter launches—and share narration samples, production updates, worldbuilding, artwork, and occasional evidence that the author should not be left unsupervised.</p>
         </div>
 
         <div class="card-fan" aria-label="A preview of Moon Gun Sam trading cards">
@@ -980,17 +1112,17 @@
           <div>
             <h3>Join The Pod and get:</h3>
             <ul>
+              <li>Audiobook Kickstarter and release notifications</li>
+              <li>New narration samples and production updates</li>
               <li>The complete opening act of <em>Vow</em>, free</li>
-              <li>Trading-card previews before release</li>
               <li>Worldbuilding, art, and behind-the-scenes stories</li>
-              <li>News about books, audio, events, and community plans</li>
             </ul>
           </div>
           <div class="pod-side">
             <img src="images/vow/posters/trading-cards.jpg" alt="Moon Gun Sam Vow trading card booster pack" loading="lazy" />
             <div class="pod-actions">
-              <a class="button" href="/#join" onclick="trackVowEvent('pod_join_click', {placement:'vow_landing_page'});">Join The Pod</a>
-              <a class="button secondary" href="https://preview.mailerlite.io/preview/2151427/emails/190689208018405203" target="_blank" rel="noopener" onclick="trackVowEvent('newsletter_preview_click');">Read a Sample</a>
+              <a class="button" href="#audiobook-updates" onclick="trackVowEvent('audiobook_updates_click', {placement:'pod'});">Get Audiobook Updates</a>
+              <a class="button secondary" href="#audiobook-preview" onclick="trackVowEvent('audiobook_replay_click');">Listen Again</a>
             </div>
             <p class="pod-note">Two emails a month. No spam. We never sell or share your address—and yes, we hate annoying email too.</p>
           </div>
@@ -1029,6 +1161,7 @@
     const progress = document.getElementById('readingProgress');
     const reader = document.getElementById('chapterReader');
     const fullChapter = document.getElementById('fullChapter');
+    const sceneAudio = document.getElementById('vowSceneAudio');
 
     function updateReadingProgress() {
       if (!progress || !reader) return;
@@ -1054,6 +1187,29 @@
         }
       });
     }
+    if (sceneAudio) {
+      let audioStarted = false;
+      sceneAudio.addEventListener('play', () => {
+        if (!audioStarted) {
+          audioStarted = true;
+          trackVowEvent('audiobook_preview_start', {
+            narrator: 'Louise Porter',
+            scene: 'Cornfield'
+          });
+        }
+      });
+      sceneAudio.addEventListener('ended', () => {
+        trackVowEvent('audiobook_preview_complete', {
+          narrator: 'Louise Porter',
+          scene: 'Cornfield'
+        });
+      });
+    }
+    document.addEventListener('submit', (event) => {
+      if (event.target.closest('#audiobook-updates')) {
+        trackVowEvent('audiobook_updates_submit', { placement: 'landing_page' });
+      }
+    }, true);
     addEventListener('scroll', updateReadingProgress, { passive: true });
     addEventListener('resize', updateReadingProgress);
     updateReadingProgress();
