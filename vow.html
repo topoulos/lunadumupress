@@ -285,14 +285,15 @@
       color: #d4d7dc;
     }
     .audiobook-benefits li {
-      display: flex;
-      gap: .75rem;
+      position: relative;
+      padding-left: 1.4rem;
       line-height: 1.55;
     }
     .audiobook-benefits li::before {
       content: "◆";
-      flex: 0 0 auto;
-      margin-top: .28em;
+      position: absolute;
+      top: .35em;
+      left: 0;
       color: var(--gold);
       font-size: .62em;
     }
