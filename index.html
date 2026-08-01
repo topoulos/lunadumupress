@@ -4,7 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Luna Dumu Press</title>
-  <link rel="stylesheet" href="styles.css" />
+  <meta name="theme-color" content="#07090d" />
+  <link rel="stylesheet" href="styles.css?v=20260801" />
   <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
 <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 <link rel="shortcut icon" href="/favicon.ico" />
@@ -12,7 +13,7 @@
 <meta name="apple-mobile-web-app-title" content="Luna Dumu" />
 <link rel="manifest" href="/site.webmanifest" />
 </head>
-<body>
+<body class="home-page">
 <div id="pageFade"></div>
  <!-- HERO -->
 <section class="hero fade visible" aria-labelledby="site-title" id="hero">
@@ -28,21 +29,22 @@
   </div>
 
   <div class="hero-content">
-    <h1 id="site-title">LUNA DUMU PRESS</h1>
+    <h1 id="site-title" class="publisher-lockup">
+      <img src="images/luna-dumu-wide.png" alt="Luna Dumu Press" />
+    </h1>
     <h2>Home of <span>Moon Gun Sam</span></h2>
     <p class="series-credit">A Book Series by Anthony Angel</p>
 
     <p class="hero-tagline">
-      An emotional, romantic science-fantasy family saga.</br>
-      28 years in the making.</br>
+      An emotional, romantic science-fantasy family saga.<br />
+      28 years in the making.<br />
       Eight books completed.
-      </p>
-      <div class="hero-ctas">
-        <a class="cta" href="#join">Join the Pod</a>
-        <a class="cta secondary" href="#trailer">Watch Trailer</a>
-        <a class="cta secondary" target="_blank" href="https://dl.bookfunnel.com/1uuimb68pd">Read Act I Free</a>
-      </div>
-      
+    </p>
+    <div class="hero-ctas">
+      <a class="cta" href="#join">Join the Pod</a>
+      <a class="cta secondary" href="#trailer">Watch Trailer</a>
+      <a class="cta secondary" target="_blank" href="https://dl.bookfunnel.com/1uuimb68pd">Read Act I Free</a>
+    </div>
 
     <div class="hero-music">
       <button id="musicToggle" class="music-btn" aria-label="Play background music">
@@ -71,17 +73,20 @@
 -->
 
 <!-- TRAILER -->
-<section id="trailer">
-  <h3>Watch the Trailer</h3>
+<section id="trailer" class="trailer-section fade" aria-labelledby="trailer-title">
+  <div class="home-section-heading">
+    <p class="home-kicker">Now playing</p>
+    <h3 id="trailer-title">Watch the Trailer</h3>
 
-<blockquote class="rooms-not-streets">
-  Love and Hope are Rooms, Not Streets.
-</blockquote>
+    <blockquote class="rooms-not-streets">
+      Love and Hope are Rooms, Not Streets.
+    </blockquote>
 
-<p>
-A new saga about family, fear,
-and when to stand and fight.
-</p>
+    <p>
+      A new saga about family, fear,<br />
+      and when to stand and fight.
+    </p>
+  </div>
 
   <div class="youtube-wrapper">
     <iframe
@@ -94,17 +99,19 @@ and when to stand and fight.
 
  <!-- FREE ACT I -->
 <section id="free-act" class="free-act-section fade" aria-labelledby="free-act-title">
+  <p class="home-kicker">Enter the story</p>
   <h3 id="free-act-title">Start Reading Free</h3>
   <p>Meet Sam, Kelli, and Alex.
 
     Read the complete opening act of
     Moon Gun Sam: The Dolphin — Vow.</p>
-  <a class="cta" target="_blank" href="https://dl.bookfunnel.com/1uuimb68pd">Join the Pod & Read Act I</a>
+  <a class="cta" target="_blank" href="https://dl.bookfunnel.com/1uuimb68pd">Join the Pod &amp; Read Act I</a>
 </section>
 
 
   <!-- BOOKS -->
   <section id="books" class="books fade" aria-labelledby="books-title">
+    <p class="home-kicker">The Dolphin</p>
     <h3 id="books-title">The Series</h3>
     <p class="books-subtitle">
       Book One: <strong>The Dolphin — Vow</strong> and Book Two: <strong>The Dolphin — Ember</strong> —
@@ -160,6 +167,7 @@ and when to stand and fight.
 
 <!-- EXPLORE -->
 <section class="explore-section fade" aria-labelledby="explore-title">
+  <p class="home-kicker">Beyond the books</p>
   <h3 id="explore-title">Explore the Universe</h3>
 
   <div class="explore-links">
@@ -172,6 +180,7 @@ and when to stand and fight.
 
 <!-- TRANSMISSION TERMINAL -->
 <section class="transmissions fade" aria-labelledby="transmission-title">
+  <p class="home-kicker">From Luna Dumu Press</p>
   <h3 id="transmission-title">Signal Log</h3>
 
   <div class="transmission-list">
@@ -222,7 +231,7 @@ and when to stand and fight.
 
  <!-- ABOUT -->
  <section class="about fade" aria-labelledby="mission-title">
-  <img src="images/logo.png" alt="Luna Dumu Press logo" />
+  <img src="images/logo.png?v=20260801" alt="Luna Dumu Press logo" />
   <div>
     <h3 id="mission-title">Our Mission</h3>
     <p>Mythic sci-fi about love, power, and survival.</p>
@@ -307,8 +316,6 @@ and when to stand and fight.
     });
   </script>
   
-  </body>
-  </html>
 <!-- End MailerLite Universal -->
 
 </body>
