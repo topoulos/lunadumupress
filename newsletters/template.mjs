@@ -87,11 +87,11 @@ export function renderNewsletter(issue) {
               <v:fill type="frame" src="${esc(issue.hero.image)}" color="#07090d" />
               <v:textbox inset="0,0,0,0">
             <![endif]-->
-            <table role="presentation" width="100%" height="100%"><tr>
+            ${issue.hero.logo ? `<table role="presentation" width="100%" height="100%"><tr>
               <td align="center" valign="top" style="padding:42px 34px 0;">
                 <img class="hero-logo" src="${esc(issue.hero.logo)}" alt="Moon Gun Sam" width="540">
               </td>
-            </tr></table>
+            </tr></table>` : ""}
             <!--[if gte mso 9]></v:textbox></v:rect><![endif]-->
           </td>
         </tr></table>

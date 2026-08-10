@@ -72,6 +72,26 @@ async function inspectAccount() {
   console.log(JSON.stringify({ groups, recentSenders }, null, 2));
 }
 
+async function inspectDraft(campaignId) {
+  if (!campaignId) throw new Error("Provide a campaign ID");
+  const result = await api(`/campaigns/${campaignId}`);
+  const campaign = result.data || {};
+  const content = campaign.emails?.[0]?.content || "";
+  const imageUrls = [...content.matchAll(/https:\/\/lunadumupress\.com\/[^\s"')]+/g)]
+    .map((match) => match[0]);
+
+  console.log(JSON.stringify({
+    id: campaign.id,
+    name: campaign.name,
+    status: campaign.status,
+    updatedAt: campaign.updated_at,
+    hasMoonGunSamLogo: content.includes("mgs-title.png"),
+    hasNewPreheader: content.includes("footwear-compliance failure"),
+    contentLength: content.length,
+    imageUrls: [...new Set(imageUrls)]
+  }, null, 2));
+}
+
 function productionAssets(value) {
   if (Array.isArray(value)) return value.map(productionAssets);
   if (value && typeof value === "object") {
@@ -168,11 +188,13 @@ const command = process.argv[2];
 
 if (command === "inspect") {
   await inspectAccount();
+} else if (command === "inspect-draft") {
+  await inspectDraft(process.argv[3]);
 } else if (command === "create-test-draft") {
   await createTestDraft(process.argv[3]);
 } else if (command === "update-test-draft") {
   await updateTestDraft(process.argv[3], process.argv[4]);
 } else {
-  console.error("Usage: node mailerlite.mjs inspect | create-test-draft issues/pod-007.json | update-test-draft CAMPAIGN_ID issues/pod-007.json");
+  console.error("Usage: node mailerlite.mjs inspect | inspect-draft CAMPAIGN_ID | create-test-draft issues/pod-007.json | update-test-draft CAMPAIGN_ID issues/pod-007.json");
   process.exit(1);
 }
