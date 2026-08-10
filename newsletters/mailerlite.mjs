@@ -85,7 +85,7 @@ async function inspectDraft(campaignId) {
     name: campaign.name,
     status: campaign.status,
     updatedAt: campaign.updated_at,
-    hasMoonGunSamLogo: content.includes("mgs-title.png"),
+    hasBrandedHero: content.includes("hero-west-comm-tower-branded.jpg"),
     hasNewPreheader: content.includes("footwear-compliance failure"),
     contentLength: content.length,
     imageUrls: [...new Set(imageUrls)]
