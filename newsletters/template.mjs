@@ -37,7 +37,7 @@ export function renderNewsletter(issue) {
     .preheader { display:none; max-height:0; overflow:hidden; opacity:0; color:transparent; }
     .section { padding:42px 44px; border-bottom:1px solid #252b33; }
     .hero { padding:0; background:#07090d; }
-    .hero-art { height:400px; background-position:center center; background-size:cover; background-repeat:no-repeat; }
+    .hero-image { display:block; width:100%; max-width:680px; height:auto; }
     .hero-logo { width:82%; max-width:540px; margin:0 auto; opacity:.84; }
     .hero-copy { padding:36px 44px 42px; text-align:center; background:#090b0e; }
     .brand { margin:0 0 8px; color:#96a7bf; font-size:12px; font-weight:bold; letter-spacing:6px; }
@@ -67,7 +67,6 @@ export function renderNewsletter(issue) {
     .footer a { color:#9db9d6; }
     @media only screen and (max-width:620px) {
       .section, .hero-copy { padding:30px 22px !important; }
-      .hero-art { height:250px !important; }
       .hero-logo { width:88% !important; }
       .issue { font-size:27px !important; }
       .book-cover { width:92px !important; }
@@ -76,25 +75,11 @@ export function renderNewsletter(issue) {
   </style>
 </head>
 <body>
-  <div class="preheader">${esc(issue.previewText)}</div>
+  <div class="preheader" style="display:none!important;visibility:hidden;opacity:0;color:transparent;height:0;width:0;max-height:0;max-width:0;overflow:hidden;mso-hide:all;font-size:1px;line-height:1px;">${esc(issue.previewText)}</div>
   <table role="presentation" class="shell" width="100%"><tr><td align="center">
     <table role="presentation" class="frame" width="680">
       <tr><td class="hero">
-        <table role="presentation" width="100%"><tr>
-          <td class="hero-art" height="400" valign="top" background="${esc(issue.hero.image)}" style="background-image:url('${esc(issue.hero.image)}');">
-            <!--[if gte mso 9]>
-            <v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style="width:680px;height:400px;">
-              <v:fill type="frame" src="${esc(issue.hero.image)}" color="#07090d" />
-              <v:textbox inset="0,0,0,0">
-            <![endif]-->
-            ${issue.hero.logo ? `<table role="presentation" width="100%" height="100%"><tr>
-              <td align="center" valign="top" style="padding:42px 34px 0;">
-                <img class="hero-logo" src="${esc(issue.hero.logo)}" alt="Moon Gun Sam" width="540">
-              </td>
-            </tr></table>` : ""}
-            <!--[if gte mso 9]></v:textbox></v:rect><![endif]-->
-          </td>
-        </tr></table>
+        <img class="hero-image" src="${esc(issue.hero.image)}" alt="${esc(issue.hero.alt || "Moon Gun Sam")}" width="680" style="display:block;width:100%;max-width:680px;height:auto;border:0;">
         <div class="hero-copy">
           <h1 class="issue">${esc(issue.heading)}</h1>
           <p class="deck">${esc(issue.deck)}</p>

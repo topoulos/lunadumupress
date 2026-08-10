@@ -87,6 +87,8 @@ async function inspectDraft(campaignId) {
     updatedAt: campaign.updated_at,
     hasBrandedHero: content.includes("hero-west-comm-tower-branded.jpg"),
     hasNewPreheader: content.includes("footwear-compliance failure"),
+    preheaderHasInlineHide: content.includes("display:none!important;visibility:hidden"),
+    heroUsesImageTag: /<img[^>]+hero-west-comm-tower-branded\.jpg/i.test(content),
     contentLength: content.length,
     imageUrls: [...new Set(imageUrls)]
   }, null, 2));
