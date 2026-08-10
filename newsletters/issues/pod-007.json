@@ -1,0 +1,113 @@
+{
+  "slug": "pod-007",
+  "number": "007",
+  "subject": "Pod #007 — The boy who stayed",
+  "previewText": "LD-12 has classified kindness as a footwear-compliance failure. Management regrets giving him forms.",
+  "heading": "The Boy Who Stayed",
+  "deck": "Four cards. One brief light in Uthul. The promise that became everything.",
+  "accent": "#df5b3f",
+  "hero": {
+    "image": "../../images/newsletters/pod-007/hero-west-comm-tower.jpg",
+    "logo": "../../images/mgs-title.png",
+    "alt": "West Comm Tower rising above Luna beneath a red sky"
+  },
+  "opening": {
+    "title": "Hey Pod. This one starts with a cough.",
+    "copy": [
+      "Before Sam Randolph became a Moon Gun, before the armor and the family and the vow that would shape his life, he was an orphan working scrap at Uthul.",
+      "West Comm Tower was one of the places children were sent when nobody important expected them to come back better. Sam heard a girl coughing on the level above him. He climbed toward the sound. Her name was Arienne.",
+      "They knew each other for barely two days. It was enough. Four cards this week, all from the small, impossible kindness that taught Sam what it meant to stay."
+    ]
+  },
+  "cards": [
+    {
+      "code": "DV-025",
+      "title": "Arienne at West Comm Tower",
+      "image": "../../images/newsletters/pod-007/dv025.jpg",
+      "alt": "Trading card showing Arienne repairing equipment inside West Comm Tower",
+      "copy": [
+        "Sam hears a wet cough above the scrap floor and finds Arienne working through fever, split hands, and a quota that does not care whether she survives it. She gives him her dolphin pendant for safekeeping because he came when he heard her.",
+        "That is the first thing she learns about Sam: if someone is hurting, he moves toward them. He has no idea yet how expensive that instinct will become."
+      ]
+    },
+    {
+      "code": "DV-026",
+      "title": "Fallen in the Mud",
+      "image": "../../images/newsletters/pod-007/dv026.jpg",
+      "alt": "Trading card showing Sam holding Arienne after she collapses in the Uthul mudyard",
+      "copy": [
+        "The next morning Arienne collapses in the mud. Sam gives her the apple a Proctor found for him, cleans her cut foot, puts his own boots on her, and carries her toward the dorm.",
+        "He then does her work and his own while barefoot. Management would like the record to show that this is romantic. LD-12 would like the record to show that it is a preventable footwear-compliance failure."
+      ]
+    },
+    {
+      "code": "DV-027",
+      "title": "Lunch with Arienne",
+      "image": "../../images/newsletters/pod-007/dv027.jpg",
+      "alt": "Trading card showing Sam bringing lunch to Arienne in the dormitory",
+      "copy": [
+        "Sam trades apples for scrap and scrap for extra rations because he does not trust Uthul to feed a sick girl. He brings Arienne lunch. The lunch contains cabbage. Arienne rejects the cabbage but accepts the kisses.",
+        "A Proctor attempts to cite them for fraternization. Sam disconnects it without interrupting the kiss. Somewhere in this moment, LD-12 experienced a disturbance in the paperwork."
+      ]
+    },
+    {
+      "code": "DV-028",
+      "title": "Before Lights Out",
+      "image": "../../images/newsletters/pod-007/dv028.jpg",
+      "alt": "Trading card showing Sam and Arienne together before lights out at Uthul",
+      "copy": [
+        "They sit together until the yard lights cut out. Sam asks her to stay. Arienne promises he will see her tomorrow and tells him that, no matter what happens, she will find a way back to him.",
+        "It is a promise kept in the cruelest possible way. Tomorrow comes. Arienne does not. But her words do—and Sam carries them for the rest of his life."
+      ]
+    }
+  ],
+  "readerQuestion": "Which card carries the most weight?",
+  "feature": {
+    "title": "LD-12 Reviews Red Rain",
+    "image": "../../images/newsletters/pod-007/red-rain-promo.png",
+    "alt": "Promotion for Red Rain by Rachel Newhouse",
+    "url": "https://www.rachelnewhouse.com/store/p/red-rain-ebook",
+    "button": "Get Red Rain",
+    "offer": "Use coupon code ANGEL to get the ebook free through September 30.",
+    "copy": [
+      "This month’s author swap sends us to 2075, where Earth has solved human disagreement by outlawing identity. This is the sort of administrative solution that sounds efficient for six seconds and then produces containment camps.",
+      "Sixteen-year-old Philadelphia Smyrna escapes to Mars, discovers the research base connected to her brother’s death, and finds an apocalyptic weapon under development. She must then decide whether to save the people who oppressed her or save her family and permit Earth to experience the consequences of its own management decisions.",
+      "LD-12 finds Philadelphia underqualified to determine planetary survival. LD-12 also finds every available adult considerably less qualified. The file is therefore approved."
+    ]
+  },
+  "interview": {
+    "title": "Why give Sam two good days?",
+    "image": "../../images/newsletters/pod-007/ld12-interviews-tony.png",
+    "alt": "Tony hiding beneath a desk while LD-12 conducts an armed interview beside spilled donuts",
+    "lines": [
+      { "speaker": "LD-12", "text": "Management, explain why you introduced Arienne, made her funny, gave her a dolphin pendant, permitted kissing, and then killed her almost immediately." },
+      { "speaker": "TONY", "text": "Because Sam needed one person to show him what love looked like before the world taught him what losing it felt like." },
+      { "speaker": "LD-12", "text": "You could have accomplished this with a pamphlet." },
+      { "speaker": "TONY", "text": "Nobody builds their life around a pamphlet." },
+      { "speaker": "LD-12", "text": "Incorrect. Entire governments have been built around pamphlets. Most ended badly, which supports my larger concern." },
+      { "speaker": "LD-12", "text": "Why does a relationship lasting two days become the vow underneath eight books?" },
+      { "speaker": "TONY", "text": "Because duration is not the same thing as importance. Arienne reached Sam before he learned to close himself off. She showed him that staying with someone matters, even when you cannot save them." },
+      { "speaker": "LD-12", "text": "This answer contains feelings and cannot be processed by the current department." },
+      { "speaker": "TONY", "text": "You asked." },
+      { "speaker": "LD-12", "text": "That was the department’s first error." }
+    ]
+  },
+  "fieldReport": {
+    "code": "007-F",
+    "title": "Unauthorized Family Recreation",
+    "image": "../../images/newsletters/pod-007/field-report-family-fair.png",
+    "alt": "Sam, Alex, Kelli, and young Lila smiling together at a fair",
+    "classification": "DOMESTIC JOY / OPERATIONAL READINESS UNKNOWN",
+    "copy": [
+      "The attached image depicts Moon Gun personnel engaged in an unsanctioned fairground operation. Present are Sam Randolph, Alex Klein, Kelli Randolph, and a minor recruit believed to be Lila Randolph.",
+      "Observed violations include public happiness, uncontrolled exposure to recreational machinery, possession of an oversized spiral sugar device, and four family members smiling within the same evidentiary frame.",
+      "The minor recruit appears delighted. This is particularly concerning. Delight reduces vigilance and frequently leads to requests for additional rides.",
+      "Alex Klein is positioned outside the central family grouping while remaining unmistakably inside it. LD-12 has reviewed the composition seventeen times and has not determined why this detail is causing a fault in his emotional-suppression subroutine.",
+      "Recommendation: continue surveillance. Permit one additional ride. Confiscate the lollipop only if the minor recruit attempts to share it with LD-12. This exception is procedural and should not be interpreted as fondness."
+    ]
+  },
+  "launchCopy": [
+    "Vow and Ember launch together October 13. Two volumes of one story about family, violence, faith, grief, and the stubborn decision not to leave people behind.",
+    "If you have been following the cards, you are already carrying pieces of that story before the books reach the shelf."
+  ]
+}

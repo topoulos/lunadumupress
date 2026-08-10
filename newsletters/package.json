@@ -1,0 +1,11 @@
+{
+  "name": "moon-gun-sam-newsletters",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build:007": "node render.mjs issues/pod-007.json",
+    "build:007:production": "node render.mjs issues/pod-007.json --production",
+    "mailerlite:inspect": "node mailerlite.mjs inspect",
+    "mailerlite:draft:007": "node mailerlite.mjs create-test-draft issues/pod-007.json"
+  }
+}
