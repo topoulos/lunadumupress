@@ -89,6 +89,8 @@ async function inspectDraft(campaignId) {
     hasNewPreheader: content.includes("footwear-compliance failure"),
     preheaderHasInlineHide: content.includes("display:none!important;visibility:hidden"),
     heroUsesImageTag: /<img[^>]+hero-west-comm-tower-branded\.jpg/i.test(content),
+    hasInlineDarkTheme: content.includes('bgcolor="#050608"') && content.includes("background:#0a0c0f"),
+    hasInlineAccentStyles: content.includes("color:#df5b3f") && content.includes("background:#df5b3f"),
     contentLength: content.length,
     imageUrls: [...new Set(imageUrls)]
   }, null, 2));

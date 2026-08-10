@@ -4,16 +4,21 @@ const esc = (value = "") => String(value)
   .replaceAll(">", "&gt;")
   .replaceAll('"', "&quot;");
 
+const font = "font-family:Arial,Helvetica,sans-serif;";
+const sectionStyle = `${font}padding:42px 44px;border-bottom:1px solid #252b33;background:#0a0c0f;color:#e8ebef;`;
+const headingStyle = `${font}margin:18px 0 14px;color:#ffffff;font-size:23px;line-height:1.25;`;
+const copyStyle = `${font}margin:0 0 16px;color:#d7dce2;font-size:15px;line-height:1.72;`;
+
 const paragraphs = (items = [], className = "copy") => items
-  .map((text) => `<p class="${className}">${esc(text)}</p>`)
+  .map((text) => `<p class="${className}" style="${copyStyle}">${esc(text)}</p>`)
   .join("\n");
 
-const card = (item) => `
+const card = (item, accent) => `
   <tr>
-    <td class="section card-section">
-      <p class="eyebrow">CARD TRANSMISSION ${esc(item.code)}</p>
-      <img class="card-image" src="${esc(item.image)}" alt="${esc(item.alt)}" width="600">
-      <h2>${esc(item.code)} — ${esc(item.title)}</h2>
+    <td class="section card-section" style="${sectionStyle}background:#0b0e12;">
+      <p class="eyebrow" style="${font}margin:0 0 12px;color:${esc(accent)};font-size:11px;font-weight:bold;letter-spacing:2.5px;text-transform:uppercase;">CARD TRANSMISSION ${esc(item.code)}</p>
+      <img class="card-image" src="${esc(item.image)}" alt="${esc(item.alt)}" width="600" style="display:block;width:100%;max-width:600px;height:auto;border:1px solid #344455;">
+      <h2 style="${headingStyle}">${esc(item.code)} — ${esc(item.title)}</h2>
       ${paragraphs(item.copy)}
     </td>
   </tr>`;
@@ -74,63 +79,63 @@ export function renderNewsletter(issue) {
     }
   </style>
 </head>
-<body>
+<body style="margin:0!important;padding:0!important;background:#050608;color:#e8ebef;">
   <div class="preheader" style="display:none!important;visibility:hidden;opacity:0;color:transparent;height:0;width:0;max-height:0;max-width:0;overflow:hidden;mso-hide:all;font-size:1px;line-height:1px;">${esc(issue.previewText)}</div>
-  <table role="presentation" class="shell" width="100%"><tr><td align="center">
-    <table role="presentation" class="frame" width="680">
-      <tr><td class="hero">
+  <table role="presentation" class="shell" width="100%" bgcolor="#050608" style="width:100%;background:#050608;border-collapse:collapse;"><tr><td align="center" bgcolor="#050608" style="background:#050608;">
+    <table role="presentation" class="frame" width="680" bgcolor="#0a0c0f" style="width:100%;max-width:680px;background:#0a0c0f;border-collapse:collapse;">
+      <tr><td class="hero" bgcolor="#07090d" style="padding:0;background:#07090d;">
         <img class="hero-image" src="${esc(issue.hero.image)}" alt="${esc(issue.hero.alt || "Moon Gun Sam")}" width="680" style="display:block;width:100%;max-width:680px;height:auto;border:0;">
-        <div class="hero-copy">
-          <h1 class="issue">${esc(issue.heading)}</h1>
-          <p class="deck">${esc(issue.deck)}</p>
+        <div class="hero-copy" style="${font}padding:36px 44px 42px;text-align:center;background:#090b0e;">
+          <h1 class="issue" style="${font}margin:0 0 12px;color:#ffffff;font-size:32px;line-height:1.15;">${esc(issue.heading)}</h1>
+          <p class="deck" style="${font}margin:0;color:#b9c2cc;font-size:15px;line-height:1.65;">${esc(issue.deck)}</p>
         </div>
       </td></tr>
-      <tr><td class="section">
-        <p class="eyebrow">POD TRANSMISSION // ISSUE ${esc(issue.number)}</p>
-        <h2>${esc(issue.opening.title)}</h2>
+      <tr><td class="section" style="${sectionStyle}">
+        <p class="eyebrow" style="${font}margin:0 0 12px;color:${esc(issue.accent)};font-size:11px;font-weight:bold;letter-spacing:2.5px;text-transform:uppercase;">POD TRANSMISSION // ISSUE ${esc(issue.number)}</p>
+        <h2 style="${headingStyle}">${esc(issue.opening.title)}</h2>
         ${paragraphs(issue.opening.copy)}
       </td></tr>
-      ${issue.cards.map(card).join("\n")}
-      <tr><td class="section question">
-        <p class="eyebrow">READER RESPONSE REQUESTED</p>
-        <h2>${esc(issue.readerQuestion)}</h2>
-        <p class="copy">Hit reply with the DV number. Tony reads every reply. LD-12 logs them for reasons management has declined to investigate.</p>
+      ${issue.cards.map((item) => card(item, issue.accent)).join("\n")}
+      <tr><td class="section question" style="${sectionStyle}background:#10151b;text-align:center;">
+        <p class="eyebrow" style="${font}margin:0 0 12px;color:${esc(issue.accent)};font-size:11px;font-weight:bold;letter-spacing:2.5px;text-transform:uppercase;">READER RESPONSE REQUESTED</p>
+        <h2 style="${headingStyle}color:${esc(issue.accent)};">${esc(issue.readerQuestion)}</h2>
+        <p class="copy" style="${copyStyle}">Hit reply with the DV number. Tony reads every reply. LD-12 logs them for reasons management has declined to investigate.</p>
       </td></tr>
-      <tr><td class="section dossier">
-        <p class="eyebrow">PROCTOR CULTURAL DISPATCH</p>
-        <h2>${esc(issue.feature.title)}</h2>
-        <img class="promo-image" src="${esc(issue.feature.image)}" alt="${esc(issue.feature.alt)}" width="592">
+      <tr><td class="section dossier" style="${sectionStyle}background:#0d1116;border-left:4px solid ${esc(issue.accent)};">
+        <p class="eyebrow" style="${font}margin:0 0 12px;color:${esc(issue.accent)};font-size:11px;font-weight:bold;letter-spacing:2.5px;text-transform:uppercase;">PROCTOR CULTURAL DISPATCH</p>
+        <h2 style="${headingStyle}">${esc(issue.feature.title)}</h2>
+        <img class="promo-image" src="${esc(issue.feature.image)}" alt="${esc(issue.feature.alt)}" width="592" style="display:block;width:100%;max-width:592px;height:auto;margin:20px 0;border:0;">
         ${paragraphs(issue.feature.copy)}
-        <div class="button-wrap"><a class="button" href="${esc(issue.feature.url)}">${esc(issue.feature.button)}</a></div>
-        <p class="copy"><strong>${esc(issue.feature.offer)}</strong></p>
+        <div class="button-wrap" style="padding:8px 0 16px;text-align:center;"><a class="button" href="${esc(issue.feature.url)}" style="${font}display:inline-block;padding:13px 22px;background:${esc(issue.accent)};color:#08090b;font-size:14px;font-weight:bold;text-decoration:none;border-radius:3px;">${esc(issue.feature.button)}</a></div>
+        <p class="copy" style="${copyStyle}"><strong>${esc(issue.feature.offer)}</strong></p>
       </td></tr>
-      <tr><td class="section dossier">
-        <p class="eyebrow">LD-12 INTERVIEWS MANAGEMENT</p>
-        <h2>${esc(issue.interview.title)}</h2>
-        <img class="promo-image" src="${esc(issue.interview.image)}" alt="${esc(issue.interview.alt)}" width="592">
-        ${issue.interview.lines.map((line) => `<p class="dialogue"><span class="speaker">${esc(line.speaker)}:</span> ${esc(line.text)}</p>`).join("\n")}
+      <tr><td class="section dossier" style="${sectionStyle}background:#0d1116;border-left:4px solid ${esc(issue.accent)};">
+        <p class="eyebrow" style="${font}margin:0 0 12px;color:${esc(issue.accent)};font-size:11px;font-weight:bold;letter-spacing:2.5px;text-transform:uppercase;">LD-12 INTERVIEWS MANAGEMENT</p>
+        <h2 style="${headingStyle}">${esc(issue.interview.title)}</h2>
+        <img class="promo-image" src="${esc(issue.interview.image)}" alt="${esc(issue.interview.alt)}" width="592" style="display:block;width:100%;max-width:592px;height:auto;margin:20px 0;border:0;">
+        ${issue.interview.lines.map((line) => `<p class="dialogue" style="${font}margin:0 0 14px;color:#d7dce2;font-size:14px;line-height:1.7;"><span class="speaker" style="color:#ffffff;font-weight:bold;letter-spacing:.5px;">${esc(line.speaker)}:</span> ${esc(line.text)}</p>`).join("\n")}
       </td></tr>
-      <tr><td class="section report">
-        <p class="eyebrow">LD-12 FIELD REPORT ${esc(issue.fieldReport.code)}</p>
-        <h2>${esc(issue.fieldReport.title)}</h2>
-        <img class="report-image" src="${esc(issue.fieldReport.image)}" alt="${esc(issue.fieldReport.alt)}" width="592">
-        <div class="report-meta">CLASSIFICATION: ${esc(issue.fieldReport.classification)}<br>STATUS: INVESTIGATION OPEN<br>RESPONSIBLE UNIT: LD-12</div>
+      <tr><td class="section report" style="${sectionStyle}background:#090b0e;border-top:3px solid #3b4653;">
+        <p class="eyebrow" style="${font}margin:0 0 12px;color:${esc(issue.accent)};font-size:11px;font-weight:bold;letter-spacing:2.5px;text-transform:uppercase;">LD-12 FIELD REPORT ${esc(issue.fieldReport.code)}</p>
+        <h2 style="${headingStyle}">${esc(issue.fieldReport.title)}</h2>
+        <img class="report-image" src="${esc(issue.fieldReport.image)}" alt="${esc(issue.fieldReport.alt)}" width="592" style="display:block;width:100%;max-width:592px;height:auto;margin:20px 0;border:0;">
+        <div class="report-meta" style="${font}padding:14px 16px;background:#121820;color:#aeb9c5;font-size:12px;line-height:1.7;">CLASSIFICATION: ${esc(issue.fieldReport.classification)}<br>STATUS: INVESTIGATION OPEN<br>RESPONSIBLE UNIT: LD-12</div>
         ${paragraphs(issue.fieldReport.copy)}
       </td></tr>
-      <tr><td class="section books">
-        <p class="eyebrow">LAUNCH TRANSMISSION // OCTOBER 13, 2026</p>
-        <h2>The Dolphin begins.</h2>
+      <tr><td class="section books" style="${sectionStyle}background:#0a0d11;">
+        <p class="eyebrow" style="${font}margin:0 0 12px;color:${esc(issue.accent)};font-size:11px;font-weight:bold;letter-spacing:2.5px;text-transform:uppercase;">LAUNCH TRANSMISSION // OCTOBER 13, 2026</p>
+        <h2 style="${headingStyle}">The Dolphin begins.</h2>
         ${paragraphs(issue.launchCopy)}
-        <div class="button-wrap"><a class="button" href="https://lunadumupress.com/#books">View the books</a></div>
+        <div class="button-wrap" style="padding:8px 0 16px;text-align:center;"><a class="button" href="https://lunadumupress.com/#books" style="${font}display:inline-block;padding:13px 22px;background:${esc(issue.accent)};color:#08090b;font-size:14px;font-weight:bold;text-decoration:none;border-radius:3px;">View the books</a></div>
       </td></tr>
-      <tr><td class="footer">
+      <tr><td class="footer" style="${font}padding:34px 44px 48px;background:#0a0c0f;color:#87919c;font-size:11px;line-height:1.7;">
         <strong style="color:#d7dce2">Luna Dumu Press</strong><br>
         Mythic sci-fi about love, power, and survival.<br><br>
-        <a href="https://lunadumupress.com">Website</a> &nbsp;·&nbsp;
-        <a href="https://shop.lunadumupress.com">Store</a> &nbsp;·&nbsp;
-        <a href="https://moon-gun-sam.subscribepage.io">Pod Archive</a><br><br>
+        <a href="https://lunadumupress.com" style="color:#9db9d6;">Website</a> &nbsp;·&nbsp;
+        <a href="https://shop.lunadumupress.com" style="color:#9db9d6;">Store</a> &nbsp;·&nbsp;
+        <a href="https://moon-gun-sam.subscribepage.io" style="color:#9db9d6;">Pod Archive</a><br><br>
         You received this transmission because you joined the Pod.<br>
-        <a href="{$unsubscribe}">Unsubscribe</a><br><br>
+        <a href="{$unsubscribe}" style="color:#9db9d6;">Unsubscribe</a><br><br>
         Luna Dumu Press<br>
         Keep your signal open.<br>— Tony
       </td></tr>
