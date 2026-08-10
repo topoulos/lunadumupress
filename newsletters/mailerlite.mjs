@@ -84,6 +84,9 @@ async function inspectDraft(campaignId) {
     id: campaign.id,
     name: campaign.name,
     status: campaign.status,
+    recipients: campaign.filter_for_humans,
+    scheduledFor: campaign.scheduled_for,
+    deliverySchedule: campaign.delivery_schedule,
     updatedAt: campaign.updated_at,
     hasBrandedHero: content.includes("hero-west-comm-tower-branded.jpg"),
     hasNewPreheader: content.includes("footwear-compliance failure"),
@@ -147,6 +150,80 @@ async function createTestDraft(issueFile) {
   }, null, 2));
 }
 
+async function createProductionDraft(issueFile) {
+  if (!issueFile) throw new Error("Provide an issue JSON file");
+
+  const issuePath = path.resolve(root, issueFile);
+  const issue = productionAssets(JSON.parse(fs.readFileSync(issuePath, "utf8")));
+  const content = renderNewsletter(issue);
+
+  if (content.includes("../../images/") || content.includes("src=\"../")) {
+    throw new Error("Draft contains local image paths");
+  }
+  if (!content.includes("{$unsubscribe}")) {
+    throw new Error("Draft is missing the MailerLite unsubscribe variable");
+  }
+
+  const result = await api("/campaigns", {
+    method: "POST",
+    body: JSON.stringify({
+      name: `Pod #${issue.number} — ${issue.heading}`,
+      type: "regular",
+      groups: ["180902431699240237"],
+      emails: [{
+        subject: issue.subject,
+        from_name: "Tony Angel",
+        from: "hello@lunadumupress.com",
+        reply_to: "hello@lunadumupress.com",
+        content
+      }]
+    })
+  });
+
+  console.log(JSON.stringify({
+    id: result.data?.id,
+    name: result.data?.name,
+    status: result.data?.status,
+    recipients: result.data?.filter_for_humans,
+    missingData: result.data?.missing_data,
+    warnings: result.data?.warnings
+  }, null, 2));
+}
+
+async function scheduleDraft(campaignId, date, hours, minutes, timezoneName = "America/Chicago") {
+  if (!campaignId || !date || !hours || !minutes) {
+    throw new Error("Provide campaign ID, date, hours, and minutes");
+  }
+
+  const timezones = await api("/timezones");
+  const timezone = (timezones.data || []).find((item) => item.name === timezoneName);
+  if (!timezone) throw new Error(`MailerLite timezone not found: ${timezoneName}`);
+
+  const result = await api(`/campaigns/${campaignId}/schedule`, {
+    method: "POST",
+    body: JSON.stringify({
+      delivery: "scheduled",
+      schedule: {
+        date,
+        hours,
+        minutes,
+        timezone_id: Number(timezone.id)
+      }
+    })
+  });
+
+  console.log(JSON.stringify({
+    id: result.data?.id,
+    name: result.data?.name,
+    status: result.data?.status,
+    recipients: result.data?.filter_for_humans,
+    scheduledFor: result.data?.scheduled_for,
+    deliverySchedule: result.data?.delivery_schedule,
+    timezone: timezone.name,
+    warnings: result.data?.warnings
+  }, null, 2));
+}
+
 async function updateTestDraft(campaignId, issueFile) {
   if (!campaignId || !issueFile) {
     throw new Error("Provide a campaign ID and an issue JSON file");
@@ -196,9 +273,13 @@ if (command === "inspect") {
   await inspectDraft(process.argv[3]);
 } else if (command === "create-test-draft") {
   await createTestDraft(process.argv[3]);
+} else if (command === "create-production-draft") {
+  await createProductionDraft(process.argv[3]);
 } else if (command === "update-test-draft") {
   await updateTestDraft(process.argv[3], process.argv[4]);
+} else if (command === "schedule-draft") {
+  await scheduleDraft(process.argv[3], process.argv[4], process.argv[5], process.argv[6], process.argv[7]);
 } else {
-  console.error("Usage: node mailerlite.mjs inspect | inspect-draft CAMPAIGN_ID | create-test-draft issues/pod-007.json | update-test-draft CAMPAIGN_ID issues/pod-007.json");
+  console.error("Usage: node mailerlite.mjs inspect | inspect-draft CAMPAIGN_ID | create-test-draft ISSUE | create-production-draft ISSUE | update-test-draft CAMPAIGN_ID ISSUE | schedule-draft CAMPAIGN_ID YYYY-MM-DD HH MM [TIMEZONE]");
   process.exit(1);
 }

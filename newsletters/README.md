@@ -29,7 +29,19 @@ npm run mailerlite:draft:007
 ```
 
 This creates an unscheduled draft addressed only to the `Internal Test` group.
-There is deliberately no send command in this project.
+
+## Create and schedule a production draft
+
+Production campaigns are created as fresh drafts for the `Moon Gun Sam – Main
+List` group, verified, and then scheduled with an explicit date and time:
+
+```sh
+node mailerlite.mjs create-production-draft issues/pod-007.json
+node mailerlite.mjs inspect-draft CAMPAIGN_ID
+node mailerlite.mjs schedule-draft CAMPAIGN_ID 2026-09-04 17 00 America/Chicago
+```
+
+There is deliberately no instant-send command in this project.
 
 ## Safety
 
