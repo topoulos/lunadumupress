@@ -5,7 +5,10 @@
   "scripts": {
     "build:007": "node render.mjs issues/pod-007.json",
     "build:007:production": "node render.mjs issues/pod-007.json --production",
+    "build:008": "node render.mjs issues/pod-008.json",
+    "build:008:production": "node render.mjs issues/pod-008.json --production",
     "mailerlite:inspect": "node mailerlite.mjs inspect",
-    "mailerlite:draft:007": "node mailerlite.mjs create-test-draft issues/pod-007.json"
+    "mailerlite:draft:007": "node mailerlite.mjs create-test-draft issues/pod-007.json",
+    "mailerlite:draft:008": "node mailerlite.mjs create-test-draft issues/pod-008.json"
   }
 }

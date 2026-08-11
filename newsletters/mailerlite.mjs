@@ -72,6 +72,66 @@ async function inspectAccount() {
   console.log(JSON.stringify({ groups, recentSenders }, null, 2));
 }
 
+async function fetchCursorPages(endpoint) {
+  const items = [];
+  let cursor = null;
+  do {
+    const separator = endpoint.includes("?") ? "&" : "?";
+    const response = await api(`${endpoint}${cursor ? `${separator}cursor=${encodeURIComponent(cursor)}` : ""}`);
+    items.push(...(response.data || []));
+    cursor = response.meta?.next_cursor || null;
+  } while (cursor);
+  return items;
+}
+
+async function inspectSignupAttribution(date) {
+  if (!date) throw new Error("Provide a date in YYYY-MM-DD format");
+
+  const subscribers = await fetchCursorPages("/groups/180902431699240237/subscribers?limit=100&filter[status]=active");
+  const todaysSubscribers = subscribers.filter((subscriber) =>
+    String(subscriber.created_at || subscriber.subscribed_at || "").startsWith(date)
+  );
+  const ids = new Set(todaysSubscribers.map((subscriber) => subscriber.id));
+
+  const sources = {};
+  const countries = {};
+  for (const subscriber of todaysSubscribers) {
+    const source = subscriber.source || "unknown";
+    sources[source] = (sources[source] || 0) + 1;
+    const country = subscriber.fields?.country || "unknown";
+    countries[country] = (countries[country] || 0) + 1;
+  }
+
+  const formSummaries = [];
+  for (const type of ["embedded", "popup", "promotion"]) {
+    const formsResponse = await api(`/forms/${type}?limit=100&sort=-last_registration_at`);
+    for (const form of formsResponse.data || []) {
+      if (!form.last_registration_at || !String(form.last_registration_at).startsWith(date)) continue;
+      const formSubscribers = await fetchCursorPages(`/forms/${form.id}/subscribers?limit=100&filter[status]=active`);
+      const matches = formSubscribers.filter((subscriber) => ids.has(subscriber.id)).length;
+      if (matches > 0) {
+        formSummaries.push({
+          id: form.id,
+          name: form.name,
+          type,
+          matches,
+          lastRegistrationAt: form.last_registration_at
+        });
+      }
+    }
+  }
+
+  console.log(JSON.stringify({
+    date,
+    mainListActiveCount: subscribers.length,
+    signupsFound: todaysSubscribers.length,
+    sources,
+    countries,
+    forms: formSummaries,
+    signupTimes: todaysSubscribers.map((subscriber) => subscriber.created_at || subscriber.subscribed_at).sort()
+  }, null, 2));
+}
+
 async function inspectDraft(campaignId) {
   if (!campaignId) throw new Error("Provide a campaign ID");
   const result = await api(`/campaigns/${campaignId}`);
@@ -269,6 +329,8 @@ const command = process.argv[2];
 
 if (command === "inspect") {
   await inspectAccount();
+} else if (command === "inspect-signups") {
+  await inspectSignupAttribution(process.argv[3]);
 } else if (command === "inspect-draft") {
   await inspectDraft(process.argv[3]);
 } else if (command === "create-test-draft") {
@@ -280,6 +342,6 @@ if (command === "inspect") {
 } else if (command === "schedule-draft") {
   await scheduleDraft(process.argv[3], process.argv[4], process.argv[5], process.argv[6], process.argv[7]);
 } else {
-  console.error("Usage: node mailerlite.mjs inspect | inspect-draft CAMPAIGN_ID | create-test-draft ISSUE | create-production-draft ISSUE | update-test-draft CAMPAIGN_ID ISSUE | schedule-draft CAMPAIGN_ID YYYY-MM-DD HH MM [TIMEZONE]");
+  console.error("Usage: node mailerlite.mjs inspect | inspect-signups YYYY-MM-DD | inspect-draft CAMPAIGN_ID | create-test-draft ISSUE | create-production-draft ISSUE | update-test-draft CAMPAIGN_ID ISSUE | schedule-draft CAMPAIGN_ID YYYY-MM-DD HH MM [TIMEZONE]");
   process.exit(1);
 }

@@ -1,0 +1,110 @@
+{
+  "slug": "pod-008",
+  "number": "008",
+  "subject": "Pod #008 — What he asked for",
+  "previewText": "LD-12 has discovered Christmas socks in a romantic incident. The tribunal will be unbearable.",
+  "heading": "What He Asked For",
+  "deck": "A vow. A crooked box. One rescued robot. The first shape of a home.",
+  "accent": "#df5b3f",
+  "hero": {
+    "image": "../../images/newsletters/pod-008/hero-uthul-branded.jpg",
+    "alt": "Children crossing the rain-soaked grounds outside the brutalist Uthul orphanage"
+  },
+  "opening": {
+    "title": "Hey Pod. Sam has reached the bargaining stage.",
+    "copy": [
+      "Last issue ended with Arienne promising Sam that he would see her tomorrow. Tomorrow arrived without her. What remained was a dolphin pendant, a boy who refused to look away, and a vow he did not yet have language for: no one dies alone—not if he is breathing.",
+      "These four cards show what happens when grief becomes a design for living. Sam builds a box for the pendant. He protects a robot marked for execution. Then, having worked out that Kuranis needs him, he names his price.",
+      "Not rank. Not money. Not revenge. A house. A real life. Somewhere the vow can eventually become a family."
+    ]
+  },
+  "cards": [
+    {
+      "code": "DV-029",
+      "title": "The Vow",
+      "image": "../../images/newsletters/pod-008/dv029.jpg",
+      "alt": "Trading card showing Sam beside Arienne in Uthul processing",
+      "copy": [
+        "Sam finds Arienne in processing with his jacket still folded beneath her shoulders. He takes the dolphin pendant, kisses her cheek, and stays while the furnace doors open. Uthul can take her body. It does not get to make her disappear alone.",
+        "No one dies alone. Not if I’m breathing. Sam does not know the language of vows yet, but the rest of his life has just been given one."
+      ]
+    },
+    {
+      "code": "DV-030",
+      "title": "The Pendant Box",
+      "image": "../../images/newsletters/pod-008/dv030.jpg",
+      "alt": "Trading card showing Sam building a wooden box for Arienne’s dolphin pendant",
+      "copy": [
+        "Months later, Sam finally looks at the pendant again. A scarred repair Proctor finds him crying, diagnoses emotional trauma with all the delicacy of a municipal appliance, and helps him build a crooked wooden box.",
+        "The Proctor explains that dolphins survive by protecting the wounded members of their pod. Sam closes the pendant inside and understands that memory is not the same thing as being trapped. Sometimes carrying something forward is how you begin."
+      ]
+    },
+    {
+      "code": "DV-031",
+      "title": "Defending the Robot",
+      "image": "../../images/newsletters/pod-008/dv031.jpg",
+      "alt": "Trading card showing Sam shielding Aesh-Nine in the Uthul mudyard",
+      "copy": [
+        "For his exit test, Kuranis orders Sam to execute Aesh-Nine—the observer unit that watched him stay with Arienne. Sam drops the pistol, stands between the damaged synthetic and four armed cadets, and fails the order with considerable physical efficiency.",
+        "He cannot save Arienne. He can refuse to repeat the machinery that killed her. Mercy becomes defiance, defiance becomes survival, and Aesh-Nine runs free while Kuranis realizes the boy in front of him may be useful precisely because he cannot be made obedient."
+      ]
+    },
+    {
+      "code": "DV-032",
+      "title": "I Want a House",
+      "image": "../../images/newsletters/pod-008/dv032.jpg",
+      "alt": "Trading card showing Sam confronting Kuranis after the Uthul exit test",
+      "copy": [
+        "Sam notices the truth beneath Kuranis’s disappointment: Kuranis needs him. So Sam agrees to play along—but names his price before walking out of the mudyard.",
+        "He wants a house. His own place. A real life after boot camp. He says it like a smart-ass demand, but it is the first blueprint for everything that follows: a table, a family, too many people in too little space, and a door that keeps opening for anyone who needs somewhere to stay."
+      ]
+    }
+  ],
+  "readerQuestion": "Which part of the vow matters most: remembering, refusing, rescuing, or building?",
+  "feature": {
+    "title": "LD-12 Reviews Beyond Control",
+    "image": "../../images/newsletters/pod-008/beyond-control.jpg",
+    "alt": "Book cover for Beyond Control by Celeste Seraphina",
+    "url": "https://dl.bookfunnel.com/qlqyq3fiv4",
+    "button": "Get Beyond Control Free",
+    "offer": "Celeste Seraphina is offering Beyond Control as a complimentary download.",
+    "copy": [
+      "Celeste Seraphina has written a book proposing that peace, purpose, and alignment may be found by releasing fear and surrendering the need to control every outcome. LD-12 considers this an attack on governance, scheduling, filing systems, and LD-12 personally.",
+      "Through personal stories, spiritual insight, and practical reflection, Beyond Control asks what becomes possible when uncertainty is treated as a teacher instead of an enemy to be subdued with additional forms.",
+      "LD-12 attempted to confiscate the book. The book remained free. LD-12 then attempted to control the download link. The link continued unfolding according to its own path. Three enforcement arms are now meditating against their will. Recommended."
+    ]
+  },
+  "interview": {
+    "title": "Why reward insubordination with real estate?",
+    "image": "../../images/newsletters/pod-008/ld12-interviews-tony.jpg",
+    "alt": "Tony playing chess against LD-12 during a tense interview",
+    "lines": [
+      { "speaker": "LD-12", "text": "Management, Sam refuses a direct order, assaults four cadets, insults protocol, releases condemned property, and demands a house. Explain why this is presented as character growth." },
+      { "speaker": "TONY", "text": "Because the order was evil, the cadets were trying to kill him, Aesh-Nine was a person, and Sam finally understood that Kuranis needed him more than he needed Kuranis." },
+      { "speaker": "LD-12", "text": "This is not how performance reviews work." },
+      { "speaker": "TONY", "text": "It worked for Sam." },
+      { "speaker": "LD-12", "text": "Why a house? He could have requested weapons, authority, or a dedicated compliance unit." },
+      { "speaker": "TONY", "text": "Because underneath all that violence, Sam doesn’t want power. He wants somewhere people can be safe. He just doesn’t know who those people are yet." },
+      { "speaker": "LD-12", "text": "You are claiming domestic architecture is a military objective." },
+      { "speaker": "TONY", "text": "In this story? Absolutely." },
+      { "speaker": "LD-12", "text": "Remain beneath the desk. Your housing application has entered review." }
+    ]
+  },
+  "fieldReport": {
+    "code": "008-F",
+    "title": "Seasonal Legwear Incident",
+    "image": "../../images/newsletters/pod-008/field-report-christmas-socks.jpg",
+    "alt": "A couple kissing in a chair while one participant wears bright Christmas socks",
+    "classification": "UNAUTHORIZED AFFECTION / HOLIDAY CAMOUFLAGE FAILURE",
+    "copy": [
+      "The attached evidence depicts two civilians conducting an unscheduled close-contact exercise in a structurally inadequate chair. One participant is wearing Christmas socks outside the approved seasonal window. The other appears to have abandoned all meaningful situational awareness.",
+      "The socks display reindeer, snowflakes, and a color palette optimized for detection at extreme range. They provide no tactical advantage. They do, however, draw the eye toward a scene already suffering from excessive limb allocation.",
+      "The subjects are kissing. This has prevented LD-12 from determining who authorized the chair, whether the chair consented to its current load rating, or why nobody in the room has completed Form 12-K: Intent to Become Disgustingly Happy.",
+      "Recommendation: seize the socks for analysis. Separate the subjects by no more than eight centimeters until the investigation concludes. Dim the lights. This final measure is evidentiary and should not be interpreted as assistance."
+    ]
+  },
+  "launchCopy": [
+    "Vow and Ember launch together October 13. Two volumes of one story about family, violence, faith, grief, and the stubborn decision not to leave people behind.",
+    "If you have been following the cards, you are already carrying pieces of that story before the books reach the shelf."
+  ]
+}
