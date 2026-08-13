@@ -1,18 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18230546993"></script>
+  <!-- Attribute the confirmation to the campaign that sent the visitor. -->
   <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'AW-18230546993');
-    gtag('config', 'G-9HLFJCJ650');
-    gtag('event', 'audiobook_updates_thank_you_view', {
-      source: 'vow_landing_page'
-    });
-    gtag('event', 'conversion', {'send_to': 'AW-18230546993/6e0kCIrM78kcELGkgPVD'});
+    (function () {
+      var campaign = null;
+      try {
+        campaign = JSON.parse(sessionStorage.getItem('mgs_campaign_source'));
+      } catch (error) {
+        campaign = null;
+      }
+
+      var isRecentMetaVisit = campaign &&
+        campaign.source === 'meta' &&
+        Date.now() - campaign.recordedAt < 24 * 60 * 60 * 1000;
+
+      if (isRecentMetaVisit) {
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window, document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '2135803324017768');
+        fbq('track', 'PageView');
+        fbq('track', 'Lead');
+        try { sessionStorage.removeItem('mgs_campaign_source'); } catch (error) {}
+        return;
+      }
+
+      var googleTag = document.createElement('script');
+      googleTag.async = true;
+      googleTag.src = 'https://www.googletagmanager.com/gtag/js?id=AW-18230546993';
+      document.head.appendChild(googleTag);
+      window.dataLayer = window.dataLayer || [];
+      window.gtag = function(){dataLayer.push(arguments);};
+      gtag('js', new Date());
+      gtag('config', 'AW-18230546993');
+      gtag('config', 'G-9HLFJCJ650');
+      gtag('event', 'audiobook_updates_thank_you_view', {
+        source: 'vow_landing_page'
+      });
+      gtag('event', 'conversion', {'send_to': 'AW-18230546993/6e0kCIrM78kcELGkgPVD'});
+    }());
   </script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />

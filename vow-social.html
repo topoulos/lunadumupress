@@ -1,8 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Channel tracking intentionally omitted.
-       Add a platform-specific pixel here when this page is assigned to a campaign. -->
+  <!-- Meta Pixel Code -->
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '2135803324017768');
+    fbq('track', 'PageView');
+    try {
+      sessionStorage.setItem('mgs_campaign_source', JSON.stringify({
+        source: 'meta',
+        recordedAt: Date.now()
+      }));
+    } catch (error) {
+      // Tracking still works if browser storage is unavailable.
+    }
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=2135803324017768&ev=PageView&noscript=1"
+    alt="" /></noscript>
+  <!-- End Meta Pixel Code -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Listen to Louise Porter narrate the opening scene of Moon Gun Sam: The Dolphin — Vow, and join the Pod for audiobook and Kickstarter updates." />
