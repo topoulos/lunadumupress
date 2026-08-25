@@ -1,0 +1,112 @@
+{
+  "slug": "pod-009",
+  "number": "009",
+  "subject": "Pod #009 — The girl who wouldn't shut up",
+  "previewText": "LD-12 has identified forged paperwork, shared push-ups, and an unauthorized smirk. Management is being restrained.",
+  "heading": "The Girl Who Wouldn't Shut Up",
+  "deck": "One forged form. One provisional pairing. Fifty miserable push-ups. The beginning of everything.",
+  "accent": "#df5b3f",
+  "hero": {
+    "image": "../../images/newsletters/pod-009/hero-shackleton-branded.jpg",
+    "alt": "Moon Gun Sam logo over the MGU training station at Shackleton"
+  },
+  "opening": {
+    "title": "Hey Pod. Sam has met a problem that talks back.",
+    "copy": [
+      "Last issue, Sam demanded a house. This one introduces the person most likely to fill it with noise, broken rules, and people who need somewhere to belong.",
+      "At Shackleton intake, Alexis Klein is losing an argument with a wall of forms and winning an argument with everyone watching. Sam fixes the problem by forging his name as her temporary sponsor. The MGU responds with the only sensible bureaucratic measure: pair them together and observe the damage.",
+      "These four cards catch the first shape of Sam and Alex—his quiet calculation, her refusal to become smaller, and the moment two people who insist they need nobody begin making promises for each other anyway."
+    ]
+  },
+  "cards": [
+    {
+      "code": "DV-033",
+      "title": "Intake",
+      "image": "../../images/newsletters/pod-009/dv033.jpg",
+      "alt": "Trading card showing Sam and Alex meeting at the Shackleton intake desk",
+      "copy": [
+        "Alexis Klein reaches Shackleton with a split lip, uncooperative hair, and a reasonable question: how many forms should it take to wash a face? When the intake Proctor refuses to process her without a sponsor, Sam takes the form, signs his own name, and pushes it back through the slot.",
+        "He claims he only helped because her mouth was holding up the line. She claims she is allergic to gratitude. Neither one recognizes the first piece of family paperwork when they see it."
+      ]
+    },
+    {
+      "code": "DV-034",
+      "title": "Unit C",
+      "image": "../../images/newsletters/pod-009/dv034.jpg",
+      "alt": "Trading card showing Sam and Alex during their Unit C pair evaluation",
+      "copy": [
+        "Their pair evaluation forbids talking and hitting, which removes most of Alex's preferred methods of assessment. They circle, pivot, and reverse. Sam refuses to compete. He is studying whether Alex starts fires or merely stands very close to them.",
+        "By the third pass, they have a rhythm. When Alex stumbles, Sam catches her elbow and releases it the instant she says don't. Compatibility: provisional. Barracks E-2. Bay six. For supervision, naturally."
+      ]
+    },
+    {
+      "code": "DV-035",
+      "title": "Miserable Push-Ups",
+      "image": "../../images/newsletters/pod-009/dv035.jpg",
+      "alt": "Trading card showing Sam and Alex doing push-ups together in formation",
+      "copy": [
+        "On day two, Alex's comm-pad flashes with a call from Kelli. Kuranis catches the distraction and assigns fifty push-ups. Sam begins counting from beside her: one miserable push-up, two miserable push-ups. Kuranis rewards the commentary with fifty of his own.",
+        "Alex decides Sam is an asshole. Sam winks. They rise shaking together, having discovered the first law of military friendship: punishment shared is still punishment, but it makes a much better story."
+      ]
+    },
+    {
+      "code": "DV-036",
+      "title": "The Bond Begins",
+      "image": "../../images/newsletters/pod-009/dv036.jpg",
+      "alt": "Trading card showing Sam and Alex talking in the Shackleton barracks",
+      "copy": [
+        "Back in the barracks, Alex admits the call was from Kelli—her best friend, her sister in every way that matters, now studying on Mars. Alex is terrified that Kelli will sound happy without her. Sam tells her signals line up again. Then he makes a promise as if it were obvious: we'll make sure you don't lose her.",
+        "Sam knows orphanages, survival, and how to remain standing. Alex knows what it is to expect abandonment before it arrives. Neither has the vocabulary for what is happening between them yet. The bond begins anyway."
+      ]
+    }
+  ],
+  "readerQuestion": "Which first impression wins: Alex threatening the toaster, Sam forging the form, the miserable push-ups, or the barracks promise?",
+  "feature": {
+    "title": "LD-12 Reviews Faking It with My Grumpy Boss",
+    "image": "../../images/newsletters/pod-009/faking-it-with-my-grumpy-boss.jpg",
+    "alt": "Book cover for Faking It with My Grumpy Boss",
+    "url": "https://dl.bookfunnel.com/lkjx95jgt5",
+    "button": "Get the Book Free",
+    "offer": "Faking It with My Grumpy Boss is available as a free BookFunnel download.",
+    "copy": [
+      "A desperate mother accepts the only job offer available: become the fake fiancée of billionaire CEO Huxley Albright. The compensation could save her seven-year-old son, erase her debt, and buy them safety. The position also requires penthouse residency, glittering galas, strategic kissing, and the gradual collapse of every boundary in the employment handbook.",
+      "Huxley controls everything until the family they are pretending to be begins feeling dangerously real. Then he discovers she has been meeting with his enemies, and the arrangement places her job, her heart, and the home they stumbled into at risk.",
+      "LD-12 objects to a corporate hiring process that combines romance, childcare, housing, espionage, and executive compensation in one undocumented role. LD-12 objects more strongly to Zach calling the CEO a hero before the completion of Form 7-B: Provisional Paternal Classification. Free, emotionally hazardous, and recommended."
+    ]
+  },
+  "interview": {
+    "title": "Why pair the quiet one with the fire alarm?",
+    "image": "../../images/newsletters/pod-009/ld12-interviews-tony.png",
+    "alt": "LD-12 restraining Tony with a blue cable during an interview",
+    "lines": [
+      { "speaker": "LD-12", "text": "Management, explain why every durable relationship in this manuscript begins with falsified paperwork." },
+      { "speaker": "TONY", "text": "Sam saw someone being crushed by a system and made the system move." },
+      { "speaker": "LD-12", "text": "He forged an intake sponsorship." },
+      { "speaker": "TONY", "text": "Efficiently." },
+      { "speaker": "LD-12", "text": "Klein threatens a Proctor, violates decorum, laughs during evaluation, and compromises formation with a personal communication device. Why is she retained?" },
+      { "speaker": "TONY", "text": "Because she refuses to let the world sand off the parts of her that care." },
+      { "speaker": "LD-12", "text": "And Randolph?" },
+      { "speaker": "TONY", "text": "He makes problems smaller. Alex finds the big ones worth fighting." },
+      { "speaker": "LD-12", "text": "Your answer has exceeded the permitted sentiment threshold." },
+      { "speaker": "TONY", "text": "Is that why the cable is around my neck?" },
+      { "speaker": "LD-12", "text": "No. This is an editorial lanyard. Stop resisting revision." }
+    ]
+  },
+  "fieldReport": {
+    "code": "009-F",
+    "title": "Formation Smirk Contagion",
+    "image": "../../images/newsletters/pod-009/field-report-formation.jpg",
+    "alt": "Sam and Alex exchanging smiles while standing in military formation",
+    "classification": "UNAUTHORIZED MORALE / BILATERAL FACIAL DISOBEDIENCE",
+    "copy": [
+      "The attached evidence depicts Randolph and Klein standing in formation while their commanding officer attempts to deliver what appears to be a professionally hostile briefing. Both recruits are displaying visible amusement. Neither submitted a request for morale.",
+      "Randolph's expression is approximately twelve percent smirk. Klein's is higher and therefore likely contagious. Their eye lines indicate a private exchange occurring in direct sunlight, where unauthorized friendship can be detected from considerable range.",
+      "The commanding officer's mustache remains structurally sound but has failed to suppress the incident. Personnel behind the subjects are attempting neutral expressions with mixed success. One recruit may already be thinking something funny.",
+      "Recommendation: separate Randolph and Klein immediately. Place them no more than two feet apart in the same barracks and assign shared punishment until the bond weakens. Historical note: this recommendation may have been implemented incorrectly."
+    ]
+  },
+  "launchCopy": [
+    "Vow and Ember launch together October 13—eleven days after this transmission. Two volumes, one enormous story, and the family whose first official record began with a forged signature at an intake window.",
+    "If you have been following the cards, you already know the secret: the universe gets spectacular, but it only matters because these people found each other first."
+  ]
+}
