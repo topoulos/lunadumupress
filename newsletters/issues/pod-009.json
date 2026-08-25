@@ -7,7 +7,7 @@
   "deck": "One forged form. One provisional pairing. Fifty miserable push-ups. The beginning of everything.",
   "accent": "#df5b3f",
   "hero": {
-    "image": "../../images/newsletters/pod-009/hero-shackleton-branded.jpg",
+    "image": "../../images/newsletters/pod-009/hero-shackleton-branded.jpg?v=e5be94a",
     "alt": "Moon Gun Sam logo over the MGU training station at Shackleton"
   },
   "opening": {
@@ -22,7 +22,7 @@
     {
       "code": "DV-033",
       "title": "Intake",
-      "image": "../../images/newsletters/pod-009/dv033.jpg",
+      "image": "../../images/newsletters/pod-009/dv033.jpg?v=e5be94a",
       "alt": "Trading card showing Sam and Alex meeting at the Shackleton intake desk",
       "copy": [
         "Alexis Klein reaches Shackleton with a split lip, uncooperative hair, and a reasonable question: how many forms should it take to wash a face? When the intake Proctor refuses to process her without a sponsor, Sam takes the form, signs his own name, and pushes it back through the slot.",
@@ -32,7 +32,7 @@
     {
       "code": "DV-034",
       "title": "Unit C",
-      "image": "../../images/newsletters/pod-009/dv034.jpg",
+      "image": "../../images/newsletters/pod-009/dv034.jpg?v=e5be94a",
       "alt": "Trading card showing Sam and Alex during their Unit C pair evaluation",
       "copy": [
         "Their pair evaluation forbids talking and hitting, which removes most of Alex's preferred methods of assessment. They circle, pivot, and reverse. Sam refuses to compete. He is studying whether Alex starts fires or merely stands very close to them.",
@@ -42,7 +42,7 @@
     {
       "code": "DV-035",
       "title": "Miserable Push-Ups",
-      "image": "../../images/newsletters/pod-009/dv035.jpg",
+      "image": "../../images/newsletters/pod-009/dv035.jpg?v=e5be94a",
       "alt": "Trading card showing Sam and Alex doing push-ups together in formation",
       "copy": [
         "On day two, Alex's comm-pad flashes with a call from Kelli. Kuranis catches the distraction and assigns fifty push-ups. Sam begins counting from beside her: one miserable push-up, two miserable push-ups. Kuranis rewards the commentary with fifty of his own.",
@@ -52,7 +52,7 @@
     {
       "code": "DV-036",
       "title": "The Bond Begins",
-      "image": "../../images/newsletters/pod-009/dv036.jpg",
+      "image": "../../images/newsletters/pod-009/dv036.jpg?v=e5be94a",
       "alt": "Trading card showing Sam and Alex talking in the Shackleton barracks",
       "copy": [
         "Back in the barracks, Alex admits the call was from Kelli—her best friend, her sister in every way that matters, now studying on Mars. Alex is terrified that Kelli will sound happy without her. Sam tells her signals line up again. Then he makes a promise as if it were obvious: we'll make sure you don't lose her.",
@@ -63,7 +63,7 @@
   "readerQuestion": "Which first impression wins: Alex threatening the toaster, Sam forging the form, the miserable push-ups, or the barracks promise?",
   "feature": {
     "title": "LD-12 Reviews Faking It with My Grumpy Boss",
-    "image": "../../images/newsletters/pod-009/faking-it-with-my-grumpy-boss.jpg",
+    "image": "../../images/newsletters/pod-009/faking-it-with-my-grumpy-boss.jpg?v=e5be94a",
     "alt": "Book cover for Faking It with My Grumpy Boss",
     "url": "https://dl.bookfunnel.com/lkjx95jgt5",
     "button": "Get the Book Free",
@@ -76,7 +76,7 @@
   },
   "interview": {
     "title": "Why pair the quiet one with the fire alarm?",
-    "image": "../../images/newsletters/pod-009/ld12-interviews-tony.png",
+    "image": "../../images/newsletters/pod-009/ld12-interviews-tony.png?v=e5be94a",
     "alt": "LD-12 restraining Tony with a blue cable during an interview",
     "lines": [
       { "speaker": "LD-12", "text": "Management, explain why every durable relationship in this manuscript begins with falsified paperwork." },
@@ -95,7 +95,7 @@
   "fieldReport": {
     "code": "009-F",
     "title": "Formation Smirk Contagion",
-    "image": "../../images/newsletters/pod-009/field-report-formation.jpg",
+    "image": "../../images/newsletters/pod-009/field-report-formation.jpg?v=e5be94a",
     "alt": "Sam and Alex exchanging smiles while standing in military formation",
     "classification": "UNAUTHORIZED MORALE / BILATERAL FACIAL DISOBEDIENCE",
     "copy": [
