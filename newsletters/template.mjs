@@ -101,6 +101,14 @@ export function renderNewsletter(issue) {
         <h2 style="${headingStyle}color:${esc(issue.accent)};">${esc(issue.readerQuestion)}</h2>
         <p class="copy" style="${copyStyle}">Hit reply with the DV number. Tony reads every reply. LD-12 logs them for reasons management has declined to investigate.</p>
       </td></tr>
+      ${issue.groupPromo ? `<tr><td class="section dossier" style="${sectionStyle}background:#0d1116;border-left:4px solid ${esc(issue.accent)};">
+        <p class="eyebrow" style="${font}margin:0 0 12px;color:${esc(issue.accent)};font-size:11px;font-weight:bold;letter-spacing:2.5px;text-transform:uppercase;">LD-12 TRANSMISSION // FREE READS DETECTED</p>
+        <h2 style="${headingStyle}">${esc(issue.groupPromo.title)}</h2>
+        <a href="${esc(issue.groupPromo.url)}" style="text-decoration:none;"><img class="promo-image" src="${esc(issue.groupPromo.image)}" alt="${esc(issue.groupPromo.alt)}" width="592" style="display:block;width:100%;max-width:592px;height:auto;margin:20px 0;border:0;"></a>
+        ${paragraphs(issue.groupPromo.copy)}
+        <div class="button-wrap" style="padding:8px 0 16px;text-align:center;"><a class="button" href="${esc(issue.groupPromo.url)}" style="${font}display:inline-block;padding:13px 22px;background:${esc(issue.accent)};color:#08090b;font-size:14px;font-weight:bold;text-decoration:none;border-radius:3px;">${esc(issue.groupPromo.button)}</a></div>
+        <p class="copy" style="${copyStyle}"><strong>${esc(issue.groupPromo.offer)}</strong></p>
+      </td></tr>` : ""}
       <tr><td class="section dossier" style="${sectionStyle}background:#0d1116;border-left:4px solid ${esc(issue.accent)};">
         <p class="eyebrow" style="${font}margin:0 0 12px;color:${esc(issue.accent)};font-size:11px;font-weight:bold;letter-spacing:2.5px;text-transform:uppercase;">PROCTOR CULTURAL DISPATCH</p>
         <h2 style="${headingStyle}">${esc(issue.feature.title)}</h2>
