@@ -1,0 +1,219 @@
+{
+  "slug": "pod-010",
+  "number": "010",
+  "subject": "Pod #010 — The line they would not cross",
+  "previewText": "LD-12 has detected two weapons, one illegal refusal, and a fist bump with catastrophic long-term consequences.",
+  "heading": "The Line They Would Not Cross",
+  "deck": "Seven cards. Two impossible weapons. One order refused. The partnership becomes family.",
+  "accent": "#d86a45",
+  "hero": {
+    "image": "../../images/newsletters/pod-010/hero-release-week-branded.jpg",
+    "alt": "Moon Gun Sam release-week poster showing Sam, Kelli, their family, Kuranis, and hooded enemies"
+  },
+  "opening": {
+    "title": "Hey Pod. The books are loose.",
+    "copy": [
+      "The Dolphin — Vow and The Dolphin — Ember arrived three days ago. So this is not a normal transmission. This is the release-week armory dump: seven cards, two weapons, one terrible command, and the moment Sam and Alex decide what kind of Moon Guns they are willing to become.",
+      "Training gives them the VXG-76 and Psalm—enough power to breach walls, tear armor, and end a fight in several deeply discouraging colors. What matters is what happens when Fenyang orders Alex to use that power on a defeated opponent.",
+      "She refuses. Sam stands beside her. Everything after that grows from the line they draw together."
+    ]
+  },
+  "cards": [
+    {
+      "code": "DV-037",
+      "title": "The Moon Gun VXG-76",
+      "image": "../../images/newsletters/pod-010/dv037.jpg",
+      "alt": "Trading card showing the VXG-76 Moon Gun weapon",
+      "copy": [
+        "The VXG-76 is massive, brutal, and inconveniently versatile. Breach tears through walls and can throw its operator clear. Bolt drives focused shots through hard targets. Shear turns the weapon into something resembling a very bad argument with a shotgun.",
+        "Multi tracks several targets at once. Grapple restrains, climbs, or drags a problem closer. Plasma can jump between harmonic weapons, although sensible operators avoid discovering why that mode is rarely used. This is the machine Sam and Alex are expected to master without letting it master them."
+      ]
+    },
+    {
+      "code": "DV-038",
+      "title": "The Tonfa Machette — Psalm",
+      "image": "../../images/newsletters/pod-010/dv038.jpg",
+      "alt": "Trading card showing Psalm, the harmonic tonfa machette",
+      "copy": [
+        "Before recruits earn a Moon Gun, they train with Psalm: a harmonic tonfa machette whose edge does not run out of ammunition and whose colors are less decorative than they appear.",
+        "Red tears. White burns and seals. Black leaves rot behind. Green poisons. Blue freezes. Every mode can chew through tissue, armor, or bone; every counter can wreck the attacker's balance before the blade ever lands. Psalm teaches the lesson the VXG will later enforce: power is never only what you can do. It is what you decide not to do."
+      ]
+    },
+    {
+      "code": "DV-039",
+      "title": "Klein vs. Jamestown",
+      "image": "../../images/newsletters/pod-010/dv039.jpg",
+      "alt": "Trading card showing Alex Klein fighting the much larger Jamestown",
+      "copy": [
+        "Alex is matched against Jamestown, a recruit built like a structural concern. She cannot overpower him, so she dismantles the problem with speed, timing, and spite. She gets him down. She wins.",
+        "Then Jamestown lashes out from the ground and tears open her leg. Alex answers with one final strike that leaves him unconscious. The fight is over. The question is whether she knows when to stop."
+      ]
+    },
+    {
+      "code": "DV-040",
+      "title": "Disobedience",
+      "image": "../../images/newsletters/pod-010/dv040.jpg",
+      "alt": "Trading card showing Alex refusing Fenyang's order while Sam stands beside her",
+      "copy": [
+        "Fenyang orders Alex to kill the defeated Jamestown. Alex throws down Psalm and refuses. Sam steps forward before caution can catch him, furious on behalf of the partner who has already proved everything that needed proving.",
+        "Kuranis allows the outburst, then sends them to the medic. The command structure records disobedience. Sam and Alex record something else: there are orders they will not obey, and neither of them will have to refuse alone."
+      ]
+    },
+    {
+      "code": "DV-041",
+      "title": "Cool Down",
+      "image": "../../images/newsletters/pod-010/dv041.jpg",
+      "alt": "Trading card showing Sam keeping Alex company while her leg is treated",
+      "copy": [
+        "Medic Proctor seals the wound in Alex's leg while Sam stays close enough to be irritating. He is openly impressed that she brought down Jamestown. Alex jokes through the pain because sincerity is more dangerous than the blade was.",
+        "The adrenaline drains away. The refusal remains. So does Sam."
+      ]
+    },
+    {
+      "code": "DV-042",
+      "title": "Fist Bump",
+      "image": "../../images/newsletters/pod-010/dv042.jpg",
+      "alt": "Trading card showing Sam and Alex sealing their pact with a fist bump",
+      "copy": [
+        "They make the rules the MGU forgot to give them. They will not kill because someone with rank finds it convenient. They will decide where the line is, and when the line costs them, they will pay together.",
+        "The agreement is sealed with a fist bump—an alarmingly small gesture for a pact that will eventually inconvenience governments, armies, gods, and at least one administrative intelligence."
+      ]
+    },
+    {
+      "code": "DV-043",
+      "title": "Sam and Alex — Training Days",
+      "image": "../../images/newsletters/pod-010/dv043.jpg",
+      "alt": "Trading card showing Sam and Alex smiling together during their training days",
+      "copy": [
+        "Somewhere between punishments, bruises, and shared acts of insubordination, Sam and Alex stop being two recruits assigned to the same unit. They become a single fighting system. Then something stronger than that: family.",
+        "They do not know yet how far their bond will reach. They only know the person beside them will stay when staying becomes expensive. Two hearts, one line, and a future large enough to change the universe."
+      ]
+    }
+  ],
+  "weaponPlatform": {
+    "afterCard": "DV-037",
+    "title": "The Moon Gun VXG-76",
+    "copy": [
+      "In the field, officers usually call it the VXG or the 76—partly for speed, partly because shouting ‘Moon Gun’ in a squad of Moon Gun Officers creates avoidable administrative comedy. It is not a firearm. It is a modular harmonic platform that channels the same physics as Psalms and the Pools through pulse-capacitor bolts.",
+      "The weapon is massive, dark, heavy, and intimidating on purpose. A reinforced back-harness supports its weight, feeds ammunition, stabilizes kick, and compensates for recoil. Microthrusters lighten the system in the air; on the ground, some modes still require the officer to plant their stance and negotiate directly with momentum."
+    ],
+    "harness": "1,000 compressed pulse-capacitor bolts in the reinforced back reservoir.",
+    "chamber": "100 bolts staged and ready to fire.",
+    "control": "Side-mounted mode selector with HUD cooldowns, target locks, and resonance warnings.",
+    "modes": [
+      { "name": "BREACH", "color": "#155c91", "copy": "Sonic-magnetic demolition and displacement. Tears steel, crushes barricades, and launches the officer when fired downward. Thirty-second cooldown; brace on the ground." },
+      { "name": "GRAPPLE", "color": "#69409a", "copy": "Fifty-meter magnetic tow-line. Climbs, rescues, detains, or pulls targets toward the weapon. Physics determines whether the result remains nonlethal." },
+      { "name": "BOLT", "color": "#5f7d27", "copy": "Single explosive pulse-capacitor, detonated on the second trigger pull. Accepts any primary Psalm color or fires as a heavy conventional explosive." },
+      { "name": "MULTI", "color": "#9a6b18", "copy": "Locks up to ten targets and fires sequential bolts. Each target receives the selected Psalm effect, assuming the operator considers that helpful." },
+      { "name": "BOLT SHEAR", "color": "#a34d19", "copy": "Splits one bolt into roughly fifty resonant micro-shards for rapid suppression. Loud, messy, and doctrinally associated with officers having a difficult afternoon." },
+      { "name": "PLASMA", "color": "#9b2424", "copy": "Surgical heat beam for precision cuts and anti-armor work. Arcs near active Psalms or other VXGs, creating electrocution and secondary discharge hazards." }
+    ],
+    "psalmBolts": "Red bleeds, White cauterizes and burns, Green poisons, Black blooms into rot, and Blue freezes tissue and bone. Combo colors cannot survive the casing. Operators prefer Red and White; wider-area colors require sealed armor and better judgment.",
+    "safety": "A Breach shot can collapse a small house. Grapple can convert rescue equipment into immediate anatomy problems. Plasma seeks nearby harmonic weapons. Improper use may cause death, dismemberment, or worse; LD-12 is awaiting clarification on ‘worse.’",
+    "url": "../../downloads/newsletters/pod-010/moon-gun-vxg-76.pdf",
+    "button": "Download the Full VXG-76 Field Chart"
+  },
+  "armory": {
+    "afterCard": "DV-038",
+    "title": "The Wheel of Psalms",
+    "copy": [
+      "Psalm is not a laser sword. It is a paired T-MACH unit—a tonfa-machette built around pulse-alloy blades and coded harmonic frequencies. Either hilt can select a mode where the fingers settle: index for Red, middle for Black, ring for Green, little finger for Blue, or all four for White.",
+      "Every color has two jobs. Its offensive frequency causes a specific injury; its defensive counter stops another frequency in the Wheel. A trained operator changes colors before impact. The built-in double-squeeze shortcut can find the counter automatically, but it is slower—and slow is a poor quality in a weapon that can give tissue opinions.",
+      "The thumb control rotates the tonfa grip through four fighting positions for advanced spin-blade techniques. This is not recommended for anyone who enjoys remaining upright, symmetrical, or employed."
+    ],
+    "modes": [
+      { "name": "RED", "color": "#8f1f24", "causes": "Bleeding", "counters": "Infection" },
+      { "name": "WHITE", "color": "#e8e8e8", "textColor": "#111111", "causes": "Cauterizing burns", "counters": "Bleeding" },
+      { "name": "BLUE", "color": "#155c91", "causes": "Freezing", "counters": "Burning" },
+      { "name": "GREEN", "color": "#28733b", "causes": "Harmonic poison", "counters": "Freezing" },
+      { "name": "BLACK", "color": "#171717", "causes": "Infection and rot", "counters": "Poison" }
+    ],
+    "sequence": "Red → White → Blue → Green → Black → Red. Color is consequence. Remember which sin eats which.",
+    "advanced": "Elite practitioners can combine modes: Yellow acid spray, Navy devour, Gray breach, Purple electrocution, and Orange flame funnel. A combo can only be stopped by its opposite—or by the same combination performed with cleaner rhythm.",
+    "safety": "Incorrect rhythm may cause harmonic ricochet, tissue blowback, bone whip, or electrostatic pulse. The phrase ‘advanced spin-blade technique’ is not recognized as a workers’ compensation category.",
+    "url": "../../downloads/newsletters/pod-010/wheel-of-psalms.pdf",
+    "button": "Download the Full Wheel of Psalms Chart"
+  },
+  "readerQuestion": "Which changes everything: the weapon, the refusal, the staying, or the fist bump?",
+  "feature": {
+    "title": "LD-12 Reviews Ashes of Xyphos",
+    "image": "../../images/newsletters/pod-010/ashes-of-xyphos.jpg",
+    "alt": "Book cover for Ashes of Xyphos by Kevin Sanon",
+    "url": "https://dl.bookfunnel.com/dnes0by2d5",
+    "button": "Get Ashes of Xyphos Free",
+    "offer": "Ashes of Xyphos is available as a free BookFunnel download.",
+    "copy": [
+      "Elias Kade survived the warlords, quarantine zones, and slow death of a forgotten city. The Terran Human Alliance rescued him with food, firepower, and promises of order. Years later, he delivers that order as an elite soldier of Ghost Force.",
+      "Then Kade is sent to cleanse a newly discovered alien world and discovers the targets are not enemy combatants. They are farmers, artists, and families whose only crime is existing where authority has decided they should not. Peace, he learns, is merely the word printed above the mission order.",
+      "Kevin Sanon's fast, emotionally intense military science-fiction novella asks what loyalty means when the good guys stop deserving the name—and what one soldier will risk when telling the truth makes him the next target.",
+      "LD-12 approves of clear chains of command, efficient planetary administration, and mission briefs without unnecessary emotional ambiguity. LD-12 has therefore classified this book as dangerously persuasive evidence that Tony may have had a point about refusing terrible orders. Free. Subversive. Recommended under protest."
+    ]
+  },
+  "interview": {
+    "title": "Management interview interrupted by a ten-year-old",
+    "image": "../../images/newsletters/pod-010/ld12-randolph-house-interview.jpg",
+    "alt": "LD-12 interviewing Tony during a family card game at Randolph House",
+    "lines": [
+      { "speaker": "LD-12", "text": "Management, this interview concerns your irresponsible decision to distribute detailed weapons specifications to civilians." },
+      { "speaker": "TONY", "text": "They're readers." },
+      { "speaker": "LILA", "text": "He means nerds." },
+      { "speaker": "ALEX", "text": "She's right. Also, your turn, toaster." },
+      { "speaker": "LD-12", "text": "I am conducting an interrogation. I cannot simultaneously participate in recreational deception." },
+      { "speaker": "LILA", "text": "Then fold." },
+      { "speaker": "LD-12", "text": "I possess three queens. Folding would be mathematically irrational." },
+      { "speaker": "ALEX", "text": "No, you don't." },
+      { "speaker": "LD-12", "text": "You cannot know that." },
+      { "speaker": "ALEX", "text": "Your left antenna twitches when you bluff." },
+      { "speaker": "LILA", "text": "It really does. Raise." },
+      { "speaker": "SAM", "text": "Maybe we should let LD-12 finish the interview." },
+      { "speaker": "KELLI", "text": "Or you could take me upstairs and explain the VXG recoil harness very slowly." },
+      { "speaker": "SAM", "text": "We have a ten-year-old at the table." },
+      { "speaker": "LILA", "text": "I'm ten, not deaf. Also, raise again." },
+      { "speaker": "TONY", "text": "For the record, Sam was trying to remove Kelli from the interview." },
+      { "speaker": "KELLI", "text": "No, he wasn't." },
+      { "speaker": "SAM", "text": "No, I wasn't." },
+      { "speaker": "LD-12", "text": "Management's account has been contradicted by two primary sources. This is precisely why I conduct interviews." },
+      { "speaker": "ALEX", "text": "Lila, you're dealing from the bottom." },
+      { "speaker": "LILA", "text": "I don't cheat." },
+      { "speaker": "ALEX", "text": "Yeah, you are. I taught you that trick." },
+      { "speaker": "LILA", "text": "Oh. Yeah. Ha ha ha." },
+      { "speaker": "LD-12", "text": "CHEATING INVALIDATES THE ENTIRE DATA SET." },
+      { "speaker": "LILA", "text": "No, it means I win." },
+      { "speaker": "LD-12", "text": "I demand an immediate rematch under laboratory conditions." },
+      { "speaker": "ALEX", "text": "Double or nothing, toaster." },
+      { "speaker": "LD-12", "text": "Accepted. Management, remain seated. Your interview will resume after I restore statistical justice." }
+    ]
+  },
+  "fieldReport": {
+    "code": "010-F",
+    "title": "The Bridal Supply Ambush",
+    "image": "../../images/newsletters/pod-010/field-report-bridal-shop.png",
+    "alt": "Kelli, Susan, Alex, and Sam laughing together in a wedding boutique",
+    "classification": "CEREMONIAL REDUNDANCY / LACE-BASED COMMAND FAILURE",
+    "copy": [
+      "The attached surveillance depicts Kelli Randolph wearing a bridal veil despite already being legally married to Sam Randolph. No divorce, annulment, death certificate, temporal reset, or authorized spouse-replacement form has been filed. The purpose of a second bridal configuration is therefore unclear and probably expensive.",
+      "Susan is holding a glass of celebratory liquid while encouraging the violation. Alexis Klein is approaching from the rear with the unmistakable expression of a person about to make the situation louder. Neither woman appears willing to assist with inventory control.",
+      "Sam Randolph has been converted into a mobile lace rack. He is carrying several framed photographs, floral material, and at least one garment capable of obscuring an entire tactical doorway. His facial expression indicates that he understands resistance would only prolong the mission.",
+      "Management claims this is a normal family outing. Management also claims that ‘something borrowed’ is a romantic custom rather than an unresolved property offense. Recommendation: confiscate all veils, champagne, and decorative frames until the responsible parties explain why one wedding was insufficient. Secondary recommendation: do not permit Lila inside the boutique under any circumstances. She has already requested a flower-girl grappling hook."
+    ]
+  },
+  "authorNote": {
+    "title": "Well, the books are finally available!",
+    "copy": [
+      "This is a big celebratory newsletter with a lot of lore. You'll find details about the weapons systems here because the books only go into as much detail as the story needs. If you enjoy those kinds of world-building items, dig in. If you're here for the romance and family love, you may glaze over them with my full permission.",
+      "This issue finds Sam and Alex in Moon Gun basic training. There is a little of that in Vow because the Moon Guns are the military and police of Luna. The story has those elements, but it isn't really a military science-fiction novel.",
+      "This is still an emotional journey, so don't worry. I love the science fantasy and the speculative slant. I enjoy the realism of these first three books. After that, it gets big—full-on space opera—but I promise not to lose the heart of the thing. My main objective is to create characters you love and want to hang out with.",
+      "So fall in love. Begin the adventure. Then leave me an honest review on Amazon or Goodreads—or both!",
+      "Book Three will be available for preorder soon. Book Four will be announced then as well.",
+      "Thank you to everyone in the Pod. It's going to be a fun year!"
+    ]
+  },
+  "launchEyebrow": "RELEASE WEEK TRANSMISSION // AVAILABLE NOW",
+  "launchTitle": "The Dolphin has begun.",
+  "launchCopy": [
+    "The Dolphin — Vow and The Dolphin — Ember are out now. Two volumes, one enormous opening movement, and the family whose first rules were written in a training room when an order crossed the line.",
+    "If you have followed these cards from the orphanage to Shackleton, this is where the doors finally open. Thank you for walking all the way here with me."
+  ],
+  "launchButton": "Enter The Dolphin",
+  "launchUrl": "https://lunadumupress.com/#books"
+}

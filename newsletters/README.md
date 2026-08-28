@@ -8,10 +8,13 @@ The generator turns one structured issue file into responsive, email-safe HTML.
 cd newsletters
 npm run build:007
 npm run build:008
+npm run build:009
+npm run build:010
 ```
 
 The output is written to `newsletters/dist/pod-007.html` or
-`newsletters/dist/pod-008.html`.
+`newsletters/dist/pod-008.html`, `newsletters/dist/pod-009.html`, or
+`newsletters/dist/pod-010.html`.
 
 ## MailerLite connection check
 

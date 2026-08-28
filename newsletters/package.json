@@ -7,8 +7,14 @@
     "build:007:production": "node render.mjs issues/pod-007.json --production",
     "build:008": "node render.mjs issues/pod-008.json",
     "build:008:production": "node render.mjs issues/pod-008.json --production",
+    "build:009": "node render.mjs issues/pod-009.json",
+    "build:009:production": "node render.mjs issues/pod-009.json --production",
+    "build:010": "node render.mjs issues/pod-010.json",
+    "build:010:production": "node render.mjs issues/pod-010.json --production",
     "mailerlite:inspect": "node mailerlite.mjs inspect",
     "mailerlite:draft:007": "node mailerlite.mjs create-test-draft issues/pod-007.json",
-    "mailerlite:draft:008": "node mailerlite.mjs create-test-draft issues/pod-008.json"
+    "mailerlite:draft:008": "node mailerlite.mjs create-test-draft issues/pod-008.json",
+    "mailerlite:draft:009": "node mailerlite.mjs create-test-draft issues/pod-009.json",
+    "mailerlite:draft:010": "node mailerlite.mjs create-test-draft issues/pod-010.json"
   }
 }

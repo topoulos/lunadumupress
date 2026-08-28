@@ -22,6 +22,9 @@ function productionAssets(value) {
   if (typeof value === "string" && value.startsWith("../../images/")) {
     return `https://lunadumupress.com/${value.slice(6)}`;
   }
+  if (typeof value === "string" && value.startsWith("../../downloads/")) {
+    return `https://lunadumupress.com/${value.slice(6)}`;
+  }
   return value;
 }
 

@@ -23,6 +23,55 @@ const card = (item, accent) => `
     </td>
   </tr>`;
 
+const dossiers = (items = [], accent) => items.length ? `<tr><td class="section dossier" style="${sectionStyle}background:#0d1116;border-left:4px solid ${esc(accent)};">
+  <p class="eyebrow" style="${font}margin:0 0 12px;color:${esc(accent)};font-size:11px;font-weight:bold;letter-spacing:2.5px;text-transform:uppercase;">DECLASSIFIED WEAPONS FILES</p>
+  <h2 style="${headingStyle}">Take the armory with you.</h2>
+  <p class="copy" style="${copyStyle}">Two technical dossiers from the Moon Gun Sam universe, cleared for Pod download.</p>
+  ${items.map((item) => `<div style="${font}margin:22px 0;padding:22px;background:#121820;border:1px solid #2a3440;">
+    <h3 style="${font}margin:0 0 10px;color:#ffffff;font-size:17px;line-height:1.35;">${esc(item.title)}</h3>
+    <p class="copy" style="${copyStyle}">${esc(item.copy)}</p>
+    <div class="button-wrap" style="padding:4px 0 0;text-align:left;"><a class="button" href="${esc(item.url)}" style="${font}display:inline-block;padding:13px 22px;background:${esc(accent)};color:#08090b;font-size:14px;font-weight:bold;text-decoration:none;border-radius:3px;">${esc(item.button || "Download PDF")}</a></div>
+  </div>`).join("\n")}
+</td></tr>` : "";
+
+const armory = (item, accent) => item ? `<tr><td class="section dossier" style="${sectionStyle}background:#0d1116;border-left:4px solid ${esc(accent)};">
+  <p class="eyebrow" style="${font}margin:0 0 12px;color:${esc(accent)};font-size:11px;font-weight:bold;letter-spacing:2.5px;text-transform:uppercase;">DECLASSIFIED ARMORY // T-MACH SYSTEM</p>
+  <h2 style="${headingStyle}">${esc(item.title)}</h2>
+  ${paragraphs(item.copy)}
+  <table role="presentation" width="100%" style="width:100%;margin:22px 0;border-collapse:collapse;">
+    ${item.modes.map((mode) => `<tr>
+      <td width="74" style="${font}padding:13px 10px;background:${esc(mode.color)};color:${esc(mode.textColor || "#ffffff")};font-size:12px;font-weight:bold;text-align:center;vertical-align:top;">${esc(mode.name)}</td>
+      <td style="${font}padding:13px 14px;background:#121820;border-bottom:1px solid #2a3440;color:#d7dce2;font-size:13px;line-height:1.55;"><strong style="color:#ffffff;">Causes:</strong> ${esc(mode.causes)}<br><strong style="color:#ffffff;">Counters:</strong> ${esc(mode.counters)}</td>
+    </tr>`).join("\n")}
+  </table>
+  <p class="copy" style="${copyStyle}"><strong style="color:#ffffff;">THE WHEEL:</strong> ${esc(item.sequence)}</p>
+  <p class="copy" style="${copyStyle}">${esc(item.advanced)}</p>
+  <div style="${font}margin:22px 0;padding:16px 18px;background:#121820;border:1px solid #2a3440;color:#b9c2cc;font-size:13px;line-height:1.65;"><strong style="color:${esc(accent)};">LD-12 SAFETY NOTICE:</strong> ${esc(item.safety)}</div>
+  <div class="button-wrap" style="padding:8px 0 6px;text-align:center;"><a class="button" href="${esc(item.url)}" style="${font}display:inline-block;padding:13px 22px;background:${esc(accent)};color:#08090b;font-size:14px;font-weight:bold;text-decoration:none;border-radius:3px;">${esc(item.button)}</a></div>
+</td></tr>` : "";
+
+const weaponPlatform = (item, accent) => item ? `<tr><td class="section dossier" style="${sectionStyle}background:#0d1116;border-left:4px solid ${esc(accent)};">
+  <p class="eyebrow" style="${font}margin:0 0 12px;color:${esc(accent)};font-size:11px;font-weight:bold;letter-spacing:2.5px;text-transform:uppercase;">DECLASSIFIED ARMORY // VXG-76 PLATFORM</p>
+  <h2 style="${headingStyle}">${esc(item.title)}</h2>
+  ${paragraphs(item.copy)}
+  <div style="${font}margin:22px 0;padding:16px 18px;background:#121820;border:1px solid #2a3440;color:#d7dce2;font-size:13px;line-height:1.7;">
+    <strong style="color:#ffffff;">HARNESS:</strong> ${esc(item.harness)}<br>
+    <strong style="color:#ffffff;">CHAMBER:</strong> ${esc(item.chamber)}<br>
+    <strong style="color:#ffffff;">CONTROL:</strong> ${esc(item.control)}
+  </div>
+  <table role="presentation" width="100%" style="width:100%;margin:22px 0;border-collapse:collapse;">
+    ${item.modes.map((mode) => `<tr>
+      <td width="104" style="${font}padding:13px 10px;background:${esc(mode.color)};color:#ffffff;font-size:11px;font-weight:bold;text-align:center;vertical-align:top;">${esc(mode.name)}</td>
+      <td style="${font}padding:13px 14px;background:#121820;border-bottom:1px solid #2a3440;color:#d7dce2;font-size:13px;line-height:1.55;">${esc(mode.copy)}</td>
+    </tr>`).join("\n")}
+  </table>
+  <p class="copy" style="${copyStyle}"><strong style="color:#ffffff;">PSALM BOLTS:</strong> ${esc(item.psalmBolts)}</p>
+  <div style="${font}margin:22px 0;padding:16px 18px;background:#121820;border:1px solid #2a3440;color:#b9c2cc;font-size:13px;line-height:1.65;"><strong style="color:${esc(accent)};">LD-12 SAFETY NOTICE:</strong> ${esc(item.safety)}</div>
+  <div class="button-wrap" style="padding:8px 0 6px;text-align:center;"><a class="button" href="${esc(item.url)}" style="${font}display:inline-block;padding:13px 22px;background:${esc(accent)};color:#08090b;font-size:14px;font-weight:bold;text-decoration:none;border-radius:3px;">${esc(item.button)}</a></div>
+</td></tr>` : "";
+
+const cardSequence = (issue) => issue.cards.map((item) => `${card(item, issue.accent)}${issue.weaponPlatform?.afterCard === item.code ? weaponPlatform(issue.weaponPlatform, issue.accent) : ""}${issue.armory?.afterCard === item.code ? armory(issue.armory, issue.accent) : ""}`).join("\n");
+
 export function renderNewsletter(issue) {
   return `<!doctype html>
 <html lang="en">
@@ -95,7 +144,8 @@ export function renderNewsletter(issue) {
         <h2 style="${headingStyle}">${esc(issue.opening.title)}</h2>
         ${paragraphs(issue.opening.copy)}
       </td></tr>
-      ${issue.cards.map((item) => card(item, issue.accent)).join("\n")}
+      ${cardSequence(issue)}
+      ${dossiers(issue.dossiers, issue.accent)}
       <tr><td class="section question" style="${sectionStyle}background:#10151b;text-align:center;">
         <p class="eyebrow" style="${font}margin:0 0 12px;color:${esc(issue.accent)};font-size:11px;font-weight:bold;letter-spacing:2.5px;text-transform:uppercase;">READER RESPONSE REQUESTED</p>
         <h2 style="${headingStyle}color:${esc(issue.accent)};">${esc(issue.readerQuestion)}</h2>
@@ -109,32 +159,38 @@ export function renderNewsletter(issue) {
         <div class="button-wrap" style="padding:8px 0 16px;text-align:center;"><a class="button" href="${esc(issue.groupPromo.url)}" style="${font}display:inline-block;padding:13px 22px;background:${esc(issue.accent)};color:#08090b;font-size:14px;font-weight:bold;text-decoration:none;border-radius:3px;">${esc(issue.groupPromo.button)}</a></div>
         <p class="copy" style="${copyStyle}"><strong>${esc(issue.groupPromo.offer)}</strong></p>
       </td></tr>` : ""}
-      <tr><td class="section dossier" style="${sectionStyle}background:#0d1116;border-left:4px solid ${esc(issue.accent)};">
+      ${issue.feature ? `<tr><td class="section dossier" style="${sectionStyle}background:#0d1116;border-left:4px solid ${esc(issue.accent)};">
         <p class="eyebrow" style="${font}margin:0 0 12px;color:${esc(issue.accent)};font-size:11px;font-weight:bold;letter-spacing:2.5px;text-transform:uppercase;">PROCTOR CULTURAL DISPATCH</p>
         <h2 style="${headingStyle}">${esc(issue.feature.title)}</h2>
         <img class="promo-image" src="${esc(issue.feature.image)}" alt="${esc(issue.feature.alt)}" width="592" style="display:block;width:100%;max-width:592px;height:auto;margin:20px 0;border:0;">
         ${paragraphs(issue.feature.copy)}
         <div class="button-wrap" style="padding:8px 0 16px;text-align:center;"><a class="button" href="${esc(issue.feature.url)}" style="${font}display:inline-block;padding:13px 22px;background:${esc(issue.accent)};color:#08090b;font-size:14px;font-weight:bold;text-decoration:none;border-radius:3px;">${esc(issue.feature.button)}</a></div>
         <p class="copy" style="${copyStyle}"><strong>${esc(issue.feature.offer)}</strong></p>
-      </td></tr>
-      <tr><td class="section dossier" style="${sectionStyle}background:#0d1116;border-left:4px solid ${esc(issue.accent)};">
+      </td></tr>` : ""}
+      ${issue.interview ? `<tr><td class="section dossier" style="${sectionStyle}background:#0d1116;border-left:4px solid ${esc(issue.accent)};">
         <p class="eyebrow" style="${font}margin:0 0 12px;color:${esc(issue.accent)};font-size:11px;font-weight:bold;letter-spacing:2.5px;text-transform:uppercase;">LD-12 INTERVIEWS MANAGEMENT</p>
         <h2 style="${headingStyle}">${esc(issue.interview.title)}</h2>
         <img class="promo-image" src="${esc(issue.interview.image)}" alt="${esc(issue.interview.alt)}" width="592" style="display:block;width:100%;max-width:592px;height:auto;margin:20px 0;border:0;">
         ${issue.interview.lines.map((line) => `<p class="dialogue" style="${font}margin:0 0 14px;color:#d7dce2;font-size:14px;line-height:1.7;"><span class="speaker" style="color:#ffffff;font-weight:bold;letter-spacing:.5px;">${esc(line.speaker)}:</span> ${esc(line.text)}</p>`).join("\n")}
-      </td></tr>
-      <tr><td class="section report" style="${sectionStyle}background:#090b0e;border-top:3px solid #3b4653;">
+      </td></tr>` : ""}
+      ${issue.fieldReport ? `<tr><td class="section report" style="${sectionStyle}background:#090b0e;border-top:3px solid #3b4653;">
         <p class="eyebrow" style="${font}margin:0 0 12px;color:${esc(issue.accent)};font-size:11px;font-weight:bold;letter-spacing:2.5px;text-transform:uppercase;">LD-12 FIELD REPORT ${esc(issue.fieldReport.code)}</p>
         <h2 style="${headingStyle}">${esc(issue.fieldReport.title)}</h2>
         <img class="report-image" src="${esc(issue.fieldReport.image)}" alt="${esc(issue.fieldReport.alt)}" width="592" style="display:block;width:100%;max-width:592px;height:auto;margin:20px 0;border:0;">
         <div class="report-meta" style="${font}padding:14px 16px;background:#121820;color:#aeb9c5;font-size:12px;line-height:1.7;">CLASSIFICATION: ${esc(issue.fieldReport.classification)}<br>STATUS: INVESTIGATION OPEN<br>RESPONSIBLE UNIT: LD-12</div>
         ${paragraphs(issue.fieldReport.copy)}
-      </td></tr>
+      </td></tr>` : ""}
+      ${issue.authorNote ? `<tr><td class="section" style="${sectionStyle}background:#10151b;">
+        <p class="eyebrow" style="${font}margin:0 0 12px;color:${esc(issue.accent)};font-size:11px;font-weight:bold;letter-spacing:2.5px;text-transform:uppercase;">AUTHOR'S LOG // RELEASE WEEK</p>
+        <h2 style="${headingStyle}">${esc(issue.authorNote.title)}</h2>
+        ${paragraphs(issue.authorNote.copy)}
+        <p class="copy" style="${copyStyle}margin-top:24px;color:#ffffff;"><strong>— Tony</strong></p>
+      </td></tr>` : ""}
       <tr><td class="section books" style="${sectionStyle}background:#0a0d11;">
-        <p class="eyebrow" style="${font}margin:0 0 12px;color:${esc(issue.accent)};font-size:11px;font-weight:bold;letter-spacing:2.5px;text-transform:uppercase;">LAUNCH TRANSMISSION // OCTOBER 13, 2026</p>
-        <h2 style="${headingStyle}">The Dolphin begins.</h2>
+        <p class="eyebrow" style="${font}margin:0 0 12px;color:${esc(issue.accent)};font-size:11px;font-weight:bold;letter-spacing:2.5px;text-transform:uppercase;">${esc(issue.launchEyebrow || "LAUNCH TRANSMISSION // OCTOBER 13, 2026")}</p>
+        <h2 style="${headingStyle}">${esc(issue.launchTitle || "The Dolphin begins.")}</h2>
         ${paragraphs(issue.launchCopy)}
-        <div class="button-wrap" style="padding:8px 0 16px;text-align:center;"><a class="button" href="https://lunadumupress.com/#books" style="${font}display:inline-block;padding:13px 22px;background:${esc(issue.accent)};color:#08090b;font-size:14px;font-weight:bold;text-decoration:none;border-radius:3px;">View the books</a></div>
+        <div class="button-wrap" style="padding:8px 0 16px;text-align:center;"><a class="button" href="${esc(issue.launchUrl || "https://lunadumupress.com/#books")}" style="${font}display:inline-block;padding:13px 22px;background:${esc(issue.accent)};color:#08090b;font-size:14px;font-weight:bold;text-decoration:none;border-radius:3px;">${esc(issue.launchButton || "View the books")}</a></div>
       </td></tr>
       <tr><td class="footer" style="${font}padding:34px 44px 48px;background:#0a0c0f;color:#87919c;font-size:11px;line-height:1.7;">
         <strong style="color:#d7dce2">Luna Dumu Press</strong><br>

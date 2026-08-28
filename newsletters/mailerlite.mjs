@@ -167,6 +167,9 @@ function productionAssets(value) {
   if (typeof value === "string" && value.startsWith("../../images/")) {
     return `https://lunadumupress.com/${value.slice(6)}`;
   }
+  if (typeof value === "string" && value.startsWith("../../downloads/")) {
+    return `https://lunadumupress.com/${value.slice(6)}`;
+  }
   return value;
 }
 
@@ -177,8 +180,8 @@ async function createTestDraft(issueFile) {
   const issue = productionAssets(JSON.parse(fs.readFileSync(issuePath, "utf8")));
   const content = renderNewsletter(issue);
 
-  if (content.includes("../../images/") || content.includes("src=\"../")) {
-    throw new Error("Draft contains local image paths");
+  if (content.includes("../../images/") || content.includes("../../downloads/") || content.includes("src=\"../") || content.includes("href=\"../")) {
+    throw new Error("Draft contains local asset paths");
   }
   if (!content.includes("{$unsubscribe}")) {
     throw new Error("Draft is missing the MailerLite unsubscribe variable");
@@ -217,8 +220,8 @@ async function createProductionDraft(issueFile) {
   const issue = productionAssets(JSON.parse(fs.readFileSync(issuePath, "utf8")));
   const content = renderNewsletter(issue);
 
-  if (content.includes("../../images/") || content.includes("src=\"../")) {
-    throw new Error("Draft contains local image paths");
+  if (content.includes("../../images/") || content.includes("../../downloads/") || content.includes("src=\"../") || content.includes("href=\"../")) {
+    throw new Error("Draft contains local asset paths");
   }
   if (!content.includes("{$unsubscribe}")) {
     throw new Error("Draft is missing the MailerLite unsubscribe variable");
@@ -284,6 +287,24 @@ async function scheduleDraft(campaignId, date, hours, minutes, timezoneName = "A
   }, null, 2));
 }
 
+async function cancelCampaign(campaignId) {
+  if (!campaignId) throw new Error("Provide a campaign ID");
+
+  const result = await api(`/campaigns/${campaignId}/cancel`, {
+    method: "POST"
+  });
+
+  console.log(JSON.stringify({
+    id: result.data?.id,
+    name: result.data?.name,
+    status: result.data?.status,
+    recipients: result.data?.filter_for_humans,
+    scheduledFor: result.data?.scheduled_for,
+    deliverySchedule: result.data?.delivery_schedule,
+    warnings: result.data?.warnings
+  }, null, 2));
+}
+
 async function updateTestDraft(campaignId, issueFile) {
   if (!campaignId || !issueFile) {
     throw new Error("Provide a campaign ID and an issue JSON file");
@@ -293,8 +314,8 @@ async function updateTestDraft(campaignId, issueFile) {
   const issue = productionAssets(JSON.parse(fs.readFileSync(issuePath, "utf8")));
   const content = renderNewsletter(issue);
 
-  if (content.includes("../../images/") || content.includes("src=\"../")) {
-    throw new Error("Draft contains local image paths");
+  if (content.includes("../../images/") || content.includes("../../downloads/") || content.includes("src=\"../") || content.includes("href=\"../")) {
+    throw new Error("Draft contains local asset paths");
   }
   if (!content.includes("{$unsubscribe}")) {
     throw new Error("Draft is missing the MailerLite unsubscribe variable");
@@ -325,6 +346,49 @@ async function updateTestDraft(campaignId, issueFile) {
   }, null, 2));
 }
 
+async function updateProductionDraft(campaignId, issueFile) {
+  if (!campaignId || !issueFile) {
+    throw new Error("Provide a campaign ID and an issue JSON file");
+  }
+
+  const issuePath = path.resolve(root, issueFile);
+  const issue = productionAssets(JSON.parse(fs.readFileSync(issuePath, "utf8")));
+  const content = renderNewsletter(issue);
+
+  if (content.includes("../../images/") || content.includes("../../downloads/") || content.includes("src=\"../") || content.includes("href=\"../")) {
+    throw new Error("Draft contains local asset paths");
+  }
+  if (!content.includes("{$unsubscribe}")) {
+    throw new Error("Draft is missing the MailerLite unsubscribe variable");
+  }
+
+  const result = await api(`/campaigns/${campaignId}`, {
+    method: "PUT",
+    body: JSON.stringify({
+      name: `Pod #${issue.number} — ${issue.heading}`,
+      groups: ["180902431699240237"],
+      emails: [{
+        subject: issue.subject,
+        from_name: "Tony Angel",
+        from: "hello@lunadumupress.com",
+        reply_to: "hello@lunadumupress.com",
+        content
+      }]
+    })
+  });
+
+  console.log(JSON.stringify({
+    id: result.data?.id,
+    name: result.data?.name,
+    status: result.data?.status,
+    recipients: result.data?.filter_for_humans,
+    scheduledFor: result.data?.scheduled_for,
+    deliverySchedule: result.data?.delivery_schedule,
+    missingData: result.data?.missing_data,
+    warnings: result.data?.warnings
+  }, null, 2));
+}
+
 const command = process.argv[2];
 
 if (command === "inspect") {
@@ -339,9 +403,13 @@ if (command === "inspect") {
   await createProductionDraft(process.argv[3]);
 } else if (command === "update-test-draft") {
   await updateTestDraft(process.argv[3], process.argv[4]);
+} else if (command === "update-production-draft") {
+  await updateProductionDraft(process.argv[3], process.argv[4]);
+} else if (command === "cancel-campaign") {
+  await cancelCampaign(process.argv[3]);
 } else if (command === "schedule-draft") {
   await scheduleDraft(process.argv[3], process.argv[4], process.argv[5], process.argv[6], process.argv[7]);
 } else {
-  console.error("Usage: node mailerlite.mjs inspect | inspect-signups YYYY-MM-DD | inspect-draft CAMPAIGN_ID | create-test-draft ISSUE | create-production-draft ISSUE | update-test-draft CAMPAIGN_ID ISSUE | schedule-draft CAMPAIGN_ID YYYY-MM-DD HH MM [TIMEZONE]");
+  console.error("Usage: node mailerlite.mjs inspect | inspect-signups YYYY-MM-DD | inspect-draft CAMPAIGN_ID | create-test-draft ISSUE | create-production-draft ISSUE | update-test-draft CAMPAIGN_ID ISSUE | update-production-draft CAMPAIGN_ID ISSUE | cancel-campaign CAMPAIGN_ID | schedule-draft CAMPAIGN_ID YYYY-MM-DD HH MM [TIMEZONE]");
   process.exit(1);
 }
