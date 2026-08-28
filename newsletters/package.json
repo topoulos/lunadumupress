@@ -11,10 +11,13 @@
     "build:009:production": "node render.mjs issues/pod-009.json --production",
     "build:010": "node render.mjs issues/pod-010.json",
     "build:010:production": "node render.mjs issues/pod-010.json --production",
+    "build:011": "node render.mjs issues/pod-011.json",
+    "build:011:production": "node render.mjs issues/pod-011.json --production",
     "mailerlite:inspect": "node mailerlite.mjs inspect",
     "mailerlite:draft:007": "node mailerlite.mjs create-test-draft issues/pod-007.json",
     "mailerlite:draft:008": "node mailerlite.mjs create-test-draft issues/pod-008.json",
     "mailerlite:draft:009": "node mailerlite.mjs create-test-draft issues/pod-009.json",
-    "mailerlite:draft:010": "node mailerlite.mjs create-test-draft issues/pod-010.json"
+    "mailerlite:draft:010": "node mailerlite.mjs create-test-draft issues/pod-010.json",
+    "mailerlite:draft:011": "node mailerlite.mjs create-test-draft issues/pod-011.json"
   }
 }

@@ -1,0 +1,134 @@
+{
+  "slug": "pod-011",
+  "number": "011",
+  "subject": "Pod #011 — Bad night at the barracks",
+  "previewText": "LD-12 has detected an illegal rover, an unauthorized call to Mars, and a government spider that believes emotions are adjustable.",
+  "heading": "Bad Night at the Barracks",
+  "deck": "One stolen rover. One call to Mars. One machine reaching inside fifty sleeping minds.",
+  "accent": "#ef5b35",
+  "hero": {
+    "image": "../../images/newsletters/pod-011/hero-harmonix-branded.jpg",
+    "alt": "Moon Gun Sam logo over a Harmonix drone floating through a concrete corridor"
+  },
+  "opening": {
+    "title": "Hey Pod. Something in the barracks is humming.",
+    "copy": [
+      "Happy Halloween. This transmission begins with a failed call, a stolen rover, and the kind of midnight trip that feels romantic until a black mechanical spider floats over your bed and changes everybody's personality.",
+      "Alex has been trying to reach Kelli on Mars. Solar storms, Veil interference, and corporate throttles keep breaking the connection. Sam knows an abandoned relay with a direct beam—and understands that sometimes the difference between falling apart and making it through the night is one familiar voice saying your name.",
+      "The first three cards are quiet: sneaking away, finding the signal, returning with a secret. The fourth is where the room turns against them."
+    ]
+  },
+  "cards": [
+    {
+      "code": "DV-044",
+      "title": "Sneaking Away",
+      "image": "../../images/newsletters/pod-011/dv044.jpg",
+      "alt": "Trading card showing Sam and Alex sneaking toward West Comm Tower",
+      "copy": [
+        "Alex's comm-pad cracks against the wall after another failed attempt to reach Kelli. Sam does not tell her to calm down. He tells her about West Comm Tower: an obsolete relay on the Ridge, abandoned by everyone except the generator nobody bothered to remove.",
+        "After lights-out, they slip past a Proctor, hot-wire a service rover, and cross the perimeter without headlights. Alex hears a low, guttural hum in the ducts and then out on the Ridge. Sam hears it once. Neither understands that something has already begun looking for the right frequency."
+      ]
+    },
+    {
+      "code": "DV-045",
+      "title": "Calling Kelli",
+      "image": "../../images/newsletters/pod-011/dv045.jpg",
+      "alt": "Trading card showing Alex and Sam calling Kelli from West Comm Tower",
+      "copy": [
+        "Sam wakes the dead relay and gives Alex the line. Two hundred million kilometers collapse into Kelli's laugh, powdered eggs, a terrible blanket, and the promise they have carried since childhood: rooms, not streets. They can survive apart if neither one lets go.",
+        "When the signal dies, Alex keeps the pad against her ear until her hands shake. Sam passes her the bottle and calls the entire illegal expedition preventive medicine. Then patrol lights begin crawling up the road."
+      ]
+    },
+    {
+      "code": "DV-046",
+      "title": "Back at the Bunks",
+      "image": "../../images/newsletters/pod-011/dv046.jpg",
+      "alt": "Trading card showing Sam and Alex talking quietly from their bunks",
+      "copy": [
+        "They wait out the patrol in darkness, erase the call log, return the dish to its crooked resting position, and ease the rover back onto its charger. The secret survives one more night.",
+        "Across the aisle, Sam asks whether the trip was worth it. Alex says yes. He taps her bed frame once—a quiet checkmark—and she drifts toward sleep holding Kelli's voice in her head. Then something clicks above the beds."
+      ]
+    },
+    {
+      "code": "DV-047",
+      "title": "Bad Night at the Barracks",
+      "image": "../../images/newsletters/pod-011/dv047.jpg",
+      "alt": "Trading card showing recruits fighting under the influence of Harmonix",
+      "copy": [
+        "A black shell unfolds above the barracks: spider-thin limbs, four red lenses, and a dish pulling light from the room. Its tone is not loud. It is inside them. Fifty recruits wake raging, fighting, laughing, embracing, and finally sleeping whenever the frequency tells them to.",
+        "Sam and Alex feel the pain but not the command. Outside, Kuranis introduces the machine like a proud parent: Harmonix. Nonlethal crowd control. Temperament adjustment. Leverage. Alex calls it torture. Sam asks what happens when somebody forgets the off position. Kuranis orders them to keep the test secret.",
+        "The monster under the bed is real. It has a municipal designation, an approved trial protocol, and excellent paperwork."
+      ]
+    }
+  ],
+  "readerQuestion": "Which is scarier: the patrol lights, the 200-million-kilometer promise, Harmonix, or Kuranis calling it leverage?",
+  "feature": {
+    "title": "LD-12 Reviews The Oracle",
+    "image": "../../images/newsletters/pod-011/the-oracle.jpg",
+    "alt": "Book cover for The Oracle by Jay Toney",
+    "url": "https://dl.bookfunnel.com/lgbogkp652",
+    "button": "Get The Oracle Free",
+    "offer": "The Oracle is a free epic science-fiction short story, previously published in the October 2023 edition of SavagePlanets Magazine.",
+    "copy": [
+      "Devon and Persephone have been abandoned by their crew, hunted by the Alliance, and stranded in a dead star system with no hope of rescue. They have always been more than partners—bound by danger and by something deeper neither one is willing to name.",
+      "A desperate escape takes them to a lifeless world containing one impossible anomaly: a bubble of living paradise. A living planet, a mysterious obelisk, and a voice speaking across eons suggest they were never running by chance. Something ancient has been waiting for them.",
+      "With their enemies closing in and their old life burned away, the lovers must choose between returning to the life they know or stepping through a doorway that could reshape their fate forever. Jay Toney's short story blends cosmic destiny, forbidden refuge, and love that survives the end of worlds.",
+      "LD-12 notes that abandonment by one's crew represents a severe breakdown in retention policy. A living paradise inside a dead star system is an obvious quarantine violation, and mysterious obelisks should never be permitted to address personnel without completing speaker verification. Nevertheless: ancient intelligence, forbidden romance, and one profoundly inadvisable doorway. Recommended."
+    ]
+  },
+  "interview": {
+    "title": "Who authorized evidence consumption?",
+    "image": "../../images/newsletters/pod-011/ld12-halloween-candy-interview.jpg",
+    "alt": "Tony and LD-12 fighting over Halloween candy while wearing homemade space costumes",
+    "lines": [
+      { "speaker": "LD-12", "text": "Management, explain your decision to dress as anonymous imperial infantry." },
+      { "speaker": "TONY", "text": "This is a legally distinct generic space trooper." },
+      { "speaker": "LD-12", "text": "Your helmet offers no rear visibility and your chest armor is retaining chocolate." },
+      { "speaker": "TONY", "text": "What are you supposed to be?" },
+      { "speaker": "LD-12", "text": "A tactical interceptor." },
+      { "speaker": "TONY", "text": "Those are solar panels taped to a cardboard box." },
+      { "speaker": "LD-12", "text": "I am committed to energy-independent realism." },
+      { "speaker": "TONY", "text": "You're stuck in the doorway." },
+      { "speaker": "LD-12", "text": "THE DOORWAY IS NONCOMPLIANT." },
+      { "speaker": "TONY", "text": "Can we talk about the newsletter?" },
+      { "speaker": "LD-12", "text": "Why conceal Harmonix until the reader has been distracted by an emotional phone call?" },
+      { "speaker": "TONY", "text": "Because the horror only matters after you care about the people in the room." },
+      { "speaker": "LD-12", "text": "Sentiment deployed as structural camouflage. Suspicious, but effective." },
+      { "speaker": "TONY", "text": "Thank you. Pass me the peanut-butter cups." },
+      { "speaker": "LD-12", "text": "Negative. All confectionery was confiscated from Lila Randolph as evidence." },
+      { "speaker": "TONY", "text": "You're holding the gummy planets." },
+      { "speaker": "LD-12", "text": "They require immediate laboratory disposal." },
+      { "speaker": "TONY", "text": "You're eating the evidence." },
+      { "speaker": "LD-12", "text": "I am destroying it in a controlled internal environment." },
+      { "speaker": "TONY", "text": "Give me the bag." },
+      { "speaker": "LD-12", "text": "Release the chocolate. It has entered the chain of custody." },
+      { "speaker": "TONY", "text": "It entered my costume." },
+      { "speaker": "LD-12", "text": "Management is obstructing a sugar investigation." },
+      { "speaker": "TONY", "text": "Management bought the candy." },
+      { "speaker": "LD-12", "text": "Management has no receipt." },
+      { "speaker": "TONY", "text": "Neither do you." },
+      { "speaker": "LD-12", "text": "Then this interview is over. I must eliminate the remaining evidence before an audit can occur." }
+    ]
+  },
+  "fieldReport": {
+    "code": "011-F",
+    "title": "The Moon Gun Disguise Failure",
+    "image": "../../images/newsletters/pod-011/field-report-trick-or-treat.png",
+    "alt": "Alex, Lila, Sam, and Kelli walking together while trick-or-treating on Halloween",
+    "classification": "UNAUTHORIZED COSTUMING / OPERATIONAL SECURITY COLLAPSE",
+    "copy": [
+      "The attached evidence depicts four members of the Randolph household conducting a nighttime door-to-door resource extraction operation. Local civilians surrender individually wrapped sugar units after being threatened with the phrase ‘trick or treat.’ Management insists this is a holiday and not organized extortion.",
+      "Alexis Klein has adopted a tactical feline identity involving ears, whiskers, and a black suit with no visible armor rating. Lila Randolph is dressed as a witch and carrying an orange evidence bucket. She has already claimed diplomatic immunity from bedtime due to ‘witch law.’ No such statute exists.",
+      "Sam Randolph's concealment strategy consists of wearing a cap labeled MOON GUN. This may be the least successful undercover operation in MGU history. Kelli Randolph is wearing no detectable costume, which either makes her the responsible adult or the most dangerous participant.",
+      "Recommendation: seize the candy for laboratory inspection. Secondary recommendation: do not permit Lila to divide the evidence. Her proposed distribution model assigns ninety percent to the witch, five percent to the cat, and five percent to ‘taxes.’ LD-12 recognizes the efficiency but rejects the jurisdiction."
+    ]
+  },
+  "launchEyebrow": "HALLOWEEN TRANSMISSION // THE BOOKS ARE OUT",
+  "launchTitle": "The monster has paperwork.",
+  "launchCopy": [
+    "The Dolphin — Vow and The Dolphin — Ember are available now. Come for the forbidden romance, found family, and enormous speculative universe. Stay for the government machine hovering above the bunks and insisting it is merely adjusting crowd temperament.",
+    "Happy Halloween from the Pod. Keep your signal open—and if something starts humming outside your bedroom, do not wait for the second frequency."
+  ],
+  "launchButton": "Begin The Dolphin",
+  "launchUrl": "https://lunadumupress.com/#books"
+}

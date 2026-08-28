@@ -164,7 +164,7 @@ export function renderNewsletter(issue) {
         <h2 style="${headingStyle}">${esc(issue.feature.title)}</h2>
         <img class="promo-image" src="${esc(issue.feature.image)}" alt="${esc(issue.feature.alt)}" width="592" style="display:block;width:100%;max-width:592px;height:auto;margin:20px 0;border:0;">
         ${paragraphs(issue.feature.copy)}
-        <div class="button-wrap" style="padding:8px 0 16px;text-align:center;"><a class="button" href="${esc(issue.feature.url)}" style="${font}display:inline-block;padding:13px 22px;background:${esc(issue.accent)};color:#08090b;font-size:14px;font-weight:bold;text-decoration:none;border-radius:3px;">${esc(issue.feature.button)}</a></div>
+        ${issue.feature.url ? `<div class="button-wrap" style="padding:8px 0 16px;text-align:center;"><a class="button" href="${esc(issue.feature.url)}" style="${font}display:inline-block;padding:13px 22px;background:${esc(issue.accent)};color:#08090b;font-size:14px;font-weight:bold;text-decoration:none;border-radius:3px;">${esc(issue.feature.button)}</a></div>` : ""}
         <p class="copy" style="${copyStyle}"><strong>${esc(issue.feature.offer)}</strong></p>
       </td></tr>` : ""}
       ${issue.interview ? `<tr><td class="section dossier" style="${sectionStyle}background:#0d1116;border-left:4px solid ${esc(issue.accent)};">
