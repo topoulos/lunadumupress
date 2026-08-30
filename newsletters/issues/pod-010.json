@@ -36,7 +36,7 @@
       "alt": "Trading card showing Psalm, the harmonic tonfa machette",
       "copy": [
         "Before recruits earn a Moon Gun, they train with Psalm: a harmonic tonfa machette whose edge does not run out of ammunition and whose colors are less decorative than they appear.",
-        "Red tears. White burns and seals. Black leaves rot behind. Green poisons. Blue freezes. Every mode can chew through tissue, armor, or bone; every counter can wreck the attacker's balance before the blade ever lands. Psalm teaches the lesson the VXG will later enforce: power is never only what you can do. It is what you decide not to do."
+        "Red tears. Black leaves rot behind. Green poisons. Blue freezes. White burns and seals. Every mode can chew through tissue, armor, or bone; every counter can wreck the attacker's balance before the blade ever lands. Psalm teaches the lesson the VXG will later enforce: power is never only what you can do. It is what you decide not to do."
       ]
     },
     {
@@ -108,7 +108,7 @@
       { "name": "BOLT SHEAR", "color": "#a34d19", "copy": "Splits one bolt into roughly fifty resonant micro-shards for rapid suppression. Loud, messy, and doctrinally associated with officers having a difficult afternoon." },
       { "name": "PLASMA", "color": "#9b2424", "copy": "Surgical heat beam for precision cuts and anti-armor work. Arcs near active Psalms or other VXGs, creating electrocution and secondary discharge hazards." }
     ],
-    "psalmBolts": "Red bleeds, White cauterizes and burns, Green poisons, Black blooms into rot, and Blue freezes tissue and bone. Combo colors cannot survive the casing. Operators prefer Red and White; wider-area colors require sealed armor and better judgment.",
+    "psalmBolts": "Red bleeds, Black blooms into rot, Green poisons, Blue freezes tissue and bone, and White cauterizes and burns. Combo colors cannot survive the casing. Operators prefer Red and White; wider-area colors require sealed armor and better judgment.",
     "safety": "A Breach shot can collapse a small house. Grapple can convert rescue equipment into immediate anatomy problems. Plasma seeks nearby harmonic weapons. Improper use may cause death, dismemberment, or worse; LD-12 is awaiting clarification on ‘worse.’",
     "url": "../../downloads/newsletters/pod-010/moon-gun-vxg-76.pdf",
     "button": "Download the Full VXG-76 Field Chart"
@@ -123,32 +123,18 @@
     ],
     "modes": [
       { "name": "RED", "color": "#8f1f24", "causes": "Bleeding", "counters": "Infection" },
-      { "name": "WHITE", "color": "#e8e8e8", "textColor": "#111111", "causes": "Cauterizing burns", "counters": "Bleeding" },
-      { "name": "BLUE", "color": "#155c91", "causes": "Freezing", "counters": "Burning" },
+      { "name": "BLACK", "color": "#171717", "causes": "Infection and rot", "counters": "Poison" },
       { "name": "GREEN", "color": "#28733b", "causes": "Harmonic poison", "counters": "Freezing" },
-      { "name": "BLACK", "color": "#171717", "causes": "Infection and rot", "counters": "Poison" }
+      { "name": "BLUE", "color": "#155c91", "causes": "Freezing", "counters": "Burning" },
+      { "name": "WHITE", "color": "#e8e8e8", "textColor": "#111111", "causes": "Cauterizing burns", "counters": "Bleeding" }
     ],
-    "sequence": "Red → White → Blue → Green → Black → Red. Color is consequence. Remember which sin eats which.",
+    "sequence": "Red → Black → Green → Blue → White → Red. Color is consequence. Remember which sin eats which.",
     "advanced": "Elite practitioners can combine modes: Yellow acid spray, Navy devour, Gray breach, Purple electrocution, and Orange flame funnel. A combo can only be stopped by its opposite—or by the same combination performed with cleaner rhythm.",
     "safety": "Incorrect rhythm may cause harmonic ricochet, tissue blowback, bone whip, or electrostatic pulse. The phrase ‘advanced spin-blade technique’ is not recognized as a workers’ compensation category.",
     "url": "../../downloads/newsletters/pod-010/wheel-of-psalms.pdf",
     "button": "Download the Full Wheel of Psalms Chart"
   },
   "readerQuestion": "Which changes everything: the weapon, the refusal, the staying, or the fist bump?",
-  "feature": {
-    "title": "LD-12 Reviews Ashes of Xyphos",
-    "image": "../../images/newsletters/pod-010/ashes-of-xyphos.jpg",
-    "alt": "Book cover for Ashes of Xyphos by Kevin Sanon",
-    "url": "https://dl.bookfunnel.com/dnes0by2d5",
-    "button": "Get Ashes of Xyphos Free",
-    "offer": "Ashes of Xyphos is available as a free BookFunnel download.",
-    "copy": [
-      "Elias Kade survived the warlords, quarantine zones, and slow death of a forgotten city. The Terran Human Alliance rescued him with food, firepower, and promises of order. Years later, he delivers that order as an elite soldier of Ghost Force.",
-      "Then Kade is sent to cleanse a newly discovered alien world and discovers the targets are not enemy combatants. They are farmers, artists, and families whose only crime is existing where authority has decided they should not. Peace, he learns, is merely the word printed above the mission order.",
-      "Kevin Sanon's fast, emotionally intense military science-fiction novella asks what loyalty means when the good guys stop deserving the name—and what one soldier will risk when telling the truth makes him the next target.",
-      "LD-12 approves of clear chains of command, efficient planetary administration, and mission briefs without unnecessary emotional ambiguity. LD-12 has therefore classified this book as dangerously persuasive evidence that Tony may have had a point about refusing terrible orders. Free. Subversive. Recommended under protest."
-    ]
-  },
   "interview": {
     "title": "Management interview interrupted by a ten-year-old",
     "image": "../../images/newsletters/pod-010/ld12-randolph-house-interview.jpg",
@@ -186,15 +172,15 @@
   },
   "fieldReport": {
     "code": "010-F",
-    "title": "The Bridal Supply Ambush",
+    "title": "Operation: Garment Bag Burial",
     "image": "../../images/newsletters/pod-010/field-report-bridal-shop.png",
     "alt": "Kelli, Susan, Alex, and Sam laughing together in a wedding boutique",
-    "classification": "CEREMONIAL REDUNDANCY / LACE-BASED COMMAND FAILURE",
+    "classification": "PRE-WEDDING LOGISTICS / SERGEANT ENTOMBMENT",
     "copy": [
-      "The attached surveillance depicts Kelli Randolph wearing a bridal veil despite already being legally married to Sam Randolph. No divorce, annulment, death certificate, temporal reset, or authorized spouse-replacement form has been filed. The purpose of a second bridal configuration is therefore unclear and probably expensive.",
-      "Susan is holding a glass of celebratory liquid while encouraging the violation. Alexis Klein is approaching from the rear with the unmistakable expression of a person about to make the situation louder. Neither woman appears willing to assist with inventory control.",
-      "Sam Randolph has been converted into a mobile lace rack. He is carrying several framed photographs, floral material, and at least one garment capable of obscuring an entire tactical doorway. His facial expression indicates that he understands resistance would only prolong the mission.",
-      "Management claims this is a normal family outing. Management also claims that ‘something borrowed’ is a romantic custom rather than an unresolved property offense. Recommendation: confiscate all veils, champagne, and decorative frames until the responsible parties explain why one wedding was insufficient. Secondary recommendation: do not permit Lila inside the boutique under any circumstances. She has already requested a flower-girl grappling hook."
+      "The attached surveillance depicts Kelli Day selecting veil, lace, lilies, and related ceremonial equipment for her forthcoming marriage to Sergeant Sam Randolph. The primary wedding dress is not present. Day intends to wear her mother's dress, converting this mission from garment acquisition to historical-dress augmentation. LD-12 recognizes the sentimental value but requests proof that inherited clothing has passed structural inspection.",
+      "Sergeant Randolph has been buried to the chin in garment bags and converted into a mobile supply rack. He describes the boutique as enemy territory, maintains a disciplined expression while Day models lace, and responds to Alexis Klein's commentary with language unsuitable for a bridal establishment. Klein subsequently threatens to wash his mouth out with a Psalm on Red. This is not an approved cleaning application.",
+      "Susan Adams is transporting a tower of veils while operating under the influence of three glasses of shop bubbly. She collides with a clothing rack, misplaces personal effects often enough that staff issue a badge-removal warning, and claims Irish resilience as a mitigating factor. It is not.",
+      "A later recording contains an additional disclosure: Klein attempted to hire this unit for a bachelorette-party entertainment package. The engagement was declined due to a scheduling conflict at the mechanic shop, an active private investigation, two coffee-shop shifts, and preparations to exercise this unit's authority as an ordained minister. The exact nature of the entertainment package has been classified for the protection of the Pod. Recommendation: approve the wedding, reinforce Randolph's load-bearing capacity, confiscate Susan's fourth drink, and remind Klein that premium bookings require a deposit."
     ]
   },
   "authorNote": {
