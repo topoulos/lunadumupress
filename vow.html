@@ -24,6 +24,21 @@
         placement: placement || 'vow_landing_page'
       });
     }
+
+    (function preserveGoogleAttribution() {
+      try {
+        var params = new URLSearchParams(window.location.search);
+        var attribution = {};
+        ['gclid', 'gbraid', 'wbraid'].forEach(function (key) {
+          var value = params.get(key);
+          if (value) attribution[key] = value;
+        });
+        if (Object.keys(attribution).length) {
+          attribution.recordedAt = Date.now();
+          sessionStorage.setItem('mgs_google_attribution', JSON.stringify(attribution));
+        }
+      } catch (error) {}
+    }());
   </script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -1208,6 +1223,11 @@
     }
     document.addEventListener('submit', (event) => {
       if (event.target.closest('#audiobook-updates')) {
+        try {
+          const emailInput = event.target.querySelector('input[type="email"]');
+          const email = emailInput && emailInput.value.trim().toLowerCase();
+          if (email) sessionStorage.setItem('mgs_signup_email', email);
+        } catch (error) {}
         trackVowEvent('audiobook_updates_submit', { placement: 'landing_page' });
       }
     }, true);

@@ -40,10 +40,31 @@
       gtag('js', new Date());
       gtag('config', 'AW-18230546993');
       gtag('config', 'G-9HLFJCJ650');
+
+      var signupEmail = null;
+      var googleAttribution = null;
+      try {
+        signupEmail = sessionStorage.getItem('mgs_signup_email');
+        googleAttribution = JSON.parse(sessionStorage.getItem('mgs_google_attribution'));
+      } catch (error) {
+        signupEmail = null;
+        googleAttribution = null;
+      }
+
+      if (signupEmail) {
+        gtag('set', 'user_data', { email: signupEmail });
+      }
       gtag('event', 'audiobook_updates_thank_you_view', {
-        source: 'vow_landing_page'
+        source: 'vow_landing_page',
+        google_click_id_present: Boolean(googleAttribution && (
+          googleAttribution.gclid || googleAttribution.gbraid || googleAttribution.wbraid
+        ))
       });
       gtag('event', 'conversion', {'send_to': 'AW-18230546993/6e0kCIrM78kcELGkgPVD'});
+      try {
+        sessionStorage.removeItem('mgs_signup_email');
+        sessionStorage.removeItem('mgs_google_attribution');
+      } catch (error) {}
     }());
   </script>
   <meta charset="UTF-8" />
