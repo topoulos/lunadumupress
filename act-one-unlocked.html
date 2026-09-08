@@ -12,7 +12,10 @@
     gtag('event', 'act_one_unlocked_view', {
       source: 'vow_landing_page'
     });
-    gtag('event', 'conversion', {'send_to': 'AW-18230546993/6e0kCIrM78kcELGkgPVD'});
+    /* Pod Signup Confirmed (AW-18230546993/6e0kCIrM78kcELGkgPVD) must only fire on
+       vow-thanks.html. No Act One conversion action exists in Ads yet — create a
+       separate Ads conversion if Act One unlock should convert later. Do not reuse
+       the Pod Signup Confirmed send_to here (it polluted that conversion). */
   </script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
