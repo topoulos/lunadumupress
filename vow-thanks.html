@@ -66,7 +66,12 @@
         source: 'vow_landing_page',
         google_click_id_present: Boolean(googleAttribution && (
           googleAttribution.gclid || googleAttribution.gbraid || googleAttribution.wbraid
-        ))
+        )),
+        utm_source_present: Boolean(googleAttribution && googleAttribution.utm_source),
+        utm_source: (googleAttribution && googleAttribution.utm_source) || undefined,
+        utm_medium: (googleAttribution && googleAttribution.utm_medium) || undefined,
+        utm_campaign: (googleAttribution && googleAttribution.utm_campaign) || undefined,
+        fbclid_present: Boolean(googleAttribution && googleAttribution.fbclid)
       });
       // Pod Signup Confirmed (conversion ID 7671113226) — session-deduped vs act-one-thanks
       if (!alreadyConfirmed) {
