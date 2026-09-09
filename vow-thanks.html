@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
   <!-- Attribute the confirmation to the campaign that sent the visitor. -->
+  <!-- Pod Signup Confirmed may also fire on act-one-thanks; session key
+       mgs_pod_signup_confirmed dedupes so bounce between pages won't double-count. -->
   <script>
     (function () {
       var campaign = null;
@@ -27,7 +29,10 @@
         fbq('init', '2135803324017768');
         fbq('track', 'PageView');
         fbq('track', 'Lead');
-        try { sessionStorage.removeItem('mgs_campaign_source'); } catch (error) {}
+        try {
+          sessionStorage.setItem('mgs_pod_signup_confirmed', String(Date.now()));
+          sessionStorage.removeItem('mgs_campaign_source');
+        } catch (error) {}
         return;
       }
 
@@ -43,12 +48,15 @@
 
       var signupEmail = null;
       var googleAttribution = null;
+      var alreadyConfirmed = null;
       try {
         signupEmail = sessionStorage.getItem('mgs_signup_email');
         googleAttribution = JSON.parse(sessionStorage.getItem('mgs_google_attribution'));
+        alreadyConfirmed = sessionStorage.getItem('mgs_pod_signup_confirmed');
       } catch (error) {
         signupEmail = null;
         googleAttribution = null;
+        alreadyConfirmed = null;
       }
 
       if (signupEmail) {
@@ -60,8 +68,13 @@
           googleAttribution.gclid || googleAttribution.gbraid || googleAttribution.wbraid
         ))
       });
-      // Pod Signup Confirmed (conversion ID 7671113226)
-      gtag('event', 'conversion', {'send_to': 'AW-18230546993/6e0kCIrM78kcELGkgPVD'});
+      // Pod Signup Confirmed (conversion ID 7671113226) — session-deduped vs act-one-thanks
+      if (!alreadyConfirmed) {
+        gtag('event', 'conversion', {'send_to': 'AW-18230546993/6e0kCIrM78kcELGkgPVD'});
+        try {
+          sessionStorage.setItem('mgs_pod_signup_confirmed', String(Date.now()));
+        } catch (error) {}
+      }
       try {
         sessionStorage.removeItem('mgs_signup_email');
         sessionStorage.removeItem('mgs_google_attribution');

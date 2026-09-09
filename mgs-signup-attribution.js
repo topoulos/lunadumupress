@@ -1,6 +1,7 @@
 /* Shared MailerLite signup attribution helpers.
- * Stashes Google click IDs + signup email for vow-thanks enhanced conversion.
- * Do NOT fire Ads conversions here — Pod Signup Confirmed fires only on vow-thanks.
+ * Stashes Google click IDs + signup email for enhanced conversion on thanks pages.
+ * Do NOT fire Ads conversions here — Pod Signup Confirmed may fire on vow-thanks
+ * OR act-one-thanks (session-deduped via mgs_pod_signup_confirmed).
  */
 (function () {
   try {
