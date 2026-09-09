@@ -25,20 +25,6 @@
       });
     }
 
-    (function preserveGoogleAttribution() {
-      try {
-        var params = new URLSearchParams(window.location.search);
-        var attribution = {};
-        ['gclid', 'gbraid', 'wbraid'].forEach(function (key) {
-          var value = params.get(key);
-          if (value) attribution[key] = value;
-        });
-        if (Object.keys(attribution).length) {
-          attribution.recordedAt = Date.now();
-          sessionStorage.setItem('mgs_google_attribution', JSON.stringify(attribution));
-        }
-      } catch (error) {}
-    }());
   </script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -1235,6 +1221,9 @@
     addEventListener('resize', updateReadingProgress);
     updateReadingProgress();
   </script>
+
+  <!-- Shared Ads UTM + click ID + signup email stash (vow-thanks / act-one-thanks) -->
+  <script src="mgs-signup-attribution.js"></script>
 
   <!-- MailerLite Universal -->
   <script>

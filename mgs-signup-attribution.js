@@ -1,19 +1,42 @@
-/* Shared MailerLite signup attribution helpers.
- * Stashes Google click IDs + signup email for enhanced conversion on thanks pages.
+/* Shared signup attribution helpers.
+ * Stashes Ads UTMs + click IDs + signup email for enhanced conversion on
+ * vow-thanks / act-one-thanks, and future ML Ad Platform mapping
+ * (Newsletter owns the MailerLite field).
  * Do NOT fire Ads conversions here — Pod Signup Confirmed may fire on vow-thanks
  * OR act-one-thanks (session-deduped via mgs_pod_signup_confirmed).
  */
 (function () {
   try {
     var params = new URLSearchParams(window.location.search);
-    var attribution = {};
-    ['gclid', 'gbraid', 'wbraid'].forEach(function (key) {
+    var keys = [
+      'utm_source',
+      'utm_medium',
+      'utm_campaign',
+      'gclid',
+      'gbraid',
+      'wbraid',
+      'fbclid'
+    ];
+    var existing = {};
+    try {
+      existing = JSON.parse(sessionStorage.getItem('mgs_google_attribution')) || {};
+    } catch (parseError) {
+      existing = {};
+    }
+    if (!existing || typeof existing !== 'object') existing = {};
+
+    var changed = false;
+    keys.forEach(function (key) {
       var value = params.get(key);
-      if (value) attribution[key] = value;
+      if (value) {
+        existing[key] = value;
+        changed = true;
+      }
     });
-    if (Object.keys(attribution).length) {
-      attribution.recordedAt = Date.now();
-      sessionStorage.setItem('mgs_google_attribution', JSON.stringify(attribution));
+    // Merge only: never overwrite existing keys with empty/missing URL values.
+    if (changed) {
+      existing.recordedAt = Date.now();
+      sessionStorage.setItem('mgs_google_attribution', JSON.stringify(existing));
     }
   } catch (error) {}
 
