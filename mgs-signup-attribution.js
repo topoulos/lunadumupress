@@ -65,16 +65,45 @@
     return '';
   }
 
-  function ensureHiddenInput(form, name, value) {
-    if (!form || value == null || value === '') return;
-    var input = form.querySelector('input[name="' + name + '"]');
-    if (!input) {
-      input = document.createElement('input');
-      input.type = 'hidden';
-      input.name = name;
-      form.appendChild(input);
+  function findNamedField(form, name) {
+    return (
+      form.querySelector('input[name="' + name + '"]') ||
+      form.querySelector('textarea[name="' + name + '"]') ||
+      form.querySelector('select[name="' + name + '"]')
+    );
+  }
+
+  /** Prefer native ML fields; hide them on landers. Inject only if missing. */
+  function setAttributionField(form, name, value) {
+    if (!form) return;
+    var field = findNamedField(form, name);
+    if (!field) {
+      if (value == null || value === '') return;
+      field = document.createElement('input');
+      field.type = 'hidden';
+      field.name = name;
+      form.appendChild(field);
+    } else {
+      // Native embed may render these as visible text — fill + hide UI, keep type.
+      field.setAttribute('aria-hidden', 'true');
+      field.tabIndex = -1;
+      var group = field.closest(
+        '.ml-field-group, .ml-form-fieldRow, .ml-form-fieldWrapper, .form-group'
+      );
+      if (group) {
+        group.style.display = 'none';
+        group.setAttribute('aria-hidden', 'true');
+      } else {
+        field.style.position = 'absolute';
+        field.style.left = '-9999px';
+        field.style.height = '1px';
+        field.style.width = '1px';
+        field.style.overflow = 'hidden';
+      }
     }
-    input.value = String(value);
+    if (value != null && value !== '') {
+      field.value = String(value);
+    }
   }
 
   function applyAttributionToForm(form) {
@@ -82,16 +111,18 @@
     // MailerLite embedded forms (and any form that already has these fields).
     var looksLikeMl =
       form.querySelector('input[name="ml-submit"]') ||
-      form.querySelector('input[name="' + AD_PLATFORM_NAME + '"]') ||
-      form.querySelector('input[name="' + UTM_CAMPAIGN_NAME + '"]') ||
+      findNamedField(form, AD_PLATFORM_NAME) ||
+      findNamedField(form, UTM_CAMPAIGN_NAME) ||
       (form.closest && form.closest('.ml-embedded, .ml-form-embedContainer'));
     if (!looksLikeMl) return;
 
     var attr = readAttribution();
     var platform = adPlatformFromAttribution(attr);
     var campaign = attr.utm_campaign ? String(attr.utm_campaign) : '';
-    ensureHiddenInput(form, AD_PLATFORM_NAME, platform);
-    ensureHiddenInput(form, UTM_CAMPAIGN_NAME, campaign);
+    // Always hide native Ad Platform / utm_campaign controls on landers,
+    // even when values are empty (organic).
+    setAttributionField(form, AD_PLATFORM_NAME, platform);
+    setAttributionField(form, UTM_CAMPAIGN_NAME, campaign);
   }
 
   function applyToAllMlForms() {
