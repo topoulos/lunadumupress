@@ -1,34 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18230546993"></script>
+  <!-- Attribute the confirmation to the campaign that sent the visitor.
+       Pod Signup Confirmed may also fire on vow-thanks; session key
+       mgs_pod_signup_confirmed dedupes so bounce between pages won't double-count. -->
   <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'AW-18230546993');
-    gtag('config', 'G-9HLFJCJ650');
-    gtag('event', 'act_one_unlocked_view', {
-      source: 'vow_landing_page'
-    });
-    /* Pod Signup Confirmed (AW-18230546993/6e0kCIrM78kcELGkgPVD) must NOT fire here.
-       Do not reuse that send_to on this redirect page (it polluted the conversion).
-       BookFunnel Act One success URL should land on /act-one-thanks after BF delivery;
-       that owned thanks page (or vow-thanks) fires Pod Signup Confirmed, session-deduped. */
+    (function () {
+      var campaign = null;
+      try {
+        campaign = JSON.parse(sessionStorage.getItem('mgs_campaign_source'));
+      } catch (error) {
+        campaign = null;
+      }
+
+      var isRecentMetaVisit = campaign &&
+        campaign.source === 'meta' &&
+        Date.now() - campaign.recordedAt < 24 * 60 * 60 * 1000;
+
+      if (isRecentMetaVisit) {
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window, document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '2135803324017768');
+        fbq('track', 'PageView');
+        fbq('track', 'Lead');
+        try {
+          sessionStorage.setItem('mgs_pod_signup_confirmed', String(Date.now()));
+          sessionStorage.removeItem('mgs_campaign_source');
+        } catch (error) {}
+        return;
+      }
+
+      var googleTag = document.createElement('script');
+      googleTag.async = true;
+      googleTag.src = 'https://www.googletagmanager.com/gtag/js?id=AW-18230546993';
+      document.head.appendChild(googleTag);
+      window.dataLayer = window.dataLayer || [];
+      window.gtag = function(){dataLayer.push(arguments);};
+      gtag('js', new Date());
+      gtag('config', 'AW-18230546993');
+      gtag('config', 'G-9HLFJCJ650');
+
+      var signupEmail = null;
+      var googleAttribution = null;
+      var alreadyConfirmed = null;
+      try {
+        signupEmail = sessionStorage.getItem('mgs_signup_email');
+        googleAttribution = JSON.parse(sessionStorage.getItem('mgs_google_attribution'));
+        alreadyConfirmed = sessionStorage.getItem('mgs_pod_signup_confirmed');
+      } catch (error) {
+        signupEmail = null;
+        googleAttribution = null;
+        alreadyConfirmed = null;
+      }
+
+      if (signupEmail) {
+        gtag('set', 'user_data', { email: signupEmail });
+      }
+      gtag('event', 'act_one_thanks_view', {
+        source: 'bookfunnel',
+        google_click_id_present: Boolean(googleAttribution && (
+          googleAttribution.gclid || googleAttribution.gbraid || googleAttribution.wbraid
+        ))
+      });
+      // Pod Signup Confirmed (conversion ID 7671113226) — session-deduped vs vow-thanks
+      if (!alreadyConfirmed) {
+        gtag('event', 'conversion', {'send_to': 'AW-18230546993/6e0kCIrM78kcELGkgPVD'});
+        try {
+          sessionStorage.setItem('mgs_pod_signup_confirmed', String(Date.now()));
+        } catch (error) {}
+      }
+      try {
+        sessionStorage.removeItem('mgs_signup_email');
+        sessionStorage.removeItem('mgs_google_attribution');
+      } catch (error) {}
+    }());
   </script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="robots" content="noindex, nofollow" />
-  <meta name="description" content="Your copy of Moon Gun Sam: The Dolphin - Vow (Act One) is ready." />
-  <title>Access Granted · Moon Gun Sam</title>
-
-  <!-- ============================================================
-       REDIRECT TARGET — replace the URL below with the real
-       BookFunnel download link before publishing.
-       ============================================================ -->
-  <meta http-equiv="refresh" content="2;url=https://dl.bookfunnel.com/1uuimb68pd" />
-
+  <link rel="canonical" href="https://lunadumupress.com/act-one-thanks" />
+  <meta name="description" content="You’re in the Pod. Act One of Moon Gun Sam: The Dolphin — Vow is on the way." />
+  <title>You’re in · Act One is on the way</title>
   <style>
     :root {
       --night: #07090d;
@@ -169,6 +227,15 @@
       font-size: .9rem;
       line-height: 1.65;
     }
+    .tagline {
+      max-width: 520px;
+      margin: 1.25rem auto 0;
+      color: var(--gold-soft);
+      font-size: .88rem;
+      font-style: italic;
+      letter-spacing: .02em;
+      line-height: 1.55;
+    }
     .thanks-actions {
       display: flex;
       flex-wrap: wrap;
@@ -195,6 +262,12 @@
       transition: transform .2s ease, filter .2s ease;
     }
     .button:hover { transform: translateY(-2px); filter: brightness(1.07); }
+    .button.secondary {
+      border-color: rgba(255,255,255,.24);
+      background: rgba(7,9,13,.46);
+      color: #fff;
+      box-shadow: none;
+    }
     .quiet-link {
       display: inline-block;
       margin-top: 1.4rem;
@@ -203,29 +276,9 @@
       text-underline-offset: .22em;
     }
 
-    /* progress bar — fills over the 2s redirect window */
-    .progress-track {
-      width: min(320px, 100%);
-      height: 3px;
-      margin: 2.2rem auto 0;
-      background: rgba(255,255,255,.12);
-      border-radius: 999px;
-      overflow: hidden;
-    }
-    .progress-fill {
-      height: 100%;
-      width: 0%;
-      background: linear-gradient(90deg, var(--cyan), var(--gold-soft));
-      animation: fill-progress 2s linear forwards;
-    }
-
     @keyframes signal-pulse {
       0%, 100% { opacity: .68; transform: scale(.9); }
       50% { opacity: 1; transform: scale(1.08); }
-    }
-    @keyframes fill-progress {
-      from { width: 0%; }
-      to { width: 100%; }
     }
 
     @media (max-width: 600px) {
@@ -248,12 +301,13 @@
       h1 { font-size: clamp(3.6rem, 19vw, 5.1rem); }
       .lede { margin-top: 1.4rem; font-size: 1rem; line-height: 1.58; }
       .inbox-note { font-size: .82rem; }
+      .thanks-actions { display: grid; }
+      .button { width: 100%; }
     }
 
     @media (prefers-reduced-motion: reduce) {
       .signal-dot { animation: none; }
       .button { transition: none; }
-      .progress-fill { animation: none; width: 100%; }
     }
   </style>
 </head>
@@ -269,15 +323,15 @@
     <div class="ambient-glow" aria-hidden="true"></div>
 
     <section class="thanks-card" aria-labelledby="thanks-title">
-      <div class="signal"><span class="signal-dot" aria-hidden="true"></span>Access granted</div>
-      <h1 id="thanks-title">It's yours.<span>Downloading now.</span></h1>
-      <p class="lede">Act One of <em>Moon Gun Sam: The Dolphin&nbsp;&ndash;&nbsp;Vow</em> is on its way. You'll be redirected automatically in a moment.</p>
-      <p class="inbox-note">If nothing happens, use the link below.</p>
-
-      <div class="progress-track" aria-hidden="true"><div class="progress-fill"></div></div>
+      <div class="signal"><span class="signal-dot" aria-hidden="true"></span>Transmission received</div>
+      <h1 id="thanks-title">You’re in.<span>Act One is on the way.</span></h1>
+      <p class="lede">You’re in the Pod—your email is captured. Check your inbox for Act One of <em>Moon Gun Sam: The Dolphin&nbsp;&mdash;&nbsp;Vow</em>.</p>
+      <p class="inbox-note">If auto-delivery needs a backup click, use the download button below. Dual launch October&nbsp;13. If the email doesn’t land in a few minutes, check promotions or spam.</p>
+      <p class="tagline">Love and Hope are Rooms, Not Streets.</p>
 
       <div class="thanks-actions">
-        <a class="button" id="download-link" href="https://dl.bookfunnel.com/1uuimb68pd">Continue to Download</a>
+        <a class="button" href="https://dl.bookfunnel.com/1uuimb68pd">Download Act One</a>
+        <a class="button secondary" href="vow.html">Explore The Vow</a>
       </div>
       <a class="quiet-link" href="index.html">Return to Luna Dumu Press</a>
     </section>
