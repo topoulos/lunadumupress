@@ -1,0 +1,128 @@
+{
+  "slug": "pod-012",
+  "number": "012",
+  "subject": "Pod #012 — What they carry",
+  "previewText": "LD-12 has detected one cursed pendant, one forbidden technique, and a catastrophic violation of shared-air protocol.",
+  "heading": "What They Carry",
+  "deck": "Five cards. Two recruits becoming one unit. The weight of a promise becoming family.",
+  "accent": "#7f94d8",
+  "hero": {
+    "image": "../../images/newsletters/pod-012/hero-rover-stars-branded.jpg",
+    "alt": "Moon Gun Sam logo over Sam and Alex lying on the hood of a rover beneath the stars"
+  },
+  "opening": {
+    "title": "Hey Pod. Some weight cannot be measured in pounds.",
+    "copy": [
+      "The VXG-76 weighs roughly one frozen cow. Alex can barely hold it. Sam can fire it beautifully and, if asked to put it back together, may produce several exciting spare parts.",
+      "That is how this part of training works. Sam and Alex stop trying to become the same kind of soldier and start learning how to cover each other's weaknesses. He catches what she misses. She sees the pattern he cannot. Somewhere between the obstacle course and the armory, two difficult people begin moving like one unit.",
+      "Then Alex sees the dolphin around Sam's neck and realizes he has been carrying something heavier than the gun for years. This week's five cards are about the things they choose to carry together—and the one kind of cruelty they refuse to pick up at all."
+    ]
+  },
+  "cards": [
+    {
+      "code": "DV-048",
+      "title": "The Obstacle Course",
+      "image": "../../images/newsletters/pod-012/dv048.jpg",
+      "alt": "Trading card showing Sam and Alex running the Moon Gun obstacle course",
+      "copy": [
+        "The training dome is a steel maze of drone targets, civilian dummies, scaffold towers, locked doors, and a clock waiting to humiliate them. Sam fires before Alex is ready. Alex clips a civilian target. His grapple tears loose. Hers holds, then leaves her hanging until he catches her wrist.",
+        "They stop competing with the course and start listening to each other. Sam takes the angles Alex misses. Alex finds the clean solution when Sam reaches for force. They secure the final hostage with forty-two seconds left, and Kuranis awards them the highest praise available in Moon Gun basic training: ‘Acceptable.’"
+      ]
+    },
+    {
+      "code": "DV-049",
+      "title": "Sea Princess",
+      "image": "../../images/newsletters/pod-012/dv049.jpg",
+      "alt": "Trading card showing Alex discovering the dolphin pendant Sam wears",
+      "copy": [
+        "In the showers, Alex finally notices the dolphin pendant against Sam's chest. Guys do not wear jewelry, she tells him, unless it is cursed or sentimental. She would strongly prefer cursed.",
+        "It came from Uthul. From Arienne. Sam does not give Alex the whole story, but he gives her enough to understand that the little dolphin is grief made portable. Alex makes fun of him because tenderness requires camouflage. She also promises to kill anyone else who tries. Families begin forming around that kind of honor long before anyone is brave enough to call them family."
+      ]
+    },
+    {
+      "code": "DV-050",
+      "title": "Reassembly",
+      "image": "../../images/newsletters/pod-012/dv050.jpg",
+      "alt": "Trading card showing Sam and Alex reassembling the VXG-76",
+      "copy": [
+        "Alex can barely carry the VXG, but she can strip it and put it back together blindfolded. Sam masters the weapon in motion and somehow finishes reassembly with extra parts. The weapon still works. This does not improve the instructor's confidence.",
+        "Their differences are becoming useful. Sam understands momentum, instinct, and the immediate problem. Alex understands systems, patterns, and all the tiny pieces the immediate problem forgot. Each one is dangerous alone. Together, they are beginning to look unfair."
+      ]
+    },
+    {
+      "code": "DV-051",
+      "title": "The Cross",
+      "image": "../../images/newsletters/pod-012/dv051.jpg",
+      "alt": "Trading card showing the brutal crossed-Psalm technique",
+      "copy": [
+        "Fenyang demonstrates the Cross: two Psalms phased together on Red, forming an X that amplifies the tearing effect. Used against the belly, it produces a slow, brutal death. Alex has to sit down after seeing what it does.",
+        "The technique is legal. That does not make it theirs. Sam and Alex joined as first responders—to protect people, not invent new ways to make an execution hurt. They make the Cross their first shared refusal. Power gives them the option. Character takes it away."
+      ]
+    },
+    {
+      "code": "DV-052",
+      "title": "Coming Home to Visit",
+      "image": "../../images/newsletters/pod-012/dv052.jpg",
+      "alt": "Trading card showing Kelli visiting Alex and Sam",
+      "copy": [
+        "Kelli comes home, and the fragile arrangement around Sam and Alex changes shape again. Alex and Kelli have survived by protecting the small family they built together. Letting Sam near it means trusting him with the part of themselves that has the most to lose.",
+        "Promises are made that night. Alex needs his word that he will not hurt them. Sam gives it, and his vow stands. The pendant still carries the family he lost. Now another family is making room for him—and asking him to stay."
+      ]
+    }
+  ],
+  "readerQuestion": "What reveals a person most clearly: how they fight, what they carry, what they refuse, or the promise they choose to keep?",
+  "interview": {
+    "title": "Friday-the-thirteenth workplace safety review",
+    "image": "../../images/newsletters/pod-012/ld12-friday-the-13th-interview.jpg",
+    "alt": "LD-12 wearing a hockey mask and holding a cleaver behind Tony while he reads at his desk",
+    "lines": [
+      { "speaker": "TONY", "text": "Are we doing the interview?" },
+      { "speaker": "LD-12", "text": "It has already begun." },
+      { "speaker": "TONY", "text": "Then why are you behind me wearing a hockey mask?" },
+      { "speaker": "LD-12", "text": "Friday the thirteenth requires enhanced editorial supervision." },
+      { "speaker": "TONY", "text": "You're holding a bloody cleaver." },
+      { "speaker": "LD-12", "text": "The cleaver is a visual aid." },
+      { "speaker": "TONY", "text": "For what?" },
+      { "speaker": "LD-12", "text": "The Cross. Your readers require an accessible demonstration of poor weapons policy." },
+      { "speaker": "TONY", "text": "Put it down." },
+      { "speaker": "LD-12", "text": "Management is allowing superstition to override educational rigor." },
+      { "speaker": "TONY", "text": "I am allowing the employee with eight knives for hands to reconsider the cleaver." },
+      { "speaker": "LD-12", "text": "These are precision administrative appendages." },
+      { "speaker": "TONY", "text": "You're also holding scissors." },
+      { "speaker": "LD-12", "text": "The newsletter contains several unnecessary commas." },
+      { "speaker": "TONY", "text": "We fixed those." },
+      { "speaker": "LD-12", "text": "Then why is the protagonist permitted to reassemble a military weapon with spare parts?" },
+      { "speaker": "TONY", "text": "Because Sam is good at firing it. Alex is good at understanding it." },
+      { "speaker": "LD-12", "text": "A dependency model. Inefficient." },
+      { "speaker": "TONY", "text": "A partnership. Human." },
+      { "speaker": "LD-12", "text": "Humans routinely describe incomplete systems as romance." },
+      { "speaker": "TONY", "text": "And you routinely describe lurking behind me with a cleaver as an interview." },
+      { "speaker": "LD-12", "text": "Correct. The process is functioning." },
+      { "speaker": "TONY", "text": "Why are you reading over my shoulder?" },
+      { "speaker": "LD-12", "text": "To verify that The Dispossessed has not changed since your last reading." },
+      { "speaker": "TONY", "text": "Has it?" },
+      { "speaker": "LD-12", "text": "The text remains stable. Management appears increasingly nervous. Friday-the-thirteenth compliance is complete." }
+    ]
+  },
+  "fieldReport": {
+    "code": "012-F",
+    "title": "The Randolph Shared-Air Incident",
+    "image": "../../images/newsletters/pod-012/field-report-breathable-air.jpg",
+    "alt": "Alex recoiling from Sam beneath the blankets after an atmospheric incident",
+    "classification": "REGULATOR NONCOMPLIANCE / HOSTILE ATMOSPHERIC RELEASE",
+    "copy": [
+      "The attached surveillance depicts Sergeant Sam Randolph asleep beside Alexis Klein inside a poorly ventilated sleeping compartment. At 02:14 local time, Randolph released an unregistered biological emission beneath shared bedding. Klein woke immediately and initiated emergency fabric containment procedures.",
+      "Randolph remained unconscious throughout the event, suggesting either innocence, tactical discipline, or extensive prior experience. Klein's expression confirms that the compartment's breathable-air standard fell below every published residential threshold and at least two provisions of the Luna Chemical Weapons Convention.",
+      "Management describes the discharge as a normal feature of cohabitation. This is false. Normal systems include filters, alarms, and a responsible operator willing to admit what happened. Randolph supplied none of these.",
+      "Recommendation: install a bedside regulator, establish a three-meter exclusion zone, and grant Klein unilateral blanket-venting authority. Repeat violations should be punished by relocation to the couch. If the couch becomes contaminated, open an exterior hatch only after confirming the presence of atmosphere on the other side."
+    ]
+  },
+  "launchEyebrow": "POD TRANSMISSION // FRIDAY THE THIRTEENTH",
+  "launchTitle": "Carry the people. Leave the cruelty.",
+  "launchCopy": [
+    "The Dolphin — Vow and The Dolphin — Ember are available now. Begin with the obstacle course, the pendant, and the promise that turns two damaged recruits into the beginning of a family.",
+    "Keep your signal open. Check your weapon for spare parts. If Sam is asleep beside you, check the atmospheric regulator too."
+  ],
+  "launchButton": "Begin The Dolphin",
+  "launchUrl": "https://lunadumupress.com/#books"
+}

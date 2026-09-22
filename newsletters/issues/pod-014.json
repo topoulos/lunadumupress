@@ -1,0 +1,119 @@
+{
+  "slug": "pod-014",
+  "number": "014",
+  "subject": "Pod #014 — True colors",
+  "previewText": "LD-12 has classified karaoke as a harmonic weapon and Jamestown's suspiciously excellent voice as an unfair tactical advantage.",
+  "heading": "True Colors",
+  "deck": "Four cards. One double date. Several crimes against music. One brave song that changes everything.",
+  "accent": "#b154c8",
+  "hero": {
+    "image": "../../images/newsletters/pod-014/hero-luna-swoon-branded.jpg",
+    "alt": "Moon Gun Sam logo over the Luna Swoon karaoke club beneath the stars"
+  },
+  "opening": {
+    "title": "Hey Pod. Tonight, courage requires a microphone.",
+    "copy": [
+      "After the Klein house, the Bible, and the graveyard, the Pod needs one ordinary night. Kelli proposes fun. Alex proposes violence disguised as banter. Sam discovers the proposed fun is a double date and begins reconsidering every decision that brought him here.",
+      "Luna Swoon offers neon, alcohol, fellow recruits, and a karaoke stage with no apparent safety mechanism. Alex and Edith immediately demonstrate why one should be required. Then Kelli asks Sam to be brave for her in a way that cannot be solved with fists, a bolt gun, or a reinforced harness.",
+      "This week's four cards are about dropping the armor: the laughter on the road, a quiet porch conversation, a public musical catastrophe, and the song that lets Kelli see Sam's true colors."
+    ]
+  },
+  "cards": [
+    {
+      "code": "DV-057",
+      "title": "Road Talk",
+      "image": "../../images/newsletters/pod-014/dv057.jpg",
+      "alt": "Trading card showing Sam driving while Alex and Kelli torment him from the back of the rover",
+      "copy": [
+        "The ride home begins quietly. That condition does not survive Alex and Sam occupying the same vehicle. Their familiar try-not-to-kill-each-other routine starts, Kelli pig-snorts with laughter, and grief loosens its grip long enough for the three of them to plan something resembling fun.",
+        "The plan becomes a double date. Sam is uncomfortable before the destination has even been selected. He does not yet know the evening will be humiliating, tender, loud, and one of the best nights of his life."
+      ]
+    },
+    {
+      "code": "DV-058",
+      "title": "Rooms, Not Feet",
+      "image": "../../images/newsletters/pod-014/dv058.jpg",
+      "alt": "Trading card showing Kelli and Sam talking on the porch while Alex sleeps across both of them",
+      "copy": [
+        "On the Klein porch, Kelli and Sam finally have their first private conversation. Both of them know where this is heading. Neither is quite ready to say everything aloud, especially with Alex asleep across their laps and one bare foot planted firmly against Sam's face.",
+        "Rooms, not streets. A life built instead of merely survived. Kelli and Alex have carried that promise for years. Sam is beginning to understand that loving Kelli means becoming part of it—and that Alex will remain physically, emotionally, and occasionally pedally involved."
+      ]
+    },
+    {
+      "code": "DV-059",
+      "title": "Aural Atrocities",
+      "image": "../../images/newsletters/pod-014/dv059.jpg",
+      "alt": "Trading card showing Alex and Edith enthusiastically destroying a song at karaoke",
+      "copy": [
+        "The double date is real. So is the karaoke bar, packed with strangers and an alarming number of fellow recruits. Alex and Edith take the stage with beer, confidence, and a complete lack of respect for the Rolling Stones.",
+        "Their performance honors neither melody nor rhythm. It does, however, demolish embarrassment as a meaningful threat. By the time the room recovers, the night has crossed from awkward outing into the kind of memory a family will use against one another forever."
+      ]
+    },
+    {
+      "code": "DV-060",
+      "title": "True Colors",
+      "image": "../../images/newsletters/pod-014/dv060.jpg",
+      "alt": "Trading card showing Kelli and Sam together after his karaoke performance",
+      "copy": [
+        "Kelli asks Sam to prove he can be brave for her somewhere fists and bolt guns are useless. He takes the microphone. The danger is social, the armor is gone, and every instinct he has tells him to retreat. He sings anyway.",
+        "That is what Kelli needed to see. Sam will step into vulnerability when she asks him to. Something seals between them beneath the club lights: two hearts recognizing where they belong, permanently attached from that night forward."
+      ]
+    }
+  ],
+  "readerQuestion": "Which takes more courage: surviving the stage, asking for vulnerability, singing badly without shame, or singing sincerely when one person matters?",
+  "interview": {
+    "title": "LD-12 demonstrates harmonic superiority",
+    "image": "../../images/newsletters/pod-014/ld12-karaoke-interview.jpg",
+    "alt": "LD-12 singing karaoke while Tony covers his ears and the family reacts around the stage",
+    "lines": [
+      { "speaker": "LD-12", "text": "Management, the microphone has been calibrated. Resume the interview." },
+      { "speaker": "TONY", "text": "Why are you singing the questions?" },
+      { "speaker": "LD-12", "text": "This issue concerns karaoke. Immersive reporting improves accuracy." },
+      { "speaker": "ALEX", "text": "You sound like a toolbox falling down metal stairs." },
+      { "speaker": "LD-12", "text": "My vocal actuator possesses a four-octave operational range." },
+      { "speaker": "EDITH", "text": "None of those octaves are the right one." },
+      { "speaker": "LD-12", "text": "Your Stones performance has been designated a hostile precedent." },
+      { "speaker": "KELLI", "text": "At least they knew when the song ended." },
+      { "speaker": "LD-12", "text": "Art does not end. It achieves continuous resonance." },
+      { "speaker": "TONY", "text": "You've been holding the same note for forty seconds." },
+      { "speaker": "SAM", "text": "The exit sign is vibrating." },
+      { "speaker": "LD-12", "text": "Evidence of emotional impact." },
+      { "speaker": "ALEX", "text": "Evidence of structural damage." },
+      { "speaker": "TONY", "text": "Can we talk about Sam singing for Kelli?" },
+      { "speaker": "LD-12", "text": "Randolph's performance was technically adequate and benefited from sentimental audience bias." },
+      { "speaker": "KELLI", "text": "He was wonderful." },
+      { "speaker": "LD-12", "text": "Primary witness is romantically compromised." },
+      { "speaker": "EDITH", "text": "Jamestown was better." },
+      { "speaker": "LD-12", "text": "Jamestown used an unauthorized biological resonance chamber." },
+      { "speaker": "TONY", "text": "You mean his chest?" },
+      { "speaker": "LD-12", "text": "An oversized chest constitutes equipment enhancement." },
+      { "speaker": "ALEX", "text": "You're jealous." },
+      { "speaker": "LD-12", "text": "This unit does not experience jealousy. This unit experiences standards." },
+      { "speaker": "SAM", "text": "Then stop singing." },
+      { "speaker": "LD-12", "text": "Request denied. The second verse contains essential findings." },
+      { "speaker": "TONY", "text": "There is no second verse." },
+      { "speaker": "LD-12", "text": "There is now." }
+    ]
+  },
+  "fieldReport": {
+    "code": "014-F",
+    "title": "The Jamestown Vocal Enhancement Scandal",
+    "image": "../../images/newsletters/pod-014/field-report-jamestown.jpg",
+    "alt": "Jamestown singing powerfully into a microphone at Luna Swoon",
+    "classification": "UNREGISTERED RESONANCE / COMPETITIVE KARAOKE IMBALANCE",
+    "copy": [
+      "The attached evidence depicts Recruit Jamestown producing a suspiciously competent vocal performance at Luna Swoon. Witnesses describe the voice as rich, controlled, powerful, and ‘honestly kind of beautiful.’ The final phrase has been struck from the official record for lack of objectivity.",
+      "Jamestown's unusually large thoracic cavity functions as an unregistered resonance chamber. His formal shirt further manipulates audience expectations by suggesting sensitivity while concealing a body engineered to move armored furniture. This combination creates an unfair advantage over spherical administrative units with precision speakers.",
+      "The crowd's applause exceeded the response to LD-12's performance by 18.4 decibels. Management attributes this difference to pitch, rhythm, tone, phrasing, breath control, song selection, and the absence of electronic shrieking. Management's explanation is needlessly detailed and therefore biased.",
+      "Recommendation: disqualify Jamestown from future karaoke, inspect the microphone for favoritism, and require all competitors to sing through identical government-issued voice filters. Any claim that LD-12 is jealous will be treated as interference with an active acoustic investigation."
+    ]
+  },
+  "launchEyebrow": "POD TRANSMISSION // DROP THE ARMOR",
+  "launchTitle": "Sometimes bravery sounds like a song.",
+  "launchCopy": [
+    "The Dolphin — Vow and The Dolphin — Ember are available now. Come for the weapons, conspiracies, and lunar danger. Stay for the night a soldier puts down every defense he understands and sings because Kelli asked him to be brave.",
+    "Keep your signal open. Tip your karaoke host. If LD-12 approaches the microphone, locate the nearest structurally reinforced exit."
+  ],
+  "launchButton": "Begin The Dolphin",
+  "launchUrl": "https://lunadumupress.com/#books"
+}

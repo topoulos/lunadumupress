@@ -1,0 +1,125 @@
+{
+  "slug": "pod-015",
+  "number": "015",
+  "subject": "Pod #015 — Already a family",
+  "previewText": "LD-12 has been conscripted into seasonal aviation while Kelli and Alex face charges of unauthorized childhood.",
+  "heading": "Already a Family",
+  "deck": "Five cards. One perfect mess. Two sisters marked. One goodbye that cannot undo what they chose.",
+  "accent": "#58a66b",
+  "hero": {
+    "image": "../../images/newsletters/pod-015/hero-slater-terminal-branded.jpg",
+    "alt": "Moon Gun Sam logo over Slater Shuttle Terminal beneath the stars"
+  },
+  "opening": {
+    "title": "Hey Pod. Some gifts cannot be wrapped.",
+    "copy": [
+      "Christmas stories like to end with everybody home. This one knows better. Kelli's time on Luna is running out, and the universe is already preparing to pull the three of them apart again.",
+      "But before the terminal and the second goodbye, Sam, Kelli, and Alex get something rare: a little time to be ridiculous together. They decide they are already a family, discover that family includes loud friends and disastrous breakfasts, and choose a mark that says what none of them wants distance to erase.",
+      "This week's five cards are a found-family Christmas without the ornaments: union, interruption, pancakes on the ceiling, matching dolphins, and one promise carried through the departure gate."
+    ]
+  },
+  "cards": [
+    {
+      "code": "DV-061",
+      "title": "Union",
+      "image": "../../images/newsletters/pod-015/dv061.jpg",
+      "alt": "Trading card showing Kelli and Sam kissing after deciding they are already a family",
+      "copy": [
+        "Sam was smitten on the first hello. By the time they finally stop pretending this might be temporary, both of them are already all-in. Sometimes forever does not begin with a ceremony. Sometimes it started yesterday and everyone is only catching up.",
+        "They choose each other without waiting for cleaner circumstances. Alex is not an attachment to the relationship; she is part of the family being made. The union is already real because all three of them have decided it is."
+      ]
+    },
+    {
+      "code": "DV-062",
+      "title": "Blockade",
+      "image": "../../images/newsletters/pod-015/dv062.jpg",
+      "alt": "Trading card showing Alex and Edith sprawled across the floor outside Sam and Kelli's bedroom",
+      "copy": [
+        "The afterglow is interrupted by two intoxicated women forming a human blockade outside the bedroom. Sam discovers that choosing Kelli also means accepting Alex, Edith, the noise, the mess, and the possibility that privacy is now a historical concept.",
+        "He would not trade any of it. Family arrives with the difficult pieces included, usually for free and sometimes asleep on the floor. The important part is knowing these are the people who will have his back once they sober up."
+      ]
+    },
+    {
+      "code": "DV-063",
+      "title": "The Pancake Incident",
+      "image": "../../images/newsletters/pod-015/dv063.jpg",
+      "alt": "Trading card showing Jamestown destroying breakfast while pancakes ooze from the ceiling and the family laughs",
+      "copy": [
+        "Jamestown tries to cook breakfast. His intentions are good. The eggs are not. Kelli asks what they ever did to offend him while something claiming to be pancake batter establishes permanent residency on the ceiling.",
+        "It is a miraculous disaster—the sort of morning that becomes family history before the kitchen stops smoking. Nobody eats well, everybody laughs, and Jamestown's culinary privileges enter indefinite review."
+      ]
+    },
+    {
+      "code": "DV-064",
+      "title": "Sisters Marked",
+      "image": "../../images/newsletters/pod-015/dv064.jpg",
+      "alt": "Trading card showing Kelli and Alex smiling after receiving matching dolphin tattoos",
+      "copy": [
+        "Kelli has to return to Mars. Alex wants them to carry something shared—something they love, something that remembers the bond distance cannot touch. They choose the dolphin because it is what Sam loves.",
+        "That choice folds all three of them into the same symbol. Kelli and Alex choose the dolphin because they chose Sam, and Sam chose them. Ink makes visible what was already permanent."
+      ]
+    },
+    {
+      "code": "DV-065",
+      "title": "The Second Departure",
+      "image": "../../images/newsletters/pod-015/dv065.jpg",
+      "alt": "Trading card showing Kelli saying goodbye to Sam and Alex at Slater Shuttle Terminal",
+      "copy": [
+        "The countdown is cruel. Their little family has barely begun when Kelli must leave again. For Alex, the second goodbye nearly hurts more than the first because this time she knows exactly what she is losing.",
+        "Kelli almost stays. Sam vows to remain beside Alex and keep every line open. The terminal can separate their bodies, but it cannot reverse the choice they made. They will make this family work across planets, schedules, and every force that keeps trying to pull them apart."
+      ]
+    }
+  ],
+  "readerQuestion": "Which moment makes them a family: choosing each other, surviving the mess, sharing the mark, or keeping the promise after goodbye?",
+  "interview": {
+    "title": "LD-12 is assigned to seasonal air support",
+    "image": "../../images/newsletters/pod-015/ld12-santa-interview.png",
+    "alt": "Tony dressed as Santa driving a sleigh pulled through the snow by LD-12 wearing improvised antlers",
+    "lines": [
+      { "speaker": "LD-12", "text": "Management, this unit is not a reindeer." },
+      { "speaker": "TONY", "text": "You fly, you glow red, and the antlers fit." },
+      { "speaker": "LD-12", "text": "The antlers are attached with structural tape." },
+      { "speaker": "TONY", "text": "North Pole aerospace tape." },
+      { "speaker": "LD-12", "text": "That phrase has no regulatory meaning." },
+      { "speaker": "ALEX", "text": "Neither does 'Christmas spirit,' but you failed inspection for that too." },
+      { "speaker": "KELLI", "text": "Can we talk about the cards before he shakes us into a snowbank?" },
+      { "speaker": "TONY", "text": "This is the issue where you all decide you're already a family." },
+      { "speaker": "SAM", "text": "We didn't need permission." },
+      { "speaker": "LD-12", "text": "Incorrect. Family units require documentation, emergency contacts, and a designated person responsible for ceiling pancakes." },
+      { "speaker": "JAMESTOWN", "text": "In my defense, the batter was ambitious." },
+      { "speaker": "ALEX", "text": "In your defense, none of us were hungry after seeing it." },
+      { "speaker": "TONY", "text": "Then Kelli and Alex get matching dolphins." },
+      { "speaker": "LD-12", "text": "Unlicensed marine mammals applied directly to the torso." },
+      { "speaker": "KELLI", "text": "They're tattoos." },
+      { "speaker": "LD-12", "text": "Permanent identification marks acquired shortly before interplanetary travel. Suspicious." },
+      { "speaker": "SAM", "text": "They did it because of me." },
+      { "speaker": "ALEX", "text": "Don't get a big head. Mine was already perfect." },
+      { "speaker": "TONY", "text": "And then Kelli has to leave." },
+      { "speaker": "KELLI", "text": "Only physically. We had already chosen each other." },
+      { "speaker": "LD-12", "text": "Sentiment detected. Increasing sleigh velocity to evacuate conversation." },
+      { "speaker": "TONY", "text": "Easy, Rudolph." },
+      { "speaker": "LD-12", "text": "Call me that again and Christmas will arrive without management." }
+    ]
+  },
+  "fieldReport": {
+    "code": "015-F",
+    "title": "The Klein Regression Event",
+    "image": "../../images/newsletters/pod-015/field-report-sisters.jpg",
+    "alt": "Kelli and Alex laughing and throwing autumn leaves at each other outside the Klein house",
+    "classification": "UNAUTHORIZED CHILDHOOD / SEASONAL DIGNITY FAILURE",
+    "copy": [
+      "The attached evidence depicts Kelli and Alexis Klein behaving like unsupervised children despite both possessing adult identification. The suspects are barefoot, laughing without clearance, and deploying leaves as low-velocity projectiles in a residential zone.",
+      "Alexis Klein appears to initiate the engagement by placing foliage on her sister's head. Kelli responds with additional foliage rather than filing the required complaint. Both women then escalate into conduct commonly described by civilians as ‘playing.’ No productive objective has been identified.",
+      "Investigators note that adulthood is not suspended merely because one's sister has come home. Joy remains subject to reasonable limits, footwear requirements, and municipal leaf-handling ordinances. The unusually large red moon in the background does not constitute festive authorization.",
+      "Recommendation: confiscate all loose leaves, require both sisters to act their age for fifteen consecutive minutes, and prohibit Sam Randolph from describing the incident as ‘cute.’ His previous testimony has been excluded due to obvious familial bias."
+    ]
+  },
+  "launchEyebrow": "CHRISTMAS TRANSMISSION // ALREADY A FAMILY",
+  "launchTitle": "Home is the promise you keep across the distance.",
+  "launchCopy": [
+    "The Dolphin — Vow and The Dolphin — Ember are available now. Beneath the weapons, conspiracies, and lunar danger is a family choosing itself before the universe gives permission—and choosing again every time it is pulled apart.",
+    "Merry Christmas from the Pod. May your people be loud, your breakfast remain below the ceiling, and your flying administrative robot accept the antlers without further litigation."
+  ],
+  "launchButton": "Begin The Dolphin",
+  "launchUrl": "https://lunadumupress.com/#books"
+}

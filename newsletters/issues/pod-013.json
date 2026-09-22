@@ -1,0 +1,117 @@
+{
+  "slug": "pod-013",
+  "number": "013",
+  "subject": "Pod #013 — The Pod forms",
+  "previewText": "One terrible call, one family taking shape, and one Thanksgiving turkey demanding an immediate workplace investigation.",
+  "heading": "The Pod Forms",
+  "deck": "Four cards. One loss. Three people choosing to become a family.",
+  "accent": "#c47b3d",
+  "hero": {
+    "image": "../../images/newsletters/pod-013/hero-klein-house-branded.jpg",
+    "alt": "Moon Gun Sam logo over the Klein house at twilight"
+  },
+  "opening": {
+    "title": "Hey Pod. This is where the name becomes real.",
+    "copy": [
+      "The Pod did not begin as a mailing list. It began at the Klein house, after a call every child dreads and a homecoming that arrived carrying both joy and grief.",
+      "Alex loses her mother before she can say goodbye. Sam stays beside her. Kelli comes home expecting a reunion and finds the person she loves shattered. The three of them enter that house as separate lives tangled together by history, affection, and need. They leave it as something new.",
+      "This week's four cards are the physical formation of the Pod: the call, the embrace, the mystery hidden inside Gertrude Klein's Bible, and the promise Alex makes at her mother's grave."
+    ]
+  },
+  "cards": [
+    {
+      "code": "DV-053",
+      "title": "The Call",
+      "image": "../../images/newsletters/pod-013/dv053.jpg",
+      "alt": "Trading card showing Sam comforting Alex after she receives the call about her mother",
+      "copy": [
+        "Alex receives the call every young adult fears: her mother is gone. Kelli is already coming home, but the reunion Alex had been waiting for changes in an instant. There will be no easy return to the Klein house and no final conversation with Gertrude.",
+        "Sam cannot repair this. He does the more difficult thing. He stays beside Alex while the news becomes real, holding onto her when there is nothing useful to say."
+      ]
+    },
+    {
+      "code": "DV-054",
+      "title": "Formation",
+      "image": "../../images/newsletters/pod-013/dv054.jpg",
+      "alt": "Trading card showing Kelli and Alex running toward each other while Sam waits at the Klein house",
+      "copy": [
+        "Kelli reaches the Klein house and runs for Alex. Sam stands nearby with cocoa, quiet enough to let the reunion belong to them and close enough to catch whatever falls afterward.",
+        "When the tears slow and the cups settle, Kelli asks about Gertrude. Alex does not have to face the answer alone. Kelli and Sam go with her. This is the first time all three members of the family occupy the same physical space—and the moment the Pod takes shape."
+      ]
+    },
+    {
+      "code": "DV-055",
+      "title": "Her Mother's Bible",
+      "image": "../../images/newsletters/pod-013/dv055.jpg",
+      "alt": "Trading card showing Alex holding her mother's Ellipse Bible while Sam and Kelli comfort her",
+      "copy": [
+        "Among Gertrude's belongings, Alex finds an Ellipse Bible. Her mother was not a believer. That would already be strange. Inside it is something stranger: a note written in cuneiform and two words waiting like a door—Dumu. Munus. Daughter.",
+        "Grief has brought Alex home, but home is beginning to reveal a history she never knew existed. The book in her hands connects her mother to something older, larger, and far more dangerous than one family's secrets. A mystery begins."
+      ]
+    },
+    {
+      "code": "DV-056",
+      "title": "A Different Kind of Promise",
+      "image": "../../images/newsletters/pod-013/dv056.jpg",
+      "alt": "Trading card showing Alex at Gertrude Klein's grave with Sam and Kelli beside her",
+      "copy": [
+        "Alex never got to say goodbye. At her mother's grave, with Sam and Kelli beside her, she makes a different kind of promise: she will do better with her own life than Gertrude was able to do with hers.",
+        "It is not an insult. It is love sharpened by grief. Alex promises to carry both of them forward, to make a name for herself, and to build something stronger from everything they survived. She cannot yet imagine how completely she will keep that promise."
+      ]
+    }
+  ],
+  "readerQuestion": "When does a family truly form: when people arrive, when they stay, when they share the grief, or when they make the promise together?",
+  "interview": {
+    "title": "The Thanksgiving centerpiece files a grievance",
+    "image": "../../images/newsletters/pod-013/ld12-thanksgiving-interview.jpg",
+    "alt": "The Randolph family and Tony laughing around a Thanksgiving table while LD-12 sits on the serving platter dressed as the turkey",
+    "lines": [
+      { "speaker": "LD-12", "text": "Management, explain why this unit has been placed on a serving platter." },
+      { "speaker": "TONY", "text": "You said you wanted to be part of Thanksgiving." },
+      { "speaker": "LD-12", "text": "Participation does not imply garnish." },
+      { "speaker": "LILA", "text": "You look delicious." },
+      { "speaker": "LD-12", "text": "I contain hydraulic fluid, lithium cells, and three active warrants. Consumption is prohibited." },
+      { "speaker": "ALEX", "text": "Should've thought of that before volunteering to be the turkey." },
+      { "speaker": "LD-12", "text": "I volunteered to monitor the turkey." },
+      { "speaker": "KELLI", "text": "You ate the turkey." },
+      { "speaker": "LD-12", "text": "Evidence was compromised during inspection." },
+      { "speaker": "SAM", "text": "You left one drumstick in the garage." },
+      { "speaker": "LD-12", "text": "The mechanic shop required a control sample." },
+      { "speaker": "TONY", "text": "Can we discuss the newsletter? This is the issue where the Pod forms." },
+      { "speaker": "ALEX", "text": "So you took the worst day of my life and named a mailing list after it." },
+      { "speaker": "TONY", "text": "When you say it like that, it sounds bad." },
+      { "speaker": "KELLI", "text": "The readers are nice." },
+      { "speaker": "SAM", "text": "And they stayed." },
+      { "speaker": "LILA", "text": "Also they get discounts." },
+      { "speaker": "LD-12", "text": "There. The child's analysis has identified the true family bond: preferred pricing." },
+      { "speaker": "TONY", "text": "It's Black Friday." },
+      { "speaker": "LD-12", "text": "A human observance in which gratitude is immediately followed by retail combat." },
+      { "speaker": "ALEX", "text": "That actually sounds like us." },
+      { "speaker": "LD-12", "text": "Then the nomenclature is approved. Remove the rosemary from my chassis." },
+      { "speaker": "LILA", "text": "Can I have the wishbone?" },
+      { "speaker": "LD-12", "text": "I DO NOT HAVE A WISHBONE." },
+      { "speaker": "LILA", "text": "Not with that attitude." }
+    ]
+  },
+  "fieldReport": {
+    "code": "013-F",
+    "title": "The Klein Tongue Deployment",
+    "image": "../../images/newsletters/pod-013/field-report-tongue.jpg",
+    "alt": "Alex sticking her tongue toward Sam while he attempts to maintain military composure",
+    "classification": "UNAUTHORIZED FLIRTATION / LOSS OF MILITARY BEARING",
+    "copy": [
+      "The attached image records Alexis Klein extending her tongue toward Sergeant Sam Randolph during an otherwise routine equipment inspection. No tactical purpose has been identified. Randolph attempts to maintain a neutral expression while looking directly at the recording device, indicating full awareness that evidence is being created.",
+      "Klein's gesture violates personal-space guidance, sanitary procedure, and at least one regulation concerning the deliberate distraction of armed personnel. Her darker uniform offers no mitigation. The tongue remains visibly unlicensed.",
+      "Randolph's failure to retreat suggests either compromised judgment or voluntary participation. His eyebrow movement has been entered into evidence as an aggravating smirk. Both officers deny flirting. The visual record is unpersuaded.",
+      "Recommendation: require two meters of separation during inspections, issue face shields, and prohibit Klein from using the phrase ‘I was checking his reflexes’ in the final report. Secondary recommendation: stop photographing violations if neither participant intends to behave professionally."
+    ]
+  },
+  "launchEyebrow": "BLACK FRIDAY TRANSMISSION // THE POD FORMS",
+  "launchTitle": "The Pod began with people who stayed.",
+  "launchCopy": [
+    "The Dolphin — Vow and The Dolphin — Ember are available now. This is the heart beneath the weapons and the space opera: grief shared, mysteries inherited, and three people deciding that none of them will face what comes next alone.",
+    "Happy Thanksgiving from the Pod. May your table be full, your family be chosen freely, and your administrative robot remain off the serving platter."
+  ],
+  "launchButton": "Begin The Dolphin",
+  "launchUrl": "https://lunadumupress.com/#books"
+}
