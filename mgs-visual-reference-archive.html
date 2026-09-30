@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <script>
+  (function () {
+    if (location.hash === '#join') {
+      location.replace('/join' + location.search);
+    }
+  })();
+  </script>
+  <title>Moon Gun Sam Visual Reference Archive</title>
+  <meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex" />
+  <meta name="googlebot" content="noindex, nofollow, noarchive, nosnippet, noimageindex" />
+  <meta name="bingbot" content="noindex, nofollow, noarchive, nosnippet, noimageindex" />
+  <meta name="theme-color" content="#07090d" />
+  <link rel="stylesheet" href="styles.css?v=20260801" />
+  <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<link rel="shortcut icon" href="/favicon.ico" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+<meta name="apple-mobile-web-app-title" content="Luna Dumu" />
+<link rel="manifest" href="/site.webmanifest" />
+</head>
+<body class="home-page visual-archive-page">
+<div id="pageFade"></div>
+ <!-- HERO -->
+<section class="hero fade visible" aria-labelledby="site-title" id="hero">
+  <div class="hero-stage">
+    <div class="hero-stars"></div>
+
+    <div class="hero-title-wrap">
+      <img class="hero-title" src="images/mgs-title.png" alt="Moon Gun Sam">
+    </div>
+
+    <div class="hero-overlay"></div>
+    <div class="hero-grain"></div>
+  </div>
+
+  <div class="hero-content">
+    <h1 id="site-title" class="publisher-lockup">
+      <img src="images/luna-dumu-wide.png" alt="Luna Dumu Press" />
+    </h1>
+    <h2>Home of <span>Moon Gun Sam</span></h2>
+    <p class="series-credit">A Book Series by Anthony Angel</p>
+
+    <p class="hero-tagline">
+      An emotional, romantic science-fantasy family saga.<br />
+      28 years in the making.<br />
+      Eight books completed.
+    </p>
+    <div class="hero-ctas">
+      <a class="cta" href="#join">Join the Pod</a>
+      <a class="cta secondary" href="#trailer">Watch Trailer</a>
+      <a class="cta secondary" target="_blank" href="https://dl.bookfunnel.com/1uuimb68pd">Read Act I Free</a>
+    </div>
+
+    <div class="hero-music">
+      <button id="musicToggle" class="music-btn" aria-label="Play background music">
+        <span class="music-icon">♪</span>
+        <span class="music-label">Start Presentation</span>
+      </button>
+
+      <div class="music-credit" id="musicCredit"></div>
+
+      <audio id="heroAudio" preload="metadata" loop>
+        Your browser does not support the audio element.
+      </audio>
+    </div>
+  </div>
+</section>
+
+<!-- EXTRAS (optional / spoiler gated)
+<section class="extras fade" aria-labelledby="extras-title">
+  <h3 id="extras-title">Extras</h3>
+
+  <div data-spoiler="book2">
+    <h4>Artifact Cortex Reveal</h4>
+    <p>Hidden content that only appears if reader selected Book 2.</p>
+  </div>
+</section>
+-->
+
+<!-- TRAILER -->
+<section id="trailer" class="trailer-section fade" aria-labelledby="trailer-title">
+  <div class="home-section-heading">
+    <p class="home-kicker">Now playing</p>
+    <h3 id="trailer-title">Watch the Trailer</h3>
+
+    <blockquote class="rooms-not-streets">
+      Love and Hope are Rooms, Not Streets.
+    </blockquote>
+
+    <p>
+      A new saga about family, fear,<br />
+      and when to stand and fight.
+    </p>
+  </div>
+
+  <div class="youtube-wrapper">
+    <iframe
+      src="https://www.youtube.com/embed/R8QleNS6L0s"
+      title="Moon Gun Sam Trailer"
+      allowfullscreen>
+    </iframe>
+  </div>
+</section>
+
+ <!-- FREE ACT I -->
+<section id="free-act" class="free-act-section fade" aria-labelledby="free-act-title">
+  <p class="home-kicker">Enter the story</p>
+  <h3 id="free-act-title">Start Reading Free</h3>
+  <p>Meet Sam, Kelli, and Alex.
+
+    Read the complete opening act of
+    Moon Gun Sam: The Dolphin — Vow.</p>
+  <a class="cta" target="_blank" href="https://dl.bookfunnel.com/1uuimb68pd">Join the Pod &amp; Read Act I</a>
+</section>
+
+
+  <!-- BOOKS -->
+  <section id="books" class="books fade" aria-labelledby="books-title">
+    <p class="home-kicker">The Dolphin</p>
+    <h3 id="books-title">The Series</h3>
+    <p class="books-subtitle">
+      Book One: <strong>The Dolphin — Vow</strong> and Book Two: <strong>The Dolphin — Ember</strong> —
+      launching October 13, 2026.
+    </p>
+        <div class="book-grid" aria-label="The Dolphin book covers">
+
+      <a class="book-cover-link" href="https://mybook.to/moon-gun-sam-vow" target="_blank" rel="noopener noreferrer" aria-label="Pre-order Moon Gun Sam: The Dolphin — Vow">
+
+        <img src="images/Vow.jpg" alt="Moon Gun Sam: The Dolphin — Vow cover" width="1200" height="1800"/>
+
+        <span class="book-cover-cta">Pre-order Vow</span>
+
+      </a>
+
+      <a class="book-cover-link" href="https://mybook.to/moon-gun-sam-ember" target="_blank" rel="noopener noreferrer" aria-label="Pre-order Moon Gun Sam: The Dolphin — Ember">
+
+        <img src="images/Ember.jpg" alt="Moon Gun Sam: The Dolphin — Ember cover" width="1200" height="1800" />
+
+        <span class="book-cover-cta">Pre-order Ember</span>
+
+      </a>
+
+      <div class="book-cover-link book-cover-soon" aria-label="Moon Gun Sam: Psalms of Chaos coming soon">
+
+        <img src="images/Psalms.jpg" alt="Moon Gun Sam: Psalms of Chaos cover" width="1200" height="1800" />
+
+        <span class="book-cover-watermark">Transmission Pending</span>
+
+      </div>
+
+    </div>
+
+    <p class="books-note">Available October 13, 2026. Join the Pod below for launch updates.</p>
+    </section>
+
+
+
+
+
+<!-- JOIN -->
+
+<section id="join" class="mailing-list fade" aria-labelledby="join-title">
+  <h3 id="join-title" class="sr-only">Join the Pod</h3>
+  <div class="ml-embedded" data-form="9NV2sK"></div>
+  <p class="privacy-note">No spam. Unsubscribe anytime.</p>
+
+  <p class="privacy-note" style="margin-top:1rem;">
+    New here?
+    <a class="inline-link" href="https://moon-gun-sam.subscribepage.io">Browse past transmissions →</a>
+  </p>
+</section>
+
+<!-- EXPLORE -->
+<section class="explore-section fade" aria-labelledby="explore-title">
+  <p class="home-kicker">Beyond the books</p>
+  <h3 id="explore-title">Explore the Universe</h3>
+
+  <div class="explore-links">
+    <a href="/author.html">Meet the Author</a>
+    <a href="https://shop.lunadumupress.com" target="_blank" rel="noopener noreferrer">Enter the Store</a>
+    <a href="/music.html">Listening Companion</a>
+    <a href="https://moon-gun-sam.subscribepage.io">Newsletter Archive</a>
+  </div>
+</section>
+
+<!-- TRANSMISSION TERMINAL -->
+<section class="transmissions fade" aria-labelledby="transmission-title">
+  <p class="home-kicker">From Luna Dumu Press</p>
+  <h3 id="transmission-title">Signal Log</h3>
+
+  <div class="transmission-list">
+
+    <div class="transmission decode">
+      <span class="transmission-date">05.16.26</span>
+      <span class="transmission-text">10.13.26 — Moon Gun Sam: The Dolphin — Vow (ISBN 978-1-972081-02-0) and The Dolphin — Ember (ISBN 978-1-972081-05-1) available October 13, 2026 from Luna Dumu Press.</span>
+    </div>
+
+    <div class="transmission decode">
+      <span class="transmission-date">05.14.26</span>
+      <span class="transmission-text">Final cover artwork completed for Moon Gun Sam: The Dolphin — Vow, Ember, and Psalms of Chaos.</span>
+    </div>
+
+    <div class="transmission decode">
+      <span class="transmission-date">05.10.26</span>
+      <span class="transmission-text">Playlist Section completed for Dolphin Vow & Ember.</span>
+    </div>
+
+    <div class="transmission decode">
+      <span class="transmission-date">05.06.26</span>
+      <span class="transmission-text">Copy Edit completed for Dolphin Vow & Ember.</span>
+    </div>
+
+
+        <div class="transmission decode">
+      <span class="transmission-date">03.01.26</span>
+      <span class="transmission-text">The Pod officially opens.</span>
+    </div>
+
+        <div class="transmission decode">
+      <span class="transmission-date">11.12.25</span>
+      <span class="transmission-text">Kite Flats chapter art transmission received.</span>
+    </div>
+
+        <div class="transmission decode">
+      <span class="transmission-date">09.21.25</span>
+      <span class="transmission-text">First Moon Gun Sam cover art revealed.</span>
+    </div>
+
+
+
+
+  </div>
+  <br />
+  Beta Readers → <a class="inline-link" href="/beta">Submit Quick Feedback</a>
+</section>
+
+ <!-- ABOUT -->
+ <section class="about fade" aria-labelledby="mission-title">
+  <img src="images/logo.png?v=20260801" alt="Luna Dumu Press logo" />
+  <div>
+    <h3 id="mission-title">Our Mission</h3>
+    <p>Mythic sci-fi about love, power, and survival.</p>
+  </div>
+</section>
+
+  <footer>
+    <section class="spoiler-settings">
+      <h3>Spoiler Filter</h3>
+      <p>Show extras based on how far you've read:</p>
+
+      <!-- Desktop buttons -->
+      <div class="spoiler-buttons">
+        <button type="button" onclick="setSpoiler('none')">No Spoilers</button>
+        <button type="button" onclick="setSpoiler('book1')">I've read Book 1</button>
+        <button type="button" onclick="setSpoiler('book2')">I've read Book 2</button>
+        <button type="button" onclick="setSpoiler('book3')">I've read Book 3</button>
+      </div>
+
+      <!-- Mobile dropdown -->
+      <div class="spoiler-select">
+        <label class="sr-only" for="spoilerLevel">Spoiler level</label>
+        <select id="spoilerLevel">
+          <option value="none">No Spoilers</option>
+          <option value="book1">I've read Book 1</option>
+          <option value="book2">I've read Book 2</option>
+          <option value="book3">I've read Book 3</option>
+        </select>
+      </div>
+    </section>
+
+    <section class="spoiler-settings" style="margin-top:1rem;">
+      <h3>Presentation Music</h3>
+      <p>Choose the music that plays with the slideshow:</p>
+      <div>
+        <label class="sr-only" for="musicTrackSelect">Theme music</label>
+        <select id="musicTrackSelect" style="width:min(420px,90vw);padding:0.75rem 0.9rem;border-radius:10px;background:rgba(255,255,255,0.08);color:#eee;border:1px solid rgba(255,255,255,0.12);">
+          <option value="cirrus">Cirrus — Scott Buckley</option>
+          <option value="frankincense">Frankincense and Myrrh — Scott Buckley</option>
+        </select>
+      </div>
+    </section>
+
+    <div class="copyright">
+      © 2026 Luna Dumu Press &nbsp;•&nbsp;
+      <a href="/author.html">Author</a> &nbsp;•&nbsp;
+      <a href="/privacy.html">Privacy Policy</a> &nbsp;•&nbsp;
+      <a href="/beta.html">Beta Feedback</a> &nbsp;•&nbsp;
+      Contact <a href="mailto:anthony@lunadumupress.com">anthony@lunadumupress.com</a>
+    </div>
+  </footer>
+
+  <script src="visual-archive.js"></script>
+
+  <!-- Google Ads click ID + signup email stash for vow-thanks conversion -->
+  <script src="mgs-signup-attribution.js"></script>
+
+  <!-- MailerLite Universal -->
+  <script>
+    (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
+    .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
+    n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
+    (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
+    ml('account', '2151427');
+  </script>
+
+  <script>
+    function restoreAnchorPosition() {
+      if (!window.location.hash) return;
+
+      const target = document.querySelector(window.location.hash);
+
+      if (target) {
+        target.scrollIntoView({
+          behavior: "auto",
+          block: "start"
+        });
+      }
+    }
+
+    window.addEventListener("load", () => {
+      restoreAnchorPosition();
+      setTimeout(restoreAnchorPosition, 500);
+      setTimeout(restoreAnchorPosition, 1500);
+    });
+  </script>
+
+<!-- End MailerLite Universal -->
+
+</body>
+</html>

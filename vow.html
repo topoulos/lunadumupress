@@ -111,7 +111,7 @@
       position: absolute;
       inset: 0;
       z-index: -2;
-      background: url("images/book1/family-couch-photo.jpg") center 35% / cover no-repeat;
+      background: url("images/artists/shawn-lee/vow-family.jpg") center 42% / cover no-repeat;
       filter: saturate(.72) contrast(1.04);
       transform: scale(1.015);
     }
@@ -394,7 +394,7 @@
       min-height: min(1000px, 112svh);
       display: grid;
       align-items: start;
-      background: #251a12 url("images/vow/chapter-one-background-color.jpg") top center / 100% auto no-repeat;
+      background: #11131a url("images/vow/chapters/chapter-one-nasa.jpg") top center / 100% auto no-repeat;
       overflow: hidden;
     }
     .chapter-stage::after {
@@ -618,22 +618,22 @@
     }
     .pod-header { max-width: 800px; text-align: center; margin: 0 auto; }
     .pod-header .section-intro { margin-inline: auto; }
-    .card-fan {
+    .newsletter-covers {
       display: grid;
       grid-template-columns: repeat(4, minmax(0,1fr));
       gap: 1rem;
       margin: 3.2rem 0;
     }
-    .card-fan img {
+    .newsletter-covers img {
       width: 100%;
       border-radius: 10px;
       box-shadow: 0 18px 48px rgba(0,0,0,.48);
       transition: transform .25s ease;
     }
-    .card-fan img:nth-child(1) { transform: rotate(-2.5deg) translateY(12px); }
-    .card-fan img:nth-child(2) { transform: rotate(1.4deg); }
-    .card-fan img:nth-child(3) { transform: rotate(-1deg); }
-    .card-fan img:nth-child(4) { transform: rotate(2.5deg) translateY(12px); }
+    .newsletter-covers img:nth-child(1) { transform: rotate(-2.5deg) translateY(12px); }
+    .newsletter-covers img:nth-child(2) { transform: rotate(1.4deg); }
+    .newsletter-covers img:nth-child(3) { transform: rotate(-1deg); }
+    .newsletter-covers img:nth-child(4) { transform: rotate(2.5deg) translateY(12px); }
     .pod-offer {
       display: grid;
       grid-template-columns: 1fr .72fr;
@@ -657,7 +657,7 @@
     @media (max-width: 860px) {
       .trailer-grid, .audiobook-signup-card, .artifact-card, .universe-grid, .pod-offer { grid-template-columns: 1fr; }
       .artifact-mark { min-height: 320px; }
-      .card-fan { grid-template-columns: repeat(2, 1fr); gap: 1.25rem; }
+      .newsletter-covers { grid-template-columns: repeat(2, 1fr); gap: 1.25rem; }
       .pod-side { justify-items: center; text-align: center; }
       .pod-actions { justify-content: center; }
       .story-beat { grid-template-columns: 1fr; }
@@ -703,8 +703,8 @@
       .chapter-location { width: calc(100% - 3rem); margin-top: 15.5rem; padding-top: 1rem; }
       .chapter-reader { margin-top: 0; width: min(100% - 2rem, 680px); font-size: 1.08rem; line-height: 1.72; }
       .future-list { grid-template-columns: 1fr; }
-      .card-fan { gap: .7rem; }
-      .card-fan img:nth-child(n) { transform: none; }
+      .newsletter-covers { gap: .7rem; }
+      .newsletter-covers img:nth-child(n) { transform: none; }
     }
     @media (max-width: 380px) {
       .hero::before { background-size: 138% auto; }
@@ -1076,7 +1076,7 @@
     <section class="universe-section" aria-labelledby="universe-title">
       <div class="section-shell">
         <div class="poster-banner">
-          <img src="images/vow/posters/enter-the-universe.jpg" alt="Enter the universe of Moon Gun Sam: Vow, Ember, Psalms of Chaos, and The War Ellipse" loading="lazy" />
+          <img src="images/vow/posters/banner-signing-cc.jpg" alt="Enter the universe of Moon Gun Sam: Vow, Ember, Psalms of Chaos, and The War Ellipse" loading="lazy" />
         </div>
         <div class="universe-grid">
           <img class="universe-poster" src="images/vow/posters/family-earth.jpg" alt="Moon Gun Sam Vow family poster" loading="lazy" />
@@ -1100,14 +1100,14 @@
         <div class="pod-header">
           <p class="section-kicker">Stay close to the story</p>
           <h2 class="section-heading" id="pod-title">Want the audiobook?<br>Join the Pod.</h2>
-          <p class="section-intro">We’ll tell Pod members when the audiobook Kickstarter launches—and share narration samples, production updates, worldbuilding, artwork, and occasional evidence that the author should not be left unsupervised.</p>
+          <p class="section-intro">We’ll tell Pod members when the audiobook Kickstarter launches—and share narration samples, production updates, worldbuilding, concept art, and occasional evidence that the author should not be left unsupervised.</p>
         </div>
 
-        <div class="card-fan" aria-label="A preview of Moon Gun Sam trading cards">
-          <img src="images/vow/cards/word-sin.jpg" alt="The Word Sin trading card" loading="lazy" />
-          <img src="images/vow/cards/pebble-fight.jpg" alt="Pebble Fight trading card" loading="lazy" />
-          <img src="images/vow/cards/making-amends.jpg" alt="Making Amends trading card" loading="lazy" />
-          <img src="images/vow/cards/the-promise.jpg" alt="The Promise trading card" loading="lazy" />
+        <div class="newsletter-covers" aria-label="Recent Moon Gun Sam Pod newsletter issues">
+          <img src="images/newsletters/pod-001.png" alt="Moon Gun Sam Pod newsletter issue one" loading="lazy" />
+          <img src="images/newsletters/pod-002.png" alt="Moon Gun Sam Pod newsletter issue two" loading="lazy" />
+          <img src="images/newsletters/pod-003.png" alt="Moon Gun Sam Pod newsletter issue three" loading="lazy" />
+          <img src="images/newsletters/pod-004.png" alt="Moon Gun Sam Pod newsletter issue four" loading="lazy" />
         </div>
 
         <div class="pod-offer">
@@ -1117,11 +1117,10 @@
               <li>Audiobook Kickstarter and release notifications</li>
               <li>New narration samples and production updates</li>
               <li>The complete opening act of <em>Vow</em>, free</li>
-              <li>Worldbuilding, art, and behind-the-scenes stories</li>
+              <li>Worldbuilding, concept art, and behind-the-scenes stories</li>
             </ul>
           </div>
           <div class="pod-side">
-            <img src="images/vow/posters/trading-cards.jpg" alt="Moon Gun Sam Vow trading card booster pack" loading="lazy" />
             <div class="pod-actions">
               <a class="button" href="#audiobook-updates" onclick="trackVowEvent('audiobook_updates_click', {placement:'pod'});">Get Audiobook Updates</a>
               <a class="button secondary" href="#audiobook-preview" onclick="trackVowEvent('audiobook_replay_click');">Listen Again</a>

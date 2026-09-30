@@ -2056,3 +2056,251 @@ footer a:hover {
     padding-left: 0.75rem;
   }
 }
+
+/* =========================
+   HUMAN-ART HOMEPAGE HERO
+   Keep commissioned portrait artwork intact instead of cover-cropping it.
+========================= */
+
+.human-art-home .hero {
+  display: grid;
+  grid-template-columns: minmax(400px, 0.9fr) minmax(520px, 1.1fr);
+  align-items: stretch;
+  min-height: max(760px, 100svh);
+  padding: 0;
+  background:
+    radial-gradient(circle at 18% 22%, rgba(111, 109, 164, 0.18), transparent 34rem),
+    radial-gradient(circle at 86% 74%, rgba(230, 177, 74, 0.09), transparent 32rem),
+    linear-gradient(118deg, #07090d 0%, #0a0d13 48%, #05070a 100%);
+}
+
+.human-art-home .hero-stage {
+  position: relative;
+  grid-column: 2;
+  grid-row: 1;
+  inset: auto;
+  width: calc(100% - clamp(1.25rem, 3vw, 3rem));
+  height: calc(100% - clamp(2.5rem, 6vw, 6rem));
+  min-height: 680px;
+  margin: clamp(1.25rem, 3vw, 3rem) clamp(1.25rem, 3vw, 3rem) clamp(1.25rem, 3vw, 3rem) 0;
+  border: 1px solid rgba(200, 196, 245, 0.18);
+  border-radius: 30px;
+  background:
+    radial-gradient(circle at 50% 45%, rgba(111, 109, 164, 0.2), transparent 45%),
+    linear-gradient(145deg, rgba(255, 255, 255, 0.035), rgba(255, 255, 255, 0.008));
+  box-shadow:
+    0 34px 90px rgba(0, 0, 0, 0.5),
+    inset 0 0 70px rgba(0, 0, 0, 0.22);
+  isolation: isolate;
+}
+
+.human-art-home .hero-stage::before,
+.human-art-home .hero-stage::after,
+.human-art-home .hero:not(.cinematic-start) .hero-stage::before,
+.human-art-home .hero:not(.cinematic-start) .hero-stage::after,
+.human-art-home .hero.cinematic-start .hero-stage::before,
+.human-art-home .hero.cinematic-start .hero-stage::after {
+  background-size: contain;
+  background-position: center;
+  animation: none;
+  transform: none;
+  filter: none;
+}
+
+.human-art-home .hero-overlay {
+  background:
+    linear-gradient(180deg, rgba(7, 9, 13, 0.04), rgba(7, 9, 13, 0.08) 65%, rgba(7, 9, 13, 0.5)),
+    radial-gradient(circle at center, transparent 48%, rgba(7, 9, 13, 0.35) 100%);
+}
+
+.human-art-home .hero-grain {
+  opacity: 0.14;
+}
+
+.human-art-home .hero-art-credit {
+  position: absolute;
+  right: 1.25rem;
+  bottom: 1rem;
+  z-index: 4;
+  margin: 0;
+  padding: 0.38rem 0.62rem;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 999px;
+  background: rgba(7, 9, 13, 0.72);
+  color: rgba(245, 243, 237, 0.7);
+  font-size: 0.66rem;
+  letter-spacing: 0.08em;
+  line-height: 1.2;
+  text-transform: uppercase;
+  backdrop-filter: blur(10px);
+}
+
+.human-art-home .hero-content {
+  grid-column: 1;
+  grid-row: 1;
+  align-self: center;
+  width: min(620px, 100%);
+  max-width: none;
+  margin: 0 auto;
+  padding: clamp(3rem, 6vw, 6rem) clamp(2rem, 5vw, 5.5rem);
+  text-align: left;
+}
+
+.human-art-home .hero-title-wrap {
+  position: relative;
+  top: auto;
+  left: auto;
+  width: min(100%, 580px);
+  margin: 0 0 1.4rem;
+  overflow: hidden;
+  transform: none;
+}
+
+.human-art-home .publisher-lockup {
+  width: min(380px, 100%);
+  margin: 0 0 0.85rem;
+}
+
+.human-art-home .hero-content h2,
+.human-art-home .series-credit {
+  text-align: left;
+}
+
+.human-art-home .hero-tagline {
+  max-width: 32rem;
+  margin: 1.75rem 0 0;
+  padding: 1rem 1.2rem;
+  border-left: 1px solid rgba(242, 205, 126, 0.36) !important;
+  border-radius: 0 16px 16px 0;
+}
+
+.human-art-home .hero-ctas {
+  justify-content: flex-start;
+}
+
+.human-art-home .hero-music {
+  display: none;
+}
+
+.human-art-home .hero.is-focused .hero-content {
+  opacity: 0.38;
+  transform: translateX(-1rem) scale(0.98);
+  filter: none;
+}
+
+.human-art-home #trailer {
+  width: min(940px, calc(100% - 2.6rem));
+  grid-template-columns: minmax(190px, 0.58fr) minmax(0, 1.42fr);
+  gap: clamp(1.5rem, 4vw, 3rem);
+  padding: clamp(1.25rem, 3vw, 2.25rem);
+  border-color: rgba(255, 255, 255, 0.08);
+  background:
+    radial-gradient(circle at 8% 20%, rgba(111, 109, 164, 0.1), transparent 38%),
+    linear-gradient(135deg, rgba(255, 255, 255, 0.028), rgba(255, 255, 255, 0.008));
+  box-shadow: 0 22px 56px rgba(0, 0, 0, 0.24);
+}
+
+.human-art-home #trailer .home-section-heading h3 {
+  font-size: clamp(1.9rem, 3.6vw, 3rem);
+}
+
+.human-art-home #trailer .rooms-not-streets {
+  font-size: clamp(1.15rem, 2vw, 1.55rem);
+}
+
+.human-art-home #trailer .youtube-wrapper {
+  border-radius: 15px;
+  box-shadow: 0 22px 54px rgba(0, 0, 0, 0.35);
+}
+
+@media (max-width: 980px) {
+  .human-art-home .hero {
+    grid-template-columns: minmax(330px, 0.92fr) minmax(430px, 1.08fr);
+  }
+
+  .human-art-home .hero-content {
+    padding-right: 2rem;
+    padding-left: 2rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .human-art-home .hero {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    min-height: auto;
+    padding: 0 0 2.75rem;
+    background:
+      radial-gradient(circle at 15% 58%, rgba(111, 109, 164, 0.17), transparent 25rem),
+      var(--home-night);
+  }
+
+  .human-art-home .hero-stage {
+    order: 0;
+    width: calc(100% - 1.5rem);
+    height: min(145vw, 680px);
+    min-height: 480px;
+    max-height: 680px;
+    margin: 0.75rem auto 0;
+    border-radius: 22px;
+  }
+
+  .human-art-home .hero-stage::before,
+  .human-art-home .hero-stage::after {
+    background-size: contain;
+    background-position: center;
+  }
+
+  .human-art-home .hero-art-credit {
+    right: 0.75rem;
+    bottom: 0.7rem;
+    font-size: 0.58rem;
+  }
+
+  .human-art-home .hero-content {
+    order: 1;
+    width: min(100%, 35rem);
+    margin: 0 auto;
+    padding: 2rem 1.25rem 0;
+    text-align: center;
+  }
+
+  .human-art-home .hero-title-wrap {
+    width: min(94%, 480px);
+    margin: 0 auto 1.25rem;
+  }
+
+  .human-art-home .publisher-lockup {
+    width: min(360px, 88vw);
+    margin: 0 auto 0.75rem;
+  }
+
+  .human-art-home .hero-content h2,
+  .human-art-home .series-credit,
+  .human-art-home .hero-music {
+    text-align: center;
+  }
+
+  .human-art-home .hero-tagline {
+    margin: 1.25rem auto 0;
+    padding: 0.9rem 1rem;
+    border: 1px solid rgba(200, 196, 245, 0.14) !important;
+    border-radius: 16px;
+  }
+
+  .human-art-home .hero-ctas {
+    justify-content: center;
+  }
+
+  .human-art-home .hero.is-focused .hero-content {
+    opacity: 0.72;
+    transform: translateY(0.5rem) scale(0.99);
+  }
+
+  .human-art-home #trailer {
+    width: calc(100% - 1.5rem);
+    grid-template-columns: 1fr;
+    padding: 2rem 1rem;
+  }
+}

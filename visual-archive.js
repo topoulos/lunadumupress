@@ -1,0 +1,498 @@
+window.setSpoiler = function(level) {
+  localStorage.setItem("spoilerLevel", level);
+  applySpoilers();
+  highlightSpoiler(level);
+
+  const select = document.getElementById("spoilerLevel");
+  if (select) select.value = level;
+
+  // Rebuild hero if available
+  if (typeof window.rebuildHeroFromSpoilerLevel === "function") {
+    window.rebuildHeroFromSpoilerLevel();
+  }
+};
+
+function applySpoilers() {
+  const level = localStorage.getItem("spoilerLevel") || "none";
+  const order = ["none", "book1", "book2", "book3"];
+
+  document.querySelectorAll("[data-spoiler]").forEach(el => {
+    const required = el.dataset.spoiler;
+
+    if (order.indexOf(level) >= order.indexOf(required)) {
+      el.style.display = "block";
+    } else {
+      el.style.display = "none";
+    }
+  });
+}
+
+function highlightSpoiler(level) {
+  document.querySelectorAll(".spoiler-settings button").forEach(btn => {
+    btn.classList.remove("active");
+  });
+
+  const activeBtn = document.querySelector(
+    `.spoiler-settings button[onclick="setSpoiler('${level}')"]`
+  );
+
+  if (activeBtn) activeBtn.classList.add("active");
+}
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  // Double rAF ensures at least one paint frame before the transition fires.
+  // Without this, mobile browsers can skip the #pageFade opacity transition
+  // entirely and leave a black screen.
+  requestAnimationFrame(() => {
+    requestAnimationFrame(() => {
+      document.body.classList.add("loaded");
+    });
+  });
+
+  const stored = localStorage.getItem("spoilerLevel") || "none";
+  if (!localStorage.getItem("spoilerLevel")) {
+    localStorage.setItem("spoilerLevel", "none");
+  }
+
+  applySpoilers();
+  highlightSpoiler(stored);
+
+  const select = document.getElementById("spoilerLevel");
+  if (select) {
+    select.value = stored;
+    select.addEventListener("change", (e) => {
+      setSpoiler(e.target.value);
+    });
+  }
+
+  const hero = document.getElementById("hero");
+  const musicToggle = document.getElementById("musicToggle");
+  const heroAudio = document.getElementById("heroAudio");
+
+  let focusTimer = null;
+  let ignoreWakeUntil = 0;
+  let cinematicTimer = null;
+  let shouldRunIntro = false;
+
+  function enterFocusMode() {
+    if (!hero || !heroAudio || heroAudio.paused) return;
+    hero.classList.remove("is-awake");
+    hero.classList.add("is-focused");
+  }
+
+  function exitFocusMode() {
+    if (!hero) return;
+    hero.classList.remove("is-focused", "is-awake");
+  }
+
+  function wakeHeroTemporarily() {
+    if (!hero || !heroAudio || heroAudio.paused) return;
+    if (Date.now() < ignoreWakeUntil) return;
+
+    hero.classList.remove("is-focused");
+    hero.classList.add("is-awake");
+
+    clearTimeout(focusTimer);
+    focusTimer = setTimeout(() => {
+      if (!heroAudio.paused) {
+        hero.classList.remove("is-awake");
+        hero.classList.add("is-focused");
+      }
+    }, 3500);
+  }
+
+  if (musicToggle && heroAudio) {
+    const label = musicToggle.querySelector(".music-label");
+    const icon = musicToggle.querySelector(".music-icon");
+
+    const updateMusicUI = () => {
+      const isPlaying = !heroAudio.paused;
+      musicToggle.classList.toggle("playing", isPlaying);
+
+      if (label) label.textContent = isPlaying ? "Pause Presentation" : "Play Presentation";
+      if (icon) icon.textContent = "♪";
+
+      musicToggle.setAttribute(
+        "aria-label",
+        isPlaying ? "Pause background music" : "Play background music"
+      );
+    };
+
+    musicToggle.addEventListener("click", async () => {
+      try {
+        if (heroAudio.paused) {
+
+          shouldRunIntro = true;   // ← ADD THIS LINE
+
+          heroAudio.currentTime = 0;
+
+          if (typeof window.restartHeroSequence === "function") {
+            window.restartHeroSequence();
+          }
+
+          await heroAudio.play();
+        } else {
+          heroAudio.pause();
+        }
+
+        updateMusicUI();
+      } catch (err) {
+        console.error("Audio playback failed:", err);
+      }
+    });
+
+    heroAudio.addEventListener("play", () => {
+      clearTimeout(focusTimer);
+      clearTimeout(cinematicTimer);
+      updateMusicUI();
+
+      ignoreWakeUntil = Date.now() + 2200;
+
+      if (hero && shouldRunIntro) {
+        console.log("triggering intro/glint", hero.className);
+        hero.classList.remove("music-started", "cinematic-start");
+        void hero.offsetWidth;
+        hero.classList.add("music-started");
+        hero.classList.add("cinematic-start");
+
+        cinematicTimer = setTimeout(() => {
+          hero.classList.remove("cinematic-start");
+        }, window.innerWidth < 700 ? 9000 : 7000);
+      }
+
+      setTimeout(() => {
+        enterFocusMode();
+      }, 800);
+
+      shouldRunIntro = false;
+    });
+
+    heroAudio.addEventListener("pause", () => {
+      clearTimeout(focusTimer);
+      clearTimeout(cinematicTimer);
+      updateMusicUI();
+
+      if (hero) {
+        hero.classList.remove("cinematic-start", "music-started");
+      }
+
+      exitFocusMode();
+    });
+
+  } // ← closes if (musicToggle && heroAudio)
+
+  // --- Music track init ---
+  const savedTrack = localStorage.getItem("musicTrack") || "cirrus";
+  applyMusicTrack(savedTrack);
+
+  const musicTrackSelect = document.getElementById("musicTrackSelect");
+  if (musicTrackSelect) {
+    musicTrackSelect.value = savedTrack;
+    musicTrackSelect.addEventListener("change", (e) => {
+      applyMusicTrack(e.target.value);
+    });
+  }
+
+}); // ← closes DOMContentLoaded
+
+const observer = new IntersectionObserver(
+  entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+        entry.target.classList.add("decoded");
+      }
+    });
+  },
+  { threshold: 0, rootMargin: "0px 0px -10px 0px" }
+);
+
+document.querySelectorAll(".fade, .decode").forEach(el => {
+  observer.observe(el);
+  // Fallback: immediately reveal anything already in the viewport on load
+  const rect = el.getBoundingClientRect();
+  if (rect.top < window.innerHeight && rect.bottom > 0) {
+    el.classList.add("visible", "decoded");
+  }
+});
+
+(() => {
+  const hero = document.getElementById("hero");
+  if (!hero) return;
+
+  const VERSION = "20260304a"; // bump this when you replace images
+
+  let intervalId = null;
+  let idx = 0;
+  let showingA = true;
+  let images = [];
+  let touchStartX = 0;
+  let touchEndX = 0;
+
+  function levelAtLeast(level, required) {
+    const order = ["none", "book1", "book2", "book3"];
+    return order.indexOf(level) >= order.indexOf(required);
+  }
+
+  function buildHeroImages(level) {
+    const list = [];
+
+    // ===== PUBLIC (no spoilers) =====
+    list.push(`images/public/005_alex_kelli_sin.jpg?v=${VERSION}`);          // porch swing
+    list.push(`images/public/008_alex_grabs_rock.jpg?v=${VERSION}`);          // porch swing
+    list.push(`images/public/009_sam_kelli_cornfield_church.jpg?v=${VERSION}`);          // porch swing
+    list.push(`images/public/alex_kelli_bible_front.jpg?v=${VERSION}`);          // porch swing
+    list.push(`images/public/011_kelli_alex_class_hairties.jpg?v=${VERSION}`);          // porch swing
+    list.push(`images/public/012_alex_kelli_locker.jpg?v=${VERSION}`);          // porch swing
+    list.push(`images/public/013_alex_mason_drainpipe.jpg?v=${VERSION}`);          // porch swing
+    list.push(`images/public/014_alex_mason_kiss.jpg?v=${VERSION}`);          // porch swing
+    list.push(`images/public/015_alex_cell_kuranis.jpg?v=${VERSION}`);          // porch swing
+    list.push(`images/public/018_alex_underwood_cocoa.jpg?v=${VERSION}`);          // porch swing
+    list.push(`images/public/020_alex_kelli_hair.jpg?v=${VERSION}`);           // hair dye
+    list.push(`images/public/010_alex_kelli_porch.jpg?v=${VERSION}`);          // porch swing
+    list.push(`images/public/021_alex_kelli_promise_hands.jpg?v=${VERSION}`);           // pizza pod
+    list.push(`images/public/022_kelli_alex_promise.jpg?v=${VERSION}`);           // pizza pod
+    list.push(`images/public/alex_kelli_slate_corrected.png?v=${VERSION}`);           // pizza pod
+    list.push(`images/public/024_sam_arienne_pendant.jpg?v=${VERSION}`);           // pizza pod
+    list.push(`images/public/025_sam_arienne_kiss.jpg?v=${VERSION}`);           // pizza pod
+    list.push(`images/public/026_sam_arienne.jpg?v=${VERSION}`);           // pizza pod
+    list.push(`images/public/027_sam_arienne_dead.jpg?v=${VERSION}`);           // pizza pod
+    list.push(`images/public/027_alex_intake_proctor_argument.jpg?v=${VERSION}`);    // sam and alex scale wall
+    list.push(`images/public/028_sam_alex_formation.jpg?v=${VERSION}`);    // sam and alex scale wall
+    list.push(`images/public/030_jamestown_alex_fight.jpg?v=${VERSION}`);    // sam and alex scale wall
+    list.push(`images/public/030_alex_leg_wound.jpg?v=${VERSION}`);    // sam and alex scale wall
+    list.push(`images/public/030_sam_alex_scale_wall.jpg?v=${VERSION}`);    // sam and alex scale wall
+    list.push(`images/public/040_sam_alex_running_recruits.jpg?v=${VERSION}`); // sam and alex running
+    list.push(`images/public/045_sam_alex_bunks.jpg?v=${VERSION}`); // sam and alex bunks night
+    list.push(`images/public/050_sam_alex_jamestown_mess_hall.jpg?v=${VERSION}`); // friends in mess hall
+    list.push(`images/public/060_sam_alex_comfort.jpg?v=${VERSION}`); // sam holding alex in barracks
+    list.push(`images/public/070_sam_alex_training_photo.jpg?v=${VERSION}`); // sam and alex pose in training gear
+    list.push(`images/public/west_comm_corrected.jpg?v=${VERSION}`); // west comm tower wide shot
+    list.push(`images/public/077_sam_alex_west_comm_sneak.jpg?v=${VERSION}`); // family night
+    list.push(`images/public/090_sam_alex_kelli_west_comm.jpg?v=${VERSION}`); // family night
+    list.push(`images/public/095_sam_alex_west_comm.jpg?v=${VERSION}`); // sam and alex sneak into west comm
+    list.push(`images/public/100_alex_kelli_sam_rover.jpg?v=${VERSION}`); // family night
+    list.push(`images/public/105_sam_kelli_karaoke_bar.jpg?v=${VERSION}`); // family night
+    list.push(`images/public/110_sam_alex_charge_tower_fenyang.jpg?v=${VERSION}`); // family night
+    list.push(`images/public/120_water_tower_battle.jpg?v=${VERSION}`); // family night
+    list.push(`images/public/130_sam_alex_graduation.jpg?v=${VERSION}`); // family night
+    list.push(`images/public/140_sam_alex_kelli_after_graduation.jpg?v=${VERSION}`); // family night
+    list.push(`images/public/150_wedding_photo_sam_alex_kelli.jpg?v=${VERSION}`); // family night
+    list.push(`images/public/160_sam_kelli_hopper.jpg?v=${VERSION}`); // family night
+    list.push(`images/book1/025_marriedlife.jpg?v=${VERSION}`); // toggle on/off
+    list.push(`images/book1/020_alex_kelli_sam_preg_porch.jpg?v=${VERSION}`); // toggle on/off
+    list.push(`images/book1/035_sam_alex_brink_kelli_pregnant_to_hospital.jpg?v=${VERSION}`); // toggle on/off
+    list.push(`images/book1/038_sam_alex_kelli_lila_born.jpg?v=${VERSION}`); // toggle on/off
+    list.push(`images/public/170_sam_alex_kelli_lila_family_night.jpg?v=${VERSION}`); // family night
+    list.push(`images/book1/060_Kelli_Lila_west_comm.jpg?v=${VERSION}`); // toggle on/off
+    list.push(`images/book1/050_kelli_alex_gethsemane.jpg?v=${VERSION}`); // toggle on/off
+    list.push(`images/book2/01_sam_alex_kill.jpg?v=${VERSION}`);
+    list.push(`images/book2/02_harmonic_cortex.jpg?v=${VERSION}`);
+    list.push(`images/book2/03_fork_array_destruction.jpg?v=${VERSION}`);
+
+
+       // ===== BOOK 1 =====
+    if (levelAtLeast(level, "book1")) {
+      list.push(`images/book1/010_cadet_funeral.jpg?v=${VERSION}`);
+      list.push(`images/book1/012_shoemaker_families.jpg?v=${VERSION}`);
+      list.push(`images/book1/015_shoemaker_disaster.jpg?v=${VERSION}`); // toggle on/off
+      list.push(`images/book1/040_spaghetti_night.jpg?v=${VERSION}`); // toggle on/off
+      list.push(`images/book1/lila_upset_with_kelli_leaving2.png?v=${VERSION}`); // toggle on/off
+      list.push(`images/book1/kell_waving_goodbye_corrected.png?v=${VERSION}`); // toggle on/off
+      list.push(`images/book1/galleys_leave_shoemaker.jpg?v=${VERSION}`); // toggle on/off
+
+      list.push(`images/book1/085_arbitor.jpg?v=${VERSION}`); // toggle on/off
+    }
+
+    // ===== BOOK 2 =====
+    if (levelAtLeast(level, "book2")) {
+      list.push(`images/book2/03_pod_pizza_party.jpg?v=${VERSION}`);
+      list.push(`images/book2/04_sam_alex_war.jpg?v=${VERSION}`);
+      list.push(`images/book2/05_alex_sam_keira.jpg?v=${VERSION}`); // spoiler heavy? toggle
+      list.push(`images/book2/06_lila_tim_carnival.jpg?v=${VERSION}`);
+      list.push(`images/book2/07_alex_sam_remember.jpg?v=${VERSION}`);
+      list.push(`images/book2/08_kellis_message.jpg?v=${VERSION}`);
+      list.push(`images/book2/09_killing_olosk.jpg?v=${VERSION}`);
+      list.push(`images/book2/10_missing_boy.jpg?v=${VERSION}`);
+    }
+
+    return list;
+  }
+
+  function preload(list) {
+    list.forEach((src) => {
+      const img = new Image();
+      img.src = src;
+    });
+  }
+
+  function applyInitialState(list) {
+    idx = 0;
+    showingA = true;
+
+    hero.style.setProperty("--hero-img-a", `url("${list[idx]}")`);
+    hero.style.setProperty("--hero-a-opacity", "1");
+
+    hero.style.setProperty("--hero-img-b", `url("${list[(idx + 1) % list.length]}")`);
+    hero.style.setProperty("--hero-b-opacity", "0");
+  }
+
+  function showSlide(newIdx) {
+    if (!images.length) return;
+
+    const normalizedIdx = (newIdx + images.length) % images.length;
+
+    if (showingA) {
+      hero.style.setProperty("--hero-img-b", `url("${images[normalizedIdx]}")`);
+      hero.style.setProperty("--hero-b-opacity", "1");
+      hero.style.setProperty("--hero-a-opacity", "0");
+      showingA = false;
+    } else {
+      hero.style.setProperty("--hero-img-a", `url("${images[normalizedIdx]}")`);
+      hero.style.setProperty("--hero-a-opacity", "1");
+      hero.style.setProperty("--hero-b-opacity", "0");
+      showingA = true;
+    }
+
+    idx = normalizedIdx;
+  }
+
+  function startRotation(holdOverride) {
+    const isMobile = window.innerWidth < 700;
+    let HOLD_MS;
+
+    if (isMobile) {
+      HOLD_MS = 12000;
+    } else if (holdOverride) {
+      HOLD_MS = holdOverride;
+    } else {
+      const audio = document.getElementById("heroAudio");
+      const duration = audio && isFinite(audio.duration) ? audio.duration : null;
+
+      if (duration && images.length > 0) {
+        // Distribute slides evenly across the song duration
+        HOLD_MS = Math.round((duration / images.length) * 1000);
+        // Clamp: no faster than 3s, no slower than 15s per slide
+        HOLD_MS = Math.max(3000, Math.min(15000, HOLD_MS));
+        console.log(`Song duration: ${duration.toFixed(1)}s, ${images.length} slides → ${HOLD_MS}ms per slide`);
+      } else {
+        HOLD_MS = 7000; // fallback if audio metadata isn't ready
+      }
+    }
+
+    if (intervalId) clearInterval(intervalId);
+
+    intervalId = setInterval(() => {
+      if (!images.length) return;
+      showSlide(idx + 1);
+    }, HOLD_MS);
+  }
+
+  function rebuildFromSpoilerLevel() {
+    const level = localStorage.getItem("spoilerLevel") || "none";
+    images = buildHeroImages(level);
+
+    if (!images.length) return;
+
+    preload(images);
+    applyInitialState(images);
+    startRotation();
+  }
+
+  // Build on load
+  rebuildFromSpoilerLevel();
+
+  // Expose so setSpoiler (top-level) can call it
+  window.rebuildHeroFromSpoilerLevel = rebuildFromSpoilerLevel;
+
+  hero.addEventListener("touchstart", (e) => {
+    if (window.innerWidth >= 700) return;
+    touchStartX = e.changedTouches[0].clientX;
+  }, { passive: true });
+
+  hero.addEventListener("touchend", (e) => {
+    if (window.innerWidth >= 700) return;
+
+    touchEndX = e.changedTouches[0].clientX;
+    const deltaX = touchEndX - touchStartX;
+    const swipeThreshold = 40;
+
+    if (Math.abs(deltaX) < swipeThreshold) return;
+
+    if (deltaX < 0) {
+      showSlide(idx + 1); // swipe left = next
+    } else {
+      showSlide(idx - 1); // swipe right = previous
+    }
+
+    startRotation(); // restart timer so it doesn't jump immediately
+  }, { passive: true });
+
+
+  window.restartHeroSequence = function() {
+    rebuildFromSpoilerLevel();
+  };
+
+  // Rebuild when the user changes spoiler level (in this tab)
+  const originalSetSpoiler = window.setSpoiler;
+  window.setSpoiler = function(level) {
+    if (typeof originalSetSpoiler === "function") originalSetSpoiler(level);
+    rebuildFromSpoilerLevel();
+  };
+
+  // Also rebuild if localStorage changes from another tab
+  window.addEventListener("storage", (e) => {
+    if (e.key === "spoilerLevel") rebuildFromSpoilerLevel();
+  });
+})();
+
+// =========================
+//   MUSIC TRACK SELECTOR
+// =========================
+
+const MUSIC_TRACKS = {
+  cirrus: {
+    src: "audio/Cirrus.mp3",
+    creditHTML: `"Cirrus" by <a href="https://www.scottbuckley.com.au/" target="_blank" rel="noopener noreferrer">Scott Buckley</a> <span class="license-tag">— CC BY 4.0</span>`,
+  },
+  frankincense: {
+    src: "audio/sb_frankincenseandmyrrh.mp3",
+    creditHTML: `"Frankincense and Myrrh" by <a href="https://www.scottbuckley.com.au/" target="_blank" rel="noopener noreferrer">Scott Buckley</a> <span class="license-tag">— CC BY 4.0</span>`,
+  },
+};
+
+function applyMusicTrack(trackKey) {
+  const track = MUSIC_TRACKS[trackKey] || MUSIC_TRACKS["cirrus"];
+  const audio = document.getElementById("heroAudio");
+  const credit = document.getElementById("musicCredit");
+  const select = document.getElementById("musicTrackSelect");
+
+  const wasPlaying = audio && !audio.paused;
+
+  if (audio) {
+    if (wasPlaying) {
+      audio.pause();
+    }
+    // Swap source
+    audio.src = track.src;
+    audio.load();
+    // If it was playing, resume
+    if (wasPlaying) {
+      audio.play().catch(() => {});
+    }
+  }
+
+  if (credit) {
+    credit.innerHTML = track.creditHTML;
+  }
+
+  if (select) {
+    select.value = trackKey;
+  }
+
+  localStorage.setItem("musicTrack", trackKey);
+}
+
+// Expose globally so it can be called from other contexts if needed
+window.applyMusicTrack = applyMusicTrack;
