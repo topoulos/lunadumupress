@@ -1719,8 +1719,36 @@ footer a:hover {
 
 .home-page .books-subtitle {
   max-width: 760px;
-  margin: 0 auto 2.75rem;
+  margin: 0 auto 1.5rem;
   line-height: 1.72;
+}
+
+.home-page .direct-store-callout {
+  display: grid;
+  gap: 0.35rem;
+  width: min(720px, 100%);
+  margin: 0 auto 2.75rem;
+  padding: 1rem 1.25rem;
+  border: 1px solid rgba(230, 177, 74, 0.28);
+  border-radius: 16px;
+  color: var(--home-muted);
+  text-align: center;
+  background:
+    radial-gradient(circle at 12% 0%, rgba(230, 177, 74, 0.12), transparent 36%),
+    linear-gradient(135deg, rgba(230, 177, 74, 0.06), rgba(111, 109, 164, 0.09));
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.18);
+}
+
+.home-page .direct-store-callout strong {
+  color: var(--home-gold-soft);
+  font-family: var(--home-display);
+  font-size: clamp(1rem, 2vw, 1.16rem);
+  letter-spacing: 0.04em;
+}
+
+.home-page .direct-store-callout span {
+  font-size: 0.94rem;
+  line-height: 1.55;
 }
 
 .home-page .book-grid {
@@ -1745,6 +1773,13 @@ footer a:hover {
 .home-page .book-cover-cta {
   color: var(--home-gold-soft);
   font-weight: 700;
+}
+
+@media (max-width: 560px) {
+  .home-page .direct-store-callout {
+    padding: 0.9rem 1rem;
+    text-align: left;
+  }
 }
 
 .home-page .mailing-list {
