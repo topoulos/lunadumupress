@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="News and upcoming events from Luna Dumu Press and the Moon Gun Sam series: signings, conventions, releases, and more." />
+  <title>News &amp; Events | Luna Dumu Press</title>
+  <meta name="theme-color" content="#07090d" />
+  <link rel="stylesheet" href="/styles.css?v=20261015" />
+  <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="shortcut icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <meta name="apple-mobile-web-app-title" content="Luna Dumu" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <style>
+    .news-page main { max-width: 860px; margin: 0 auto; padding: 2rem 1.25rem 4rem; }
+    .news-page .author-header { padding: 1.25rem; text-align: center; }
+    .news-page .author-home-link { color: #eee; text-decoration: none; letter-spacing: 0.18em; text-transform: uppercase; font-size: 0.85rem; }
+    .news-hero { text-align: center; margin-bottom: 2.5rem; }
+    .news-hero h1 { font-size: clamp(1.8rem, 5vw, 2.6rem); letter-spacing: 0.08em; margin: 0.4rem 0 0.8rem; }
+    .news-section { margin: 2.5rem 0; }
+    .news-section h3 { margin-bottom: 1rem; }
+    .news-item { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; padding: 1.25rem 1.4rem; margin-bottom: 1rem; text-align: left; }
+    .news-item h4 { font-size: 1.25rem; margin: 0.2rem 0 0.4rem; }
+    .news-date { font-size: 0.85rem; letter-spacing: 0.12em; text-transform: uppercase; opacity: 0.75; }
+    .news-location { opacity: 0.85; margin-bottom: 0.5rem; }
+    .news-image { width: 100%; height: auto; border-radius: 8px; margin: 0.6rem 0; }
+    .news-empty { opacity: 0.7; font-style: italic; }
+    .pod-cta { text-align: center; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.14); border-radius: 14px; padding: 2rem 1.25rem; margin: 2.5rem 0; }
+    .pod-cta ul { list-style: none; margin: 1rem 0 1.4rem; line-height: 1.9; }
+  </style>
+</head>
+<body class="news-page">
+  <div id="pageFade"></div>
+  <header class="author-header">
+    <a class="author-home-link" href="/">Luna Dumu Press</a>
+  </header>
+
+  <main>
+    <section class="news-hero fade visible" aria-labelledby="news-title">
+      <p class="home-kicker">From Luna Dumu Press</p>
+      <h1 id="news-title">News &amp; Events</h1>
+      <p>Signings, conventions, releases, and updates from the world of Moon Gun Sam.</p>
+    </section>
+
+    <section class="news-section fade visible" aria-labelledby="upcoming-title">
+      <p class="home-kicker">On the calendar</p>
+      <h3 id="upcoming-title">Upcoming</h3>
+      <div id="upcoming-list">
+        <article class="news-item" id="prologue-signing-2026-10-17">
+          <p class="news-date">Sat, Oct 17, 2026 · 12:00–2:00 PM CT</p>
+          <h4>Book Signing at Prologue Bookstore</h4>
+          <p class="news-location">Prologue Bookstore, 126 S Wood St, Neosho, MO 64850</p>
+          <p>Meet Anthony Angel and get signed copies of Moon Gun Sam: The Dolphin — Vow and The Dolphin — Ember.</p>
+          <a class="inline-link" href="https://www.prologuebookstore.com" target="_blank" rel="noopener noreferrer">Details →</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="pod-cta fade visible" aria-labelledby="pod-cta-title">
+      <h3 id="pod-cta-title">Join the Pod</h3>
+      <ul>
+        <li>Hear about news and events first</li>
+        <li>Pod perks: 15% off direct, free ebook with hardcovers</li>
+        <li>First look at art, chapters, and transmissions</li>
+      </ul>
+      <a class="cta" href="https://lunadumupress.com/join">Join the Pod</a>
+    </section>
+
+    <section class="news-section fade visible" aria-labelledby="latest-title">
+      <p class="home-kicker">Transmissions</p>
+      <h3 id="latest-title">Latest News</h3>
+      <div id="news-list">
+        <p class="news-empty">News from the Pod is on the way.</p>
+      </div>
+    </section>
+
+    <section class="news-section fade visible" id="past-events" aria-labelledby="past-title" hidden>
+      <p class="home-kicker">Archive</p>
+      <h3 id="past-title">Past Events</h3>
+      <div id="past-list"></div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="copyright">
+      © 2026 Luna Dumu Press &nbsp;•&nbsp;
+      <a href="/">Home</a> &nbsp;•&nbsp;
+      <a href="/author.html">Author</a> &nbsp;•&nbsp;
+      <a href="/privacy.html">Privacy Policy</a> &nbsp;•&nbsp;
+      Contact <a href="mailto:anthony@lunadumupress.com">anthony@lunadumupress.com</a>
+    </div>
+  </footer>
+
+  <script src="/news/news.js"></script>
+</body>
+</html>
