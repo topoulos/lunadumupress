@@ -73,6 +73,38 @@
     );
   }
 
+  var CONTROL_SELECTOR = 'input, select, textarea, button';
+
+  /** True only if el wraps exactly one form control (this field) and nothing
+   * a visitor needs: never the email input or a submit button. */
+  function wrapsOnlyField(el, field) {
+    if (!el || !el.querySelectorAll) return false;
+    var controls = el.querySelectorAll(CONTROL_SELECTOR);
+    if (controls.length !== 1 || controls[0] !== field) return false;
+    if (el.querySelector('input[type="email"], [type="submit"]')) return false;
+    return true;
+  }
+
+  /** Highest ancestor (below the form) that still contains ONLY this field. */
+  function soloWrapper(field, form) {
+    var best = null;
+    var node = field.parentElement;
+    while (node && node !== form && form.contains(node)) {
+      if (!wrapsOnlyField(node, field)) break;
+      best = node;
+      node = node.parentElement;
+    }
+    return best;
+  }
+
+  function hideOffscreen(field) {
+    field.style.position = 'absolute';
+    field.style.left = '-9999px';
+    field.style.height = '1px';
+    field.style.width = '1px';
+    field.style.overflow = 'hidden';
+  }
+
   /** Prefer native ML fields; hide them on landers. Inject only if missing. */
   function setAttributionField(form, name, value) {
     if (!form) return;
@@ -83,22 +115,23 @@
       field.type = 'hidden';
       field.name = name;
       form.appendChild(field);
-    } else {
+    } else if (field.type !== 'hidden') {
       // Native embed may render these as visible text — fill + hide UI, keep type.
+      // Only ever hide a wrapper that contains THIS field alone; if the markup
+      // nests other fields (email, submit) in the same wrapper, hide just the input.
       field.setAttribute('aria-hidden', 'true');
       field.tabIndex = -1;
       var group = field.closest(
         '.ml-field-group, .ml-form-fieldRow, .ml-form-fieldWrapper, .form-group'
       );
+      if (!(group && form.contains(group) && wrapsOnlyField(group, field))) {
+        group = soloWrapper(field, form);
+      }
       if (group) {
         group.style.display = 'none';
         group.setAttribute('aria-hidden', 'true');
       } else {
-        field.style.position = 'absolute';
-        field.style.left = '-9999px';
-        field.style.height = '1px';
-        field.style.width = '1px';
-        field.style.overflow = 'hidden';
+        hideOffscreen(field);
       }
     }
     if (value != null && value !== '') {
@@ -136,7 +169,68 @@
     } catch (error) {}
   }
 
+  /* Fallback: if the MailerLite embed hasn't shown a visible email field after
+   * a few seconds (ML script blocked/failed, or hidden by anything), show a
+   * plain link to the MailerLite-hosted copy of form 9NV2sK. Removed again if
+   * the embed shows up later. */
+  var HOSTED_FORM_URL =
+    'https://dashboard.mailerlite.com/forms/2151427/180902664009155935/share';
+  var FALLBACK_CLASS = 'mgs-ml-fallback';
+
+  function isShown(el) {
+    if (!el) return false;
+    if (typeof el.checkVisibility === 'function' && !el.checkVisibility()) {
+      return false;
+    }
+    var rect = el.getBoundingClientRect();
+    return rect.width > 0 && rect.height > 0;
+  }
+
+  function embedLooksUsable(container) {
+    var email = container.querySelector(
+      'input[type="email"], input[name="fields[email]"]'
+    );
+    var submit = container.querySelector('button[type="submit"], input[type="submit"]');
+    return isShown(email) && isShown(submit);
+  }
+
+  function checkEmbedsOrFallback() {
+    try {
+      var containers = document.querySelectorAll('.ml-embedded[data-form="9NV2sK"]');
+      for (var i = 0; i < containers.length; i++) {
+        var container = containers[i];
+        var next = container.nextElementSibling;
+        var existing =
+          next && next.classList && next.classList.contains(FALLBACK_CLASS) ? next : null;
+        if (embedLooksUsable(container)) {
+          if (existing) existing.parentNode.removeChild(existing);
+          continue;
+        }
+        if (existing) continue;
+        var box = document.createElement('p');
+        box.className = FALLBACK_CLASS;
+        box.style.cssText =
+          'margin:1rem auto;text-align:center;line-height:1.5;font-size:1rem;';
+        var link = document.createElement('a');
+        link.href = HOSTED_FORM_URL;
+        link.rel = 'noopener';
+        link.textContent = 'Tap here to join the Pod';
+        link.style.cssText =
+          'display:inline-block;padding:0.85rem 1.4rem;border-radius:10px;' +
+          'background:#e8b04b;color:#090909;font-weight:800;text-decoration:none;' +
+          'letter-spacing:0.04em;';
+        var note = document.createElement('span');
+        note.textContent = 'Signup form not showing? ';
+        note.style.cssText = 'display:block;margin-bottom:0.6rem;color:#aeb4bf;';
+        box.appendChild(note);
+        box.appendChild(link);
+        container.parentNode.insertBefore(box, container.nextSibling);
+      }
+    } catch (error) {}
+  }
+
   stashFromUrl();
+  setTimeout(checkEmbedsOrFallback, 8000);
 
   document.addEventListener(
     'submit',
@@ -166,6 +260,8 @@
     applyToAllMlForms();
     setTimeout(applyToAllMlForms, 500);
     setTimeout(applyToAllMlForms, 1500);
+    setTimeout(checkEmbedsOrFallback, 6000);
+    setTimeout(checkEmbedsOrFallback, 12000);
   });
   try {
     var observer = new MutationObserver(function () {
