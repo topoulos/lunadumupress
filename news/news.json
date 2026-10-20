@@ -1,6 +1,15 @@
 {
   "items": [
     {
+      "id": "lathotep-art-2026-10-20",
+      "type": "news",
+      "date": "2026-10-20",
+      "title": "New Lathotep art is on the way",
+      "summary": "Artist Shawn Lee, an illustrator based in South Korea, is working on brand-new Lathotep artwork for Moon Gun Sam. Want to meet the artist? Our full interview with Shawn lands in the Luna Dumu Pod newsletter on Black Friday, Nov 27.",
+      "credit": "Art by Shawn Lee",
+      "link": "https://lunadumupress.com/join"
+    },
+    {
       "id": "prologue-signing-2026-10-17",
       "type": "event",
       "date": "2026-10-17",
