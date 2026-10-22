@@ -20,7 +20,13 @@
     if (it.location) h += '<p class="news-location">' + esc(it.location) + "</p>";
     if (it.image) h += '<img class="news-image" src="' + esc(it.image) + '" alt="' + esc(it.title) + '" loading="lazy" />';
     h += "<p>" + esc(past && it.recap ? it.recap : it.summary) + "</p>";
-    if (it.link) h += '<a class="inline-link" href="' + esc(it.link) + '" target="_blank" rel="noopener noreferrer">Details →</a>';
+    if (it.credit) h += '<p class="news-credit">' + esc(it.credit) + "</p>";
+    if (it.link || it.joinLink) {
+      h += '<p class="news-links">';
+      if (it.link) h += '<a class="inline-link" href="' + esc(it.link) + '" target="_blank" rel="noopener noreferrer">Details →</a>';
+      if (it.joinLink) h += '<a class="inline-link" href="' + esc(it.joinLink) + '">Join the Pod →</a>';
+      h += "</p>";
+    }
     return h + "</article>";
   }
   function split(items, today) {
