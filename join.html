@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Join the Pod for Moon Gun Sam — free Act I, audiobook news, series updates, and behind-the-scenes transmissions. No spam." />
+  <meta name="description" content="Watch the Moon Gun Sam trailer, meet Vow and Ember, and join the Pod — free Act I, audiobook news, series updates, and behind-the-scenes transmissions. No spam." />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://lunadumupress.com/join" />
   <title>Join the Pod · Moon Gun Sam</title>
@@ -76,6 +76,16 @@
       text-align: center;
       margin-top: 0.75rem;
     }
+    .join-section { margin-top: clamp(2.5rem, 6vw, 4rem); text-align: center; }
+    .join-section h2 { font-size: clamp(1.4rem, 3vw, 1.9rem); letter-spacing: 0.05em; margin: 0 0 0.75rem; }
+    .join-section > p { max-width: 38rem; margin: 0 auto 1.25rem; color: #aeb4bf; line-height: 1.55; }
+    .join-books { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: clamp(1.25rem, 4vw, 2rem); text-align: left; }
+    .join-book { display: flex; gap: 1rem; align-items: flex-start; }
+    .join-book img { width: 120px; height: auto; border-radius: 6px; flex-shrink: 0; box-shadow: 0 12px 30px rgba(0,0,0,0.4); }
+    .join-book h3 { margin: 0 0 0.4rem; font-size: 1.15rem; letter-spacing: 0.04em; }
+    .join-book p { margin: 0 0 0.6rem; color: #aeb4bf; line-height: 1.5; font-size: 0.95rem; }
+    .join-book a, .join-explore a { color: var(--home-gold-soft, #f2cd7e); }
+    .join-explore { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.75rem 1.5rem; }
   </style>
 </head>
 <body class="home-page">
@@ -90,10 +100,11 @@
     <main>
       <div class="join-intro">
         <p class="home-kicker">Moon Gun Sam</p>
-        <h1>Join the Pod</h1>
+        <h1>Welcome to the Pod</h1>
         <p>
-          Get free Act&nbsp;I, audiobook news, series updates, and behind-the-scenes
-          transmissions — quiet, useful, and never spammy.
+          Thank you for reading. This page is yours to explore — watch the trailer and
+          meet the books below, no signup needed. If you'd like free Act&nbsp;I, audiobook
+          news, and behind-the-scenes transmissions, the Pod is right here too.
         </p>
       </div>
 
@@ -110,6 +121,58 @@
           Prefer the sample first?
           <a class="inline-link" href="https://dl.bookfunnel.com/1uuimb68pd" target="_blank" rel="noopener noreferrer">Free Act I + series updates (no spam)</a>
         </p>
+      </section>
+
+      <section id="trailer" class="join-section" aria-labelledby="trailer-title">
+        <p class="home-kicker">Free to watch</p>
+        <h2 id="trailer-title">Watch the Official Trailer</h2>
+        <p><em>Love and Hope are Rooms, Not Streets.</em><br />Meet the family at the heart of Moon Gun Sam.</p>
+        <div class="youtube-wrapper">
+          <iframe
+            src="https://www.youtube-nocookie.com/embed/_oewA28OtHo"
+            title="Moon Gun Sam: The Dolphin — Vow &amp; Ember | Official Trailer"
+            loading="lazy"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen>
+          </iframe>
+        </div>
+      </section>
+
+      <section id="books" class="join-section" aria-labelledby="books-title">
+        <p class="home-kicker">The Dolphin</p>
+        <h2 id="books-title">Meet the Books</h2>
+        <div class="join-books">
+          <article class="join-book">
+            <img src="/images/Vow.jpg" alt="Moon Gun Sam: The Dolphin — Vow cover" width="1200" height="1800" loading="lazy" />
+            <div>
+              <h3>Book One: Vow</h3>
+              <p>On Luna, nothing stays buried. Begin the sacred science-fantasy family saga—gothic, grounded, violent, and stubbornly human.</p>
+              <a href="/buy-vow.html">Get Vow →</a>
+            </div>
+          </article>
+          <article class="join-book">
+            <img src="/images/Ember.jpg" alt="Moon Gun Sam: The Dolphin — Ember cover" width="1200" height="1800" loading="lazy" />
+            <div>
+              <h3>Book Two: Ember</h3>
+              <p>The rooms were full of serpents. The family survived everything thrown at them. Now they must uncover the mystery beneath Waking Dawn before it’s too late.</p>
+              <a href="/buy-ember.html">Get Ember →</a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- PLACEHOLDER: EXTRA SCENE — add an approved, spoiler-safe bonus scene here (Books 1–3 only). -->
+      <!-- PLACEHOLDER: CHARACTER NOTE — add an approved, spoiler-safe character note here. -->
+      <!-- PLACEHOLDER: AUDIOBOOK PREVIEW — add an approved audiobook sample player here (e.g. Louise Porter narration). -->
+
+      <section id="explore" class="join-section" aria-labelledby="explore-title">
+        <p class="home-kicker">Keep exploring</p>
+        <h2 id="explore-title">More from Luna Dumu Press</h2>
+        <div class="join-explore">
+          <a href="/news/">News &amp; Events →</a>
+          <a href="https://shop.lunadumupress.com" target="_blank" rel="noopener noreferrer">Visit the Shop →</a>
+          <a href="/author.html">Meet the Author →</a>
+        </div>
       </section>
 
       <p class="join-launch">Vow &amp; Ember are available now.</p>
