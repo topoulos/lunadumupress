@@ -384,6 +384,19 @@
       </div>
     </div>
 
+
+    <div class="music-book-card" id="book4-card">
+      <div class="music-book-card-image">
+        <div class="music-book-card-image-placeholder" aria-hidden="true">IV</div>
+      </div>
+      <div class="music-book-card-body">
+        <span class="music-book-card-eyebrow">Book Four</span>
+        <div class="music-book-card-title">The War Ellipse</div>
+        <div class="music-book-card-subtitle">Listening companion</div>
+        <span class="music-book-card-cta">TRANSMISSION PENDING</span>
+      </div>
+    </div>
+
   </div>
 </div>
 
@@ -396,6 +409,7 @@
       <button type="button" onclick="setSpoiler('book1')">I've read Book 1</button>
       <button type="button" onclick="setSpoiler('book2')">I've read Book 2</button>
       <button type="button" onclick="setSpoiler('book3')">I've read Book 3</button>
+      <button type="button" onclick="setSpoiler('book4')">Reading Book 4</button>
     </div>
     <div class="spoiler-select">
       <label class="sr-only" for="spoilerLevel">Spoiler level</label>
@@ -404,6 +418,7 @@
         <option value="book1">I've read Book 1</option>
         <option value="book2">I've read Book 2</option>
         <option value="book3">I've read Book 3</option>
+        <option value="book4">Reading Book 4</option>
       </select>
     </div>
   </section>
@@ -414,12 +429,12 @@
   </div>
 </footer>
 
-<script src="script.js"></script>
+<script src="script.js?v=book4-1"></script>
 <script>
   // Music hub spoiler card logic
   function applyMusicHubSpoilers() {
     const level = localStorage.getItem("spoilerLevel") || "none";
-    const order = ["none", "book1", "book2", "book3"];
+    const order = ["none", "book1", "book2", "book3", "book4"];
 
     // Book 2 card
     const book2 = document.getElementById("book2-card");

@@ -667,12 +667,11 @@
       "title": "Night",
       "artist": "John Carpenter",
       "links": {
-        "youtube": "https://youtu.be/3ItHGMVnu10?si=gQhfX7GraWn5lCqV",
-        "apple": "https://music.apple.com/us/album/night-zola-jesus-dean-hurley-remix/1036254173?i=1036254467",
-        "spotify": "https://open.spotify.com/track/42cpLMpSd0AuQRM6pHI59U"
+        "youtube": "https://youtu.be/Lxbfshg2mcI?si=BjK-uBgFOTkqrcM-",
+        "apple": "https://music.apple.com/us/album/night/950418048?i=950418070",
+        "spotify": "https://open.spotify.com/track/1LNsMbRtGhXEYc9Bxv2Ffp"
       },
-      "status": "selected",
-      "version": "Zola Jesus & Dean Hurley Remix"
+      "status": "selected"
     },
     {
       "id": "track-059",
@@ -938,6 +937,17 @@
         "youtube": "https://youtu.be/FYrnptSa1AM?si=EZQ_c7Sg1rKtjgj2",
         "apple": "https://music.apple.com/us/album/without-you-extended/1544877496?i=1544877503",
         "spotify": "https://open.spotify.com/track/30pNfaqKiMbnbh9A5MrNQx"
+      },
+      "status": "selected"
+    },
+    {
+      "id": "track-083",
+      "title": "Cenotaph",
+      "artist": "Ghost",
+      "links": {
+        "youtube": "https://youtu.be/ciGeAweNk0s?si=Z9hefEGwjETpUORG",
+        "apple": null,
+        "spotify": null
       },
       "status": "selected"
     }
@@ -1753,14 +1763,14 @@
     {
       "id": "cue-001",
       "sectionId": "act-1",
-      "trackId": "track-001",
+      "trackId": "track-082",
       "sceneIds": [
         "B03-A1-S1",
         "B03-A1-S2"
       ],
-      "commentary": "For the opening there is no dolphin to ignite. Only the window of Lila’s room: the curtain moving, her drawings on the walls, Hopper on the bed. The music is grim horror. After the title, it feels paused over the stakeout; then the drums kick in for the apprehension and transport. All hell breaks loose.",
+      "commentary": "For the opening there is no dolphin to ignite. Only the window of Lila’s room: the curtain moving, her drawings on the walls, Hopper on the bed.\n\nThis song is about how you can’t live in a world without someone, so you would rather the world not be there anymore than go on. It’s not about suicide, though—just a profession of strong love. The lyrics allude to a dangerous lifestyle that threatens to take each other away. The song is sad with missing and loss, and it feels like Sam and Alex in this moment. Seeing Lila’s bedroom, what was taken from them, feeds that desperation. The music becomes bombastic with orchestra and drums over the apprehension and transport, when all hell breaks loose.",
       "spoilerLevel": "book3",
-      "displayLabel": "The Dark Time"
+      "displayLabel": "The Opening"
     },
     {
       "id": "cue-002",
@@ -2770,9 +2780,9 @@
     {
       "id": "cue-088",
       "sectionId": "afterwards",
-      "trackId": "track-082",
+      "trackId": "track-083",
       "sceneIds": [],
-      "commentary": "This music feels like Alex's heart to Sam and Sam's heart to Alex. But also Sam and Alex's heart toward Keira, Lila, and Kelli. It's about not accepting a world without them in it. It's beautiful and epic, this version has extra orchestral arrangements and just rocks.",
+      "commentary": "A beautiful, hopeful rock song about missing someone and carrying them in your heart. A cenotaph is a memorial without a body; to me, the title speaks to the feeling that the person’s true spirit is still alive with you. This fits what Alex is choosing to feel for Sam moving forward. She’s mourning him, but now that she has a mission, she carries him in her heart.",
       "spoilerLevel": "book3",
       "label": "End titles"
     }

@@ -13,7 +13,7 @@ Special cases: Winged Serpent covers S183's action; To the Stars begins at that 
 
 Book 3 uses the site's `spoilerLevel` preference and per-cue Show/Hide interaction. Scene numbers and music metadata stay public; scene titles, locations, timing notes, and commentary require Book 3 plus an explicit per-cue reveal. Lowering the level closes all notes. No-JS defaults closed.
 
-Catalog matching corrected “Vorex” to “Vortex,” “The Immoralist” to “The Immortalist,” and “After Initiation” to “Afterlife Initiation.” “Night” explicitly identifies the Zola Jesus & Dean Hurley remix from the supplied YouTube selection. “Philimelagram” and “The Spirit Within” match the soundtrack catalogs. Alternate catalog credits (for example inola / Young Collective for Glacier) are retained in the link audit. The audit records metadata matching, not audio fingerprint verification; unresolved entries do not establish that a recording is unavailable.
+Catalog matching corrected “Vorex” to “Vortex,” “The Immoralist” to “The Immortalist,” and “After Initiation” to “Afterlife Initiation.” “Night” uses John Carpenter’s original Lost Themes recording and Tony’s corrected YouTube link. “Philimelagram” and “The Spirit Within” match the soundtrack catalogs. Alternate catalog credits (for example inola / Young Collective for Glacier) are retained in the link audit. The audit records metadata matching, not audio fingerprint verification; unresolved entries do not establish that a recording is unavailable.
 
 `music-companion.css` derives from Ember's companion style with wrapping/accessibility additions for long titles. Existing Vow and Ember pages are unchanged. The hub links to Psalms; there is no publication step in this phase.
 

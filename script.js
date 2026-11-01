@@ -14,7 +14,7 @@ window.setSpoiler = function(level) {
 
 function applySpoilers() {
   const level = localStorage.getItem("spoilerLevel") || "none";
-  const order = ["none", "book1", "book2", "book3"];
+  const order = ["none", "book1", "book2", "book3", "book4"];
 
   document.querySelectorAll("[data-spoiler]").forEach(el => {
     const required = el.dataset.spoiler;

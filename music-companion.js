@@ -1,6 +1,6 @@
 /* Same site-wide spoilerLevel and per-cue reveal pattern as Vow / Ember. */
 (() => {
-  const levels = ['none', 'book1', 'book2', 'book3'];
+  const levels = ['none', 'book1', 'book2', 'book3', 'book4'];
   const buttons = [...document.querySelectorAll('.track-reveal-btn')];
   const setOpen = (button, open) => {
     const content = document.getElementById(button.getAttribute('aria-controls'));
@@ -14,8 +14,8 @@
     const stored = localStorage.getItem('spoilerLevel');
     const level = levels.includes(stored) ? stored : 'none';
     buttons.forEach(button => {
-      button.style.display = level === 'book3' ? 'inline-flex' : 'none';
-      if (level !== 'book3') setOpen(button, false);
+      button.style.display = levels.indexOf(level) >= levels.indexOf('book3') ? 'inline-flex' : 'none';
+      if (levels.indexOf(level) < levels.indexOf('book3')) setOpen(button, false);
     });
     levels.forEach(value => {
       const button = document.getElementById('cfb-' + value);
@@ -30,7 +30,7 @@
     if (typeof window.highlightSpoiler === 'function') window.highlightSpoiler(level);
   };
   buttons.forEach(button => button.addEventListener('click', () => {
-    if (localStorage.getItem('spoilerLevel') === 'book3') setOpen(button, button.getAttribute('aria-expanded') !== 'true');
+    if (levels.indexOf(localStorage.getItem('spoilerLevel')) >= levels.indexOf('book3')) setOpen(button, button.getAttribute('aria-expanded') !== 'true');
   }));
   const original = window.setSpoiler;
   window.setSpoiler = level => { original(level); apply(); };

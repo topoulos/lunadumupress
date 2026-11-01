@@ -368,6 +368,7 @@
     <button type="button" onclick="setSpoiler('book1')" id="cfb-book1">Reading Book 1</button>
     <button type="button" onclick="setSpoiler('book2')" id="cfb-book2">Reading Book 2</button>
     <button type="button" onclick="setSpoiler('book3')" id="cfb-book3">Reading Book 3</button>
+    <button type="button" onclick="setSpoiler('book4')" id="cfb-book4">Reading Book 4</button>
   </div>
   <div class="companion-filter-select">
     <select id="companionSpoilerSelect">
@@ -375,6 +376,7 @@
       <option value="book1">Reading Book 1</option>
       <option value="book2">Reading Book 2</option>
       <option value="book3">Reading Book 3</option>
+      <option value="book4">Reading Book 4</option>
     </select>
   </div>
 </div>
@@ -1488,6 +1490,7 @@
       <button type="button" onclick="setSpoiler('book1')">Reading Book 1</button>
       <button type="button" onclick="setSpoiler('book2')">Reading Book 2</button>
       <button type="button" onclick="setSpoiler('book3')">Reading Book 3</button>
+      <button type="button" onclick="setSpoiler('book4')">Reading Book 4</button>
     </div>
     <div class="spoiler-select">
       <label class="sr-only" for="spoilerLevel">Spoiler level</label>
@@ -1496,6 +1499,7 @@
         <option value="book1">Reading Book 1</option>
         <option value="book2">Reading Book 2</option>
         <option value="book3">Reading Book 3</option>
+        <option value="book4">Reading Book 4</option>
       </select>
     </div>
   </section>
@@ -1505,7 +1509,7 @@
   </div>
 </footer>
 
-<script src="script.js"></script>
+<script src="script.js?v=book4-1"></script>
 <script>
   function toggleNote(btn) {
     const content = btn.nextElementSibling;
@@ -1519,7 +1523,7 @@
 
   function applyCompanionSpoilers() {
     const level = localStorage.getItem("spoilerLevel") || "none";
-    const order = ["none", "book1", "book2", "book3"];
+    const order = ["none", "book1", "book2", "book3", "book4"];
     const unlocked = order.indexOf(level) >= order.indexOf("book1");
 
     document.querySelectorAll(".track-reveal-btn").forEach(btn => {
@@ -1531,7 +1535,7 @@
       }
     });
 
-    ["none","book1","book2","book3"].forEach(l => {
+    ["none","book1","book2","book3","book4"].forEach(l => {
       const b = document.getElementById("cfb-" + l);
       if (b) b.classList.toggle("active", l === level);
     });

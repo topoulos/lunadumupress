@@ -1063,20 +1063,20 @@
       "trackId": "track-058",
       "title": "Night",
       "artist": "John Carpenter",
-      "youtube": "https://youtu.be/3ItHGMVnu10?si=gQhfX7GraWn5lCqV",
+      "youtube": "https://youtu.be/Lxbfshg2mcI?si=BjK-uBgFOTkqrcM-",
       "apple": {
-        "title": "Night (Zola Jesus & Dean Hurley Remix)",
+        "title": "Night",
         "artist": "John Carpenter",
-        "album": "Lost Themes Remixed",
-        "url": "https://music.apple.com/us/album/night-zola-jesus-dean-hurley-remix/1036254173?i=1036254467",
-        "isrc": "US5NR1512310",
-        "duration": 219545
+        "album": "Lost Themes (Deluxe Edition)",
+        "url": "https://music.apple.com/us/album/night/950418048?i=950418070",
+        "isrc": "US5NR1512309",
+        "duration": 218000
       },
       "spotify": {
-        "title": "Night - Zola Jesus and Dean Hurley Remix",
+        "title": "Night",
         "artist": "John Carpenter",
-        "url": "https://open.spotify.com/track/42cpLMpSd0AuQRM6pHI59U",
-        "evidence": "https://open.spotify.com/embed/album/548hvAyUUAEXTLOPQZYK0x"
+        "url": "https://open.spotify.com/track/1LNsMbRtGhXEYc9Bxv2Ffp",
+        "evidence": "https://open.spotify.com/embed/track/1LNsMbRtGhXEYc9Bxv2Ffp"
       },
       "unresolved": []
     },
@@ -1511,6 +1511,18 @@
         "evidence": "https://open.spotify.com/embed/artist/3gAl49dGPSIUbkWbSJyIBs"
       },
       "unresolved": []
+    },
+    {
+      "trackId": "track-083",
+      "title": "Cenotaph",
+      "artist": "Ghost",
+      "youtube": "https://youtu.be/ciGeAweNk0s?si=Z9hefEGwjETpUORG",
+      "apple": null,
+      "spotify": null,
+      "unresolved": [
+        "apple",
+        "spotify"
+      ]
     }
   ]
 }
