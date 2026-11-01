@@ -1,0 +1,357 @@
+.companion-hero {
+      position: relative;
+      width: 100%;
+      min-height: 52vh;
+      display: flex;
+      align-items: flex-end;
+      overflow: hidden;
+      background: #0b0b0b;
+    }
+
+    .companion-hero-bg {
+      position: absolute;
+      inset: 0;
+      background-image: url("images/music/psalms_intro.jpg");
+      background-size: cover;
+      background-position: center 35%;
+      opacity: 0.55;
+      filter: brightness(0.75);
+    }
+
+    .companion-hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to bottom, rgba(11,11,11,0.2) 0%, rgba(11,11,11,0.15) 40%, rgba(11,11,11,0.85) 80%, rgba(11,11,11,1) 100%);
+      z-index: 1;
+    }
+
+    .companion-hero-content {
+      position: relative;
+      z-index: 2;
+      padding: 3rem 3rem 3.5rem;
+      max-width: 860px;
+    }
+
+    .companion-hero-back {
+      display: inline-block;
+      margin-bottom: 1.5rem;
+      font-size: 0.8rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.4);
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    .companion-hero-back:hover { color: #e6b14a; text-decoration: none; }
+
+    .companion-hero-eyebrow {
+      font-size: 0.75rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: #e6b14a;
+      margin-bottom: 0.6rem;
+    }
+
+    .companion-hero h1 {
+      font-size: clamp(2.2rem, 5vw, 4rem);
+      font-weight: 200;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #fff;
+      line-height: 1.1;
+      margin-bottom: 0.5rem;
+    }
+
+    .companion-hero-tagline {
+      font-size: 1rem;
+      color: rgba(255,255,255,0.5);
+      margin-bottom: 1.5rem;
+      max-width: 520px;
+      line-height: 1.6;
+    }
+
+    .companion-hero-meta {
+      display: flex;
+      gap: 2rem;
+      font-size: 0.78rem;
+      color: rgba(255,255,255,0.3);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      flex-wrap: wrap;
+    }
+
+    .companion-howto {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 1.25rem 2rem 0;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      font-size: 0.78rem;
+      color: rgba(255,255,255,0.59);
+      letter-spacing: 0.04em;
+      line-height: 1.6;
+    }
+
+    .companion-filter-bar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(11,11,11,0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(255,255,255,0.07);
+      padding: 0.85rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .companion-filter-bar-label {
+      font-size: 0.72rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.35);
+      white-space: nowrap;
+    }
+
+    .companion-filter-buttons { display: flex; gap: 0.4rem; flex-wrap: wrap; }
+
+    .companion-filter-buttons button {
+      padding: 0.4rem 0.85rem;
+      font-size: 0.72rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      background: rgba(255,255,255,0.06);
+      color: rgba(255,255,255,0.6);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 999px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .companion-filter-buttons button:hover { background: rgba(255,255,255,0.1); color: #fff; }
+    .companion-filter-buttons button.active { background: #e6b14a; color: #000; border-color: #e6b14a; font-weight: 600; }
+
+    .companion-filter-select { display: none; }
+    .companion-filter-select select { padding: 0.45rem 0.8rem; border-radius: 8px; background: rgba(255,255,255,0.08); color: #eee; border: 1px solid rgba(255,255,255,0.12); font-size: 0.8rem; }
+
+    @media (max-width: 600px) {
+      .companion-filter-buttons { display: none; }
+      .companion-filter-select { display: block; }
+    }
+
+    .companion-body { max-width: 860px; margin: 0 auto; padding: 2rem 2rem 6rem; }
+
+    .companion-act {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      margin: 3.5rem 0 1.5rem;
+      opacity: 0.4;
+    }
+
+    .companion-act::before, .companion-act::after {
+      content: "";
+      flex: 1;
+      height: 1px;
+      background: rgba(255,255,255,0.12);
+    }
+
+    .companion-act-label {
+      font-size: 0.68rem;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.9);
+      white-space: nowrap;
+    }
+
+    .companion-disclaimer {
+        max-width: 860px;
+        margin: 0 auto;
+        padding: 0.75rem 2rem 0;
+        font-size: 0.72rem;
+        line-height: 1.6;
+        color: rgba(255,255,255,0.24);
+    }
+
+    .track-card {
+      border: 1px solid rgba(255,255,255,0.07);
+      border-radius: 14px;
+      padding: 1.4rem 1.75rem;
+      margin-bottom: 0.7rem;
+      background: rgba(255,255,255,0.02);
+      transition: border-color 0.2s ease, background 0.2s ease;
+    }
+
+    .track-card:hover { border-color: rgba(255,255,255,0.11); background: rgba(255,255,255,0.03); }
+
+    /* Silence card - different treatment */
+    .silence-card {
+      border: 1px solid rgba(255,255,255,0.04);
+      border-radius: 14px;
+      padding: 1.4rem 1.75rem;
+      margin-bottom: 0.7rem;
+      background: transparent;
+      text-align: center;
+    }
+
+    .silence-card-text {
+      font-size: 0.82rem;
+      color: rgba(255,255,255,0.25);
+      font-style: italic;
+      line-height: 1.7;
+      letter-spacing: 0.02em;
+      max-width: 560px;
+      margin: 0 auto;
+    }
+
+    .track-header {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 1.5rem;
+      align-items: start;
+    }
+
+    .track-location {
+      font-size: 0.63rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.59);
+      margin-bottom: 0.3rem;
+      font-family: 'Courier New', monospace;
+      line-height: 1.5;
+    }
+
+    .track-scene-name {
+      font-size: 1.02rem;
+      font-weight: 500;
+      color: #fff;
+      line-height: 1.3;
+    }
+
+    .track-info { text-align: right; flex-shrink: 0; }
+    .track-name { font-size: 0.88rem; color: #e6b14a; font-weight: 500; line-height: 1.3; white-space: nowrap; }
+    .track-artist { font-size: 0.73rem; color: rgba(255,255,255,0.59); margin-top: 0.15rem; white-space: nowrap; }
+
+    .track-links { display: flex; gap: 0.4rem; margin-top: 0.45rem; justify-content: flex-end; flex-wrap: wrap; }
+
+    .track-link {
+      display: inline-flex;
+      align-items: center;
+      padding: 0.22rem 0.6rem;
+      font-size: 0.63rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.4);
+      border: 1px solid rgba(255,255,255,0.09);
+      border-radius: 999px;
+      text-decoration: none;
+      transition: all 0.18s ease;
+      white-space: nowrap;
+    }
+
+    .track-link:hover { color: #fff; border-color: rgba(255,255,255,0.28); text-decoration: none; background: rgba(255,255,255,0.05); }
+    .track-link.yt { border-color: rgba(255,80,80,0.2); color: rgba(255,120,120,0.7); }
+    .track-link.yt:hover { border-color: rgba(255,80,80,0.5); color: #ff8080; background: rgba(255,80,80,0.06); }
+    .track-link.sp { border-color: rgba(30,215,96,0.2); color: rgba(30,215,96,0.6); }
+    .track-link.sp:hover { border-color: rgba(30,215,96,0.42); color: #1ed760; background: rgba(30,215,96,0.05); }
+    .track-link.ap { border-color: rgba(250,175,175,0.16); color: rgba(250,175,175,0.5); }
+    .track-link.ap:hover { border-color: rgba(250,175,175,0.35); color: #faaFaF; background: rgba(250,175,175,0.05); }
+
+    .cc-badge {
+      display: inline-flex;
+      align-items: center;
+      font-size: 0.58rem;
+      letter-spacing: 0.07em;
+      color: rgba(255,255,255,0.18);
+      border: 1px solid rgba(255,255,255,0.06);
+      padding: 0.16rem 0.48rem;
+      border-radius: 999px;
+      margin-top: 0.3rem;
+    }
+
+    .track-info-secondary {
+      margin-top: 0.65rem;
+      padding-top: 0.65rem;
+      border-top: 1px solid rgba(255,255,255,0.06);
+    }
+
+    /* PER-TRACK REVEAL */
+    .track-notes-section {
+      margin-top: 0.9rem;
+      border-top: 1px solid rgba(255,255,255,0.05);
+      padding-top: 0.75rem;
+    }
+
+    .track-reveal-btn {
+      display: none;
+      align-items: center;
+      gap: 0.45rem;
+      background: none;
+      border: 1px solid rgba(255,255,255,0.09);
+      border-radius: 999px;
+      padding: 0.32rem 0.85rem;
+      font-size: 0.66rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.3);
+      cursor: pointer;
+      transition: all 0.18s ease;
+    }
+
+    .track-reveal-btn:hover { border-color: rgba(230,177,74,0.35); color: #e6b14a; background: rgba(230,177,74,0.04); }
+    .track-reveal-btn.open { border-color: rgba(230,177,74,0.25); color: rgba(230,177,74,0.55); }
+
+    .reveal-icon { transition: transform 0.2s ease; display: inline-block; font-style: normal; }
+    .track-reveal-btn.open .reveal-icon { transform: rotate(180deg); }
+
+    .track-spoiler-content {
+      display: none;
+      margin-top: 0.85rem;
+      padding: 0.95rem 1.15rem;
+      background: rgba(230,177,74,0.035);
+      border-left: 2px solid rgba(230,177,74,0.28);
+      border-radius: 0 8px 8px 0;
+      font-size: 0.875rem;
+      color: rgba(255,255,255,0.6);
+      line-height: 1.82;
+      animation: noteReveal 0.22s ease;
+    }
+
+    .track-spoiler-content.open { display: block; }
+
+    @keyframes noteReveal {
+      from { opacity: 0; transform: translateY(-3px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 700px) {
+      .companion-hero-content { padding: 2rem 1.5rem 2.5rem; }
+      .companion-hero h1 { font-size: 2.2rem; }
+      .companion-body { padding: 1.5rem 1rem 5rem; }
+      .track-header { grid-template-columns: 1fr; }
+      .track-info { text-align: left; }
+      .track-links { justify-content: flex-start; }
+      .track-card { padding: 1.1rem; }
+      .companion-howto { padding: 1rem 1rem 0; }
+    }
+
+
+/* Psalms retains the companion geometry, palette and reveal treatment. */
+.track-header > *, .track-info { min-width: 0; }
+.track-name, .track-artist { white-space: normal; overflow-wrap: anywhere; }
+.track-header { grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr); }
+.track-name { margin: 0; }
+.cue-scenes { margin: 0 0 1rem; padding-left: 1.2rem; }
+.cue-scenes li { margin-bottom: .55rem; }
+.cue-scenes small { display: block; color: rgba(255,255,255,.59); }
+.track-spoiler-content p { margin: .7rem 0; }
+.companion-jump { max-width: 860px; margin: 1rem auto 0; padding: 0 2rem; display:flex; gap:.5rem; flex-wrap:wrap; }
+.companion-act { scroll-margin-top: 7rem; }
+.track-reveal-btn:focus-visible, .track-link:focus-visible { outline: 2px solid #e6b14a; outline-offset: 4px; }
+.track-spoiler-content[hidden] { display: none !important; }
+@media(max-width:700px) { .track-header { grid-template-columns: 1fr; } .companion-jump { padding:0 1rem; } }
+@media(prefers-reduced-motion:reduce) { .track-spoiler-content { animation:none; } }

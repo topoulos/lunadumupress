@@ -1,0 +1,1516 @@
+{
+  "checkedOn": "2026-11-01",
+  "method": "Apple US catalog and Spotify public catalog metadata matched to supplied YouTube titles, artists and explicit versions. Unresolved means no confident match in this pass, not proof of unavailability. No audio fingerprint comparison performed.",
+  "tracks": [
+    {
+      "trackId": "track-001",
+      "title": "Past In Flames",
+      "artist": "Greg Dombrowski",
+      "youtube": "https://www.youtube.com/watch?v=S5ZmI0F64DY&list=PLvDxU9glBJXdeyYJvRhblF33dziZB5f2-",
+      "apple": {
+        "title": "Past in Flames",
+        "artist": "Secession Studios & Greg Dombrowski",
+        "album": "Heroes",
+        "url": "https://music.apple.com/us/album/past-in-flames/1506123199?i=1506123328",
+        "isrc": "TCAES2098325",
+        "duration": 292400
+      },
+      "spotify": {
+        "title": "Past in Flames",
+        "artist": "Secession Studios, Greg Dombrowski",
+        "url": "https://open.spotify.com/track/4yN2Bd4FxRW5k286sIFA19",
+        "evidence": "https://open.spotify.com/embed/playlist/1pSZNOeELcg3xdyRb0QaHa"
+      },
+      "unresolved": []
+    },
+    {
+      "trackId": "track-002",
+      "title": "Ancestral",
+      "artist": "Tony Anderson",
+      "youtube": "https://youtu.be/WYRTWgBvPuE?si=QZC4OMV4wcwRZhlg",
+      "apple": {
+        "title": "Ancestral",
+        "artist": "Tony Anderson",
+        "album": "Ancestral - Single",
+        "url": "https://music.apple.com/us/album/ancestral/1736668749?i=1736668750",
+        "isrc": "GBRKQ2484052",
+        "duration": 427907
+      },
+      "spotify": {
+        "title": "Ancestral",
+        "artist": "Tony Anderson",
+        "url": "https://open.spotify.com/track/6ezlF224pbxjKpVi1KRcOW",
+        "evidence": "https://open.spotify.com/embed/playlist/6zyeECFJHIh9gzeHta6Yg6"
+      },
+      "unresolved": []
+    },
+    {
+      "trackId": "track-003",
+      "title": "Kate's Theme",
+      "artist": "Benjamin Wallfisch",
+      "youtube": "https://youtu.be/XpqRm74XO3A?si=_UMfFN2rzhJP4Q_x",
+      "apple": {
+        "title": "Kate's Theme",
+        "artist": "Benjamin Wallfisch",
+        "album": "Twisters (Original Motion Picture Score)",
+        "url": "https://music.apple.com/us/album/kates-theme/1760436759?i=1760436989",
+        "isrc": "USQ4E2400231",
+        "duration": 232301
+      },
+      "spotify": {
+        "title": "Kate's Theme",
+        "artist": "Benjamin Wallfisch",
+        "url": "https://open.spotify.com/track/4e8rHkj8NwGhpFwfmCPhyy",
+        "evidence": "https://open.spotify.com/embed/album/7oj3ux6cGIlZPwBVCPG9mm"
+      },
+      "unresolved": []
+    },
+    {
+      "trackId": "track-004",
+      "title": "On The Nature of Daylight",
+      "artist": "Max Richter",
+      "youtube": "https://youtu.be/rVN1B-tUpgs?si=pCbGxSRoLkyjL9tg",
+      "apple": {
+        "title": "On The Nature Of Daylight",
+        "artist": "Max Richter, Louisa Fuller, Natalia Bonner, John Metcalfe, Philip Sheppard & Chris Worsey",
+        "album": "The Blue Notebooks (15 Years)",
+        "url": "https://music.apple.com/us/album/on-the-nature-of-daylight/1368089903?i=1368090483",
+        "isrc": "GBDCA0300279",
+        "duration": 371747
+      },
+      "spotify": {
+        "title": "On the Nature of Daylight",
+        "artist": "Max Richter, Louisa Fuller, Natalia Bonner, John Metcalfe, Philip Sheppard, Chris Worsey",
+        "url": "https://open.spotify.com/track/3Ya2HLVmg1VykhrRWMqzVp",
+        "evidence": "https://open.spotify.com/embed/track/3Ya2HLVmg1VykhrRWMqzVp"
+      },
+      "unresolved": []
+    },
+    {
+      "trackId": "track-005",
+      "title": "A Close Friend Cinematic Cover (from Fantastic Beasts)",
+      "artist": "Elijah Siegler",
+      "youtube": "https://youtu.be/5TnfctjIBNo?si=hCgnE9XOVsrIwQ61",
+      "apple": null,
+      "spotify": null,
+      "unresolved": [
+        "apple",
+        "spotify"
+      ]
+    },
+    {
+      "trackId": "track-006",
+      "title": "Certain Light",
+      "artist": "Wojciech Kilar",
+      "youtube": "https://youtu.be/s35ogkLisws?si=DYcRgLRLn2nRMVxA",
+      "apple": null,
+      "spotify": null,
+      "unresolved": [
+        "apple",
+        "spotify"
+      ]
+    },
+    {
+      "trackId": "track-007",
+      "title": "The Wanderer",
+      "artist": "Max Richter",
+      "youtube": "https://youtu.be/-lmCgFA-GQs?si=WS_BxH-SX9rLTayy",
+      "apple": {
+        "title": "The Wanderer",
+        "artist": "Max Richter",
+        "album": "Ad Astra (Original Motion Picture Soundtrack)",
+        "url": "https://music.apple.com/us/album/the-wanderer/1482828581?i=1482830262",
+        "isrc": "DEUM71905879",
+        "duration": 290719
+      },
+      "spotify": {
+        "title": "The Wanderer",
+        "artist": "Max Richter",
+        "url": "https://open.spotify.com/track/7MGuU2d0kAZcskNbRvJQFD",
+        "evidence": "https://open.spotify.com/embed/album/7A0KkKcwRKJYLrWQQsO3bH"
+      },
+      "unresolved": []
+    },
+    {
+      "trackId": "track-008",
+      "title": "3 Pieces for Orchestra, Op. 6: No. 1, Praeludium",
+      "artist": "Alban Berg",
+      "youtube": "https://youtu.be/3CFenfrAtYk?si=B_XVOOCe3-KsFPPE",
+      "apple": null,
+      "spotify": null,
+      "unresolved": [
+        "apple",
+        "spotify"
+      ]
+    },
+    {
+      "trackId": "track-009",
+      "title": "Aurorae",
+      "artist": "Triptykon",
+      "youtube": "https://youtu.be/zvREn3nVwqk?si=8oGG7K70rGtxyXuC",
+      "apple": {
+        "title": "Aurorae",
+        "artist": "Triptykon",
+        "album": "Melana Chasmata",
+        "url": "https://music.apple.com/us/album/aurorae/1045394682?i=1045394921",
+        "isrc": "US4E41412005",
+        "duration": 377093
+      },
+      "spotify": {
+        "title": "Aurorae",
+        "artist": "Triptykon",
+        "url": "https://open.spotify.com/track/5EehBjlQfBYKYbDVXydVpp",
+        "evidence": "https://open.spotify.com/embed/track/5EehBjlQfBYKYbDVXydVpp"
+      },
+      "unresolved": []
+    },
+    {
+      "trackId": "track-010",
+      "title": "Losing Hope",
+      "artist": "Elijah Siegler",
+      "youtube": "https://youtu.be/_HNESh0SOak?si=P69xJrHhlQbu0o5y",
+      "apple": null,
+      "spotify": null,
+      "unresolved": [
+        "apple",
+        "spotify"
+      ]
+    },
+    {
+      "trackId": "track-011",
+      "title": "... Slowly We Fell Into Slumber And I Held You Until the End Of Time",
+      "artist": "Ursine Vulpine",
+      "youtube": "https://youtu.be/KMLDpz9on44?si=heUGp5E5yIUgzXup",
+      "apple": {
+        "title": "...Slowly We Fell Into Slumber and I Held You Until the End of Time",
+        "artist": "Ursine Vulpine",
+        "album": "Respire",
+        "url": "https://music.apple.com/us/album/slowly-we-fell-into-slumber-and-i-held-you-until-the/1545202056?i=1545202078",
+        "isrc": "GBKPL1783125",
+        "duration": 308213
+      },
+      "spotify": null,
+      "unresolved": [
+        "spotify"
+      ]
+    },
+    {
+      "trackId": "track-012",
+      "title": "Perihelion",
+      "artist": "Max Richter",
+      "youtube": "https://youtu.be/7tTCZOHUWFA?si=Bbj-RzJfLkijC8gA",
+      "apple": {
+        "title": "Perihelion",
+        "artist": "Max Richter, Louisa Fuller, Natalia Bonner, Nick Barr, Max Ruisi & Zara Hudson-Kozdoj",
+        "album": "Richter: Perihelion - Single",
+        "url": "https://music.apple.com/us/album/perihelion/1798524079?i=1798524084",
+        "isrc": "DEN962500250",
+        "duration": 468336
+      },
+      "spotify": {
+        "title": "Perihelion",
+        "artist": "Max Richter, Louisa Fuller, Natalia Bonner, Nick Barr, Max Ruisi, Zara Hudson-Kozdoj",
+        "url": "https://open.spotify.com/track/2K1Chgi3BKuGP4CVVLl30Z",
+        "evidence": "https://open.spotify.com/embed/album/4xVJBHVR1BPvY6WK5MILGl"
+      },
+      "unresolved": []
+    },
+    {
+      "trackId": "track-013",
+      "title": "Decoherence",
+      "artist": "Scott Buckley",
+      "youtube": "https://youtu.be/2H3sSsV9adY?si=n_pa5eeCEb586hl1",
+      "apple": {
+        "title": "Decoherence",
+        "artist": "Scott Buckley",
+        "album": "Decoherence - EP",
+        "url": "https://music.apple.com/us/album/decoherence/1616420302?i=1616420303",
+        "isrc": "AUZVV1900130",
+        "duration": 618089
+      },
+      "spotify": {
+        "title": "Decoherence",
+        "artist": "Scott Buckley",
+        "url": "https://open.spotify.com/track/2mJem09oJN1LpkHlurpUfs",
+        "evidence": "https://open.spotify.com/embed/playlist/1YXqD5onkw1HMkhaJW5Qny"
+      },
+      "unresolved": []
+    },
+    {
+      "trackId": "track-014",
+      "title": "Aphelion",
+      "artist": "Scott Buckley",
+      "youtube": "https://youtu.be/6dcZm7UH0DM?si=quKIYYEahmJ0JEzd",
+      "apple": {
+        "title": "Aphelion",
+        "artist": "Scott Buckley",
+        "album": "Aphelion - Single",
+        "url": "https://music.apple.com/us/album/aphelion/1895824333?i=6764538273",
+        "isrc": "AUZVV2600034",
+        "duration": 422250
+      },
+      "spotify": {
+        "title": "Aphelion",
+        "artist": "Scott Buckley",
+        "url": "https://open.spotify.com/track/7hvf2gJ8bcb9njRUSHQ5T4",
+        "evidence": "https://open.spotify.com/embed/album/0dZ6z23OStR2rTqT7Gnjh6"
+      },
+      "unresolved": []
+    },
+    {
+      "trackId": "track-015",
+      "title": "Glacier",
+      "artist": "Judah Earl and Zane Callister",
+      "youtube": "https://youtu.be/jMFScyxERVY?si=POJVfggpOCgjdJ17",
+      "apple": {
+        "title": "Glacier (feat. Young Collective)",
+        "artist": "inola",
+        "album": "Sierra - EP",
+        "url": "https://music.apple.com/us/album/glacier-feat-young-collective/1650565929?i=1650566164",
+        "isrc": "TCAGN2269781",
+        "duration": 249600
+      },
+      "spotify": {
+        "title": "Glacier",
+        "artist": "inola, Young Collective",
+        "url": "https://open.spotify.com/track/6rLnCsHw48th92MIM9qpiu",
+        "evidence": "https://open.spotify.com/embed/track/6rLnCsHw48th92MIM9qpiu"
+      },
+      "unresolved": []
+    },
+    {
+      "trackId": "track-016",
+      "title": "Skyward",
+      "artist": "Scott Buckley",
+      "youtube": "https://www.youtube.com/watch?v=vf91RaIKn_w",
+      "apple": null,
+      "spotify": {
+        "title": "Skyward",
+        "artist": "Scott Buckley",
+        "url": "https://open.spotify.com/track/3gVcpLrpSDdzOgndVITy2V",
+        "evidence": "https://open.spotify.com/embed/track/3gVcpLrpSDdzOgndVITy2V"
+      },
+      "unresolved": [
+        "apple"
+      ]
+    },
+    {
+      "trackId": "track-017",
+      "title": "Dancing with Flames",
+      "artist": "Greg Dombrowski",
+      "youtube": "https://youtu.be/UauukzbPejE?si=iVgFzgcGyaU2HYCu",
+      "apple": {
+        "title": "Dancing with Flames",
+        "artist": "Secession Studios & Greg Dombrowski",
+        "album": "Heart of Darkness",
+        "url": "https://music.apple.com/us/album/dancing-with-flames/1488073908?i=1488074166",
+        "isrc": "TCAEN1930652",
+        "duration": 244800
+      },
+      "spotify": {
+        "title": "Dancing with Flames",
+        "artist": "Secession Studios, Greg Dombrowski",
+        "url": "https://open.spotify.com/track/07zsaNsOhgfxXOxvthH3lj",
+        "evidence": "https://open.spotify.com/embed/album/2gfBE1YIq6zbvziPLGN5FQ"
+      },
+      "unresolved": []
+    },
+    {
+      "trackId": "track-018",
+      "title": "Incantation",
+      "artist": "Scott Buckley",
+      "youtube": "https://youtu.be/t5gA_cHOcZk?si=gB1kriuAfWayEg_y",
+      "apple": {
+        "title": "Incantation",
+        "artist": "Scott Buckley",
+        "album": "Incantation - Single",
+        "url": "https://music.apple.com/us/album/incantation/1774718406?i=1774718407",
+        "isrc": "AUZVV2400029",
+        "duration": 433033
+      },
+      "spotify": {
+        "title": "Incantation",
+        "artist": "Scott Buckley",
+        "url": "https://open.spotify.com/track/1ONFUPhwjeYuNzGc0ZHAsF",
+        "evidence": "https://open.spotify.com/embed/track/1ONFUPhwjeYuNzGc0ZHAsF"
+      },
+      "unresolved": []
+    },
+    {
+      "trackId": "track-019",
+      "title": "Almost Blue",
+      "artist": "Chet Baker",
+      "youtube": "https://youtu.be/z4PKzz81m5c?si=VvJYl4SgM9lDLVki",
+      "apple": null,
+      "spotify": null,
+      "unresolved": [
+        "apple",
+        "spotify"
+      ]
+    },
+    {
+      "trackId": "track-020",
+      "title": "All the places I will never go",
+      "artist": "Elijah Siegler",
+      "youtube": "https://youtu.be/od7m8G1Snkc?si=npvVDmPQJdg5c1E_",
+      "apple": {
+        "title": "All the Places I Will Never Go",
+        "artist": "Elijah Siegler",
+        "album": "All the Places I Will Never Go - Single",
+        "url": "https://music.apple.com/us/album/all-the-places-i-will-never-go/1872760982?i=1872760992",
+        "isrc": "GXJBL2631614",
+        "duration": 373375
+      },
+      "spotify": {
+        "title": "All the Places I Will Never Go",
+        "artist": "Elijah Siegler",
+        "url": "https://open.spotify.com/track/4cH3XkPvdvxIDmjxb6FmDM",
+        "evidence": "https://open.spotify.com/embed/track/4cH3XkPvdvxIDmjxb6FmDM"
+      },
+      "unresolved": []
+    },
+    {
+      "trackId": "track-021",
+      "title": "Unraveling",
+      "artist": "Scott Buckley",
+      "youtube": "https://youtu.be/Fc4L4tZkF30?si=krriFEPl8Ig43Ixi",
+      "apple": {
+        "title": "Unraveling",
+        "artist": "Scott Buckley",
+        "album": "Unraveling - Single",
+        "url": "https://music.apple.com/us/album/unraveling/6764794740?i=6764794741",
+        "isrc": "AUZVV2600035",
+        "duration": 444024
+      },
+      "spotify": {
+        "title": "Unraveling",
+        "artist": "Scott Buckley",
+        "url": "https://open.spotify.com/track/7rpcgQymRvlpybjViZ5WHn",
+        "evidence": "https://open.spotify.com/embed/track/7rpcgQymRvlpybjViZ5WHn"
+      },
+      "unresolved": []
+    },
+    {
+      "trackId": "track-022",
+      "title": "Hymn to the Dawn",
+      "artist": "Scott Buckley",
+      "youtube": "https://youtu.be/OYA7tLVHB20?si=WuunZFvLlULdytGy",
+      "apple": {
+        "title": "Hymn To the Dawn",
+        "artist": "Scott Buckley",
+        "album": "Hymn To the Dawn - Single",
+        "url": "https://music.apple.com/us/album/hymn-to-the-dawn/1654303177?i=1654303179",
+        "isrc": "AUZVV1900144",
+        "duration": 418341
+      },
+      "spotify": {
+        "title": "Hymn To The Dawn",
+        "artist": "Scott Buckley",
+        "url": "https://open.spotify.com/track/01or0fz5xHtP1LCR8EDG7Q",
+        "evidence": "https://open.spotify.com/embed/playlist/1YXqD5onkw1HMkhaJW5Qny"
+      },
+      "unresolved": []
+    },
+    {
+      "trackId": "track-023",
+      "title": "When I was in Your World",
+      "artist": "Elijah Siegler",
+      "youtube": "https://youtu.be/in-gI3hxqgs?si=EvAWVARotqYPy1aq",
+      "apple": {
+        "title": "When I Was in Your World",
+        "artist": "Elijah Siegler",
+        "album": "When I Was in Your World - Single",
+        "url": "https://music.apple.com/us/album/when-i-was-in-your-world/6813960322?i=6813960323",
+        "isrc": "GXLEL2655637",
+        "duration": 319444
+      },
+      "spotify": {
+        "title": "When I Was in Your World",
+        "artist": "Elijah Siegler",
+        "url": "https://open.spotify.com/track/0q7uqbScg2MCKkd3HQuFnn",
+        "evidence": "https://open.spotify.com/embed/artist/5RgwwELQ9UGDPXf6Ko0fwx"
+      },
+      "unresolved": []
+    },
+    {
+      "trackId": "track-024",
+      "title": "Remembering Tessa",
+      "artist": "George Kallis",
+      "youtube": "https://youtu.be/eDBOclZHlyE?si=fLX41l69SO03YEBP",
+      "apple": {
+        "title": "Remembering Tessa",
+        "artist": "George Kallis",
+        "album": "After Everything (Original Motion Picture Soundtrack)",
+        "url": "https://music.apple.com/us/album/remembering-tessa/1704463287?i=1704463299",
+        "isrc": "QZTAS2375865",
+        "duration": 254000
+      },
+      "spotify": {
+        "title": "Remembering Tessa",
+        "artist": "George Kallis",
+        "url": "https://open.spotify.com/track/7qxLs95Uu5s6ozIL00239V",
+        "evidence": "https://open.spotify.com/embed/track/7qxLs95Uu5s6ozIL00239V"
+      },
+      "unresolved": []
+    },
+    {
+      "trackId": "track-025",
+      "title": "The Immoralist",
+      "artist": "Greg Dombrowski",
+      "youtube": "https://youtu.be/mYTO8JaM8xs?si=srNP-w1zKRNqY178",
+      "apple": {
+        "title": "The Immortalist",
+        "artist": "Secession Studios & Greg Dombrowski",
+        "album": "Heroes",
+        "url": "https://music.apple.com/us/album/the-immortalist/1506123199?i=1506123335",
+        "isrc": "TCAES2098333",
+        "duration": 413133
+      },
+      "spotify": {
+        "title": "The Immortalist",
+        "artist": "Secession Studios, Greg Dombrowski",
+        "url": "https://open.spotify.com/track/3OJDwqKyGsoTT52GryFqfC",
+        "evidence": "https://open.spotify.com/embed/playlist/1pSZNOeELcg3xdyRb0QaHa"
+      },
+      "unresolved": []
+    },
+    {
+      "trackId": "track-026",
+      "title": "My Little Boy",
+      "artist": "Asher Goldschmidt",
+      "youtube": "https://youtu.be/zSeGv8vWtAc?si=8Y26G-QrK2wSdHxy",
+      "apple": {
+        "title": "My Little Boy",
+        "artist": "Asher Goldschmidt",
+        "album": "Rise of the Raven (Original Soundtrack)",
+        "url": "https://music.apple.com/us/album/my-little-boy/1802998562?i=1802998995",
+        "isrc": "DEGR52500422",
+        "duration": 252971
+      },
+      "spotify": {
+        "title": "My Little Boy",
+        "artist": "Asher Goldschmidt",
+        "url": "https://open.spotify.com/track/6TmPrwrLOFA1OaEKbkMZnu",
+        "evidence": "https://open.spotify.com/embed/album/1BaYkJjSerGSmSTjTSR6RZ"
+      },
+      "unresolved": []
+    },
+    {
+      "trackId": "track-027",
+      "title": "You Were Once a Child",
+      "artist": "Elijah Siegler",
+      "youtube": "https://youtu.be/I5W5a16QJIE?si=PwOCpD2w8ck8Xnfh",
+      "apple": null,
+      "spotify": null,
+      "unresolved": [
+        "apple",
+        "spotify"
+      ]
+    },
+    {
+      "trackId": "track-028",
+      "title": "After Initiation",
+      "artist": "Complexities of Sound",
+      "youtube": "https://youtu.be/L0mOwNphLZg?si=1zUM2V3-T1Zqstps",
+      "apple": {
+        "title": "Afterlife Initiation",
+        "artist": "Complexities of Sound",
+        "album": "Embers",
+        "url": "https://music.apple.com/us/album/afterlife-initiation/1694763620?i=1694763627",
+        "isrc": "QM7G91638346",
+        "duration": 112915
+      },
+      "spotify": null,
+      "unresolved": [
+        "spotify"
+      ]
+    },
+    {
+      "trackId": "track-029",
+      "title": "Fading Over Time",
+      "artist": "Scapes",
+      "youtube": "https://youtu.be/QZnOWiXryao?si=psRruOR5Ybpdejk1",
+      "apple": {
+        "title": "Fading Over Time",
+        "artist": "Scapes",
+        "album": "Fading Over Time - Single",
+        "url": "https://music.apple.com/us/album/fading-over-time/1641902045?i=1641902049",
+        "isrc": "GBSMU0133204",
+        "duration": 198910
+      },
+      "spotify": {
+        "title": "fading over time",
+        "artist": "scapes",
+        "url": "https://open.spotify.com/track/4caGSIngaDQm1KxPbO7Tkj",
+        "evidence": "https://open.spotify.com/embed/track/4caGSIngaDQm1KxPbO7Tkj"
+      },
+      "unresolved": []
+    },
+    {
+      "trackId": "track-030",
+      "title": "Broken Air",
+      "artist": "Exist Strategy",
+      "youtube": "https://youtu.be/pHGHLIGs31U?si=aZrxF5d1XPAucjzG",
+      "apple": {
+        "title": "Broken Air",
+        "artist": "Exist Strategy",
+        "album": "Lie Still and Fade - EP",
+        "url": "https://music.apple.com/us/album/broken-air/1113794515?i=1113794813",
+        "isrc": "QM4DW1668324",
+        "duration": 145573
+      },
+      "spotify": {
+        "title": "Broken Air",
+        "artist": "Exist Strategy",
+        "url": "https://open.spotify.com/track/0yzzLd3WfrxFMaU0atqn4i",
+        "evidence": "https://open.spotify.com/embed/track/0yzzLd3WfrxFMaU0atqn4i"
+      },
+      "unresolved": []
+    },
+    {
+      "trackId": "track-031",
+      "title": "In the Distance",
+      "artist": "Tony Anderson",
+      "youtube": "https://youtu.be/nOkPgwMuVVw?si=sOUwwUyM0v_TmvBV",
+      "apple": {
+        "title": "In the Distance",
+        "artist": "Tony Anderson",
+        "album": "The Heart of Man",
+        "url": "https://music.apple.com/us/album/in-the-distance/1544556199?i=1544556210",
+        "isrc": "USDHM1702942",
+        "duration": 336282
+      },
+      "spotify": {
+        "title": "In the Distance",
+        "artist": "Tony Anderson",
+        "url": "https://open.spotify.com/track/36KGB6KgKjha6VCs6RGf0a",
+        "evidence": "https://open.spotify.com/embed/track/36KGB6KgKjha6VCs6RGf0a"
+      },
+      "unresolved": []
+    },
+    {
+      "trackId": "track-032",
+      "title": "This Feeling",
+      "artist": "0neheart",
+      "youtube": "https://youtu.be/yQlewTDS2AI?si=IuDlzozyB4syVc9g",
+      "apple": {
+        "title": "This Feeling",
+        "artist": "Øneheart",
+        "album": "This Feeling - Single",
+        "url": "https://music.apple.com/us/album/this-feeling/1607913503?i=1607913504",
+        "isrc": "US3DF2212263",
+        "duration": 94333
+      },
+      "spotify": {
+        "title": "this feeling",
+        "artist": "Øneheart",
+        "url": "https://open.spotify.com/track/1r232i80xFiNHzSUmrFc01",
+        "evidence": "https://open.spotify.com/embed/album/4pxgrlu74Sk31RrGRH8FjL"
+      },
+      "unresolved": []
+    },
+    {
+      "trackId": "track-033",
+      "title": "I'll Destroy You Before You Destroy Me",
+      "artist": "Greg Dombrowski",
+      "youtube": "https://youtu.be/dVTt-qjLFmQ?si=pTIhhv6DNTqVjuSf",
+      "apple": null,
+      "spotify": null,
+      "unresolved": [
+        "apple",
+        "spotify"
+      ]
+    },
+    {
+      "trackId": "track-034",
+      "title": "This Quiet Violence",
+      "artist": "David Chappell",
+      "youtube": "https://youtu.be/N35XW92tqcY?si=cNKc2GUI19oz2-9Q",
+      "apple": {
+        "title": "This Quiet Violence",
+        "artist": "David Chappell",
+        "album": "Aeon - EP",
+        "url": "https://music.apple.com/us/album/this-quiet-violence/1513954821?i=1513954826",
+        "isrc": "QZHN32011007",
+        "duration": 189206
+      },
+      "spotify": {
+        "title": "This Quiet Violence",
+        "artist": "David Chappell",
+        "url": "https://open.spotify.com/track/44BBvzWWCVN5KdCajjPZIk",
+        "evidence": "https://open.spotify.com/embed/artist/6Mcfzo3GqPaurA2tGbdknQ"
+      },
+      "unresolved": []
+    },
+    {
+      "trackId": "track-035",
+      "title": "Pastoral",
+      "artist": "Tony Anderson",
+      "youtube": "https://youtu.be/zDqvlvXn4TY?si=R8bYCw7jJNHw0_hC",
+      "apple": {
+        "title": "Pastoral",
+        "artist": "Tony Anderson",
+        "album": "Fleurie - Single",
+        "url": "https://music.apple.com/us/album/pastoral/1795807196?i=1795807198",
+        "isrc": "GBRKQ2517873",
+        "duration": 296508
+      },
+      "spotify": {
+        "title": "Pastoral",
+        "artist": "Tony Anderson",
+        "url": "https://open.spotify.com/track/18wUBVmjDBF9kPSRgwGM2T",
+        "evidence": "https://open.spotify.com/embed/playlist/6zyeECFJHIh9gzeHta6Yg6"
+      },
+      "unresolved": []
+    },
+    {
+      "trackId": "track-036",
+      "title": "All Your Rage, All Your Pain",
+      "artist": "Greg Dombrowski",
+      "youtube": "https://youtu.be/IHIzHXZhTQA?si=HSi8CB2h-Y04_5vd",
+      "apple": {
+        "title": "All Your Rage, All Your Pain",
+        "artist": "Secession Studios & Greg Dombrowski",
+        "album": "Heart of Darkness",
+        "url": "https://music.apple.com/us/album/all-your-rage-all-your-pain/1488073908?i=1488073918",
+        "isrc": "TCAEN1930645",
+        "duration": 185818
+      },
+      "spotify": {
+        "title": "All Your Rage, All Your Pain",
+        "artist": "Secession Studios, Greg Dombrowski",
+        "url": "https://open.spotify.com/track/2fo8LzMNzC7WzI4aBk8TQP",
+        "evidence": "https://open.spotify.com/embed/playlist/1pSZNOeELcg3xdyRb0QaHa"
+      },
+      "unresolved": []
+    },
+    {
+      "trackId": "track-037",
+      "title": "Somewhere But Not Here",
+      "artist": "Nicolai Patricio",
+      "youtube": "https://youtu.be/1kKBT_PHYR0?si=EaXftGSUjK9aGmM0",
+      "apple": null,
+      "spotify": null,
+      "unresolved": [
+        "apple",
+        "spotify"
+      ]
+    },
+    {
+      "trackId": "track-038",
+      "title": "Without You",
+      "artist": "Ursine Vulpine & Annaca",
+      "youtube": "https://youtu.be/TZysqPdZn_U?si=t7CDjioyAPXxpXZl",
+      "apple": {
+        "title": "Without You",
+        "artist": "Ursine Vulpine & Annaca",
+        "album": "Without You - Single",
+        "url": "https://music.apple.com/us/album/without-you/1544876999?i=1544877000",
+        "isrc": "GBKPL1831292",
+        "duration": 282693
+      },
+      "spotify": {
+        "title": "Without You",
+        "artist": "Ursine Vulpine, Annaca",
+        "url": "https://open.spotify.com/track/47gOeiA8uBzpl1BXoyKoqQ",
+        "evidence": "https://open.spotify.com/embed/artist/3gAl49dGPSIUbkWbSJyIBs"
+      },
+      "unresolved": []
+    },
+    {
+      "trackId": "track-039",
+      "title": "Vorex",
+      "artist": "John Carpenter",
+      "youtube": "https://youtu.be/1ci_XSqtuAc?si=Ot7ZZlDOSH_Wq5xp",
+      "apple": {
+        "title": "Vortex",
+        "artist": "John Carpenter",
+        "album": "Lost Themes (Deluxe Edition)",
+        "url": "https://music.apple.com/us/album/vortex/950418048?i=950418049",
+        "isrc": "US5NR1512301",
+        "duration": 284640
+      },
+      "spotify": {
+        "title": "Vortex",
+        "artist": "John Carpenter",
+        "url": "https://open.spotify.com/track/2zoKTjuuG0s3qbOaA96oz7",
+        "evidence": "https://open.spotify.com/embed/album/548hvAyUUAEXTLOPQZYK0x"
+      },
+      "unresolved": []
+    },
+    {
+      "trackId": "track-040",
+      "title": "Evil Behind the Mask",
+      "artist": "Karl Casey @ White Bat Audio",
+      "youtube": "https://youtu.be/KOp9EmMCuS4?si=PWcNx8JEl11FUMXi",
+      "apple": {
+        "title": "Evil Behind the Mask",
+        "artist": "Karl Casey",
+        "album": "Dusk Till Dawn",
+        "url": "https://music.apple.com/us/album/evil-behind-the-mask/1538441307?i=1538441308",
+        "isrc": "QZNWQ2053810",
+        "duration": 199149
+      },
+      "spotify": {
+        "title": "Evil Behind the Mask",
+        "artist": "Karl Casey",
+        "url": "https://open.spotify.com/track/58lg8VinszDHuDpwdOwd1x",
+        "evidence": "https://open.spotify.com/embed/album/3QXdPpf0BjG5F3HoleR5KJ"
+      },
+      "unresolved": []
+    },
+    {
+      "trackId": "track-041",
+      "title": "Ember",
+      "artist": "Tony Anderson",
+      "youtube": "https://youtu.be/n0E-2juRHuI?si=eM3VeeHcOPTp1Svw",
+      "apple": {
+        "title": "Ember",
+        "artist": "Tony Anderson",
+        "album": "Ember - Single",
+        "url": "https://music.apple.com/us/album/ember/1544553199?i=1544553200",
+        "isrc": "USDHM1419053",
+        "duration": 184909
+      },
+      "spotify": {
+        "title": "Ember",
+        "artist": "Tony Anderson",
+        "url": "https://open.spotify.com/track/3KDHazDZyngxhum4MakOQB",
+        "evidence": "https://open.spotify.com/embed/track/3KDHazDZyngxhum4MakOQB"
+      },
+      "unresolved": []
+    },
+    {
+      "trackId": "track-042",
+      "title": "Power from Pain",
+      "artist": "Greg Dombrowski",
+      "youtube": "https://youtu.be/fztDBKouZQo?si=_iLn4HVb_0AffiUI",
+      "apple": {
+        "title": "Power from Pain",
+        "artist": "Secession Studios & Greg Dombrowski",
+        "album": "The Gloaming",
+        "url": "https://music.apple.com/us/album/power-from-pain/1629208451?i=1629208628",
+        "isrc": "TCAGG2235184",
+        "duration": 254769
+      },
+      "spotify": {
+        "title": "Power from Pain",
+        "artist": "Secession Studios, Greg Dombrowski",
+        "url": "https://open.spotify.com/track/2CUffhy2tAvSytG2Wu3fUy",
+        "evidence": "https://open.spotify.com/embed/playlist/1pSZNOeELcg3xdyRb0QaHa"
+      },
+      "unresolved": []
+    },
+    {
+      "trackId": "track-043",
+      "title": "Darkest Night",
+      "artist": "Tony Anderson",
+      "youtube": "https://youtu.be/gvFSg9Tlxe4?si=e5czwPBUa3YYTUXC",
+      "apple": {
+        "title": "Darkest Night",
+        "artist": "Tony Anderson",
+        "album": "The Heart of Man",
+        "url": "https://music.apple.com/us/album/darkest-night/1544556199?i=1544556205",
+        "isrc": "USDHM1702937",
+        "duration": 268083
+      },
+      "spotify": {
+        "title": "Darkest Night",
+        "artist": "Tony Anderson",
+        "url": "https://open.spotify.com/track/506x1AFqa5UIh91P0dh0ra",
+        "evidence": "https://open.spotify.com/embed/track/506x1AFqa5UIh91P0dh0ra"
+      },
+      "unresolved": []
+    },
+    {
+      "trackId": "track-044",
+      "title": "Vekeri",
+      "artist": "BlackWeald",
+      "youtube": "https://youtu.be/BX9LdqBZv1k?si=K2KJlapvuyiCIqO3",
+      "apple": {
+        "title": "Vekeri, 37 °C, Drought",
+        "artist": "BlackWeald",
+        "album": "From the Dust of the Old Hungarian Plains, Emerges the Invisible Claw that Drags Us into our Rotting Grave",
+        "url": "https://music.apple.com/us/album/vekeri-37-c-drought/1638170840?i=1638170851",
+        "isrc": "QZMEQ2280206",
+        "duration": 390000
+      },
+      "spotify": null,
+      "unresolved": [
+        "spotify"
+      ]
+    },
+    {
+      "trackId": "track-045",
+      "title": "Two Souls",
+      "artist": "Greg Dombrowski",
+      "youtube": "https://youtu.be/J33zSPl8eSU?si=nvwZjwuj1TAuZEiM",
+      "apple": null,
+      "spotify": null,
+      "unresolved": [
+        "apple",
+        "spotify"
+      ]
+    },
+    {
+      "trackId": "track-046",
+      "title": "The Artist",
+      "artist": "Elijah Siegler",
+      "youtube": "https://youtu.be/GR7WpfLZA3Q?si=aFDRmSNFFft8QNjb",
+      "apple": null,
+      "spotify": null,
+      "unresolved": [
+        "apple",
+        "spotify"
+      ]
+    },
+    {
+      "trackId": "track-047",
+      "title": "A Small Measure of Peace",
+      "artist": "Hans Zimmer",
+      "youtube": "https://youtu.be/P93JhrkedV0?si=AW5buQWbTU-91Di4",
+      "apple": {
+        "title": "A Small Measure of Peace",
+        "artist": "Hans Zimmer",
+        "album": "The Last Samurai (Original Motion Picture Score)",
+        "url": "https://music.apple.com/us/album/a-small-measure-of-peace/3943118?i=3942532",
+        "isrc": "USEE10340784",
+        "duration": 479680
+      },
+      "spotify": {
+        "title": "A Small Measure of Peace",
+        "artist": "Hans Zimmer",
+        "url": "https://open.spotify.com/track/0k1zElVBehCAzAa975af71",
+        "evidence": "https://open.spotify.com/embed/track/0k1zElVBehCAzAa975af71"
+      },
+      "unresolved": []
+    },
+    {
+      "trackId": "track-048",
+      "title": "Terra Incognita",
+      "artist": "Max Richter",
+      "youtube": "https://youtu.be/wRJC-3IfRyA?si=oXMgdEDrFDnGABBk",
+      "apple": {
+        "title": "Terra incognita",
+        "artist": "Max Richter",
+        "album": "Ad Astra (Original Motion Picture Soundtrack)",
+        "url": "https://music.apple.com/us/album/terra-incognita/1482828581?i=1482829869",
+        "isrc": "DEUM71905875",
+        "duration": 169615
+      },
+      "spotify": {
+        "title": "Terra Incognita",
+        "artist": "Max Richter",
+        "url": "https://open.spotify.com/track/37uzbA0C7hupI2xCGd9wLw",
+        "evidence": "https://open.spotify.com/embed/album/7A0KkKcwRKJYLrWQQsO3bH"
+      },
+      "unresolved": []
+    },
+    {
+      "trackId": "track-049",
+      "title": "You Have to Let Me Go",
+      "artist": "Max Richter",
+      "youtube": "https://youtu.be/tlNUKfC8GVU?si=3orI2SUmj8Er_xCW",
+      "apple": {
+        "title": "You Have to Let Me Go",
+        "artist": "Max Richter",
+        "album": "Ad Astra (Original Motion Picture Soundtrack)",
+        "url": "https://music.apple.com/us/album/you-have-to-let-me-go/1482828581?i=1482830441",
+        "isrc": "DEUM71905888",
+        "duration": 357078
+      },
+      "spotify": {
+        "title": "You Have to Let Me Go",
+        "artist": "Max Richter",
+        "url": "https://open.spotify.com/track/2keGnQjdunlP534YDNFOT3",
+        "evidence": "https://open.spotify.com/embed/album/7A0KkKcwRKJYLrWQQsO3bH"
+      },
+      "unresolved": []
+    },
+    {
+      "trackId": "track-050",
+      "title": "Briefing",
+      "artist": "Lorne Balfe",
+      "youtube": "https://youtu.be/xZeLTlawbMk?si=gLiiXec5b7gLw9u4",
+      "apple": {
+        "title": "Briefing",
+        "artist": "Lorne Balfe",
+        "album": "Ad Astra (Original Motion Picture Soundtrack)",
+        "url": "https://music.apple.com/us/album/briefing/1482828581?i=1482830449",
+        "isrc": "DEUM71905890",
+        "duration": 152939
+      },
+      "spotify": {
+        "title": "Briefing",
+        "artist": "Lorne Balfe",
+        "url": "https://open.spotify.com/track/5uGBqXf77ileRxAN5QSFkG",
+        "evidence": "https://open.spotify.com/embed/album/7A0KkKcwRKJYLrWQQsO3bH"
+      },
+      "unresolved": []
+    },
+    {
+      "trackId": "track-051",
+      "title": "Losing Hope",
+      "artist": "Elijah Siegler",
+      "youtube": "https://youtu.be/_HNESh0SOak?si=4NZDyqxMamBS3X8n",
+      "apple": null,
+      "spotify": null,
+      "unresolved": [
+        "apple",
+        "spotify"
+      ]
+    },
+    {
+      "trackId": "track-052",
+      "title": "The Machine",
+      "artist": "Greg Dombrowski",
+      "youtube": "https://youtu.be/UtscIsyfK4w?si=xgYpe8fVkqzg3Y86",
+      "apple": {
+        "title": "The Machine",
+        "artist": "Secession Studios & Greg Dombrowski",
+        "album": "In the Shadows (Original Motion Picture Soundtrack)",
+        "url": "https://music.apple.com/us/album/the-machine/1586286358?i=1586286795",
+        "isrc": "TCAFT2188339",
+        "duration": 360000
+      },
+      "spotify": {
+        "title": "The Machine",
+        "artist": "Secession Studios, Greg Dombrowski",
+        "url": "https://open.spotify.com/track/5bDKrWIpYdBFy2G82tHUVV",
+        "evidence": "https://open.spotify.com/embed/album/5vUWdX3dxQDbsEZON2TyXX"
+      },
+      "unresolved": []
+    },
+    {
+      "trackId": "track-053",
+      "title": "Mentality",
+      "artist": "Greg Dombrowski",
+      "youtube": "https://youtu.be/ndWyxzDtFqc?si=llcwBzeXnaELl6Fr",
+      "apple": {
+        "title": "Mentality",
+        "artist": "Secession Studios & Greg Dombrowski",
+        "album": "Vae Victis",
+        "url": "https://music.apple.com/us/album/mentality/1467733943?i=1467734282",
+        "isrc": "TCAEG1982896",
+        "duration": 250800
+      },
+      "spotify": {
+        "title": "Mentality",
+        "artist": "Secession Studios, Greg Dombrowski",
+        "url": "https://open.spotify.com/track/0AfQ7bmoNhpzslTCb0ZPMG",
+        "evidence": "https://open.spotify.com/embed/album/5vUWdX3dxQDbsEZON2TyXX"
+      },
+      "unresolved": []
+    },
+    {
+      "trackId": "track-054",
+      "title": "Eschaton",
+      "artist": "Tony Anderson",
+      "youtube": "https://youtu.be/Hu4HUNmqAIU?si=T8AITZl0d0Guyyw3",
+      "apple": {
+        "title": "Eschaton (Tony Anderson Rework)",
+        "artist": "Tony Anderson",
+        "album": "Eschaton - Single",
+        "url": "https://music.apple.com/us/album/eschaton-tony-anderson-rework/1544556253?i=1544556255",
+        "isrc": "GBKPL1968147",
+        "duration": 223125
+      },
+      "spotify": {
+        "title": "Eschaton - Tony Anderson Rework",
+        "artist": "Tony Anderson",
+        "url": "https://open.spotify.com/track/05bMvNJ2HgYXKNwHEqskXX",
+        "evidence": "https://open.spotify.com/embed/track/05bMvNJ2HgYXKNwHEqskXX"
+      },
+      "unresolved": []
+    },
+    {
+      "trackId": "track-055",
+      "title": "The Stallion",
+      "artist": "Elijah Siegler",
+      "youtube": "https://youtu.be/hg3P_d7dJ4E?si=BGvQnEmUHLFXK8I8",
+      "apple": null,
+      "spotify": null,
+      "unresolved": [
+        "apple",
+        "spotify"
+      ]
+    },
+    {
+      "trackId": "track-056",
+      "title": "The Inner Spaces of the Heart",
+      "artist": "Elijah Siegler",
+      "youtube": "https://youtu.be/QVsla5GkRgw?si=nQmKCk2ZGFlc_K5D",
+      "apple": null,
+      "spotify": null,
+      "unresolved": [
+        "apple",
+        "spotify"
+      ]
+    },
+    {
+      "trackId": "track-057",
+      "title": "Tree",
+      "artist": "Aphex Twin",
+      "youtube": "https://youtu.be/ATzlzPLMUhc?si=nKmhUjcji9awpUg_",
+      "apple": null,
+      "spotify": null,
+      "unresolved": [
+        "apple",
+        "spotify"
+      ]
+    },
+    {
+      "trackId": "track-058",
+      "title": "Night",
+      "artist": "John Carpenter",
+      "youtube": "https://youtu.be/3ItHGMVnu10?si=gQhfX7GraWn5lCqV",
+      "apple": {
+        "title": "Night (Zola Jesus & Dean Hurley Remix)",
+        "artist": "John Carpenter",
+        "album": "Lost Themes Remixed",
+        "url": "https://music.apple.com/us/album/night-zola-jesus-dean-hurley-remix/1036254173?i=1036254467",
+        "isrc": "US5NR1512310",
+        "duration": 219545
+      },
+      "spotify": {
+        "title": "Night - Zola Jesus and Dean Hurley Remix",
+        "artist": "John Carpenter",
+        "url": "https://open.spotify.com/track/42cpLMpSd0AuQRM6pHI59U",
+        "evidence": "https://open.spotify.com/embed/album/548hvAyUUAEXTLOPQZYK0x"
+      },
+      "unresolved": []
+    },
+    {
+      "trackId": "track-059",
+      "title": "Vampire's Touch",
+      "artist": "John Carpenter",
+      "youtube": "https://youtu.be/WOacj_CMlsw?si=S94OoxKZ1nJVF7Dt",
+      "apple": {
+        "title": "Vampire's Touch",
+        "artist": "John Carpenter",
+        "album": "Lost Themes III: Alive After Death",
+        "url": "https://music.apple.com/us/album/vampires-touch/1534812089?i=1534812094",
+        "isrc": "US5NR2126505",
+        "duration": 270453
+      },
+      "spotify": {
+        "title": "Vampire's Touch",
+        "artist": "John Carpenter",
+        "url": "https://open.spotify.com/track/3OndkmCxpO5fCHnETwnmel",
+        "evidence": "https://open.spotify.com/embed/album/2GYD5j8wa4kEhlmN5GGiUT"
+      },
+      "unresolved": []
+    },
+    {
+      "trackId": "track-060",
+      "title": "Vortex",
+      "artist": "Elliot Goldenthal",
+      "youtube": "https://youtu.be/63L5qwrmxwA?si=SGxrXwwpeYwXlswb",
+      "apple": {
+        "title": "Vortex",
+        "artist": "Elliot Goldenthal, Steven Mercurio, Jonathan Sheffer, Page Hamilton, Mark Stewart, The London Metropolitan Orchestra, English Chamber Choir, The Mask Orchestra, The Pickled Heads Band, Bruce Williamson & John Thomas",
+        "album": "Titus (Original Motion Picture Soundtrack)",
+        "url": "https://music.apple.com/us/album/vortex/250240035?i=250240085",
+        "isrc": "USSM19927919",
+        "duration": 92867
+      },
+      "spotify": {
+        "title": "Vortex - Instrumental",
+        "artist": "Cesare Andrea Bixio, Elliot Goldenthal, Steven Mercurio, Jonathan Sheffer, London Metropolitan Orchestra, The Mask Orchestra",
+        "url": "https://open.spotify.com/track/4Qvhbeq1AlajoE6YNKGsKW",
+        "evidence": "https://open.spotify.com/embed/album/4DfkUpbLH9vA5RaEpgjhm9"
+      },
+      "unresolved": []
+    },
+    {
+      "trackId": "track-061",
+      "title": "Philimelagram",
+      "artist": "Elliot Goldenthal",
+      "youtube": "https://youtu.be/BJHvEMT8f7M?si=sjcmGLofZUoOFmZY",
+      "apple": {
+        "title": "Philimelagram",
+        "artist": "Elliot Goldenthal, Steven Mercurio, Jonathan Sheffer, Page Hamilton, Mark Stewart, The London Metropolitan Orchestra, English Chamber Choir, The Mask Orchestra, The Pickled Heads Band, Bruce Williamson & John Thomas",
+        "album": "Titus (Original Motion Picture Soundtrack)",
+        "url": "https://music.apple.com/us/album/philimelagram/250240035?i=250240199",
+        "isrc": "USSM19927926",
+        "duration": 105627
+      },
+      "spotify": {
+        "title": "Philimelagram - Instrumental",
+        "artist": "Cesare Andrea Bixio, Elliot Goldenthal, Steven Mercurio, Jonathan Sheffer, London Metropolitan Orchestra, The Mask Orchestra",
+        "url": "https://open.spotify.com/track/1MQKY4emMucdFQowTSwiaN",
+        "evidence": "https://open.spotify.com/embed/album/4DfkUpbLH9vA5RaEpgjhm9"
+      },
+      "unresolved": []
+    },
+    {
+      "trackId": "track-062",
+      "title": "Girl on the Subway Train",
+      "artist": "John Barry",
+      "youtube": "https://youtu.be/lA1FuOX5DLI?si=a0bxMEE6EK5GvmJ-",
+      "apple": null,
+      "spotify": null,
+      "unresolved": [
+        "apple",
+        "spotify"
+      ]
+    },
+    {
+      "trackId": "track-063",
+      "title": "Tall Grass",
+      "artist": "Jerry Goldsmith",
+      "youtube": "https://youtu.be/cFEXxoAYpn8?si=EJpEjMFCnkjixIrx",
+      "apple": null,
+      "spotify": null,
+      "unresolved": [
+        "apple",
+        "spotify"
+      ]
+    },
+    {
+      "trackId": "track-064",
+      "title": "A Final Sacrifice",
+      "artist": "Luke Richards",
+      "youtube": "https://youtu.be/K9tLAH0Z0pA?si=--4wta1WKQmPuy1j",
+      "apple": {
+        "title": "A Final Sacrifice",
+        "artist": "Luke Richards",
+        "album": "Absolution",
+        "url": "https://music.apple.com/us/album/a-final-sacrifice/1836382541?i=1836382544",
+        "isrc": "GBFFM1911426",
+        "duration": 161702
+      },
+      "spotify": {
+        "title": "A Final Sacrifice",
+        "artist": "Luke Richards",
+        "url": "https://open.spotify.com/track/6RktYGSRnCIss0xc9vy2Eo",
+        "evidence": "https://open.spotify.com/embed/album/6kIHZTMwlQByQ64gfKiYac"
+      },
+      "unresolved": []
+    },
+    {
+      "trackId": "track-065",
+      "title": "Regeneration",
+      "artist": "Elijah Siegler",
+      "youtube": "https://youtu.be/h5d_9JXKqgs?si=RIsbcoSPy6zN_7Q7",
+      "apple": null,
+      "spotify": null,
+      "unresolved": [
+        "apple",
+        "spotify"
+      ]
+    },
+    {
+      "trackId": "track-066",
+      "title": "Ella Returns Home",
+      "artist": "Elijah Siegler",
+      "youtube": "https://youtu.be/MKalVHw3N_M?si=ol552kpT2rsTR0SP",
+      "apple": null,
+      "spotify": null,
+      "unresolved": [
+        "apple",
+        "spotify"
+      ]
+    },
+    {
+      "trackId": "track-067",
+      "title": "Original music · title forthcoming",
+      "artist": "Elijah Siegler",
+      "youtube": null,
+      "apple": null,
+      "spotify": null,
+      "unresolved": [
+        "apple",
+        "spotify"
+      ]
+    },
+    {
+      "trackId": "track-068",
+      "title": "We Are One",
+      "artist": "Elijah Siegler",
+      "youtube": "https://youtu.be/LY_u9iiQEsI?si=FHhb8ciDes5DIeei",
+      "apple": null,
+      "spotify": null,
+      "unresolved": [
+        "apple",
+        "spotify"
+      ]
+    },
+    {
+      "trackId": "track-069",
+      "title": "Hypernova",
+      "artist": "Eternal Eclipse",
+      "youtube": "https://youtu.be/GAj0gEBo8dg?si=FO0gn0g4Q4uYjKUT",
+      "apple": {
+        "title": "Hypernova",
+        "artist": "Eternal Eclipse",
+        "album": "Outerlife",
+        "url": "https://music.apple.com/us/album/hypernova/1693426414?i=1693427080",
+        "isrc": "QZAKB2343589",
+        "duration": 208128
+      },
+      "spotify": {
+        "title": "Hypernova",
+        "artist": "Eternal Eclipse",
+        "url": "https://open.spotify.com/track/65MZ4fUIj7YP1IcM3AKcjj",
+        "evidence": "https://open.spotify.com/embed/track/65MZ4fUIj7YP1IcM3AKcjj"
+      },
+      "unresolved": []
+    },
+    {
+      "trackId": "track-070",
+      "title": "A Child Recalled",
+      "artist": "Elliot Goldenthal",
+      "youtube": "https://youtu.be/JKC_1bz900w?si=ucUd2OLQzRdJJwev",
+      "apple": {
+        "title": "A Child Recalled",
+        "artist": "Elliot Goldenthal, Dirk Brossé, London Symphony Orchestra, London Voices & Dave Heath",
+        "album": "Final Fantasy (Original Motion Picture Soundtrack)",
+        "url": "https://music.apple.com/us/album/a-child-recalled/267528654?i=267529053",
+        "isrc": "USSM10105809",
+        "duration": 146000
+      },
+      "spotify": {
+        "title": "A Child Recalled - Voice",
+        "artist": "Elliot Goldenthal, Dirk Brossé, London Symphony Orchestra, London Voices",
+        "url": "https://open.spotify.com/track/2mWmTjiMbTZszvA3sSjuVS",
+        "evidence": "https://open.spotify.com/embed/album/4ccfkxYDaw8OhBX0wOA32f"
+      },
+      "unresolved": []
+    },
+    {
+      "trackId": "track-071",
+      "title": "The Spirit Within",
+      "artist": "Elliot Goldenthal",
+      "youtube": "https://youtu.be/oJvJ3CerS1Y?si=PkTTEFKMKMuufz7-",
+      "apple": {
+        "title": "The Spirit Within",
+        "artist": "Elliot Goldenthal, Dirk Brossé, London Symphony Orchestra, London Voices & Dave Heath",
+        "album": "Final Fantasy (Original Motion Picture Soundtrack)",
+        "url": "https://music.apple.com/us/album/the-spirit-within/267528654?i=267528666",
+        "isrc": "USSM10105799",
+        "duration": 125293
+      },
+      "spotify": {
+        "title": "The Spirit Within - Voice",
+        "artist": "Elliot Goldenthal, Dirk Brossé, London Symphony Orchestra, London Voices, David Heath",
+        "url": "https://open.spotify.com/track/7dTNRHze4FTQftEkvBVRx4",
+        "evidence": "https://open.spotify.com/embed/album/4ccfkxYDaw8OhBX0wOA32f"
+      },
+      "unresolved": []
+    },
+    {
+      "trackId": "track-072",
+      "title": "If I Was In Your World",
+      "artist": "Elijah Siegler",
+      "youtube": "https://youtu.be/gHPBerSf6CY?si=xfPPPv_b0xF5sDrN",
+      "apple": null,
+      "spotify": null,
+      "unresolved": [
+        "apple",
+        "spotify"
+      ]
+    },
+    {
+      "trackId": "track-073",
+      "title": "Code Red",
+      "artist": "Elliot Goldenthal",
+      "youtube": "https://youtu.be/tsTHTNUfGhI?si=8QDMoeEHnD5bPofI",
+      "apple": {
+        "title": "Code Red",
+        "artist": "Elliot Goldenthal, Dirk Brossé, London Symphony Orchestra, London Voices & Dave Heath",
+        "album": "Final Fantasy (Original Motion Picture Soundtrack)",
+        "url": "https://music.apple.com/us/album/code-red/267528654?i=267528715",
+        "isrc": "USSM10105802",
+        "duration": 125133
+      },
+      "spotify": {
+        "title": "Code Red - Voice",
+        "artist": "Elliot Goldenthal, Dirk Brossé, London Symphony Orchestra, London Voices",
+        "url": "https://open.spotify.com/track/7zyIEeV0KVXZ8nON2X4s8k",
+        "evidence": "https://open.spotify.com/embed/album/4ccfkxYDaw8OhBX0wOA32f"
+      },
+      "unresolved": []
+    },
+    {
+      "trackId": "track-074",
+      "title": "Coronation",
+      "artist": "Elliot Goldenthal",
+      "youtube": "https://youtu.be/BO72aDV3gv8?si=S-Mqsh6zkwzzfOAr",
+      "apple": {
+        "title": "Coronation",
+        "artist": "Elliot Goldenthal, Steven Mercurio, Jonathan Sheffer, Page Hamilton, Mark Stewart, The London Metropolitan Orchestra, English Chamber Choir, The Mask Orchestra, The Pickled Heads Band, Bruce Williamson & John Thomas",
+        "album": "Titus (Original Motion Picture Soundtrack)",
+        "url": "https://music.apple.com/us/album/coronation/250240035?i=250240238",
+        "isrc": "USSM19927929",
+        "duration": 113173
+      },
+      "spotify": {
+        "title": "Coronation - Instrumental",
+        "artist": "Cesare Andrea Bixio, Elliot Goldenthal, Steven Mercurio, Jonathan Sheffer, London Metropolitan Orchestra, The Mask Orchestra",
+        "url": "https://open.spotify.com/track/5g9FXZRs7uo6mJ19LpYpoq",
+        "evidence": "https://open.spotify.com/embed/album/4DfkUpbLH9vA5RaEpgjhm9"
+      },
+      "unresolved": []
+    },
+    {
+      "trackId": "track-075",
+      "title": "Aaron's Plea",
+      "artist": "Elliot Goldenthal",
+      "youtube": "https://youtu.be/ZKDFaHO04Q4?si=vjeSSPp-_T4ZvsK7",
+      "apple": {
+        "title": "Aaron's Plea",
+        "artist": "Elliot Goldenthal",
+        "album": "Titus (Original Motion Picture Soundtrack)",
+        "url": "https://music.apple.com/us/album/aarons-plea/260268265?i=260268477",
+        "isrc": "USSM19927928",
+        "duration": 121533
+      },
+      "spotify": {
+        "title": "Aaron's Plea - Instrumental",
+        "artist": "Cesare Andrea Bixio, Elliot Goldenthal, Steven Mercurio, Jonathan Sheffer, London Metropolitan Orchestra, The Mask Orchestra",
+        "url": "https://open.spotify.com/track/6oUtdzUOxJjJCjGcY5E9fq",
+        "evidence": "https://open.spotify.com/embed/album/4DfkUpbLH9vA5RaEpgjhm9"
+      },
+      "unresolved": []
+    },
+    {
+      "trackId": "track-076",
+      "title": "The Night Window",
+      "artist": "Thomas Newman",
+      "youtube": "https://youtu.be/gqo46lt-8Q4?si=xJbpZq1hNCDGIMsk",
+      "apple": {
+        "title": "The Night Window",
+        "artist": "Thomas Newman",
+        "album": "1917 (Original Motion Picture Soundtrack)",
+        "url": "https://music.apple.com/us/album/the-night-window/1489939478?i=1489939567",
+        "isrc": "USQX91903439",
+        "duration": 221427
+      },
+      "spotify": {
+        "title": "The Night Window (From \"1917\" Soundtrack)",
+        "artist": "Thomas Newman",
+        "url": "https://open.spotify.com/track/4imfe6DeUeqtUpKqS851mO",
+        "evidence": "https://open.spotify.com/embed/track/4imfe6DeUeqtUpKqS851mO"
+      },
+      "unresolved": []
+    },
+    {
+      "trackId": "track-077",
+      "title": "Winged Serpent",
+      "artist": "Elliot Goldenthal",
+      "youtube": "https://youtu.be/RG_oG9udlF0?si=Pqi4nLEuiAIHselI",
+      "apple": {
+        "title": "Winged Serpent",
+        "artist": "Elliot Goldenthal, Dirk Brossé, London Symphony Orchestra, London Voices & Dave Heath",
+        "album": "Final Fantasy (Original Motion Picture Soundtrack)",
+        "url": "https://music.apple.com/us/album/winged-serpent/267528654?i=267528856",
+        "isrc": "USSM10105806",
+        "duration": 95293
+      },
+      "spotify": {
+        "title": "Winged Serpent - Voice",
+        "artist": "Elliot Goldenthal, Dirk Brossé, London Symphony Orchestra, London Voices",
+        "url": "https://open.spotify.com/track/5gsmtBTpo6kGAuP9oZmt6p",
+        "evidence": "https://open.spotify.com/embed/album/4ccfkxYDaw8OhBX0wOA32f"
+      },
+      "unresolved": []
+    },
+    {
+      "trackId": "track-078",
+      "title": "To the Stars",
+      "artist": "Max Richter",
+      "youtube": "https://youtu.be/6l1vqupFqLE?si=OCRiJht8TZAouiN1",
+      "apple": {
+        "title": "To the Stars",
+        "artist": "Max Richter",
+        "album": "Ad Astra (Original Motion Picture Soundtrack)",
+        "url": "https://music.apple.com/us/album/to-the-stars/1482828581?i=1482829075",
+        "isrc": "DEUM71905341",
+        "duration": 210430
+      },
+      "spotify": {
+        "title": "To the Stars",
+        "artist": "Max Richter",
+        "url": "https://open.spotify.com/track/03BoaviXTqX4f3cTjrXPKb",
+        "evidence": "https://open.spotify.com/embed/album/7A0KkKcwRKJYLrWQQsO3bH"
+      },
+      "unresolved": []
+    },
+    {
+      "trackId": "track-079",
+      "title": "Like Wind",
+      "artist": "Judah Earl",
+      "youtube": "https://youtu.be/599mugzJhKw?si=Z5vGQgNcrV5o6-1c",
+      "apple": {
+        "title": "Like Wind",
+        "artist": "Judah Earl",
+        "album": "Like Wind - Single",
+        "url": "https://music.apple.com/us/album/like-wind/1697201502?i=1697201503",
+        "isrc": "QZTV32320260",
+        "duration": 154043
+      },
+      "spotify": {
+        "title": "Like Wind",
+        "artist": "Judah Earl",
+        "url": "https://open.spotify.com/track/39jFE6dY3u4zu8UyQ8mezj",
+        "evidence": "https://open.spotify.com/embed/track/39jFE6dY3u4zu8UyQ8mezj"
+      },
+      "unresolved": []
+    },
+    {
+      "trackId": "track-080",
+      "title": "Twilight Cellos",
+      "artist": "Wojciech Kilar",
+      "youtube": "https://youtu.be/Rf-vu4nCTgA?si=pdYVWbqecjnSJj-E",
+      "apple": null,
+      "spotify": null,
+      "unresolved": [
+        "apple",
+        "spotify"
+      ]
+    },
+    {
+      "trackId": "track-081",
+      "title": "Eyes Wide Open (Cinematic Mix)",
+      "artist": "Tony Anderson",
+      "youtube": "https://youtu.be/zdbCM674kt0?si=egvqu-F2EocUpTZN",
+      "apple": {
+        "title": "Eyes Wide Open (Cinematic Mix)",
+        "artist": "Tony Anderson",
+        "album": "The Heart of Man",
+        "url": "https://music.apple.com/us/album/eyes-wide-open-cinematic-mix/1544556199?i=1544556216",
+        "isrc": "USDHM1702948",
+        "duration": 324034
+      },
+      "spotify": {
+        "title": "Eyes Wide Open - Cinematic Mix",
+        "artist": "Tony Anderson",
+        "url": "https://open.spotify.com/track/045Zsm8xqwZ4ATrCmeODcb",
+        "evidence": "https://open.spotify.com/embed/track/045Zsm8xqwZ4ATrCmeODcb"
+      },
+      "unresolved": []
+    },
+    {
+      "trackId": "track-082",
+      "title": "Without You (Extended)",
+      "artist": "Ursine Vulpine & Annaca",
+      "youtube": "https://youtu.be/FYrnptSa1AM?si=EZQ_c7Sg1rKtjgj2",
+      "apple": {
+        "title": "Without You - Extended",
+        "artist": "Ursine Vulpine & Annaca",
+        "album": "Solace - EP",
+        "url": "https://music.apple.com/us/album/without-you-extended/1544877496?i=1544877503",
+        "isrc": "GBKPL1832875",
+        "duration": 529947
+      },
+      "spotify": {
+        "title": "Without You - Extended",
+        "artist": "Ursine Vulpine, Annaca",
+        "url": "https://open.spotify.com/track/30pNfaqKiMbnbh9A5MrNQx",
+        "evidence": "https://open.spotify.com/embed/artist/3gAl49dGPSIUbkWbSJyIBs"
+      },
+      "unresolved": []
+    }
+  ]
+}

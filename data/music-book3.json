@@ -1,0 +1,2780 @@
+{
+  "book": 3,
+  "title": "Psalms of Chaos",
+  "sections": [
+    {
+      "id": "act-1",
+      "title": "Act I · The Dry Branch"
+    },
+    {
+      "id": "interlude",
+      "title": "Interlude · Growing Up"
+    },
+    {
+      "id": "act-2",
+      "title": "Act II · The Accelerant"
+    },
+    {
+      "id": "act-3",
+      "title": "Act III · The Sudden Heat"
+    },
+    {
+      "id": "act-4",
+      "title": "Act IV · The Ignition"
+    },
+    {
+      "id": "act-5",
+      "title": "Act V · The Burning Bush"
+    },
+    {
+      "id": "afterwards",
+      "title": "Afterwards"
+    }
+  ],
+  "tracks": [
+    {
+      "id": "track-001",
+      "title": "Past In Flames",
+      "artist": "Greg Dombrowski",
+      "links": {
+        "youtube": "https://www.youtube.com/watch?v=S5ZmI0F64DY&list=PLvDxU9glBJXdeyYJvRhblF33dziZB5f2-",
+        "apple": "https://music.apple.com/us/album/past-in-flames/1506123199?i=1506123328",
+        "spotify": "https://open.spotify.com/track/4yN2Bd4FxRW5k286sIFA19"
+      },
+      "status": "selected"
+    },
+    {
+      "id": "track-002",
+      "title": "Ancestral",
+      "artist": "Tony Anderson",
+      "links": {
+        "youtube": "https://youtu.be/WYRTWgBvPuE?si=QZC4OMV4wcwRZhlg",
+        "apple": "https://music.apple.com/us/album/ancestral/1736668749?i=1736668750",
+        "spotify": "https://open.spotify.com/track/6ezlF224pbxjKpVi1KRcOW"
+      },
+      "status": "selected"
+    },
+    {
+      "id": "track-003",
+      "title": "Kate's Theme",
+      "artist": "Benjamin Wallfisch",
+      "links": {
+        "youtube": "https://youtu.be/XpqRm74XO3A?si=_UMfFN2rzhJP4Q_x",
+        "apple": "https://music.apple.com/us/album/kates-theme/1760436759?i=1760436989",
+        "spotify": "https://open.spotify.com/track/4e8rHkj8NwGhpFwfmCPhyy"
+      },
+      "status": "selected",
+      "sourceWork": "Twisters Soundtrack"
+    },
+    {
+      "id": "track-004",
+      "title": "On The Nature of Daylight",
+      "artist": "Max Richter",
+      "links": {
+        "youtube": "https://youtu.be/rVN1B-tUpgs?si=pCbGxSRoLkyjL9tg",
+        "apple": "https://music.apple.com/us/album/on-the-nature-of-daylight/1368089903?i=1368090483",
+        "spotify": "https://open.spotify.com/track/3Ya2HLVmg1VykhrRWMqzVp"
+      },
+      "status": "selected"
+    },
+    {
+      "id": "track-005",
+      "title": "A Close Friend Cinematic Cover (from Fantastic Beasts)",
+      "artist": "Elijah Siegler",
+      "links": {
+        "youtube": "https://youtu.be/5TnfctjIBNo?si=hCgnE9XOVsrIwQ61",
+        "apple": null,
+        "spotify": null
+      },
+      "status": "selected"
+    },
+    {
+      "id": "track-006",
+      "title": "Certain Light",
+      "artist": "Wojciech Kilar",
+      "links": {
+        "youtube": "https://youtu.be/s35ogkLisws?si=DYcRgLRLn2nRMVxA",
+        "apple": null,
+        "spotify": null
+      },
+      "status": "selected"
+    },
+    {
+      "id": "track-007",
+      "title": "The Wanderer",
+      "artist": "Max Richter",
+      "links": {
+        "youtube": "https://youtu.be/-lmCgFA-GQs?si=WS_BxH-SX9rLTayy",
+        "apple": "https://music.apple.com/us/album/the-wanderer/1482828581?i=1482830262",
+        "spotify": "https://open.spotify.com/track/7MGuU2d0kAZcskNbRvJQFD"
+      },
+      "status": "selected",
+      "sourceWork": "From Ad Astra"
+    },
+    {
+      "id": "track-008",
+      "title": "3 Pieces for Orchestra, Op. 6: No. 1, Praeludium",
+      "artist": "Alban Berg",
+      "links": {
+        "youtube": "https://youtu.be/3CFenfrAtYk?si=B_XVOOCe3-KsFPPE",
+        "apple": null,
+        "spotify": null
+      },
+      "status": "selected"
+    },
+    {
+      "id": "track-009",
+      "title": "Aurorae",
+      "artist": "Triptykon",
+      "links": {
+        "youtube": "https://youtu.be/zvREn3nVwqk?si=8oGG7K70rGtxyXuC",
+        "apple": "https://music.apple.com/us/album/aurorae/1045394682?i=1045394921",
+        "spotify": "https://open.spotify.com/track/5EehBjlQfBYKYbDVXydVpp"
+      },
+      "status": "selected"
+    },
+    {
+      "id": "track-010",
+      "title": "Losing Hope",
+      "artist": "Elijah Siegler",
+      "links": {
+        "youtube": "https://youtu.be/_HNESh0SOak?si=P69xJrHhlQbu0o5y",
+        "apple": null,
+        "spotify": null
+      },
+      "status": "selected"
+    },
+    {
+      "id": "track-011",
+      "title": "... Slowly We Fell Into Slumber And I Held You Until the End Of Time",
+      "artist": "Ursine Vulpine",
+      "links": {
+        "youtube": "https://youtu.be/KMLDpz9on44?si=heUGp5E5yIUgzXup",
+        "apple": "https://music.apple.com/us/album/slowly-we-fell-into-slumber-and-i-held-you-until-the/1545202056?i=1545202078",
+        "spotify": null
+      },
+      "status": "selected"
+    },
+    {
+      "id": "track-012",
+      "title": "Perihelion",
+      "artist": "Max Richter",
+      "links": {
+        "youtube": "https://youtu.be/7tTCZOHUWFA?si=Bbj-RzJfLkijC8gA",
+        "apple": "https://music.apple.com/us/album/perihelion/1798524079?i=1798524084",
+        "spotify": "https://open.spotify.com/track/2K1Chgi3BKuGP4CVVLl30Z"
+      },
+      "status": "selected"
+    },
+    {
+      "id": "track-013",
+      "title": "Decoherence",
+      "artist": "Scott Buckley",
+      "links": {
+        "youtube": "https://youtu.be/2H3sSsV9adY?si=n_pa5eeCEb586hl1",
+        "apple": "https://music.apple.com/us/album/decoherence/1616420302?i=1616420303",
+        "spotify": "https://open.spotify.com/track/2mJem09oJN1LpkHlurpUfs"
+      },
+      "status": "selected"
+    },
+    {
+      "id": "track-014",
+      "title": "Aphelion",
+      "artist": "Scott Buckley",
+      "links": {
+        "youtube": "https://youtu.be/6dcZm7UH0DM?si=quKIYYEahmJ0JEzd",
+        "apple": "https://music.apple.com/us/album/aphelion/1895824333?i=6764538273",
+        "spotify": "https://open.spotify.com/track/7hvf2gJ8bcb9njRUSHQ5T4"
+      },
+      "status": "selected"
+    },
+    {
+      "id": "track-015",
+      "title": "Glacier",
+      "artist": "Judah Earl and Zane Callister",
+      "links": {
+        "youtube": "https://youtu.be/jMFScyxERVY?si=POJVfggpOCgjdJ17",
+        "apple": "https://music.apple.com/us/album/glacier-feat-young-collective/1650565929?i=1650566164",
+        "spotify": "https://open.spotify.com/track/6rLnCsHw48th92MIM9qpiu"
+      },
+      "status": "selected"
+    },
+    {
+      "id": "track-016",
+      "title": "Skyward",
+      "artist": "Scott Buckley",
+      "links": {
+        "youtube": "https://www.youtube.com/watch?v=vf91RaIKn_w",
+        "apple": null,
+        "spotify": "https://open.spotify.com/track/3gVcpLrpSDdzOgndVITy2V"
+      },
+      "status": "selected"
+    },
+    {
+      "id": "track-017",
+      "title": "Dancing with Flames",
+      "artist": "Greg Dombrowski",
+      "links": {
+        "youtube": "https://youtu.be/UauukzbPejE?si=iVgFzgcGyaU2HYCu",
+        "apple": "https://music.apple.com/us/album/dancing-with-flames/1488073908?i=1488074166",
+        "spotify": "https://open.spotify.com/track/07zsaNsOhgfxXOxvthH3lj"
+      },
+      "status": "selected"
+    },
+    {
+      "id": "track-018",
+      "title": "Incantation",
+      "artist": "Scott Buckley",
+      "links": {
+        "youtube": "https://youtu.be/t5gA_cHOcZk?si=gB1kriuAfWayEg_y",
+        "apple": "https://music.apple.com/us/album/incantation/1774718406?i=1774718407",
+        "spotify": "https://open.spotify.com/track/1ONFUPhwjeYuNzGc0ZHAsF"
+      },
+      "status": "selected"
+    },
+    {
+      "id": "track-019",
+      "title": "Almost Blue",
+      "artist": "Chet Baker",
+      "links": {
+        "youtube": "https://youtu.be/z4PKzz81m5c?si=VvJYl4SgM9lDLVki",
+        "apple": null,
+        "spotify": null
+      },
+      "status": "selected"
+    },
+    {
+      "id": "track-020",
+      "title": "All the places I will never go",
+      "artist": "Elijah Siegler",
+      "links": {
+        "youtube": "https://youtu.be/od7m8G1Snkc?si=npvVDmPQJdg5c1E_",
+        "apple": "https://music.apple.com/us/album/all-the-places-i-will-never-go/1872760982?i=1872760992",
+        "spotify": "https://open.spotify.com/track/4cH3XkPvdvxIDmjxb6FmDM"
+      },
+      "status": "selected"
+    },
+    {
+      "id": "track-021",
+      "title": "Unraveling",
+      "artist": "Scott Buckley",
+      "links": {
+        "youtube": "https://youtu.be/Fc4L4tZkF30?si=krriFEPl8Ig43Ixi",
+        "apple": "https://music.apple.com/us/album/unraveling/6764794740?i=6764794741",
+        "spotify": "https://open.spotify.com/track/7rpcgQymRvlpybjViZ5WHn"
+      },
+      "status": "selected"
+    },
+    {
+      "id": "track-022",
+      "title": "Hymn to the Dawn",
+      "artist": "Scott Buckley",
+      "links": {
+        "youtube": "https://youtu.be/OYA7tLVHB20?si=WuunZFvLlULdytGy",
+        "apple": "https://music.apple.com/us/album/hymn-to-the-dawn/1654303177?i=1654303179",
+        "spotify": "https://open.spotify.com/track/01or0fz5xHtP1LCR8EDG7Q"
+      },
+      "status": "selected"
+    },
+    {
+      "id": "track-023",
+      "title": "When I was in Your World",
+      "artist": "Elijah Siegler",
+      "links": {
+        "youtube": "https://youtu.be/in-gI3hxqgs?si=EvAWVARotqYPy1aq",
+        "apple": "https://music.apple.com/us/album/when-i-was-in-your-world/6813960322?i=6813960323",
+        "spotify": "https://open.spotify.com/track/0q7uqbScg2MCKkd3HQuFnn"
+      },
+      "status": "selected"
+    },
+    {
+      "id": "track-024",
+      "title": "Remembering Tessa",
+      "artist": "George Kallis",
+      "links": {
+        "youtube": "https://youtu.be/eDBOclZHlyE?si=fLX41l69SO03YEBP",
+        "apple": "https://music.apple.com/us/album/remembering-tessa/1704463287?i=1704463299",
+        "spotify": "https://open.spotify.com/track/7qxLs95Uu5s6ozIL00239V"
+      },
+      "status": "selected"
+    },
+    {
+      "id": "track-025",
+      "title": "The Immortalist",
+      "artist": "Greg Dombrowski",
+      "links": {
+        "youtube": "https://youtu.be/mYTO8JaM8xs?si=srNP-w1zKRNqY178",
+        "apple": "https://music.apple.com/us/album/the-immortalist/1506123199?i=1506123335",
+        "spotify": "https://open.spotify.com/track/3OJDwqKyGsoTT52GryFqfC"
+      },
+      "status": "selected"
+    },
+    {
+      "id": "track-026",
+      "title": "My Little Boy",
+      "artist": "Asher Goldschmidt",
+      "links": {
+        "youtube": "https://youtu.be/zSeGv8vWtAc?si=8Y26G-QrK2wSdHxy",
+        "apple": "https://music.apple.com/us/album/my-little-boy/1802998562?i=1802998995",
+        "spotify": "https://open.spotify.com/track/6TmPrwrLOFA1OaEKbkMZnu"
+      },
+      "status": "selected"
+    },
+    {
+      "id": "track-027",
+      "title": "You Were Once a Child",
+      "artist": "Elijah Siegler",
+      "links": {
+        "youtube": "https://youtu.be/I5W5a16QJIE?si=PwOCpD2w8ck8Xnfh",
+        "apple": null,
+        "spotify": null
+      },
+      "status": "selected"
+    },
+    {
+      "id": "track-028",
+      "title": "Afterlife Initiation",
+      "artist": "Complexities of Sound",
+      "links": {
+        "youtube": "https://youtu.be/L0mOwNphLZg?si=1zUM2V3-T1Zqstps",
+        "apple": "https://music.apple.com/us/album/afterlife-initiation/1694763620?i=1694763627",
+        "spotify": null
+      },
+      "status": "selected"
+    },
+    {
+      "id": "track-029",
+      "title": "Fading Over Time",
+      "artist": "Scapes",
+      "links": {
+        "youtube": "https://youtu.be/QZnOWiXryao?si=psRruOR5Ybpdejk1",
+        "apple": "https://music.apple.com/us/album/fading-over-time/1641902045?i=1641902049",
+        "spotify": "https://open.spotify.com/track/4caGSIngaDQm1KxPbO7Tkj"
+      },
+      "status": "selected"
+    },
+    {
+      "id": "track-030",
+      "title": "Broken Air",
+      "artist": "Exist Strategy",
+      "links": {
+        "youtube": "https://youtu.be/pHGHLIGs31U?si=aZrxF5d1XPAucjzG",
+        "apple": "https://music.apple.com/us/album/broken-air/1113794515?i=1113794813",
+        "spotify": "https://open.spotify.com/track/0yzzLd3WfrxFMaU0atqn4i"
+      },
+      "status": "selected"
+    },
+    {
+      "id": "track-031",
+      "title": "In the Distance",
+      "artist": "Tony Anderson",
+      "links": {
+        "youtube": "https://youtu.be/nOkPgwMuVVw?si=sOUwwUyM0v_TmvBV",
+        "apple": "https://music.apple.com/us/album/in-the-distance/1544556199?i=1544556210",
+        "spotify": "https://open.spotify.com/track/36KGB6KgKjha6VCs6RGf0a"
+      },
+      "status": "selected"
+    },
+    {
+      "id": "track-032",
+      "title": "This Feeling",
+      "artist": "Øneheart",
+      "links": {
+        "youtube": "https://youtu.be/yQlewTDS2AI?si=IuDlzozyB4syVc9g",
+        "apple": "https://music.apple.com/us/album/this-feeling/1607913503?i=1607913504",
+        "spotify": "https://open.spotify.com/track/1r232i80xFiNHzSUmrFc01"
+      },
+      "status": "selected"
+    },
+    {
+      "id": "track-033",
+      "title": "I'll Destroy You Before You Destroy Me",
+      "artist": "Greg Dombrowski",
+      "links": {
+        "youtube": "https://youtu.be/dVTt-qjLFmQ?si=pTIhhv6DNTqVjuSf",
+        "apple": null,
+        "spotify": null
+      },
+      "status": "selected"
+    },
+    {
+      "id": "track-034",
+      "title": "This Quiet Violence",
+      "artist": "David Chappell",
+      "links": {
+        "youtube": "https://youtu.be/N35XW92tqcY?si=cNKc2GUI19oz2-9Q",
+        "apple": "https://music.apple.com/us/album/this-quiet-violence/1513954821?i=1513954826",
+        "spotify": "https://open.spotify.com/track/44BBvzWWCVN5KdCajjPZIk"
+      },
+      "status": "selected"
+    },
+    {
+      "id": "track-035",
+      "title": "Pastoral",
+      "artist": "Tony Anderson",
+      "links": {
+        "youtube": "https://youtu.be/zDqvlvXn4TY?si=R8bYCw7jJNHw0_hC",
+        "apple": "https://music.apple.com/us/album/pastoral/1795807196?i=1795807198",
+        "spotify": "https://open.spotify.com/track/18wUBVmjDBF9kPSRgwGM2T"
+      },
+      "status": "selected"
+    },
+    {
+      "id": "track-036",
+      "title": "All Your Rage, All Your Pain",
+      "artist": "Greg Dombrowski",
+      "links": {
+        "youtube": "https://youtu.be/IHIzHXZhTQA?si=HSi8CB2h-Y04_5vd",
+        "apple": "https://music.apple.com/us/album/all-your-rage-all-your-pain/1488073908?i=1488073918",
+        "spotify": "https://open.spotify.com/track/2fo8LzMNzC7WzI4aBk8TQP"
+      },
+      "status": "selected"
+    },
+    {
+      "id": "track-037",
+      "title": "Somewhere But Not Here",
+      "artist": "Nicolai Patricio",
+      "links": {
+        "youtube": "https://youtu.be/1kKBT_PHYR0?si=EaXftGSUjK9aGmM0",
+        "apple": null,
+        "spotify": null
+      },
+      "status": "selected"
+    },
+    {
+      "id": "track-038",
+      "title": "Without You",
+      "artist": "Ursine Vulpine & Annaca",
+      "links": {
+        "youtube": "https://youtu.be/TZysqPdZn_U?si=t7CDjioyAPXxpXZl",
+        "apple": "https://music.apple.com/us/album/without-you/1544876999?i=1544877000",
+        "spotify": "https://open.spotify.com/track/47gOeiA8uBzpl1BXoyKoqQ"
+      },
+      "status": "selected"
+    },
+    {
+      "id": "track-039",
+      "title": "Vortex",
+      "artist": "John Carpenter",
+      "links": {
+        "youtube": "https://youtu.be/1ci_XSqtuAc?si=Ot7ZZlDOSH_Wq5xp",
+        "apple": "https://music.apple.com/us/album/vortex/950418048?i=950418049",
+        "spotify": "https://open.spotify.com/track/2zoKTjuuG0s3qbOaA96oz7"
+      },
+      "status": "selected"
+    },
+    {
+      "id": "track-040",
+      "title": "Evil Behind the Mask",
+      "artist": "Karl Casey @ White Bat Audio",
+      "links": {
+        "youtube": "https://youtu.be/KOp9EmMCuS4?si=PWcNx8JEl11FUMXi",
+        "apple": "https://music.apple.com/us/album/evil-behind-the-mask/1538441307?i=1538441308",
+        "spotify": "https://open.spotify.com/track/58lg8VinszDHuDpwdOwd1x"
+      },
+      "status": "selected"
+    },
+    {
+      "id": "track-041",
+      "title": "Ember",
+      "artist": "Tony Anderson",
+      "links": {
+        "youtube": "https://youtu.be/n0E-2juRHuI?si=eM3VeeHcOPTp1Svw",
+        "apple": "https://music.apple.com/us/album/ember/1544553199?i=1544553200",
+        "spotify": "https://open.spotify.com/track/3KDHazDZyngxhum4MakOQB"
+      },
+      "status": "selected"
+    },
+    {
+      "id": "track-042",
+      "title": "Power from Pain",
+      "artist": "Greg Dombrowski",
+      "links": {
+        "youtube": "https://youtu.be/fztDBKouZQo?si=_iLn4HVb_0AffiUI",
+        "apple": "https://music.apple.com/us/album/power-from-pain/1629208451?i=1629208628",
+        "spotify": "https://open.spotify.com/track/2CUffhy2tAvSytG2Wu3fUy"
+      },
+      "status": "selected"
+    },
+    {
+      "id": "track-043",
+      "title": "Darkest Night",
+      "artist": "Tony Anderson",
+      "links": {
+        "youtube": "https://youtu.be/gvFSg9Tlxe4?si=e5czwPBUa3YYTUXC",
+        "apple": "https://music.apple.com/us/album/darkest-night/1544556199?i=1544556205",
+        "spotify": "https://open.spotify.com/track/506x1AFqa5UIh91P0dh0ra"
+      },
+      "status": "selected"
+    },
+    {
+      "id": "track-044",
+      "title": "Vekeri",
+      "artist": "BlackWeald",
+      "links": {
+        "youtube": "https://youtu.be/BX9LdqBZv1k?si=K2KJlapvuyiCIqO3",
+        "apple": "https://music.apple.com/us/album/vekeri-37-c-drought/1638170840?i=1638170851",
+        "spotify": null
+      },
+      "status": "selected"
+    },
+    {
+      "id": "track-045",
+      "title": "Two Souls",
+      "artist": "Greg Dombrowski",
+      "links": {
+        "youtube": "https://youtu.be/J33zSPl8eSU?si=nvwZjwuj1TAuZEiM",
+        "apple": null,
+        "spotify": null
+      },
+      "status": "selected"
+    },
+    {
+      "id": "track-046",
+      "title": "The Artist",
+      "artist": "Elijah Siegler",
+      "links": {
+        "youtube": "https://youtu.be/GR7WpfLZA3Q?si=aFDRmSNFFft8QNjb",
+        "apple": null,
+        "spotify": null
+      },
+      "status": "selected"
+    },
+    {
+      "id": "track-047",
+      "title": "A Small Measure of Peace",
+      "artist": "Hans Zimmer",
+      "links": {
+        "youtube": "https://youtu.be/P93JhrkedV0?si=AW5buQWbTU-91Di4",
+        "apple": "https://music.apple.com/us/album/a-small-measure-of-peace/3943118?i=3942532",
+        "spotify": "https://open.spotify.com/track/0k1zElVBehCAzAa975af71"
+      },
+      "status": "selected"
+    },
+    {
+      "id": "track-048",
+      "title": "Terra Incognita",
+      "artist": "Max Richter",
+      "links": {
+        "youtube": "https://youtu.be/wRJC-3IfRyA?si=oXMgdEDrFDnGABBk",
+        "apple": "https://music.apple.com/us/album/terra-incognita/1482828581?i=1482829869",
+        "spotify": "https://open.spotify.com/track/37uzbA0C7hupI2xCGd9wLw"
+      },
+      "status": "selected"
+    },
+    {
+      "id": "track-049",
+      "title": "You Have to Let Me Go",
+      "artist": "Max Richter",
+      "links": {
+        "youtube": "https://youtu.be/tlNUKfC8GVU?si=3orI2SUmj8Er_xCW",
+        "apple": "https://music.apple.com/us/album/you-have-to-let-me-go/1482828581?i=1482830441",
+        "spotify": "https://open.spotify.com/track/2keGnQjdunlP534YDNFOT3"
+      },
+      "status": "selected"
+    },
+    {
+      "id": "track-050",
+      "title": "Briefing",
+      "artist": "Lorne Balfe",
+      "links": {
+        "youtube": "https://youtu.be/xZeLTlawbMk?si=gLiiXec5b7gLw9u4",
+        "apple": "https://music.apple.com/us/album/briefing/1482828581?i=1482830449",
+        "spotify": "https://open.spotify.com/track/5uGBqXf77ileRxAN5QSFkG"
+      },
+      "status": "selected"
+    },
+    {
+      "id": "track-051",
+      "title": "Losing Hope",
+      "artist": "Elijah Siegler",
+      "links": {
+        "youtube": "https://youtu.be/_HNESh0SOak?si=4NZDyqxMamBS3X8n",
+        "apple": null,
+        "spotify": null
+      },
+      "status": "selected"
+    },
+    {
+      "id": "track-052",
+      "title": "The Machine",
+      "artist": "Greg Dombrowski",
+      "links": {
+        "youtube": "https://youtu.be/UtscIsyfK4w?si=xgYpe8fVkqzg3Y86",
+        "apple": "https://music.apple.com/us/album/the-machine/1586286358?i=1586286795",
+        "spotify": "https://open.spotify.com/track/5bDKrWIpYdBFy2G82tHUVV"
+      },
+      "status": "selected"
+    },
+    {
+      "id": "track-053",
+      "title": "Mentality",
+      "artist": "Greg Dombrowski",
+      "links": {
+        "youtube": "https://youtu.be/ndWyxzDtFqc?si=llcwBzeXnaELl6Fr",
+        "apple": "https://music.apple.com/us/album/mentality/1467733943?i=1467734282",
+        "spotify": "https://open.spotify.com/track/0AfQ7bmoNhpzslTCb0ZPMG"
+      },
+      "status": "selected"
+    },
+    {
+      "id": "track-054",
+      "title": "Eschaton",
+      "artist": "Tony Anderson",
+      "links": {
+        "youtube": "https://youtu.be/Hu4HUNmqAIU?si=T8AITZl0d0Guyyw3",
+        "apple": "https://music.apple.com/us/album/eschaton-tony-anderson-rework/1544556253?i=1544556255",
+        "spotify": "https://open.spotify.com/track/05bMvNJ2HgYXKNwHEqskXX"
+      },
+      "status": "selected",
+      "version": "Rework"
+    },
+    {
+      "id": "track-055",
+      "title": "The Stallion",
+      "artist": "Elijah Siegler",
+      "links": {
+        "youtube": "https://youtu.be/hg3P_d7dJ4E?si=BGvQnEmUHLFXK8I8",
+        "apple": null,
+        "spotify": null
+      },
+      "status": "selected"
+    },
+    {
+      "id": "track-056",
+      "title": "The Inner Spaces of the Heart",
+      "artist": "Elijah Siegler",
+      "links": {
+        "youtube": "https://youtu.be/QVsla5GkRgw?si=nQmKCk2ZGFlc_K5D",
+        "apple": null,
+        "spotify": null
+      },
+      "status": "selected"
+    },
+    {
+      "id": "track-057",
+      "title": "Tree",
+      "artist": "Aphex Twin",
+      "links": {
+        "youtube": "https://youtu.be/ATzlzPLMUhc?si=nKmhUjcji9awpUg_",
+        "apple": null,
+        "spotify": null
+      },
+      "status": "selected"
+    },
+    {
+      "id": "track-058",
+      "title": "Night",
+      "artist": "John Carpenter",
+      "links": {
+        "youtube": "https://youtu.be/3ItHGMVnu10?si=gQhfX7GraWn5lCqV",
+        "apple": "https://music.apple.com/us/album/night-zola-jesus-dean-hurley-remix/1036254173?i=1036254467",
+        "spotify": "https://open.spotify.com/track/42cpLMpSd0AuQRM6pHI59U"
+      },
+      "status": "selected",
+      "version": "Zola Jesus & Dean Hurley Remix"
+    },
+    {
+      "id": "track-059",
+      "title": "Vampire's Touch",
+      "artist": "John Carpenter",
+      "links": {
+        "youtube": "https://youtu.be/WOacj_CMlsw?si=S94OoxKZ1nJVF7Dt",
+        "apple": "https://music.apple.com/us/album/vampires-touch/1534812089?i=1534812094",
+        "spotify": "https://open.spotify.com/track/3OndkmCxpO5fCHnETwnmel"
+      },
+      "status": "selected"
+    },
+    {
+      "id": "track-060",
+      "title": "Vortex",
+      "artist": "Elliot Goldenthal",
+      "links": {
+        "youtube": "https://youtu.be/63L5qwrmxwA?si=SGxrXwwpeYwXlswb",
+        "apple": "https://music.apple.com/us/album/vortex/250240035?i=250240085",
+        "spotify": "https://open.spotify.com/track/4Qvhbeq1AlajoE6YNKGsKW"
+      },
+      "status": "selected",
+      "sourceWork": "Titus"
+    },
+    {
+      "id": "track-061",
+      "title": "Philimelagram",
+      "artist": "Elliot Goldenthal",
+      "links": {
+        "youtube": "https://youtu.be/BJHvEMT8f7M?si=sjcmGLofZUoOFmZY",
+        "apple": "https://music.apple.com/us/album/philimelagram/250240035?i=250240199",
+        "spotify": "https://open.spotify.com/track/1MQKY4emMucdFQowTSwiaN"
+      },
+      "status": "selected",
+      "sourceWork": "Titus"
+    },
+    {
+      "id": "track-062",
+      "title": "Girl on the Subway Train",
+      "artist": "John Barry",
+      "links": {
+        "youtube": "https://youtu.be/lA1FuOX5DLI?si=a0bxMEE6EK5GvmJ-",
+        "apple": null,
+        "spotify": null
+      },
+      "status": "selected"
+    },
+    {
+      "id": "track-063",
+      "title": "Tall Grass",
+      "artist": "Jerry Goldsmith",
+      "links": {
+        "youtube": "https://youtu.be/cFEXxoAYpn8?si=EJpEjMFCnkjixIrx",
+        "apple": null,
+        "spotify": null
+      },
+      "status": "selected"
+    },
+    {
+      "id": "track-064",
+      "title": "A Final Sacrifice",
+      "artist": "Luke Richards",
+      "links": {
+        "youtube": "https://youtu.be/K9tLAH0Z0pA?si=--4wta1WKQmPuy1j",
+        "apple": "https://music.apple.com/us/album/a-final-sacrifice/1836382541?i=1836382544",
+        "spotify": "https://open.spotify.com/track/6RktYGSRnCIss0xc9vy2Eo"
+      },
+      "status": "selected"
+    },
+    {
+      "id": "track-065",
+      "title": "Regeneration",
+      "artist": "Elijah Siegler",
+      "links": {
+        "youtube": "https://youtu.be/h5d_9JXKqgs?si=RIsbcoSPy6zN_7Q7",
+        "apple": null,
+        "spotify": null
+      },
+      "status": "selected"
+    },
+    {
+      "id": "track-066",
+      "title": "Ella Returns Home",
+      "artist": "Elijah Siegler",
+      "links": {
+        "youtube": "https://youtu.be/MKalVHw3N_M?si=ol552kpT2rsTR0SP",
+        "apple": null,
+        "spotify": null
+      },
+      "status": "selected"
+    },
+    {
+      "id": "track-067",
+      "title": "Original music · title forthcoming",
+      "artist": "Elijah Siegler",
+      "links": {
+        "youtube": null,
+        "apple": null,
+        "spotify": null
+      },
+      "status": "in-progress"
+    },
+    {
+      "id": "track-068",
+      "title": "We Are One",
+      "artist": "Elijah Siegler",
+      "links": {
+        "youtube": "https://youtu.be/LY_u9iiQEsI?si=FHhb8ciDes5DIeei",
+        "apple": null,
+        "spotify": null
+      },
+      "status": "selected"
+    },
+    {
+      "id": "track-069",
+      "title": "Hypernova",
+      "artist": "Eternal Eclipse",
+      "links": {
+        "youtube": "https://youtu.be/GAj0gEBo8dg?si=FO0gn0g4Q4uYjKUT",
+        "apple": "https://music.apple.com/us/album/hypernova/1693426414?i=1693427080",
+        "spotify": "https://open.spotify.com/track/65MZ4fUIj7YP1IcM3AKcjj"
+      },
+      "status": "selected"
+    },
+    {
+      "id": "track-070",
+      "title": "A Child Recalled",
+      "artist": "Elliot Goldenthal",
+      "links": {
+        "youtube": "https://youtu.be/JKC_1bz900w?si=ucUd2OLQzRdJJwev",
+        "apple": "https://music.apple.com/us/album/a-child-recalled/267528654?i=267529053",
+        "spotify": "https://open.spotify.com/track/2mWmTjiMbTZszvA3sSjuVS"
+      },
+      "status": "selected",
+      "sourceWork": "Final Fantasy"
+    },
+    {
+      "id": "track-071",
+      "title": "The Spirit Within",
+      "artist": "Elliot Goldenthal",
+      "links": {
+        "youtube": "https://youtu.be/oJvJ3CerS1Y?si=PkTTEFKMKMuufz7-",
+        "apple": "https://music.apple.com/us/album/the-spirit-within/267528654?i=267528666",
+        "spotify": "https://open.spotify.com/track/7dTNRHze4FTQftEkvBVRx4"
+      },
+      "status": "selected"
+    },
+    {
+      "id": "track-072",
+      "title": "If I Was In Your World",
+      "artist": "Elijah Siegler",
+      "links": {
+        "youtube": "https://youtu.be/gHPBerSf6CY?si=xfPPPv_b0xF5sDrN",
+        "apple": null,
+        "spotify": null
+      },
+      "status": "selected"
+    },
+    {
+      "id": "track-073",
+      "title": "Code Red",
+      "artist": "Elliot Goldenthal",
+      "links": {
+        "youtube": "https://youtu.be/tsTHTNUfGhI?si=8QDMoeEHnD5bPofI",
+        "apple": "https://music.apple.com/us/album/code-red/267528654?i=267528715",
+        "spotify": "https://open.spotify.com/track/7zyIEeV0KVXZ8nON2X4s8k"
+      },
+      "status": "selected"
+    },
+    {
+      "id": "track-074",
+      "title": "Coronation",
+      "artist": "Elliot Goldenthal",
+      "links": {
+        "youtube": "https://youtu.be/BO72aDV3gv8?si=S-Mqsh6zkwzzfOAr",
+        "apple": "https://music.apple.com/us/album/coronation/250240035?i=250240238",
+        "spotify": "https://open.spotify.com/track/5g9FXZRs7uo6mJ19LpYpoq"
+      },
+      "status": "selected"
+    },
+    {
+      "id": "track-075",
+      "title": "Aaron's Plea",
+      "artist": "Elliot Goldenthal",
+      "links": {
+        "youtube": "https://youtu.be/ZKDFaHO04Q4?si=vjeSSPp-_T4ZvsK7",
+        "apple": "https://music.apple.com/us/album/aarons-plea/260268265?i=260268477",
+        "spotify": "https://open.spotify.com/track/6oUtdzUOxJjJCjGcY5E9fq"
+      },
+      "status": "selected"
+    },
+    {
+      "id": "track-076",
+      "title": "The Night Window",
+      "artist": "Thomas Newman",
+      "links": {
+        "youtube": "https://youtu.be/gqo46lt-8Q4?si=xJbpZq1hNCDGIMsk",
+        "apple": "https://music.apple.com/us/album/the-night-window/1489939478?i=1489939567",
+        "spotify": "https://open.spotify.com/track/4imfe6DeUeqtUpKqS851mO"
+      },
+      "status": "selected"
+    },
+    {
+      "id": "track-077",
+      "title": "Winged Serpent",
+      "artist": "Elliot Goldenthal",
+      "links": {
+        "youtube": "https://youtu.be/RG_oG9udlF0?si=Pqi4nLEuiAIHselI",
+        "apple": "https://music.apple.com/us/album/winged-serpent/267528654?i=267528856",
+        "spotify": "https://open.spotify.com/track/5gsmtBTpo6kGAuP9oZmt6p"
+      },
+      "status": "selected"
+    },
+    {
+      "id": "track-078",
+      "title": "To the Stars",
+      "artist": "Max Richter",
+      "links": {
+        "youtube": "https://youtu.be/6l1vqupFqLE?si=OCRiJht8TZAouiN1",
+        "apple": "https://music.apple.com/us/album/to-the-stars/1482828581?i=1482829075",
+        "spotify": "https://open.spotify.com/track/03BoaviXTqX4f3cTjrXPKb"
+      },
+      "status": "selected"
+    },
+    {
+      "id": "track-079",
+      "title": "Like Wind",
+      "artist": "Judah Earl",
+      "links": {
+        "youtube": "https://youtu.be/599mugzJhKw?si=Z5vGQgNcrV5o6-1c",
+        "apple": "https://music.apple.com/us/album/like-wind/1697201502?i=1697201503",
+        "spotify": "https://open.spotify.com/track/39jFE6dY3u4zu8UyQ8mezj"
+      },
+      "status": "selected"
+    },
+    {
+      "id": "track-080",
+      "title": "Twilight Cellos",
+      "artist": "Wojciech Kilar",
+      "links": {
+        "youtube": "https://youtu.be/Rf-vu4nCTgA?si=pdYVWbqecjnSJj-E",
+        "apple": null,
+        "spotify": null
+      },
+      "status": "selected"
+    },
+    {
+      "id": "track-081",
+      "title": "Eyes Wide Open (Cinematic Mix)",
+      "artist": "Tony Anderson",
+      "links": {
+        "youtube": "https://youtu.be/zdbCM674kt0?si=egvqu-F2EocUpTZN",
+        "apple": "https://music.apple.com/us/album/eyes-wide-open-cinematic-mix/1544556199?i=1544556216",
+        "spotify": "https://open.spotify.com/track/045Zsm8xqwZ4ATrCmeODcb"
+      },
+      "status": "selected"
+    },
+    {
+      "id": "track-082",
+      "title": "Without You (Extended)",
+      "artist": "Ursine Vulpine & Annaca",
+      "links": {
+        "youtube": "https://youtu.be/FYrnptSa1AM?si=EZQ_c7Sg1rKtjgj2",
+        "apple": "https://music.apple.com/us/album/without-you-extended/1544877496?i=1544877503",
+        "spotify": "https://open.spotify.com/track/30pNfaqKiMbnbh9A5MrNQx"
+      },
+      "status": "selected"
+    }
+  ],
+  "scenes": {
+    "B03-A1-S1": {
+      "id": "B03-A1-S1",
+      "title": "Roof Surveillance",
+      "location": "Luna City — Club District",
+      "date": "2487-08-15",
+      "timeOfDay": "Evening"
+    },
+    "B03-A1-S2": {
+      "id": "B03-A1-S2",
+      "title": "Transport",
+      "location": "Veil Corridor",
+      "date": "2487-08-15",
+      "timeOfDay": "Evening"
+    },
+    "B03-A1-S5": {
+      "id": "B03-A1-S5",
+      "title": "Return to West Comm Tower",
+      "location": "West Comm Tower",
+      "date": "2487-08-16",
+      "timeOfDay": "Late Afternoon"
+    },
+    "B03-A1-S6": {
+      "id": "B03-A1-S6",
+      "title": "Sam and Alex, Alone Time",
+      "location": "Randolph House",
+      "date": "2487-08-16",
+      "timeOfDay": "Evening"
+    },
+    "B03-A1-S7": {
+      "id": "B03-A1-S7",
+      "title": "Alex and Sam in bed",
+      "location": "Randolph House",
+      "date": "2487-08-17",
+      "timeOfDay": "After Midnight"
+    },
+    "B03-A1-S8": {
+      "id": "B03-A1-S8",
+      "title": "Underwood",
+      "location": "Old Cornfield Church",
+      "date": "2487-08-17",
+      "timeOfDay": "Late Afternoon"
+    },
+    "B03-A1-S10": {
+      "id": "B03-A1-S10",
+      "title": "Keira in Gym Class",
+      "location": "Kite Flats High School — Gym",
+      "date": "2487-08-25",
+      "timeOfDay": "Afternoon"
+    },
+    "B03-A1-S11": {
+      "id": "B03-A1-S11",
+      "title": "Tim Abel - The Smart Kid",
+      "location": "Kite Flats — Streets",
+      "date": "2487-08-25",
+      "timeOfDay": "Late Afternoon"
+    },
+    "B03-A1-S12": {
+      "id": "B03-A1-S12",
+      "title": "Making Dinner",
+      "location": "Randolph House",
+      "date": "2487-08-25",
+      "timeOfDay": "Early Evening"
+    },
+    "B03-A1-S13": {
+      "id": "B03-A1-S13",
+      "title": "Dinner",
+      "location": "Randolph House",
+      "date": "2487-08-25",
+      "timeOfDay": "Evening"
+    },
+    "B03-A1-S14": {
+      "id": "B03-A1-S14",
+      "title": "Write a Letter",
+      "location": "Randolph House",
+      "date": "2487-08-26",
+      "timeOfDay": "Evening"
+    },
+    "B03-A1-S17": {
+      "id": "B03-A1-S17",
+      "title": "Before the Party",
+      "location": "Luna City — Lorenz Estate",
+      "date": "2487-08-29",
+      "timeOfDay": "Late Afternoon"
+    },
+    "B03-A1-S18": {
+      "id": "B03-A1-S18",
+      "title": "Caps",
+      "location": "Luna City — Lorenz Estate",
+      "date": "2487-08-29",
+      "timeOfDay": "Evening"
+    },
+    "B03-A1-S19": {
+      "id": "B03-A1-S19",
+      "title": "His Daughter's Room",
+      "location": "Randolph House",
+      "date": "2487-08-29",
+      "timeOfDay": "Evening"
+    },
+    "B03-A1-S22": {
+      "id": "B03-A1-S22",
+      "title": "April's House",
+      "location": "Luna City — Lorenz Estate",
+      "date": "2487-08-30",
+      "timeOfDay": "Evening"
+    },
+    "B03-A1-S28": {
+      "id": "B03-A1-S28",
+      "title": "Bad Hip",
+      "location": "Randolph House",
+      "date": "2487-09-07",
+      "timeOfDay": "After Midnight"
+    },
+    "B03-A1-S29": {
+      "id": "B03-A1-S29",
+      "title": "The Doctor's Warning",
+      "location": "Luna City Hospital — ER",
+      "date": "2487-09-07",
+      "timeOfDay": "After Midnight"
+    },
+    "B03-A1-S30": {
+      "id": "B03-A1-S30",
+      "title": "Keira At Home",
+      "location": "Randolph House",
+      "date": "2487-09-07",
+      "timeOfDay": "Pre Dawn"
+    },
+    "B03-A1-S32": {
+      "id": "B03-A1-S32",
+      "title": "Cavern Cemetery",
+      "location": "Cavern Cemetery",
+      "date": "2487-09-08",
+      "timeOfDay": "Evening"
+    },
+    "B03-A1-S33": {
+      "id": "B03-A1-S33",
+      "title": "Successful Arrest",
+      "location": "Shackleton Ridge",
+      "date": "2487-09-08",
+      "timeOfDay": "Late Evening"
+    },
+    "B03-A1-S34": {
+      "id": "B03-A1-S34",
+      "title": "Taking the Station",
+      "location": "Precinct Holding WIng",
+      "date": "2487-09-09",
+      "timeOfDay": "After Midnight"
+    },
+    "B03-A1-S36": {
+      "id": "B03-A1-S36",
+      "title": "Love and Cold Fingers",
+      "location": "Randolph House",
+      "date": "2487-09-27",
+      "timeOfDay": "Evening"
+    },
+    "B03-A1-S38": {
+      "id": "B03-A1-S38",
+      "title": "Telling the Lorenzes",
+      "location": "Luna City — Lorenz Estate",
+      "date": "2487-09-28",
+      "timeOfDay": "Evening"
+    },
+    "B03-A1-S39": {
+      "id": "B03-A1-S39",
+      "title": "Telling Mom and Dad",
+      "location": "Randolph House",
+      "date": "2487-09-28",
+      "timeOfDay": "Evening"
+    },
+    "B03-A1-S42": {
+      "id": "B03-A1-S42",
+      "title": "Kuranis Home",
+      "location": "Farm Belt--Kuranis Estate",
+      "date": "2487-10-03",
+      "timeOfDay": "Evening"
+    },
+    "B03-A1-S44": {
+      "id": "B03-A1-S44",
+      "title": "Looking for Camera",
+      "location": "Randolph House",
+      "date": "2487-10-04",
+      "timeOfDay": "After Midnight"
+    },
+    "B03-A1-S46": {
+      "id": "B03-A1-S46",
+      "title": "Susan at Lang",
+      "location": "Lang HQ — Parking Deck",
+      "date": "2487-10-06",
+      "timeOfDay": "Late Afternoon"
+    },
+    "B03-A1-S50": {
+      "id": "B03-A1-S50",
+      "title": "Alex and Sam Detecting",
+      "location": "Randolph House",
+      "date": "2487-10-08",
+      "timeOfDay": "Morning"
+    },
+    "B03-A1-S53": {
+      "id": "B03-A1-S53",
+      "title": "The Letter Starts",
+      "location": "Randolph House",
+      "date": "2487-10-13",
+      "timeOfDay": "Evening"
+    },
+    "B03-A1-S56": {
+      "id": "B03-A1-S56",
+      "title": "Sam and Alex meet the Lorenzes",
+      "location": "Luna City — Lorenz Estate",
+      "date": "2487-10-14",
+      "timeOfDay": "Early Evening"
+    },
+    "B03-A2-S59": {
+      "id": "B03-A2-S59",
+      "title": "West Comm Salvage",
+      "location": "West Comm Tower",
+      "date": "2491-04-01",
+      "timeOfDay": "Afternoon"
+    },
+    "B03-A2-S64": {
+      "id": "B03-A2-S64",
+      "title": "Kelli",
+      "location": "Old Cornfield Church — Graves",
+      "date": "2491-05-05",
+      "timeOfDay": "Late Afternoon"
+    },
+    "B03-A2-S65": {
+      "id": "B03-A2-S65",
+      "title": "Lila",
+      "location": "Cavern Cemetery",
+      "date": "2491-05-05",
+      "timeOfDay": "Evening"
+    },
+    "B03-A2-S66": {
+      "id": "B03-A2-S66",
+      "title": "Alex",
+      "location": "Adams Apartment",
+      "date": "2491-05-05",
+      "timeOfDay": "Late Evening"
+    },
+    "B03-A2-S67": {
+      "id": "B03-A2-S67",
+      "title": "Keira",
+      "location": "Randolph House",
+      "date": "2491-05-06",
+      "timeOfDay": "After Midnight"
+    },
+    "B03-A2-S72": {
+      "id": "B03-A2-S72",
+      "title": "Susan and Jamestown",
+      "location": "Adams Apartment",
+      "date": "2491-05-19",
+      "timeOfDay": "Evening"
+    },
+    "B03-A2-S73": {
+      "id": "B03-A2-S73",
+      "title": "Police Call",
+      "location": "Randolph House",
+      "date": "2491-05-19",
+      "timeOfDay": "Late Evening"
+    },
+    "B03-A2-S74": {
+      "id": "B03-A2-S74",
+      "title": "Alex breaks down with Sam",
+      "location": "Adams Apartment — Block Outside",
+      "date": "2491-05-19",
+      "timeOfDay": "Before Midnight"
+    },
+    "B03-A2-S76": {
+      "id": "B03-A2-S76",
+      "title": "Sam and Jason",
+      "location": "Peddington House",
+      "date": "2491-05-21",
+      "timeOfDay": "Morning"
+    },
+    "B03-A2-S77": {
+      "id": "B03-A2-S77",
+      "title": "Pursuit to Lang",
+      "location": "Lang HQ",
+      "date": "2491-05-21",
+      "timeOfDay": "Morning"
+    },
+    "B03-A2-S79": {
+      "id": "B03-A2-S79",
+      "title": "Jamestown's Grave",
+      "location": "Cavern Cemetery",
+      "date": "2491-05-26",
+      "timeOfDay": "Morning"
+    },
+    "B03-A2-S83": {
+      "id": "B03-A2-S83",
+      "title": "The Empty Nest",
+      "location": "Randolph House",
+      "date": "2491-06-08",
+      "timeOfDay": "Morning"
+    },
+    "B03-A2-S84": {
+      "id": "B03-A2-S84",
+      "title": "Two",
+      "location": "Randolph House",
+      "date": "2491-06-08",
+      "timeOfDay": "Evening"
+    },
+    "B03-A2-S86": {
+      "id": "B03-A2-S86",
+      "title": "At The Park",
+      "location": "Kite Flats Park",
+      "date": "2491-06-09",
+      "timeOfDay": "Late Morning"
+    },
+    "B03-A2-S87": {
+      "id": "B03-A2-S87",
+      "title": "The Tiny Thing",
+      "location": "Grocery Market",
+      "date": "2491-06-21",
+      "timeOfDay": "Morning"
+    },
+    "B03-A2-S88": {
+      "id": "B03-A2-S88",
+      "title": "Binky",
+      "location": "Randolph House",
+      "date": "2491-06-21",
+      "timeOfDay": "Afternoon"
+    },
+    "B03-A2-S90": {
+      "id": "B03-A2-S90",
+      "title": "Twenty",
+      "location": "Randolph House",
+      "date": "2491-06-24",
+      "timeOfDay": "Morning"
+    },
+    "B03-A2-S91": {
+      "id": "B03-A2-S91",
+      "title": "Downtown Shootout",
+      "location": "Luna City Main Square",
+      "date": "2491-07-02",
+      "timeOfDay": "Morning"
+    },
+    "B03-A2-S92": {
+      "id": "B03-A2-S92",
+      "title": "Broken",
+      "location": "Luna City Hospital — Medical/Burn Ward",
+      "date": "2491-07-02",
+      "timeOfDay": "Late Afternoon"
+    },
+    "B03-A2-S93": {
+      "id": "B03-A2-S93",
+      "title": "Alex and Keira",
+      "location": "Luna City Hospital — Medical/Burn Ward",
+      "date": "2491-07-03",
+      "timeOfDay": "Morning"
+    },
+    "B03-A2-S95": {
+      "id": "B03-A2-S95",
+      "title": "Marriage at the Stone",
+      "location": "Old Cornfield Church — Graves",
+      "date": "2491-07-07",
+      "timeOfDay": "Morning"
+    },
+    "B03-A2-S98": {
+      "id": "B03-A2-S98",
+      "title": "The Walk In",
+      "location": "Luna City Slums",
+      "date": "2491-08-08",
+      "timeOfDay": "Morning"
+    },
+    "B03-A2-S101": {
+      "id": "B03-A2-S101",
+      "title": "The Exit",
+      "location": "Night Galley Concourse",
+      "date": "2491-08-09",
+      "timeOfDay": "Late Evening"
+    },
+    "B03-A2-S102": {
+      "id": "B03-A2-S102",
+      "title": "Quiet Aftermath",
+      "location": "Luna City Plaza",
+      "date": "2491-08-10",
+      "timeOfDay": "After Midnight"
+    },
+    "B03-A2-S105": {
+      "id": "B03-A2-S105",
+      "title": "Hiding Day",
+      "location": "Old Cornfield Church",
+      "date": "2491-10-06",
+      "timeOfDay": "Dusk"
+    },
+    "B03-A2-S106": {
+      "id": "B03-A2-S106",
+      "title": "The Armory Battle",
+      "location": "Shackleton Station — Training Dome",
+      "date": "2491-10-20",
+      "timeOfDay": "Afternoon"
+    },
+    "B03-A2-S109": {
+      "id": "B03-A2-S109",
+      "title": "Susan's Place",
+      "location": "Adams Apartment",
+      "date": "2491-12-21",
+      "timeOfDay": "Morning"
+    },
+    "B03-A3-S111": {
+      "id": "B03-A3-S111",
+      "title": "Ice and Boots",
+      "location": "Randolph House",
+      "date": "2492-01-04",
+      "timeOfDay": "Late Evening"
+    },
+    "B03-A3-S112": {
+      "id": "B03-A3-S112",
+      "title": "Gregory",
+      "location": "Luna City Plaza",
+      "date": "2492-05-19",
+      "timeOfDay": "Late Afternoon"
+    },
+    "B03-A3-S114": {
+      "id": "B03-A3-S114",
+      "title": "Triage",
+      "location": "Luna City Hospital — ER",
+      "date": "2492-06-06",
+      "timeOfDay": "Late Evening"
+    },
+    "B03-A3-S115": {
+      "id": "B03-A3-S115",
+      "title": "Messages",
+      "location": "Randolph House",
+      "date": "2492-06-07",
+      "timeOfDay": "Morning"
+    },
+    "B03-A3-S116": {
+      "id": "B03-A3-S116",
+      "title": "Dingir",
+      "location": "Old Cornfield Church",
+      "date": "2492-06-19",
+      "timeOfDay": "Morning"
+    },
+    "B03-A3-S119": {
+      "id": "B03-A3-S119",
+      "title": "Proof of Chaos",
+      "location": "Luna City Slums",
+      "date": "2492-06-20",
+      "timeOfDay": "Late Morning"
+    },
+    "B03-A3-S121": {
+      "id": "B03-A3-S121",
+      "title": "The Name We Don't Say",
+      "location": "Randolph House",
+      "date": "2492-06-21",
+      "timeOfDay": "After Midnight"
+    },
+    "B03-A3-S123": {
+      "id": "B03-A3-S123",
+      "title": "To The Library",
+      "location": "Eden Grove — Library",
+      "date": "2492-06-23",
+      "timeOfDay": "Late Morning"
+    },
+    "B03-A3-S124": {
+      "id": "B03-A3-S124",
+      "title": "Meeting Atal",
+      "location": "Eden Grove — Library",
+      "date": "2492-06-23",
+      "timeOfDay": "Afternoon"
+    },
+    "B03-A3-S127": {
+      "id": "B03-A3-S127",
+      "title": "The Waking Dawn Saferoom",
+      "location": "Open Wound — Waking Dawn School Ruins",
+      "date": "2492-06-23",
+      "timeOfDay": "Late Evening"
+    },
+    "B03-A3-S129": {
+      "id": "B03-A3-S129",
+      "title": "Drill Site",
+      "location": "Open Wound — Waking Dawn Perimeter",
+      "date": "2492-06-24",
+      "timeOfDay": "Midnight"
+    },
+    "B03-A3-S131": {
+      "id": "B03-A3-S131",
+      "title": "Twenty-one",
+      "location": "Randolph House",
+      "date": "2492-06-24",
+      "timeOfDay": "Later"
+    },
+    "B03-A3-S134": {
+      "id": "B03-A3-S134",
+      "title": "Origins",
+      "location": "Randolph House",
+      "date": "2492-06-24",
+      "timeOfDay": "Late Afternoon"
+    },
+    "B03-A3-S138": {
+      "id": "B03-A3-S138",
+      "title": "Inside",
+      "location": "Under Pylon Flats — The Bay",
+      "date": "2492-06-25",
+      "timeOfDay": "After Midnight"
+    },
+    "B03-A4-S139": {
+      "id": "B03-A4-S139",
+      "title": "Arrival",
+      "location": "South Ridge Observatory — Outer Rim",
+      "date": "2492-06-25",
+      "timeOfDay": "After Midnight"
+    },
+    "B03-A4-S140": {
+      "id": "B03-A4-S140",
+      "title": "Crooked Ideology",
+      "location": "South Ridge Observatory",
+      "date": "2492-06-25",
+      "timeOfDay": "Pre Dawn"
+    },
+    "B03-A4-S141": {
+      "id": "B03-A4-S141",
+      "title": "Off Grid Uplink",
+      "location": "South Ridge Observatory",
+      "date": "2492-06-25",
+      "timeOfDay": "Pre Dawn"
+    },
+    "B03-A4-S142": {
+      "id": "B03-A4-S142",
+      "title": "Triangulation",
+      "location": "South Ridge Observatory",
+      "date": "2492-06-25",
+      "timeOfDay": "Pre Dawn"
+    },
+    "B03-A4-S143": {
+      "id": "B03-A4-S143",
+      "title": "While the Sky Moves",
+      "location": "South Ridge Observatory",
+      "date": "2492-06-25",
+      "timeOfDay": "Pre Dawn"
+    },
+    "B03-A4-S144": {
+      "id": "B03-A4-S144",
+      "title": "Breach Window",
+      "location": "South Ridge Observatory",
+      "date": "2492-06-25",
+      "timeOfDay": "Pre Dawn"
+    },
+    "B03-A4-S145": {
+      "id": "B03-A4-S145",
+      "title": "The Network Turns",
+      "location": "Theero Seven — Veil Sky",
+      "date": "2492-06-25",
+      "timeOfDay": "Dawn"
+    },
+    "B03-A4-S146": {
+      "id": "B03-A4-S146",
+      "title": "Hurting Hearts",
+      "location": "Theero Seven — Veil Sky",
+      "date": "2492-06-25",
+      "timeOfDay": "Dawn"
+    },
+    "B03-A4-S148": {
+      "id": "B03-A4-S148",
+      "title": "To The Pool",
+      "location": "KOR Tower — Subsurface Pool Complex Egress",
+      "date": "2492-06-25",
+      "timeOfDay": "Late Morning"
+    },
+    "B03-A4-S149": {
+      "id": "B03-A4-S149",
+      "title": "The Pool Discovery",
+      "location": "KOR Tower — Subsurface Pool Complex",
+      "date": "2492-06-25",
+      "timeOfDay": "Noon"
+    },
+    "B03-A4-S152": {
+      "id": "B03-A4-S152",
+      "title": "SAL.DUN",
+      "location": "Council of Shadows",
+      "date": "2492-06-25",
+      "timeOfDay": "Late Afternoon"
+    },
+    "B03-A4-S153": {
+      "id": "B03-A4-S153",
+      "title": "Pursuit",
+      "location": "Lang HQ — Parking Deck",
+      "date": "2492-06-25",
+      "timeOfDay": "Late Afternoon"
+    },
+    "B03-A4-S154": {
+      "id": "B03-A4-S154",
+      "title": "The Hospital",
+      "location": "Luna City Hospital — ER",
+      "date": "2492-06-25",
+      "timeOfDay": "Late Afternoon"
+    },
+    "B03-A4-S155": {
+      "id": "B03-A4-S155",
+      "title": "Extraction",
+      "location": "Luna City Hospital — Roof",
+      "date": "2492-06-25",
+      "timeOfDay": "Dusk"
+    },
+    "B03-A4-S157": {
+      "id": "B03-A4-S157",
+      "title": "Revelation",
+      "location": "Precinct Bullpen",
+      "date": "2492-06-25",
+      "timeOfDay": "Late Evening"
+    },
+    "B03-A4-S158": {
+      "id": "B03-A4-S158",
+      "title": "The Bullet",
+      "location": "Shackleton Causeway — Rover",
+      "date": "2492-06-26",
+      "timeOfDay": "After Midnight"
+    },
+    "B03-A4-S159": {
+      "id": "B03-A4-S159",
+      "title": "Teddy Bears and Moon Guns",
+      "location": "Day Farmhouse",
+      "date": "2492-06-26",
+      "timeOfDay": "After Midnight"
+    },
+    "B03-A5-S160": {
+      "id": "B03-A5-S160",
+      "title": "Fallen",
+      "location": "KOR — North Access Launch Sector C",
+      "date": "2492-06-26",
+      "timeOfDay": "Pre Dawn"
+    },
+    "B03-A5-S161": {
+      "id": "B03-A5-S161",
+      "title": "The Desperate Run",
+      "location": "KOR Tower — Sublevel Accessway",
+      "date": "2492-06-26",
+      "timeOfDay": "Pre Dawn"
+    },
+    "B03-A5-S162": {
+      "id": "B03-A5-S162",
+      "title": "Water and Wound",
+      "location": "KOR Tower — Subsurface Pool Complex",
+      "date": "2492-06-26",
+      "timeOfDay": "Dawn"
+    },
+    "B03-A5-S163": {
+      "id": "B03-A5-S163",
+      "title": "Blackout and Purge",
+      "location": "KOR Tower — Sublevel Accessway",
+      "date": "2492-06-26",
+      "timeOfDay": "Early Morning"
+    },
+    "B03-A5-S164": {
+      "id": "B03-A5-S164",
+      "title": "Avenues of Escape",
+      "location": "Luna City Hospital — Ground Exit B",
+      "date": "2492-06-26",
+      "timeOfDay": "Early Morning"
+    },
+    "B03-A5-S165": {
+      "id": "B03-A5-S165",
+      "title": "Into Hell",
+      "location": "KOR — North Access Launch Sector C",
+      "date": "2492-06-26",
+      "timeOfDay": "Morning"
+    },
+    "B03-A5-S166": {
+      "id": "B03-A5-S166",
+      "title": "Anger",
+      "location": "KOR — Launch Sector C — Access Deck",
+      "date": "2492-06-26",
+      "timeOfDay": "Late Morning"
+    },
+    "B03-A5-S167": {
+      "id": "B03-A5-S167",
+      "title": "Bargaining",
+      "location": "KOR — Launch Sector C — Fueling Stations",
+      "date": "2492-06-26",
+      "timeOfDay": "Noon"
+    },
+    "B03-A5-S168": {
+      "id": "B03-A5-S168",
+      "title": "Withdrawal",
+      "location": "KOR — Launch Sector C — Docking Clamp Array",
+      "date": "2492-06-26",
+      "timeOfDay": "Afternoon"
+    },
+    "B03-A5-S169": {
+      "id": "B03-A5-S169",
+      "title": "Acceptance",
+      "location": "KOR — Launch Sector C — Docking Clamp Array",
+      "date": "2492-06-26",
+      "timeOfDay": "Afternoon"
+    },
+    "B03-A5-S170": {
+      "id": "B03-A5-S170",
+      "title": "Out of Hell",
+      "location": "KOR — Launch Sector C — Docking Clamp Array",
+      "date": "2492-06-26",
+      "timeOfDay": "Afternoon"
+    },
+    "B03-A5-S171": {
+      "id": "B03-A5-S171",
+      "title": "The Launch Deck",
+      "location": "KOR — Launch Sector C — Deck",
+      "date": "2492-06-26",
+      "timeOfDay": "Moments Later"
+    },
+    "B03-A5-S172": {
+      "id": "B03-A5-S172",
+      "title": "The Ascent",
+      "location": "BG1101 — Main Corridor",
+      "date": "2492-06-26",
+      "timeOfDay": "Moments Later"
+    },
+    "B03-A5-S173": {
+      "id": "B03-A5-S173",
+      "title": "Unchained",
+      "location": "BG1101 — Accommodation",
+      "date": "2492-06-26",
+      "timeOfDay": "Late Afternoon"
+    },
+    "B03-A5-S174": {
+      "id": "B03-A5-S174",
+      "title": "Inheritance",
+      "location": "BG1101 — Spine Corridor — Bridge Approach",
+      "date": "2492-06-26",
+      "timeOfDay": "Moments Later"
+    },
+    "B03-A5-S175": {
+      "id": "B03-A5-S175",
+      "title": "Stone Law",
+      "location": "BG1101 — Bridge",
+      "date": "2492-06-26",
+      "timeOfDay": "Moments Later"
+    },
+    "B03-A5-S176": {
+      "id": "B03-A5-S176",
+      "title": "The Seal",
+      "location": "BG1101 — Bridge",
+      "date": "2492-06-26",
+      "timeOfDay": "Moments Later"
+    },
+    "B03-A5-S177": {
+      "id": "B03-A5-S177",
+      "title": "Myth",
+      "location": "KOR Tower — Exterior Causeway to Sublevel Access",
+      "date": "2492-06-26",
+      "timeOfDay": "Late Afternoon"
+    },
+    "B03-A5-S178": {
+      "id": "B03-A5-S178",
+      "title": "The Healing Wound",
+      "location": "KOR Tower — Subsurface Pool Complex",
+      "date": "2492-06-26",
+      "timeOfDay": "Early Evening"
+    },
+    "B03-A5-S179": {
+      "id": "B03-A5-S179",
+      "title": "The Other Choir",
+      "location": "KOR Tower — Subsurface Pool Complex",
+      "date": "2492-06-26",
+      "timeOfDay": "Early Evening"
+    },
+    "B03-A5-S180": {
+      "id": "B03-A5-S180",
+      "title": "Betrayed Hope",
+      "location": "North Ridge Pads — BG Aux-3",
+      "date": "2492-06-26",
+      "timeOfDay": "Dusk"
+    },
+    "B03-A5-S181": {
+      "id": "B03-A5-S181",
+      "title": "Coming Home",
+      "location": "Randolph House",
+      "date": "2492-06-26",
+      "timeOfDay": "Late Evening"
+    },
+    "B03-A5-S182": {
+      "id": "B03-A5-S182",
+      "title": "Kadash Revealed",
+      "location": "Old Cornfield Church",
+      "date": "2492-06-27",
+      "timeOfDay": "Dawn"
+    },
+    "B03-A5-S183": {
+      "id": "B03-A5-S183",
+      "title": "Ambush",
+      "location": "Old Cornfield Church — Graves",
+      "date": "2492-06-27",
+      "timeOfDay": "Early Morning"
+    },
+    "B03-A5-S184": {
+      "id": "B03-A5-S184",
+      "title": "Lila's Dream",
+      "location": "Slater Shuttle",
+      "date": "2492-06-27",
+      "timeOfDay": "Transit Night"
+    },
+    "B03-A5-S185": {
+      "id": "B03-A5-S185",
+      "title": "The Letter",
+      "location": "Slater Shuttle",
+      "date": "2492-06-27",
+      "timeOfDay": "Transit Night"
+    },
+    "B03-A5-S186": {
+      "id": "B03-A5-S186",
+      "title": "Coda",
+      "location": "Slater Shuttle",
+      "date": "2492-06-27",
+      "timeOfDay": "Transit Night"
+    }
+  },
+  "cues": [
+    {
+      "id": "cue-001",
+      "sectionId": "act-1",
+      "trackId": "track-001",
+      "sceneIds": [
+        "B03-A1-S1",
+        "B03-A1-S2"
+      ],
+      "commentary": "For the opening there is no dolphin to ignite. Only the window of Lila’s room: the curtain moving, her drawings on the walls, Hopper on the bed. The music is grim horror. After the title, it feels paused over the stakeout; then the drums kick in for the apprehension and transport. All hell breaks loose.",
+      "spoilerLevel": "book3",
+      "displayLabel": "The Dark Time"
+    },
+    {
+      "id": "cue-002",
+      "sectionId": "act-1",
+      "trackId": "track-002",
+      "sceneIds": [
+        "B03-A1-S5"
+      ],
+      "commentary": "This music is light and feels like missing someone. The ache you feel and the tears you cannot stop. separated by time, distance, death. Memories are all we really have. No one has moved on. No one wants to.",
+      "spoilerLevel": "book3",
+      "displayLabel": "Return to West Comm Tower"
+    },
+    {
+      "id": "cue-003",
+      "sectionId": "act-1",
+      "trackId": "track-003",
+      "sceneIds": [
+        "B03-A1-S6",
+        "B03-A1-S7"
+      ],
+      "commentary": "I played this while writing because it has a sad quality, a loveliness, but resolves bittersweet. There’s still pain, but there’s love in this house. It carries through the quiet evening and into the night.",
+      "spoilerLevel": "book3",
+      "displayLabel": "The New Normal"
+    },
+    {
+      "id": "cue-004",
+      "sectionId": "act-1",
+      "trackId": "track-004",
+      "sceneIds": [
+        "B03-A1-S8"
+      ],
+      "commentary": "It's been four years.\n\nThe tears still flow. The missing is managed, not healed. They visit the graves.\n\nThe music just felt right to me for this. A quartet. It's very recognizable music, but it felt like the scene to me.",
+      "spoilerLevel": "book3",
+      "displayLabel": "Underwood"
+    },
+    {
+      "id": "cue-005",
+      "sectionId": "act-1",
+      "trackId": "track-005",
+      "sceneIds": [
+        "B03-A1-S10",
+        "B03-A1-S11",
+        "B03-A1-S12"
+      ],
+      "commentary": "This music is really about how sweet and wonderful Keira is. It kind of accompanies what I wrote for these scenes and others for her in the book. I could hear a softer more somber version at different times, maybe pieces, maybe just piano. But she's the flower that came out of the darkness of the first two books. She's the healer and this music feels like healing.",
+      "spoilerLevel": "book3",
+      "sceneAnchor": "Follow Keira from school, through her walk with Tim, to dinner at home.",
+      "displayLabel": "Keira"
+    },
+    {
+      "id": "cue-006",
+      "sectionId": "act-1",
+      "trackId": "track-006",
+      "sceneIds": [
+        "B03-A1-S13"
+      ],
+      "commentary": "Sam and Alex move beyond grief and survival towards desire and need. They make love.\n\nThis music has an older orchestral appeal. Beautiful, stoic, mournful and in love all at once. Not many could write music like Kilar.",
+      "spoilerLevel": "book3",
+      "displayLabel": "Sam and Alex"
+    },
+    {
+      "id": "cue-007",
+      "sectionId": "act-1",
+      "trackId": "track-007",
+      "sceneIds": [
+        "B03-A1-S14"
+      ],
+      "commentary": "This sounds like a sweet goodbye that never really lets go. Whenever they go into Lila’s room, I can hear it. You don’t let go of the ones you love; you hold them tighter. That’s what Sam is doing with the letter. It’s not a goodbye; it’s a conversation. It’s a hug.",
+      "spoilerLevel": "book3",
+      "displayLabel": "Write a Letter"
+    },
+    {
+      "id": "cue-008",
+      "sectionId": "act-1",
+      "trackId": "track-008",
+      "sceneIds": [
+        "B03-A1-S17"
+      ],
+      "commentary": "Ellipse adjacent, I put on this track for the eeriness of the Ellipse in this scene. London Symphony Orchestra. Just unsettling, atonal full orchestral mayhem.",
+      "spoilerLevel": "book3",
+      "sceneAnchor": "Keira arrives at the Lorenz estate before the party begins.",
+      "displayLabel": "Dark Findings"
+    },
+    {
+      "id": "cue-009",
+      "sectionId": "act-1",
+      "trackId": "track-009",
+      "sceneIds": [
+        "B03-A1-S18"
+      ],
+      "commentary": "Nice groove, but weird, ominous. Evil. Fits the party. If you need something to say \"something 's not right here\" but still need it to rock, nothing like a little abstract post modern metal from the godfather of Celtic Frost to unnerve you.\n\nStarts innocent enough but this new drug is brutal and we see what it's doing to the teenagers on Luna here.",
+      "spoilerLevel": "book3",
+      "displayLabel": "Caps"
+    },
+    {
+      "id": "cue-010",
+      "sectionId": "act-1",
+      "trackId": "track-010",
+      "sceneIds": [
+        "B03-A1-S19"
+      ],
+      "commentary": "Elijah knows the harmonies of grief and loss and missing. This is the music I hear for this scene. It's different because Sam is joined by Alex here. Grieving together in Lila's room, missing Lila and Kelli. They fall asleep in each other's arms.",
+      "spoilerLevel": "book3",
+      "displayLabel": "His Daughter's Room"
+    },
+    {
+      "id": "cue-011",
+      "sectionId": "act-1",
+      "trackId": "track-011",
+      "sceneIds": [
+        "B03-A1-S22"
+      ],
+      "commentary": "This feels like unresolved emotional tension: Keira feeling a little alone and sad, and missing her mom and dad. Then it escalates into something powerful and beautiful. I like it for that family dynamic—a family moving forward, but barely hanging on.",
+      "spoilerLevel": "book3",
+      "displayLabel": "Spending the Night"
+    },
+    {
+      "id": "cue-012",
+      "sectionId": "act-1",
+      "trackId": "track-012",
+      "sceneIds": [
+        "B03-A1-S28",
+        "B03-A1-S29",
+        "B03-A1-S30"
+      ],
+      "commentary": "Richter captures something like depression with very few instruments. It felt right for the bad news here and the next few scenes.",
+      "spoilerLevel": "book3",
+      "sceneAnchor": "A painful night takes Sam and Alex to the hospital while Keira waits at home.",
+      "displayLabel": "Bones"
+    },
+    {
+      "id": "cue-013",
+      "sectionId": "act-1",
+      "trackId": "track-013",
+      "sceneIds": [
+        "B03-A1-S32",
+        "B03-A1-S33"
+      ],
+      "commentary": "Eerie, mysterious, and a little terrifying—the sound of a discovery you don’t want to make. The ominous music continues through the arrest. Something is wrong.",
+      "spoilerLevel": "book3",
+      "sceneAnchor": "The investigation moves from Cavern Cemetery to an arrest at Shackleton Ridge.",
+      "displayLabel": "Dark Discovery"
+    },
+    {
+      "id": "cue-014",
+      "sectionId": "act-1",
+      "trackId": "track-014",
+      "sceneIds": [
+        "B03-A1-S34"
+      ],
+      "commentary": "The music sounds like technical prowess, but something that can’t be stopped. It fits the precision of the station operation.",
+      "spoilerLevel": "book3",
+      "displayLabel": "The Taking"
+    },
+    {
+      "id": "cue-015",
+      "sectionId": "act-1",
+      "trackId": "track-015",
+      "sceneIds": [
+        "B03-A1-S36"
+      ],
+      "commentary": "Sweet, funny, then sad, sexy and somber, the music is a reflection of their lives encompassed in a day. A wedding, memories, silly stuff and love, with Alex being Alex and making the day be something only she could. Earl does hope and love with optimism that is needed here, love survives, and is burning bright.",
+      "spoilerLevel": "book3",
+      "displayLabel": "Love and Cold Fingers"
+    },
+    {
+      "id": "cue-016",
+      "sectionId": "act-1",
+      "trackId": "track-016",
+      "sceneIds": [
+        "B03-A1-S38",
+        "B03-A1-S39"
+      ],
+      "commentary": "Strained, sad, tense—like doing the right thing isn’t working. This is Keira’s fragility showing as she tries to find her place in the Randolph house. It felt right for these scenes and informed my writing of them.",
+      "spoilerLevel": "book3",
+      "displayLabel": "Lorenz Family Dinner"
+    },
+    {
+      "id": "cue-017",
+      "sectionId": "act-1",
+      "trackId": "track-017",
+      "sceneIds": [
+        "B03-A1-S42"
+      ],
+      "commentary": "The music is ominous and accompanies Sam, Alex, and Jamestown as they infiltrate their boss's home.",
+      "spoilerLevel": "book3",
+      "displayLabel": "Kuranis Home"
+    },
+    {
+      "id": "cue-018",
+      "sectionId": "act-1",
+      "trackId": "track-013",
+      "sceneIds": [
+        "B03-A1-S44"
+      ],
+      "commentary": "This track fits this scene, the tension, the destruction, trying to find the intrusion. This time the music feels a little hopeless here.",
+      "spoilerLevel": "book3",
+      "sceneAnchor": "Sam and Alex search their bedroom for hidden surveillance devices.",
+      "displayLabel": "Hidden Camera"
+    },
+    {
+      "id": "cue-019",
+      "sectionId": "act-1",
+      "trackId": "track-018",
+      "sceneIds": [
+        "B03-A1-S46"
+      ],
+      "commentary": "This music is creepy and soft. Tension in the drones. Wind sound. Something awakening. Whenever Susan goes looking for something, she usually finds something bad.",
+      "spoilerLevel": "book3",
+      "sceneAnchor": "Susan follows a lead at Lang’s parking deck.",
+      "displayLabel": "Susan at Lang"
+    },
+    {
+      "id": "cue-020",
+      "sectionId": "act-1",
+      "trackId": "track-019",
+      "sceneIds": [
+        "B03-A1-S50"
+      ],
+      "commentary": "LD12, gumshoe, he's a private dick, ya know? This music is from another time that I think in-universe only LD12 and Alex get; mainly because Alex has watched too many movies, and LD12 is an idiot.\n\nLD12 INTERRUPTION: AHEM... The author is the idiot.",
+      "spoilerLevel": "book3",
+      "displayLabel": "Private Eye"
+    },
+    {
+      "id": "cue-021",
+      "sectionId": "act-1",
+      "trackId": "track-020",
+      "sceneIds": [
+        "B03-A1-S53"
+      ],
+      "commentary": "The music is a sad return to the memories of his beloved daughter as he begins the letter. Alex and Sam comfort one another so as to not be overwhelmed. The music is bittersweet as was the scene.",
+      "spoilerLevel": "book3",
+      "displayLabel": "The Letter Starts"
+    },
+    {
+      "id": "cue-022",
+      "sectionId": "act-1",
+      "trackId": "track-021",
+      "sceneIds": [
+        "B03-A1-S56"
+      ],
+      "commentary": "The opening feels right for the revelations during this visit; not necessarily the whole track, the whole time. I listened to it to sharpen the scene. Buckley’s music has a chameleon effect: you can find it inspirational in so many different circumstances.",
+      "spoilerLevel": "book3",
+      "displayLabel": "Meeting the Lorenzes"
+    },
+    {
+      "id": "cue-023",
+      "sectionId": "interlude",
+      "trackId": "track-022",
+      "sceneIds": [],
+      "commentary": "I love this track to imagine the next four years.  Soft. Sweet. Dramatic. Feels forged out of memory, time, and holding someone close.",
+      "spoilerLevel": "book3",
+      "label": "Interlude · Growing Up · 2487–2491"
+    },
+    {
+      "id": "cue-024",
+      "sectionId": "act-2",
+      "trackId": "track-023",
+      "sceneIds": [
+        "B03-A2-S59"
+      ],
+      "commentary": "This music is like a memory being torn away until all that's left is a broken piano. It's affecting and poignant. It feels like saying goodbye when you know you shouldn't have to.",
+      "spoilerLevel": "book3",
+      "sceneAnchor": "Sam and Alex return to the stripped West Comm Tower and find Hank running on emergency power.",
+      "displayLabel": "West Comm Salvage"
+    },
+    {
+      "id": "cue-025",
+      "sectionId": "act-2",
+      "trackId": "track-024",
+      "sceneIds": [
+        "B03-A2-S64",
+        "B03-A2-S65",
+        "B03-A2-S66",
+        "B03-A2-S67"
+      ],
+      "commentary": "This music felt really good when writing these scenes. This is Sam loving the four women in his life, living or not: Kelli. Lila. Alex. Keira.\n\nSam's heart is just always broken. But that's because he never stops loving.",
+      "spoilerLevel": "book3",
+      "displayLabel": "Four Roses"
+    },
+    {
+      "id": "cue-026",
+      "sectionId": "act-2",
+      "trackId": "track-017",
+      "sceneIds": [
+        "B03-A2-S72",
+        "B03-A2-S73",
+        "B03-A2-S74"
+      ],
+      "commentary": "The music turns intimacy into horror. It ends in screams. Something terrible is beginning.",
+      "spoilerLevel": "book3",
+      "displayLabel": "Graduation Night"
+    },
+    {
+      "id": "cue-027",
+      "sectionId": "act-2",
+      "trackId": "track-025",
+      "sceneIds": [
+        "B03-A2-S76",
+        "B03-A2-S77"
+      ],
+      "commentary": "",
+      "spoilerLevel": "book3",
+      "sceneAnchor": "Sam and Jason follow Hal Peddington from his house to Lang Tower.",
+      "displayLabel": "Pursuit of Hal"
+    },
+    {
+      "id": "cue-028",
+      "sectionId": "act-2",
+      "trackId": "track-026",
+      "sceneIds": [
+        "B03-A2-S79"
+      ],
+      "commentary": "Somber and beautiful, with the presence of angels crying. This is funeral music for a friend who was a brother, and for people still missing.",
+      "spoilerLevel": "book3",
+      "displayLabel": "Grief in Vain"
+    },
+    {
+      "id": "cue-029",
+      "sectionId": "act-2",
+      "trackId": "track-006",
+      "sceneIds": [
+        "B03-A2-S83",
+        "B03-A2-S84"
+      ],
+      "commentary": "The kids seem to be moving out. Just Sam and Alex left. It's a heartache they weren't ready for but must endure. The music is that music I hear when Sam and Alex have each other. This is the second time I hear this music.",
+      "spoilerLevel": "book3",
+      "displayLabel": "The Empty Nest"
+    },
+    {
+      "id": "cue-030",
+      "sectionId": "act-2",
+      "trackId": "track-027",
+      "sceneIds": [
+        "B03-A2-S86",
+        "B03-A2-S87",
+        "B03-A2-S88"
+      ],
+      "commentary": "A new life. This music hits those sweet notes. There's a sadness underneath, because of memories of Lila as a baby. Grief meets joy meets guilt. Elijah's music is the most Moon Gun Sam music there is.",
+      "spoilerLevel": "book3",
+      "displayLabel": "Sweet"
+    },
+    {
+      "id": "cue-031",
+      "sectionId": "act-2",
+      "trackId": "track-002",
+      "sceneIds": [
+        "B03-A2-S90"
+      ],
+      "commentary": "Sam and Alex grieve on what would have been Lila's twentieth birthday. Eight years since her passing. The wound reopens and this theme came out.",
+      "spoilerLevel": "book3",
+      "displayLabel": "Twenty"
+    },
+    {
+      "id": "cue-032",
+      "sectionId": "act-2",
+      "trackId": "track-028",
+      "sceneIds": [
+        "B03-A2-S91"
+      ],
+      "commentary": "Things go to hell downtown, especially when the Lathotep arrive. This music is very Lathotep horror. Bedlam and blood? Stumbled upon it and it creeped me out in exactly the right way.",
+      "spoilerLevel": "book3",
+      "displayLabel": "Downtown"
+    },
+    {
+      "id": "cue-033",
+      "sectionId": "act-2",
+      "trackId": "track-029",
+      "sceneIds": [
+        "B03-A2-S92"
+      ],
+      "commentary": "",
+      "spoilerLevel": "book3",
+      "sceneAnchor": "Alex wakes in the hospital with Sam beside her.",
+      "displayLabel": "Broken"
+    },
+    {
+      "id": "cue-034",
+      "sectionId": "act-2",
+      "trackId": "track-030",
+      "sceneIds": [
+        "B03-A2-S93"
+      ],
+      "commentary": "Grief and loss become connected to guilt. Keira helps her overcome, but does she truly understand? Alex is at her lowest point. That's when we need each other. This music is soft piano meandering on a scratched vinyl recording. Lo-fi, imperfect, and heartfelt. It feels like there's nothing left to take.",
+      "spoilerLevel": "book3",
+      "displayLabel": "Alex and Keira"
+    },
+    {
+      "id": "cue-035",
+      "sectionId": "act-2",
+      "trackId": "track-031",
+      "sceneIds": [
+        "B03-A2-S95"
+      ],
+      "commentary": "A deeply spiritual wedding. At their lowest point, they decide to choose life, and to do it with everyone they love, dead or alive. It feels holy and bittersweet, and it is. This music sits in that exact register for this scene. It remembers Sam and Alex finding that first kiss at the end of book 2, that ember that started this warmth they share that has become their life.",
+      "spoilerLevel": "book3",
+      "displayLabel": "At the Stone"
+    },
+    {
+      "id": "cue-036",
+      "sectionId": "act-2",
+      "trackId": "track-032",
+      "sceneIds": [
+        "B03-A2-S98"
+      ],
+      "commentary": "This music is sad despite the horrific scene because it's what's felt by Sam and Alex. So the slaughter witnessed via footage is played with sad ethereal music. Terrible things are witnessed.",
+      "spoilerLevel": "book3",
+      "displayLabel": "The Walk In"
+    },
+    {
+      "id": "cue-037",
+      "sectionId": "act-2",
+      "trackId": "track-033",
+      "sceneIds": [
+        "B03-A2-S101"
+      ],
+      "commentary": "Secession Studios hits a lot of Lathotep notes. It was on a lot for the Lathotep scenes. The almost supernatural power the Lathotep show in this scene in the book demanded something larger than life. Pure death. Pure terror. Drums that march to the ritual of violence. Greg is very good at dark music.",
+      "spoilerLevel": "book3",
+      "sceneAnchor": "The confrontation reaches the Night Galley concourse.",
+      "displayLabel": "The Exit"
+    },
+    {
+      "id": "cue-038",
+      "sectionId": "act-2",
+      "trackId": "track-034",
+      "sceneIds": [
+        "B03-A2-S102"
+      ],
+      "commentary": "Just quiet decompression music as Sam holds his girls after the day's insanity. This was playing on my mix on youtube and it just fit as I was writing the scene. One of those weird coincidences.",
+      "spoilerLevel": "book3",
+      "displayLabel": "Quiet Aftermath"
+    },
+    {
+      "id": "cue-039",
+      "sectionId": "act-2",
+      "trackId": "track-035",
+      "sceneIds": [
+        "B03-A2-S105"
+      ],
+      "commentary": "This is bittersweet, it's a call back to when Kelli and Alex sat here so long ago. The music played when they said goodbye to their childhoods for me then, now it's remembering them in that same place under different circumstances. It's poignant and it felt right for this scene.",
+      "spoilerLevel": "book3",
+      "sceneAnchor": "Sam and Alex return to the old cornfield church at dusk.",
+      "displayLabel": "Hiding Day"
+    },
+    {
+      "id": "cue-040",
+      "sectionId": "act-2",
+      "trackId": "track-036",
+      "sceneIds": [
+        "B03-A2-S106"
+      ],
+      "commentary": "Soft to start, then something goes awry. Sadness gives way to shock and sustained tension, before ending softly with Alex keeping Sam together. The music fit that cadence and helped inspire the scene’s trajectory. It’s a long one, but it keeps the tension on.",
+      "spoilerLevel": "book3",
+      "displayLabel": "Armory"
+    },
+    {
+      "id": "cue-041",
+      "sectionId": "act-2",
+      "trackId": "track-037",
+      "sceneIds": [
+        "B03-A2-S109"
+      ],
+      "commentary": "Soft ambient music that ended up in my rotation I kind of love for this scene. Another happy coincidence.",
+      "spoilerLevel": "book3",
+      "sceneAnchor": "Alex visits Susan’s apartment, still untouched since she disappeared.",
+      "displayLabel": "Susan's Place"
+    },
+    {
+      "id": "cue-042",
+      "sectionId": "act-3",
+      "trackId": "track-038",
+      "sceneIds": [
+        "B03-A3-S111"
+      ],
+      "commentary": "This is a song that I thought about their lovemaking. I don't imagine super spicy stuff, but I do imagine the love between these two is off the charts, and this song is how they both feel about each other. It's a funny sweet scene, but it has heat. Ice gets melted, after all!",
+      "spoilerLevel": "book3",
+      "displayLabel": "Ice and Boots"
+    },
+    {
+      "id": "cue-043",
+      "sectionId": "act-3",
+      "trackId": "track-039",
+      "sceneIds": [
+        "B03-A3-S112"
+      ],
+      "commentary": "This might be one of the songs that reshaped MGS into what it is today. I imagined Outland crossed with Lovecraft, directed like one of Carpenter’s proto-westerns. This track fit that entire vibe. I listened to it for a long time; this little action scene felt right for it. John Carpenter still writes fantastic music.",
+      "spoilerLevel": "book3",
+      "sceneAnchor": "Sam and Elias pursue Gregory through the plaza, with Alex on dispatch.",
+      "displayLabel": "Gregory"
+    },
+    {
+      "id": "cue-044",
+      "sectionId": "act-3",
+      "trackId": "track-040",
+      "sceneIds": [
+        "B03-A3-S114"
+      ],
+      "commentary": "Hard-driving synth and ’80s-inspired horror for the hospital invasion. The Lathotep have that relentless, masked-assassin feeling.",
+      "spoilerLevel": "book3",
+      "displayLabel": "Triage"
+    },
+    {
+      "id": "cue-045",
+      "sectionId": "act-3",
+      "trackId": "track-041",
+      "sceneIds": [
+        "B03-A3-S115"
+      ],
+      "commentary": "Keira comes home to a loving home, but to sad news on the Vidcom. Ember captures that sweet hug but sad tension.",
+      "spoilerLevel": "book3",
+      "displayLabel": "Messages"
+    },
+    {
+      "id": "cue-046",
+      "sectionId": "act-3",
+      "trackId": "track-042",
+      "sceneIds": [
+        "B03-A3-S116"
+      ],
+      "commentary": "The music escalates with the chase, but the horror hits close to home. Dombrowski is a great inspiration for this book because of the tension he cultivates.",
+      "spoilerLevel": "book3",
+      "displayLabel": "DINGIR"
+    },
+    {
+      "id": "cue-047",
+      "sectionId": "act-3",
+      "trackId": "track-043",
+      "sceneIds": [
+        "B03-A3-S119"
+      ],
+      "commentary": "This has a research/detective vibe, fitting Elias’s search for information on Chaos.",
+      "spoilerLevel": "book3",
+      "displayLabel": "Proof of Chaos"
+    },
+    {
+      "id": "cue-048",
+      "sectionId": "act-3",
+      "trackId": "track-044",
+      "sceneIds": [
+        "B03-A3-S121"
+      ],
+      "commentary": "This is more of a mysterious horror drone than a song, but it fits the phone conversation. BlackWeald makes some very interesting and creepy cosmic horror inspired music.",
+      "spoilerLevel": "book3",
+      "sceneAnchor": "Sam and Elias compare what they know in a phone call after midnight.",
+      "displayLabel": "The Name We Don't Say"
+    },
+    {
+      "id": "cue-049",
+      "sectionId": "act-3",
+      "trackId": "track-045",
+      "sceneIds": [
+        "B03-A3-S123"
+      ],
+      "commentary": "",
+      "spoilerLevel": "book3",
+      "sceneAnchor": "Sam, Alex, and Elias descend into the library beneath Eden Grove.",
+      "displayLabel": "To The Library"
+    },
+    {
+      "id": "cue-050",
+      "sectionId": "act-3",
+      "trackId": "track-046",
+      "sceneIds": [
+        "B03-A3-S124"
+      ],
+      "commentary": "I couldn’t find music for this scene for the longest time. Then I heard this newer track from Elijah: haunting, sweet, and curious, exactly the register Atal operates in.",
+      "spoilerLevel": "book3",
+      "displayLabel": "Meeting Atal"
+    },
+    {
+      "id": "cue-051",
+      "sectionId": "act-3",
+      "trackId": "track-047",
+      "sceneIds": [
+        "B03-A3-S127"
+      ],
+      "commentary": "Sam and Alex are taking sandpaper to a raw nerve to get through this. The music feels like pulling yourself forward in a blizzard of emotional pain. Love is the only way forward.",
+      "spoilerLevel": "book3",
+      "sceneAnchor": "Sam and Alex return to the ruins of Lila’s school.",
+      "displayLabel": "Saferoom"
+    },
+    {
+      "id": "cue-052",
+      "sectionId": "act-3",
+      "trackId": "track-048",
+      "sceneIds": [
+        "B03-A3-S129"
+      ],
+      "commentary": "Creepy and weird; it works with all the bizarre unveiling at the drill site.",
+      "spoilerLevel": "book3",
+      "displayLabel": "Drill Wreckage"
+    },
+    {
+      "id": "cue-053",
+      "sectionId": "act-3",
+      "trackId": "track-049",
+      "sceneIds": [
+        "B03-A3-S131"
+      ],
+      "commentary": "Somber, low droning, and aching. This was to be Lila's 21st birthday. Alex and Sam watch home movies of Lila and Kelli, falling asleep through tears, holding each other. This music broke me when revisiting this scene. It's especially heartbreaking in the second half of the track.",
+      "spoilerLevel": "book3",
+      "displayLabel": "Twenty-one"
+    },
+    {
+      "id": "cue-054",
+      "sectionId": "act-3",
+      "trackId": "track-050",
+      "sceneIds": [
+        "B03-A3-S134"
+      ],
+      "commentary": "Sam gets heavy information. This music hits those mythic God chords and agrees with the text. It was in my rotation when writing and it fit very well when I heard it. Great soundtrack.",
+      "spoilerLevel": "book3",
+      "sceneAnchor": "At home, Sam reads Elias’s notes about his family’s past.",
+      "displayLabel": "Origins"
+    },
+    {
+      "id": "cue-055",
+      "sectionId": "act-3",
+      "trackId": "track-051",
+      "sceneIds": [
+        "B03-A3-S138"
+      ],
+      "commentary": "Elijah Siegler doesn’t mess around when it comes to having your heart pulled out. He knows the specific kinds of pain someone can go through. Here the music escalates into pain with Keira’s realization. The same piece that held shared grief in Lila’s room now carries something harder to bear.",
+      "spoilerLevel": "book3",
+      "sceneAnchor": "In the Bay, Keira is shown footage of Sam and Alex from the Battle of Luna.",
+      "displayLabel": "Inside"
+    },
+    {
+      "id": "cue-056",
+      "sectionId": "act-4",
+      "trackId": "track-052",
+      "sceneIds": [
+        "B03-A4-S139",
+        "B03-A4-S140"
+      ],
+      "commentary": "This has that haunting dystopian synthwave feel that pulls you into the true picture of their society. When the mask comes off the institutions, things are revealed to be even darker than they thought.",
+      "spoilerLevel": "book3",
+      "sceneAnchor": "The group arrives at South Ridge Observatory and is brought inside by Nash.",
+      "displayLabel": "Observatory"
+    },
+    {
+      "id": "cue-057",
+      "sectionId": "act-4",
+      "trackId": "track-053",
+      "sceneIds": [
+        "B03-A4-S141"
+      ],
+      "commentary": "This starts with a warbled sound because it's not the message that is broken. It's the hopelessness of the plan. There are no other options. They have to go through the dark.",
+      "spoilerLevel": "book3",
+      "displayLabel": "Off Grid Uplink"
+    },
+    {
+      "id": "cue-058",
+      "sectionId": "act-4",
+      "trackId": "track-054",
+      "sceneIds": [
+        "B03-A4-S142",
+        "B03-A4-S143"
+      ],
+      "commentary": "soft and ethereal - the sound of outer space and machines lining up to unlock truths and a way forward through the darkness. A simple two chord pad progression haunts as the alignments do their thing.",
+      "spoilerLevel": "book3",
+      "displayLabel": "Triangulation"
+    },
+    {
+      "id": "cue-059",
+      "sectionId": "act-4",
+      "trackId": "track-055",
+      "sceneIds": [
+        "B03-A4-S144"
+      ],
+      "commentary": "The softness eclipses the breach and escape. I kind of imagine that part being silent with just the music as the explosion happens and they come out down ahead.",
+      "spoilerLevel": "book3",
+      "displayLabel": "Breach Window"
+    },
+    {
+      "id": "cue-060",
+      "sectionId": "act-4",
+      "trackId": "track-056",
+      "sceneIds": [
+        "B03-A4-S145",
+        "B03-A4-S146"
+      ],
+      "commentary": "This aches at things falling apart, and at Keira’s emotional separation from Sam and Alex. It carries through the call and Sam holding Alex afterward. I couldn’t find the earlier track during rewrites; when I heard this one, it was somehow even more perfect.",
+      "spoilerLevel": "book3",
+      "displayLabel": "The Turning"
+    },
+    {
+      "id": "cue-061",
+      "sectionId": "act-4",
+      "trackId": "track-057",
+      "sceneIds": [
+        "B03-A4-S148",
+        "B03-A4-S149"
+      ],
+      "commentary": "",
+      "spoilerLevel": "book3",
+      "sceneAnchor": "Sam, Alex, Elias, and Atal descend beneath KOR Tower to the Pool chamber.",
+      "displayLabel": "KOR Subsurface"
+    },
+    {
+      "id": "cue-062",
+      "sectionId": "act-4",
+      "trackId": "track-033",
+      "sceneIds": [
+        "B03-A4-S152"
+      ],
+      "commentary": "This music is so brutally dark it informed me shaping the scene. The drums, the atonal low brass and bass pad drones. The horror choral arrangement. If the Lathotep and the Unknown Priest have a theme, this is it.",
+      "spoilerLevel": "book3",
+      "displayLabel": "Council"
+    },
+    {
+      "id": "cue-063",
+      "sectionId": "act-4",
+      "trackId": "track-058",
+      "sceneIds": [
+        "B03-A4-S153"
+      ],
+      "commentary": "Another great track from John Carpenter's lost track. It has that saw pulse oscillation that he's famous for. It's repetitive and dark. The Lathotep pursue and Sam and friends escape -- barely.",
+      "spoilerLevel": "book3",
+      "displayLabel": "Pursuit"
+    },
+    {
+      "id": "cue-064",
+      "sectionId": "act-4",
+      "trackId": "track-059",
+      "sceneIds": [
+        "B03-A4-S154"
+      ],
+      "commentary": "I love the emotional timbre with the soft driving tension in this piece. The Vampiric melody on the pipe organ fits the Lathotep attack on the hospital ensues.",
+      "spoilerLevel": "book3",
+      "timing": "Use the opening through approximately 2:27.",
+      "displayLabel": "The Hospital"
+    },
+    {
+      "id": "cue-065",
+      "sectionId": "act-4",
+      "trackId": "track-002",
+      "sceneIds": [
+        "B03-A4-S155"
+      ],
+      "commentary": "",
+      "spoilerLevel": "book3",
+      "sceneAnchor": "On the hospital roof, the evacuation brings Sam and Alex face to face with Keira’s decision to stay.",
+      "displayLabel": "Extraction"
+    },
+    {
+      "id": "cue-066",
+      "sectionId": "act-4",
+      "trackId": "track-060",
+      "sceneIds": [
+        "B03-A4-S157"
+      ],
+      "commentary": "Soft bells and horns. The Hall of Heroes is in ruins URSAG. The sad funeral hymn of Elliot Goldenthal's Titus score felt correct for the discovery and horror of the scene.",
+      "spoilerLevel": "book3",
+      "displayLabel": "Revelation"
+    },
+    {
+      "id": "cue-067",
+      "sectionId": "act-4",
+      "trackId": "track-061",
+      "sceneIds": [
+        "B03-A4-S158"
+      ],
+      "commentary": "This music has those God chords for the revelatory feel, but then somber for grief. The revelation is needed. But the remembrance of how Kelli dies stings.",
+      "spoilerLevel": "book3",
+      "displayLabel": "The Bullet"
+    },
+    {
+      "id": "cue-068",
+      "sectionId": "act-4",
+      "trackId": "track-062",
+      "sceneIds": [
+        "B03-A4-S159"
+      ],
+      "commentary": "Warm strings and a soft piano lead, the way John Barry always seems to do. Bittersweet, melancholy, nostalgic, unresolved—yet somehow sweet. The music rises into reassurance in time with Sam’s words to Alex on the porch.",
+      "spoilerLevel": "book3",
+      "displayLabel": "Teddy Bears and Moon Guns"
+    },
+    {
+      "id": "cue-069",
+      "sectionId": "act-5",
+      "trackId": "track-063",
+      "sceneIds": [
+        "B03-A5-S160"
+      ],
+      "commentary": "The music is creepy, the unknown priest, chaos, but there is no music for our girl when she suffers. Only her voice and the cries of Sam, Alex, and him with her.",
+      "spoilerLevel": "book3",
+      "sceneAnchor": "Sam and Alex are cornered in KOR’s North Chamber with Chaos closing in.",
+      "displayLabel": "The Cross"
+    },
+    {
+      "id": "cue-070",
+      "sectionId": "act-5",
+      "trackId": "track-064",
+      "sceneIds": [
+        "B03-A5-S161"
+      ],
+      "commentary": "This music hit me - it's the classic death of the hero music. This is how I picture Sam running with Alex, trying to keep her together. The music is swelling pleading. Full orchestral, very classical film of the late 20th century style.",
+      "spoilerLevel": "book3",
+      "displayLabel": "The Run"
+    },
+    {
+      "id": "cue-071",
+      "sectionId": "act-5",
+      "trackId": "track-065",
+      "sceneIds": [
+        "B03-A5-S162"
+      ],
+      "commentary": "It sounds holy and full of life. It's strangely uplifting, yet a bit sad or full of empathy. I'm not sure. It just has all the feels for the scene.",
+      "spoilerLevel": "book3",
+      "sceneAnchor": "Sam carries Alex into the Pool chamber.",
+      "displayLabel": "Water"
+    },
+    {
+      "id": "cue-072",
+      "sectionId": "act-5",
+      "trackId": "track-066",
+      "sceneIds": [
+        "B03-A5-S163",
+        "B03-A5-S164"
+      ],
+      "commentary": "",
+      "spoilerLevel": "book3",
+      "sceneAnchor": "The perspective shifts from Sam and Alex in KOR’s service halls to Keira moving patients out of the hospital.",
+      "displayLabel": "Blackout and Purge"
+    },
+    {
+      "id": "cue-073",
+      "sectionId": "act-5",
+      "trackId": "track-067",
+      "sceneIds": [
+        "B03-A5-S165",
+        "B03-A5-S166",
+        "B03-A5-S167",
+        "B03-A5-S168",
+        "B03-A5-S169"
+      ],
+      "commentary": "This music is being composed for Moon Gun Sam by Elijah Siegler.",
+      "spoilerLevel": "book3",
+      "sceneAnchor": "Follow Sam’s confrontation with Chaos across Launch Sector C, from the access deck to the docking clamps.",
+      "displayLabel": "Psalms of Chaos"
+    },
+    {
+      "id": "cue-074",
+      "sectionId": "act-5",
+      "trackId": "track-068",
+      "sceneIds": [
+        "B03-A5-S170"
+      ],
+      "commentary": "We Are One. These are the words that Alex and Sam told each other their first battle. Every battle after. Getting through life. Becoming married. Now it's their goodbye kiss.",
+      "spoilerLevel": "book3",
+      "displayLabel": "Out of Hell"
+    },
+    {
+      "id": "cue-075",
+      "sectionId": "act-5",
+      "trackId": "track-069",
+      "sceneIds": [
+        "B03-A5-S171",
+        "B03-A5-S172"
+      ],
+      "commentary": "Bombastic, extreme, insane. Sam pushes beyond what a human should tolerate. The music follows him into the airlock and through the breach.",
+      "spoilerLevel": "book3",
+      "displayLabel": "Propulsion"
+    },
+    {
+      "id": "cue-076",
+      "sectionId": "act-5",
+      "trackId": "track-070",
+      "sceneIds": [
+        "B03-A5-S173"
+      ],
+      "commentary": "Soft piano, the sound of childhood. It fits the recognition in this scene and the moment they begin working together.",
+      "spoilerLevel": "book3",
+      "sceneAnchor": "Sam reaches the accommodation corridor and the three Lathotep waiting there.",
+      "displayLabel": "Free"
+    },
+    {
+      "id": "cue-077",
+      "sectionId": "act-5",
+      "trackId": "track-071",
+      "sceneIds": [
+        "B03-A5-S174",
+        "B03-A5-S175",
+        "B03-A5-S176"
+      ],
+      "commentary": "Eerie at first, escalating into tension and victory, then haste. The music carries the three scenes through the bridge and out again, finally going to white with a giant crescendo.",
+      "spoilerLevel": "book3",
+      "displayLabel": "Overthrow"
+    },
+    {
+      "id": "cue-078",
+      "sectionId": "act-5",
+      "trackId": "track-072",
+      "sceneIds": [
+        "B03-A5-S177"
+      ],
+      "commentary": "The music feels like the ache and tug of Alex’s goodbye, and the effort to keep moving.",
+      "spoilerLevel": "book3",
+      "sceneAnchor": "Alex pauses on the causeway outside KOR with Lila in her arms.",
+      "displayLabel": "Myth"
+    },
+    {
+      "id": "cue-079",
+      "sectionId": "act-5",
+      "trackId": "track-073",
+      "sceneIds": [
+        "B03-A5-S178"
+      ],
+      "commentary": "Tense music with trills, as Alex thinks fast and the battle begins.",
+      "spoilerLevel": "book3",
+      "displayLabel": "Rejection"
+    },
+    {
+      "id": "cue-080",
+      "sectionId": "act-5",
+      "trackId": "track-074",
+      "sceneIds": [
+        "B03-A5-S179"
+      ],
+      "commentary": "low brass and strings as darkness finds a way forward.",
+      "spoilerLevel": "book3",
+      "sceneAnchor": "The perspective returns to Fenyang in the collapsed Pool chamber.",
+      "displayLabel": "The Other Choir"
+    },
+    {
+      "id": "cue-081",
+      "sectionId": "act-5",
+      "trackId": "track-075",
+      "sceneIds": [
+        "B03-A5-S180"
+      ],
+      "commentary": "The music is softly ominous before the crescendo of betrayal.",
+      "spoilerLevel": "book3",
+      "sceneAnchor": "Fenyang reaches the North Ridge pads, where civilians are trying to board a ship.",
+      "displayLabel": "North Ridge"
+    },
+    {
+      "id": "cue-082",
+      "sectionId": "act-5",
+      "trackId": "track-076",
+      "sceneIds": [
+        "B03-A5-S181",
+        "B03-A5-S182"
+      ],
+      "commentary": "As the message’s meaning comes into focus, this builds into something holy, powerful, and supernatural. It carries from the house to the old church: the feeling of a prayer being answered.",
+      "spoilerLevel": "book3",
+      "displayLabel": "Numbers"
+    },
+    {
+      "id": "cue-083",
+      "sectionId": "act-5",
+      "trackId": "track-077",
+      "sceneIds": [
+        "B03-A5-S183"
+      ],
+      "commentary": "Action-heavy orchestral music from the Final Fantasy film, accompanying the brawl at the stone and the rescue.",
+      "spoilerLevel": "book3",
+      "timing": "The churchyard action.",
+      "displayLabel": "Last Dance"
+    },
+    {
+      "id": "cue-084",
+      "sectionId": "act-5",
+      "trackId": "track-078",
+      "sceneIds": [
+        "B03-A5-S183",
+        "B03-A5-S184"
+      ],
+      "commentary": "This music starts with Alex with the girls on the ship as it takes off, folds over into the Lila's dream scene. Soft and serene, the strings are in that key of grief.",
+      "spoilerLevel": "book3",
+      "timing": "Begins at the shuttle departure in Ambush; continues into Lila’s Dream.",
+      "displayLabel": "A Good Day"
+    },
+    {
+      "id": "cue-085",
+      "sectionId": "act-5",
+      "trackId": "track-079",
+      "sceneIds": [
+        "B03-A5-S185"
+      ],
+      "commentary": "This music is both sad and happy, and felt like the letter to me.",
+      "spoilerLevel": "book3",
+      "sceneAnchor": "Aboard the shuttle, Lila reads the letter Sam wrote for her.",
+      "displayLabel": "The Letter"
+    },
+    {
+      "id": "cue-086",
+      "sectionId": "act-5",
+      "trackId": "track-080",
+      "sceneIds": [
+        "B03-A5-S186"
+      ],
+      "commentary": "This music is just gorgeous. It's somber and sad, but somewhat hopeful about what comes next. It feels like what music should accompany a shuttle in deep space carrying a broken family on an impossible adventure that's about to begin should sound like.",
+      "spoilerLevel": "book3",
+      "displayLabel": "Coda"
+    },
+    {
+      "id": "cue-087",
+      "sectionId": "afterwards",
+      "trackId": "track-081",
+      "sceneIds": [],
+      "commentary": "This is always the music to break away from the story. This adventure is just getting started.",
+      "spoilerLevel": "book3",
+      "label": "The Saga Continues"
+    },
+    {
+      "id": "cue-088",
+      "sectionId": "afterwards",
+      "trackId": "track-082",
+      "sceneIds": [],
+      "commentary": "This music feels like Alex's heart to Sam and Sam's heart to Alex. But also Sam and Alex's heart toward Keira, Lila, and Kelli. It's about not accepting a world without them in it. It's beautiful and epic, this version has extra orchestral arrangements and just rocks.",
+      "spoilerLevel": "book3",
+      "label": "End titles"
+    }
+  ]
+}
