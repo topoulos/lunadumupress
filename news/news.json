@@ -1,6 +1,15 @@
 {
   "items": [
     {
+      "id": "store-ebooks-2026-11-02",
+      "type": "news",
+      "date": "2026-11-02",
+      "title": "Vow & Ember ebooks are now in the Luna Dumu store",
+      "summary": "You can now get the Vow and Ember ebooks directly from the Luna Dumu store. BookFunnel delivers them to your inbox, ready for Kindle, Kobo, Apple Books, or your phone. Through Dec 31, Vow is $0.99 and Ember is $4.99 in our store. The same prices come to major ebook retailers from Nov 7 through Dec 31, starting early on Amazon on Nov 4. Want even better pricing? Join the Pod and Vow is yours free, plus a Pod-only price on Ember.",
+      "link": "https://shop.lunadumupress.com",
+      "joinLink": "https://lunadumupress.com/join"
+    },
+    {
       "id": "first-reviews-thanks-2026-10-28",
       "type": "news",
       "date": "2026-10-28",
