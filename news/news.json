@@ -1,6 +1,22 @@
 {
   "items": [
     {
+      "id": "holiday-ebook-sale-2026-11-09",
+      "type": "news",
+      "date": "2026-11-09",
+      "title": "Holiday ebook sale: Vow $0.99, Ember $4.99",
+      "summary": "Through Dec 31, the Vow ebook is $0.99 and Ember is $4.99 at Amazon, Apple Books, Barnes & Noble, Google Play, and other ebook retailers. Pod members get even better pricing in the Luna Dumu store, so if you haven't joined yet, now's a great time.",
+      "joinLink": "https://lunadumupress.com/join"
+    },
+    {
+      "id": "anthony-update-2026-11-09",
+      "type": "news",
+      "date": "2026-11-09",
+      "title": "Shorts, a birthday thank-you, and Book Three news",
+      "summary": "“I am in the process of setting up my workspace (cleaning it and throwing away trash, ha ha ha) to do YouTube Shorts. I don't really like getting on camera, but I feel like I need to step up and talk about things, and we could have some fun with it. Newsletters are my first priority, but the Shorts will be a fun addition. More to come! Also, thank you for all the warm birthday wishes! One more update: Elijah is beginning to write the score for the Book Three Christmas trailer. Not sure what I'm going to do for the visual yet, probably Shawn's paintings around Book Three, the cover, stuff like that. Waiting on some ISBN stuff to get fixed, and then preorders can begin for Book Three.” — Anthony",
+      "joinLink": "https://lunadumupress.com/join"
+    },
+    {
       "id": "store-ebooks-2026-11-02",
       "type": "news",
       "date": "2026-11-02",
