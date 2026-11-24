@@ -1,7 +1,7 @@
 /* Shared signup attribution helpers.
  * Stashes Ads UTMs + click IDs + signup email for enhanced conversion on
  * vow-thanks / act-one-thanks, and bridges sessionStorage into MailerLite
- * form 9NV2sK hidden fields (Ad Platform + utm_campaign).
+ * form hidden fields (Ad Platform + utm_campaign) on 9NV2sK and 4ig4wX.
  * Newsletter owns ML field definitions + 1b automation; Web only fills values.
  * Do NOT fire Ads conversions here — Pod Signup Confirmed may fire on vow-thanks
  * OR act-one-thanks (session-deduped via mgs_pod_signup_confirmed).
@@ -171,10 +171,13 @@
 
   /* Fallback: if the MailerLite embed hasn't shown a visible email field after
    * a few seconds (ML script blocked/failed, or hidden by anything), show a
-   * plain link to the MailerLite-hosted copy of form 9NV2sK. Removed again if
-   * the embed shows up later. */
-  var HOSTED_FORM_URL =
-    'https://dashboard.mailerlite.com/forms/2151427/180902664009155935/share';
+   * plain link to the MailerLite-hosted copy of that form. Removed again if
+   * the embed shows up later. Covers the Pod form (9NV2sK) and the
+   * Audiobook Interest form (4ig4wX). */
+  var HOSTED_FORM_URLS = {
+    '9NV2sK': 'https://dashboard.mailerlite.com/forms/2151427/180902664009155935/share',
+    '4ig4wX': 'https://dashboard.mailerlite.com/forms/2151427/204984503705273394/share'
+  };
   var FALLBACK_CLASS = 'mgs-ml-fallback';
 
   function isShown(el) {
@@ -196,7 +199,9 @@
 
   function checkEmbedsOrFallback() {
     try {
-      var containers = document.querySelectorAll('.ml-embedded[data-form="9NV2sK"]');
+      var containers = document.querySelectorAll(
+        '.ml-embedded[data-form="9NV2sK"], .ml-embedded[data-form="4ig4wX"]'
+      );
       for (var i = 0; i < containers.length; i++) {
         var container = containers[i];
         var next = container.nextElementSibling;
@@ -207,12 +212,15 @@
           continue;
         }
         if (existing) continue;
+        var slug = container.getAttribute('data-form');
+        var hosted = HOSTED_FORM_URLS[slug];
+        if (!hosted) continue;
         var box = document.createElement('p');
         box.className = FALLBACK_CLASS;
         box.style.cssText =
           'margin:1rem auto;text-align:center;line-height:1.5;font-size:1rem;';
         var link = document.createElement('a');
-        link.href = HOSTED_FORM_URL;
+        link.href = hosted;
         link.rel = 'noopener';
         link.textContent = 'Tap here to join the Pod';
         link.style.cssText =

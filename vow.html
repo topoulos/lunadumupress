@@ -273,6 +273,51 @@
       letter-spacing: .03em;
       line-height: 1.45;
     }
+    #audiobook-signup {
+      scroll-margin-top: 5.5rem;
+    }
+    .narrator-blurb {
+      display: flex;
+      gap: .75rem;
+      align-items: flex-start;
+      margin-top: .9rem;
+      padding-top: .85rem;
+      border-top: 1px solid rgba(255,255,255,.14);
+    }
+    .narrator-blurb img {
+      flex: 0 0 56px;
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      object-fit: cover;
+      background: rgba(255,255,255,.08);
+    }
+    .narrator-blurb p {
+      margin: 0;
+      color: rgba(255,255,255,.72);
+      font-size: .78rem;
+      line-height: 1.45;
+    }
+    .narrator-blurb .narrator-more {
+      margin-top: .35rem;
+      color: rgba(255,255,255,.48);
+      font-size: .72rem;
+    }
+    .audiobook-section-jump .section-shell {
+      padding: clamp(1.75rem, 4vw, 2.75rem) 0;
+    }
+    .audiobook-jump {
+      margin: 0 auto;
+      max-width: 720px;
+      text-align: center;
+      color: var(--muted);
+      font-size: clamp(1rem, 1.8vw, 1.15rem);
+      line-height: 1.65;
+    }
+    .audiobook-jump a {
+      color: var(--gold-soft);
+      text-underline-offset: .2em;
+    }
     .hero-reader-link {
       display: inline-block;
       margin-top: .9rem;
@@ -797,38 +842,36 @@
             <source src="audio/vow-scene-one-louise.m4a" type="audio/mp4" />
             Your browser does not support embedded audio.
           </audio>
-          <div class="hero-audiobook-signup" id="audiobook-interest-signup">
+          <aside class="narrator-blurb" aria-label="About the narrator, Louise">
+            <!-- Use “Louise” only in this blurb until Anthony confirms how she would like to be named. -->
+            <img src="images/narrators/louise.jpg" alt="Louise" width="250" height="250" />
+            <div>
+              <p>Meet the voice: Louise is a full-time professional voice actor with more than 20 years of theatre and voice experience, recording from her own professional studio. Her voice work has been heard in projects for clients like Meta, the NHS and Cambridge University. Scene One is her first step into the world of Moon Gun Sam.</p>
+              <p class="narrator-more">More of Louise’s work: [Link]</p>
+            </div>
+          </aside>
+          <div class="hero-audiobook-signup" id="audiobook-signup">
             <p class="hero-audiobook-copy">Prefer to listen? Join the Pod and be among the first to hear about upcoming Moon Gun Sam audiobooks.</p>
-            <!-- PLACEHOLDER: MailerLite embedded form that must add subscribers to
-                 BOTH the Pod (Moon Gun Sam – Main List, group id 180902431699240237)
-                 AND the new "Audiobook Interest" group. That group and form do not
-                 exist yet — Newsletter needs to create them. Do not reuse form
-                 9NV2sK here: it only adds to the Main List, and changing that
-                 form's groups would also tag every /join signup.
-                 When Newsletter provides the new form slug, replace FORM_SLUG
-                 and uncomment the embed below, then remove the placeholder div.
-            <div class="ml-embedded" data-form="FORM_SLUG"></div>
+            <!-- MailerLite form 4ig4wX (id 204984503705273394) is meant to add
+                 subscribers to both the Pod (Moon Gun Sam – Main List,
+                 180902431699240237) and Audiobook Interest (204983865193793452).
+                 The form exists but is not published yet. Keep the disabled
+                 placeholder visible until it is confirmed published, then
+                 uncomment the embed below and remove .ml-embedded-placeholder.
+                 Do not reuse form 9NV2sK here (Main List only; changing its
+                 groups would also tag every /join signup).
+            <div class="ml-embedded" data-form="4ig4wX"></div>
             -->
             <div class="ml-embedded-placeholder" aria-hidden="true">
               <label for="audiobook-interest-email-placeholder">Email</label>
               <input id="audiobook-interest-email-placeholder" type="email" placeholder="you@example.com" disabled />
               <button type="button" class="button" disabled>Join the Pod</button>
-              <p class="signup-note">Draft preview — the live signup form will appear here after the Audiobook Interest list is set up. No spam. Unsubscribe anytime.</p>
+              <p class="signup-note">Draft preview — the live signup form will appear here after form 4ig4wX is published. No spam. Unsubscribe anytime.</p>
             </div>
-            <!-- PLACEHOLDER: optional short Louise Porter narrator blurb + photo.
-                 The page currently has only “Narrated by Louise Porter · 9:45”.
-                 Do not invent bio facts. If a blurb is wanted, request from Louise
-                 (via Chief of Staff): a photo she is happy to use, a short bio,
-                 and links to her other work. Then uncomment and fill:
-            <div class="narrator-blurb">
-              <img src="images/narrators/louise-porter.jpg" alt="Louise Porter" width="96" height="96" />
-              <p>Short approved blurb goes here.</p>
-            </div>
-            -->
           </div>
         </div>
         <div class="hero-actions">
-          <a class="button" href="#audiobook-updates" onclick="trackVowEvent('audiobook_updates_click', {placement:'hero'});">Get Audiobook Updates</a>
+          <a class="button" href="#audiobook-signup" onclick="trackVowEvent('audiobook_updates_click', {placement:'hero'});">Get Audiobook Updates</a>
           <a class="button secondary" href="#chapter" onclick="trackVowEvent('preview_start_click', {placement:'hero'});">Read a 3-Minute Preview</a>
         </div>
         <a class="hero-reader-link" target="_blank" rel="noopener" href="act-one-unlocked.html" onclick="reportVowBookFunnelClick('hero_text_link');">Prefer the ebook? Get the opening act free →</a>
@@ -836,29 +879,9 @@
       </div>
     </header>
 
-    <section class="audiobook-section" id="audiobook-updates" aria-labelledby="audiobook-title">
-      <div class="section-shell audiobook-signup-card">
-        <div class="audiobook-copy">
-          <p class="section-kicker">Audiobook in development</p>
-          <h2 class="section-heading" id="audiobook-title">Want the rest of the story in Louise’s voice?</h2>
-          <p class="section-intro">Join the Pod and we’ll let you know when the Moon Gun Sam audiobook Kickstarter launches. You’ll also get production notes, new narration samples, and release updates as the audio editions come together.</p>
-          <ul class="audiobook-benefits">
-            <li>Audiobook Kickstarter launch notification</li>
-            <li>New samples and behind-the-scenes production updates</li>
-            <li>The complete opening act of <em>Vow</em>, free</li>
-          </ul>
-        </div>
-        <div class="audiobook-form-panel">
-          <!-- This existing panel still uses form 9NV2sK (Pod / Main List only).
-               After Newsletter creates the Audiobook Interest form, consider
-               switching this embed to that form too so these signups also join
-               the Audiobook Interest group. Do not add that group to 9NV2sK
-               itself — that would affect every /join signup. -->
-          <h3>Join the Pod for audiobook updates</h3>
-          <p>Leave your email and we’ll send the important audio news when it is ready.</p>
-          <div class="ml-embedded" data-form="9NV2sK"></div>
-          <p class="signup-note">Two emails a month at most. We never sell or share your address.</p>
-        </div>
+    <section class="audiobook-section audiobook-section-jump" id="audiobook-updates" aria-label="Audiobook signup">
+      <div class="section-shell">
+        <p class="audiobook-jump">Want the rest of the story in Louise’s voice? <a href="#audiobook-signup">Join the audiobook list up top</a>.</p>
       </div>
     </section>
 
@@ -1208,7 +1231,7 @@
           </div>
           <div class="pod-side">
             <div class="pod-actions">
-              <a class="button" href="#audiobook-updates" onclick="trackVowEvent('audiobook_updates_click', {placement:'pod'});">Get Audiobook Updates</a>
+              <a class="button" href="#audiobook-signup" onclick="trackVowEvent('audiobook_updates_click', {placement:'pod'});">Get Audiobook Updates</a>
               <a class="button secondary" href="#audiobook-preview" onclick="trackVowEvent('audiobook_replay_click');">Listen Again</a>
             </div>
             <p class="pod-note">Two emails a month. No spam. We never sell or share your address—and yes, we hate annoying email too.</p>
@@ -1294,7 +1317,7 @@
       });
     }
     document.addEventListener('submit', (event) => {
-      if (event.target.closest('#audiobook-updates')) {
+      if (event.target.closest('#audiobook-signup')) {
         try {
           const emailInput = event.target.querySelector('input[type="email"]');
           const email = emailInput && emailInput.value.trim().toLowerCase();
